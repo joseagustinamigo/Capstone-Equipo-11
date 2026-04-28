@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Simulación Pabellones</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    body {
+        font-family: Arial;
+        background: #f5f7fa;
+        margin: 40px;
+    }
+    h1 {
+        text-align: center;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    canvas {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Simulación de Pabellones y Camas</h1>
+
+<div class="container">
+    <canvas id="camasChart"></canvas>
+    <canvas id="duracionChart"></canvas>
+</div>
+
+<script>
+// Cargar CSV
+async function loadCSV(path) {
+    const res = await fetch(path);
+    const text = await res.text();
+    const rows = text.split(\"\\n\").slice(1);
+    return rows.map(r => r.split(\",\"));
+}
+
+// Gráfico camas
+async function plotCamas() {
+    const data = await loadCSV(\"ocupacion.csv\");
+
+    const fechas = data.map(r => r[0]);
+    const camas = data.map(r => parseInt(r[1]));
+
+    new Chart(document.getElementById(\"camasChart\"), {
+        type: 'line',
+        data: {
+            labels: fechas,
+            datasets: [{
+                label: 'Camas ocupadas',
+                data: camas,
+                tension: 0.3
+            }]
+        }
+    });
+}
+
+// Gráfico duración
+async function plotDuracion() {
+    const data = await loadCSV(\"sim_resultados.csv\");
+
+    const duraciones = data.map(r => parseFloat(r[4]));
+
+    new Chart(document.getElementById(\"duracionChart\"), {
+        type: 'histogram',
+        data: {
+            labels: duraciones,
+            datasets: [{
+                label: 'Duración intervenciones',
+                data: duraciones
+            }]
+        }
+    });
+}
+
+plotCamas();
+plotDuracion();
+</script>
+
+</body>
+</html>
