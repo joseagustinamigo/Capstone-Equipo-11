@@ -1,0 +1,7 @@
+Correlativo,servicio,descripcion,Prioridad,Pabellón,Día,Hora inicio,Hora fin,Duración agendada (min),dias_permanencia_efectivos,Requiere UCI,dias_permanencia_programados,duracion_efectiva_intervencion,inicio_dt,fin_dt
+1173,Vascular,AV fistula,5,2,1,09:00,10:15,0 days 01:15:00,1 days,True,1 days,0 days 01:15:00,2026-01-02 09:00:00,2026-01-02 10:15:00
+1818,Vascular,AV fistula,5,5,1,09:45,11:00,0 days 01:15:00,1 days,True,1 days,0 days 01:15:00,2026-01-02 09:45:00,2026-01-02 11:00:00
+613,Vascular,"Digital amputation, metatarsophalangeal joint",3,6,1,16:00,17:00,0 days 01:00:00,1 days,False,1 days,0 days 01:00:00,2026-01-02 16:00:00,2026-01-02 17:00:00
+1798,Orthopedics,Flexor tendon repair,4,2,1,16:30,18:00,0 days 01:30:00,1 days,False,1 days,0 days 01:30:00,2026-01-02 16:30:00,2026-01-02 18:00:00
+427,Pediatrics,"Myringotomy, general anesthesia",3,6,1,17:00,18:00,0 days 01:00:00,1 days,False,1 days,0 days 01:00:00,2026-01-02 17:00:00,2026-01-02 18:00:00
+534,Urology,Vasectomy,4,3,1,17:00,18:00,0 days 01:00:00,1 days,False,1 days,0 days 01:00:00,2026-01-02 17:00:00,2026-01-02 18:00:00
