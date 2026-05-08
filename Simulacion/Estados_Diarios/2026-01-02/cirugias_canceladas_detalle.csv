@@ -1,7 +1,0 @@
-Correlativo,descripcion,servicio,Prioridad,Requiere UCI,inicio_dt
-1173,AV fistula,Vascular,5,True,2026-01-02 09:00:00
-1818,AV fistula,Vascular,5,True,2026-01-02 09:45:00
-613,"Digital amputation, metatarsophalangeal joint",Vascular,3,False,2026-01-02 16:00:00
-1798,Flexor tendon repair,Orthopedics,4,False,2026-01-02 16:30:00
-427,"Myringotomy, general anesthesia",Pediatrics,3,False,2026-01-02 17:00:00
-534,Vasectomy,Urology,4,False,2026-01-02 17:00:00

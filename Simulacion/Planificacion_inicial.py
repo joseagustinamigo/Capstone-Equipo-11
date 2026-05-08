@@ -31,7 +31,7 @@ from os import path
 RUTA_EXCEL = path.join("..","Capstone-Equipo-11","preprocesamiento","Datos","Datos Operaciones y lista de espera.xlsx")
 
 # Parámetros del horizonte
-N_DIAS = 7                  # |D|
+N_DIAS = 28                  # |D|
 SLOT_MIN = 15               # tamaño del slot en minutos
 HORA_INICIO_JORNADA = 8     # 8:00 AM
 HORA_FIN_JORNADA = 18       # 6:00 PM
@@ -47,8 +47,8 @@ DIAS_UCI = 2                # σ — días obligatorios en UCI para Vascular/AV 
 N_PACIENTES_MAX = 1257
 
 # Parámetros de Gurobi
-TIEMPO_LIMITE_SEG = 300     # 10 minutos
-MIP_GAP = 0.005              # detener cuando el gap sea menor al 1%
+TIEMPO_LIMITE_SEG = 20000     # 10 minutos
+MIP_GAP = 0            # detener cuando el gap sea menor al 1%
 
 # =============================================================================
 # 2. CARGA Y PREPARACIÓN DE DATOS
@@ -68,8 +68,8 @@ print(f"Lista de espera: {len(df_espera)}")
 # La lista de espera no incluye 'Días de permanencia programados'. Estimamos
 # usando el mínmo del histórico agrupando por descripción de la cirugía.
 permanencia_por_desc = (
-    df_base.groupby("Descripción")["Días de permanencia programados"]
-    .min()
+    df_base.groupby("Descripción")["Días de permanencia efectivos"]
+    .apply(lambda x: x.value_counts().idxmax())
     .astype(int)
     .to_dict()
 )
@@ -163,6 +163,7 @@ combinaciones_validas = []  # lista de tuplas (i, j, d, s)
 
 # Diagnóstico: contar pacientes sin slots de inicio válidos
 pacientes_sin_slot = []
+or_suite = df_espera["OR Suite"].to_dict()
 
 for i in I:
     li = ell[i]
@@ -180,10 +181,10 @@ for i in I:
         pacientes_sin_slot.append((i, g[i], df_espera.loc[i, "Descripción"],
                                     df_espera.loc[i, "Duración agendada (min)"]))
 
-    for j in J:
-        for d in D:
-            for s in slots_inicio_validos:
-                combinaciones_validas.append((i, j, d, s))
+    j_permitido = or_suite[i]
+    for d in D:
+        for s in slots_inicio_validos:
+            combinaciones_validas.append((i, j_permitido, d, s))
 
 print(f"Combinaciones (i,j,d,s) válidas: {len(combinaciones_validas):,}")
 total_teorico = len(I) * len(J) * len(D) * len(S)

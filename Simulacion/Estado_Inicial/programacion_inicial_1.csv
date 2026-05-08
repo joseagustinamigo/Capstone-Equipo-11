@@ -1,14 +1,14 @@
 Correlativo,Servicio,Descripción,Prioridad,Pabellón,Día,Hora inicio,Hora fin,Duración (min),Permanencia,Requiere UCI
-288,Ophthalmology,Extracapsular cataract removal,4,1,1,08:00,08:45,45,0,False
+493,Ophthalmology,Extracapsular cataract removal,3,1,1,08:00,08:45,45,0,False
 1184,Orthopedics,"Arthroscopy, knee, surgical",3,1,1,08:45,09:45,60,1,False
 1352,Pediatrics,"Myringotomy, general anesthesia",5,1,1,09:45,10:45,60,1,False
-494,Ophthalmology,Extracapsular cataract removal,5,1,1,10:45,11:30,45,0,False
-2052,ENT,Septoplasty,5,1,1,11:30,13:00,90,0,False
-403,Plastic,Removal of benign skin lesion,5,1,1,13:00,14:00,60,1,False
+1944,OBGYN,Cervical biopsy,5,1,1,10:45,12:00,75,1,False
+1235,ENT,Tonsillectomy,3,1,1,12:00,13:00,60,1,False
+1808,Urology,Cystourethroscopy,5,1,1,13:00,14:00,60,1,False
 1915,Plastic,Rhinoplasty,5,1,1,14:00,16:00,120,2,False
 1759,Orthopedics,"Arthroscopy, knee, surgical",5,1,1,16:00,17:00,60,1,False
 666,Pediatrics,"Myringotomy, general anesthesia",3,1,1,17:00,18:00,60,1,False
-1087,Pediatrics,"Tympanostomy, general anesthesia",3,2,1,08:00,09:00,60,1,False
+440,Vascular,"Digital amputation, metatarsophalangeal joint",5,2,1,08:00,09:00,60,1,False
 1173,Vascular,AV fistula,5,2,1,09:00,10:15,75,1,True
 1940,Ophthalmology,Extracapsular cataract removal,3,2,1,10:15,11:00,45,0,False
 1926,Podiatry,Bunionectomy with distal osteotomy,5,2,1,11:00,13:00,120,1,False
@@ -16,81 +16,81 @@ Correlativo,Servicio,Descripción,Prioridad,Pabellón,Día,Hora inicio,Hora fin,
 659,Orthopedics,"Fasciotomy, palmar, open",4,2,1,14:00,15:30,90,1,False
 522,Orthopedics,"Carpal tunnel release, open",3,2,1,15:30,16:30,60,1,False
 1798,Orthopedics,Flexor tendon repair,4,2,1,16:30,18:00,90,1,False
-2106,Ophthalmology,Extracapsular cataract removal,3,3,1,08:00,08:45,45,0,False
+1050,Ophthalmology,Extracapsular cataract removal,4,3,1,08:00,08:45,45,0,False
 510,Pediatrics,"Tympanostomy, general anesthesia",3,3,1,08:45,09:45,60,1,False
 1916,Vascular,"Digital amputation, metatarsophalangeal joint",5,3,1,09:45,10:45,60,1,False
-1944,OBGYN,Cervical biopsy,5,3,1,10:45,12:00,75,1,False
-1235,ENT,Tonsillectomy,3,3,1,12:00,13:00,60,1,False
+447,Podiatry,"Neurectomy, intrinsic musculature of foot",3,3,1,10:45,11:45,60,1,False
+2115,OBGYN,Cervical biopsy,5,3,1,11:45,13:00,75,1,False
 2056,Plastic,Removal of benign skin lesion,5,3,1,13:00,14:00,60,1,False
 1247,Podiatry,Bunionectomy with distal osteotomy,5,3,1,14:00,16:00,120,1,False
-512,Pediatrics,"Myringotomy, general anesthesia",3,3,1,16:00,17:00,60,1,False
+1047,Orthopedics,"Arthroscopy, knee, surgical",5,3,1,16:00,17:00,60,1,False
 534,Urology,Vasectomy,4,3,1,17:00,18:00,60,1,False
-447,Podiatry,"Neurectomy, intrinsic musculature of foot",3,4,1,08:00,09:00,60,1,False
+1122,Pediatrics,"Myringotomy, general anesthesia",4,4,1,08:00,09:00,60,1,False
 600,Pediatrics,"Myringotomy, general anesthesia",4,4,1,09:00,10:00,60,1,False
 1115,Orthopedics,"Carpal tunnel release, open",3,4,1,10:00,11:00,60,1,False
-1693,Ophthalmology,Extracapsular cataract removal,4,4,1,11:00,11:45,45,0,False
-560,Ophthalmology,Extracapsular cataract removal,4,4,1,11:45,12:30,45,0,False
-2156,ENT,Septoplasty,4,4,1,12:30,14:00,90,0,False
-2062,Pediatrics,"Myringotomy, general anesthesia",5,4,1,14:00,15:00,60,1,False
+1095,Urology,Cystourethroscopy,3,4,1,11:00,12:00,60,1,False
+466,Urology,Cystourethroscopy,3,4,1,12:00,13:00,60,1,False
+2020,Plastic,Rhinoplasty,5,4,1,13:00,15:00,120,2,False
 506,Plastic,Removal of benign skin lesion,3,4,1,15:00,16:00,60,1,False
-2077,Pediatrics,"Tympanostomy, general anesthesia",4,4,1,16:00,17:00,60,1,False
+554,Orthopedics,"Arthroscopy, knee, surgical",5,4,1,16:00,17:00,60,1,False
 1966,Orthopedics,"Carpal tunnel release, open",4,4,1,17:00,18:00,60,1,False
 1070,Pediatrics,"Tympanostomy, general anesthesia",3,5,1,08:00,09:00,60,1,False
-1937,Ophthalmology,Extracapsular cataract removal,3,5,1,09:00,09:45,45,0,False
+2040,Ophthalmology,Extracapsular cataract removal,4,5,1,09:00,09:45,45,0,False
 1818,Vascular,AV fistula,5,5,1,09:45,11:00,75,1,True
-298,Plastic,Removal of benign skin lesion,5,5,1,11:00,12:00,60,1,False
-466,Urology,Cystourethroscopy,3,5,1,12:00,13:00,60,1,False
+1807,Urology,Vasectomy,5,5,1,11:00,12:00,60,1,False
+1198,ENT,Tonsillectomy,3,5,1,12:00,13:00,60,1,False
 1093,Urology,Cystourethroscopy,5,5,1,13:00,14:00,60,1,False
 383,Orthopedics,"Arthroscopy, knee, surgical",4,5,1,14:00,15:00,60,1,False
 591,Orthopedics,"Carpal tunnel release, open",3,5,1,15:00,16:00,60,1,False
-1807,Urology,Vasectomy,5,5,1,16:00,17:00,60,1,False
-1122,Pediatrics,"Myringotomy, general anesthesia",4,5,1,17:00,18:00,60,1,False
+439,Vascular,"Digital amputation, metatarsophalangeal joint",5,5,1,16:00,17:00,60,1,False
+512,Pediatrics,"Myringotomy, general anesthesia",3,5,1,17:00,18:00,60,1,False
 1697,OBGYN,Cervical biopsy,4,6,1,08:00,09:15,75,1,False
 1193,Ophthalmology,Extracapsular cataract removal,4,6,1,09:15,10:00,45,0,False
 2121,Urology,Vasectomy,5,6,1,10:00,11:00,60,1,False
 428,Urology,Vasectomy,5,6,1,11:00,12:00,60,1,False
 605,Urology,Cystourethroscopy,5,6,1,12:00,13:00,60,1,False
-2020,Plastic,Rhinoplasty,5,6,1,13:00,15:00,120,2,False
-1204,Plastic,Removal of benign skin lesion,3,6,1,15:00,16:00,60,1,False
-613,Vascular,"Digital amputation, metatarsophalangeal joint",3,6,1,16:00,17:00,60,1,False
-427,Pediatrics,"Myringotomy, general anesthesia",3,6,1,17:00,18:00,60,1,False
-1187,Ophthalmology,Extracapsular cataract removal,5,7,1,08:00,08:45,45,0,False
-1163,Urology,Cystourethroscopy,5,7,1,08:45,09:45,60,1,False
-1016,Ophthalmology,Extracapsular cataract removal,5,7,1,09:45,10:30,45,0,False
-2115,OBGYN,Cervical biopsy,5,7,1,11:00,12:15,75,1,False
+403,Plastic,Removal of benign skin lesion,5,6,1,13:00,14:00,60,1,False
+1008,Podiatry,Bunionectomy with distal osteotomy,5,6,1,14:00,16:00,120,1,False
+1921,General,Sleeve gastrectomy,5,6,1,16:00,18:00,120,1,False
+1163,Urology,Cystourethroscopy,5,7,1,08:00,09:00,60,1,False
+2093,Vascular,"Digital amputation, metatarsophalangeal joint",5,7,1,09:00,10:00,60,1,False
+1693,Ophthalmology,Extracapsular cataract removal,4,7,1,10:00,10:45,45,0,False
+1691,Ophthalmology,Extracapsular cataract removal,5,7,1,10:45,11:30,45,0,False
+2150,Ophthalmology,Extracapsular cataract removal,3,7,1,11:30,12:15,45,0,False
 284,Ophthalmology,Extracapsular cataract removal,5,7,1,12:15,13:00,45,0,False
-1808,Urology,Cystourethroscopy,5,7,1,13:00,14:00,60,1,False
+673,ENT,Tonsillectomy,3,7,1,13:00,14:00,60,1,False
 327,Urology,Vasectomy,3,7,1,14:00,15:00,60,1,False
-1921,General,Sleeve gastrectomy,5,7,1,15:00,17:00,120,1,False
-1843,Urology,Cystourethroscopy,4,7,1,17:00,18:00,60,1,False
-2030,Podiatry,Hallux rigidus correction with cheilectomy,4,8,1,08:00,09:00,60,1,False
+530,Pediatrics,"Myringotomy, general anesthesia",3,7,1,15:00,16:00,60,1,False
+1069,Pediatrics,"Tympanostomy, general anesthesia",3,7,1,16:00,17:00,60,1,False
+613,Vascular,"Digital amputation, metatarsophalangeal joint",3,7,1,17:00,18:00,60,1,False
+2062,Pediatrics,"Myringotomy, general anesthesia",5,8,1,08:00,09:00,60,1,False
 1031,Vascular,"Digital amputation, metatarsophalangeal joint",5,8,1,09:00,10:00,60,1,False
-1185,Orthopedics,"Arthroscopy, knee, surgical",5,8,1,10:00,11:00,60,1,False
+1087,Pediatrics,"Tympanostomy, general anesthesia",3,8,1,10:00,11:00,60,1,False
 1140,General,Sleeve gastrectomy,4,8,1,11:00,13:00,120,1,False
 2163,Plastic,"Adjacent tissue transfer, eyelids, nose, ears, lip",5,8,1,13:00,15:00,120,1,False
-1346,Plastic,Removal of benign skin lesion,5,8,1,15:00,16:00,60,1,False
+2077,Pediatrics,"Tympanostomy, general anesthesia",4,8,1,15:00,16:00,60,1,False
 1252,Orthopedics,"Arthroscopy, knee, surgical",3,8,1,16:00,17:00,60,1,False
-1208,Pediatrics,"Tympanostomy, general anesthesia",3,8,1,17:00,18:00,60,1,False
-2144,Ophthalmology,Extracapsular cataract removal,4,1,2,08:00,08:45,45,0,False
+645,Vascular,"Digital amputation, metatarsophalangeal joint",3,8,1,17:00,18:00,60,1,False
+1328,Ophthalmology,Extracapsular cataract removal,5,1,2,08:00,08:45,45,0,False
 1177,Podiatry,Bunionectomy with distal osteotomy,5,1,2,08:45,10:45,120,1,False
-2147,Ophthalmology,Extracapsular cataract removal,4,1,2,10:45,11:30,45,0,False
-493,Ophthalmology,Extracapsular cataract removal,3,1,2,11:30,12:15,45,0,False
+1155,Ophthalmology,Extracapsular cataract removal,3,1,2,10:45,11:30,45,0,False
+1016,Ophthalmology,Extracapsular cataract removal,5,1,2,11:30,12:15,45,0,False
 1051,Ophthalmology,Extracapsular cataract removal,4,1,2,12:15,13:00,45,0,False
-608,ENT,Tonsillectomy,4,1,2,13:00,14:00,60,1,False
-609,ENT,Tonsillectomy,4,1,2,14:00,15:00,60,1,False
+609,ENT,Tonsillectomy,4,1,2,13:00,14:00,60,1,False
+1945,ENT,Tonsillectomy,4,1,2,14:00,15:00,60,1,False
 1227,Pediatrics,"Myringotomy, general anesthesia",3,1,2,15:00,16:00,60,1,False
 1071,Pediatrics,"Tympanostomy, general anesthesia",4,1,2,16:00,17:00,60,1,False
 426,Pediatrics,"Myringotomy, general anesthesia",4,1,2,17:00,18:00,60,1,False
-551,Podiatry,Hallux rigidus correction with cheilectomy,3,2,2,08:00,09:00,60,1,False
+614,Vascular,"Digital amputation, metatarsophalangeal joint",3,2,2,08:00,09:00,60,1,False
 1044,Orthopedics,"Arthroscopy, knee, surgical",4,2,2,09:00,10:00,60,1,False
-1150,Ophthalmology,Extracapsular cataract removal,4,2,2,10:00,10:45,45,0,False
+1903,Ophthalmology,Extracapsular cataract removal,4,2,2,10:00,10:45,45,0,False
 1834,Ophthalmology,Extracapsular cataract removal,5,2,2,10:45,11:30,45,0,False
-2145,Ophthalmology,Extracapsular cataract removal,5,2,2,11:30,12:15,45,0,False
-1048,Ophthalmology,Extracapsular cataract removal,5,2,2,12:15,13:00,45,0,False
-1739,ENT,Tonsillectomy,4,2,2,13:00,14:00,60,1,False
+392,Ophthalmology,Extracapsular cataract removal,4,2,2,11:30,12:15,45,0,False
+1295,Ophthalmology,Extracapsular cataract removal,4,2,2,12:15,13:00,45,0,False
+299,Plastic,Removal of benign skin lesion,4,2,2,13:00,14:00,60,1,False
 2076,Pediatrics,"Tympanostomy, general anesthesia",5,2,2,14:00,15:00,60,1,False
 654,Podiatry,Plantar fasciotomy,5,2,2,15:00,16:00,60,1,False
-1715,Podiatry,Hallux rigidus correction with cheilectomy,4,2,2,16:00,17:00,60,1,False
+1929,Orthopedics,"Arthroscopy, knee, surgical",5,2,2,16:00,17:00,60,1,False
 1884,Vascular,"Digital amputation, metatarsophalangeal joint",5,2,2,17:00,18:00,60,1,False
 363,Urology,Cystourethroscopy,4,3,2,08:00,09:00,60,1,False
 636,OBGYN,Cervical biopsy,4,3,2,09:00,10:15,75,1,False
@@ -101,89 +101,91 @@ Correlativo,Servicio,Descripción,Prioridad,Pabellón,Día,Hora inicio,Hora fin,
 1342,ENT,Septoplasty,4,3,2,13:30,15:00,90,0,False
 1862,Orthopedics,"Carpal tunnel release, open",4,3,2,15:00,16:00,60,1,False
 1746,Pediatrics,"Tympanostomy, general anesthesia",4,3,2,16:00,17:00,60,1,False
-1231,Urology,Vasectomy,5,3,2,17:00,18:00,60,1,False
-2041,Ophthalmology,Extracapsular cataract removal,4,4,2,08:00,08:45,45,0,False
+1932,Orthopedics,"Arthroscopy, knee, surgical",5,3,2,17:00,18:00,60,1,False
+2043,Ophthalmology,Extracapsular cataract removal,3,4,2,08:00,08:45,45,0,False
 556,Orthopedics,"Arthroscopy, knee, surgical",5,4,2,08:45,09:45,60,1,False
 1045,Orthopedics,"Arthroscopy, knee, surgical",4,4,2,09:45,10:45,60,1,False
-573,ENT,Tonsillectomy,4,4,2,10:45,11:45,60,1,False
+1776,ENT,Tonsillectomy,5,4,2,10:45,11:45,60,1,False
 1832,Ophthalmology,Extracapsular cataract removal,3,4,2,11:45,12:30,45,0,False
 531,Urology,Vasectomy,3,4,2,12:30,13:30,60,1,False
-2026,General,Sleeve gastrectomy,5,4,2,13:30,15:30,120,1,False
-1785,Pediatrics,"Myringotomy, general anesthesia",4,4,2,15:30,16:30,60,1,False
-1970,Orthopedics,Flexor tendon repair,4,4,2,16:30,18:00,90,1,False
+1061,ENT,Septoplasty,5,4,2,13:30,15:00,90,0,False
+1136,Vascular,"Digital amputation, metatarsophalangeal joint",5,4,2,15:00,16:00,60,1,False
+551,Podiatry,Hallux rigidus correction with cheilectomy,3,4,2,16:00,17:00,60,1,False
+1747,Pediatrics,"Myringotomy, general anesthesia",5,4,2,17:00,18:00,60,1,False
 1867,Pediatrics,"Tympanostomy, general anesthesia",5,5,2,08:00,09:00,60,1,False
 2008,Ophthalmology,Extracapsular cataract removal,4,5,2,09:00,09:45,45,0,False
-286,Ophthalmology,Extracapsular cataract removal,4,5,2,09:45,10:30,45,0,False
+494,Ophthalmology,Extracapsular cataract removal,5,5,2,09:45,10:30,45,0,False
 2027,General,Sleeve gastrectomy,5,5,2,10:30,12:30,120,1,False
-1095,Urology,Cystourethroscopy,3,5,2,12:30,13:30,60,1,False
+1739,ENT,Tonsillectomy,4,5,2,12:30,13:30,60,1,False
 683,General,Sleeve gastrectomy,4,5,2,13:30,15:30,120,1,False
 487,Orthopedics,"Arthroscopy, knee, surgical",4,5,2,15:30,16:30,60,1,False
 1865,Orthopedics,Flexor tendon repair,4,5,2,16:30,18:00,90,1,False
-373,General,Sleeve gastrectomy,5,6,2,08:00,10:00,120,1,False
-2040,Ophthalmology,Extracapsular cataract removal,4,6,2,10:00,10:45,45,0,False
+558,Ophthalmology,Extracapsular cataract removal,3,6,2,08:00,08:45,45,0,False
+1769,OBGYN,"Hysterectomy, surgical",5,6,2,08:45,10:45,120,1,False
 385,Ophthalmology,Extracapsular cataract removal,5,6,2,10:45,11:30,45,0,False
-1903,Ophthalmology,Extracapsular cataract removal,4,6,2,11:30,12:15,45,0,False
-350,Ophthalmology,Extracapsular cataract removal,4,6,2,12:15,13:00,45,0,False
+1187,Ophthalmology,Extracapsular cataract removal,5,6,2,11:30,12:15,45,0,False
+1332,Ophthalmology,Extracapsular cataract removal,4,6,2,12:15,13:00,45,0,False
 1910,Urology,Cystourethroscopy,5,6,2,13:00,14:00,60,1,False
 553,Orthopedics,"Arthroscopy, knee, surgical",4,6,2,14:00,15:00,60,1,False
 1756,Orthopedics,"Arthroscopy, knee, surgical",4,6,2,15:00,16:00,60,1,False
-1164,Urology,Vasectomy,5,6,2,16:00,17:00,60,1,False
+1324,Orthopedics,"Arthroscopy, knee, surgical",5,6,2,16:00,17:00,60,1,False
 2072,Orthopedics,"Carpal tunnel release, open",5,6,2,17:00,18:00,60,1,False
 1145,Podiatry,Lapidus bunionectomy,5,7,2,08:00,10:30,150,1,False
 2006,Ophthalmology,Extracapsular cataract removal,5,7,2,10:30,11:15,45,0,False
 464,Urology,Vasectomy,4,7,2,11:15,12:15,60,1,False
-2001,Ophthalmology,Extracapsular cataract removal,5,7,2,12:15,13:00,45,0,False
-1945,ENT,Tonsillectomy,4,7,2,13:00,14:00,60,1,False
-1073,Pediatrics,"Myringotomy, general anesthesia",4,7,2,14:00,15:00,60,1,False
-1745,Pediatrics,"Tympanostomy, general anesthesia",5,7,2,15:00,16:00,60,1,False
-582,Pediatrics,"Myringotomy, general anesthesia",5,7,2,16:00,17:00,60,1,False
-669,Urology,Cystourethroscopy,3,7,2,17:00,18:00,60,1,False
-1324,Orthopedics,"Arthroscopy, knee, surgical",5,8,2,08:00,09:00,60,1,False
-1136,Vascular,"Digital amputation, metatarsophalangeal joint",5,8,2,09:00,10:00,60,1,False
+1768,Ophthalmology,Extracapsular cataract removal,3,7,2,12:15,13:00,45,0,False
+1231,Urology,Vasectomy,5,7,2,13:00,14:00,60,1,False
+1712,General,Sleeve gastrectomy,5,7,2,14:00,16:00,120,1,False
+667,Urology,Vasectomy,5,7,2,16:00,17:00,60,1,False
+1164,Urology,Vasectomy,5,7,2,17:00,18:00,60,1,False
+582,Pediatrics,"Myringotomy, general anesthesia",5,8,2,08:00,09:00,60,1,False
+1785,Pediatrics,"Myringotomy, general anesthesia",4,8,2,09:00,10:00,60,1,False
 1762,Ophthalmology,Extracapsular cataract removal,5,8,2,10:00,10:45,45,0,False
 561,Ophthalmology,Extracapsular cataract removal,4,8,2,10:45,11:30,45,0,False
-294,ENT,Septoplasty,4,8,2,11:30,13:00,90,0,False
+1767,Ophthalmology,Extracapsular cataract removal,5,8,2,11:30,12:15,45,0,False
+1150,Ophthalmology,Extracapsular cataract removal,4,8,2,12:15,13:00,45,0,False
 1096,ENT,Tonsillectomy,4,8,2,13:00,14:00,60,1,False
-1932,Orthopedics,"Arthroscopy, knee, surgical",5,8,2,14:00,15:00,60,1,False
-1747,Pediatrics,"Myringotomy, general anesthesia",5,8,2,15:00,16:00,60,1,False
+608,ENT,Tonsillectomy,4,8,2,14:00,15:00,60,1,False
+1073,Pediatrics,"Myringotomy, general anesthesia",4,8,2,15:00,16:00,60,1,False
 1280,Pediatrics,"Myringotomy, general anesthesia",4,8,2,16:00,17:00,60,1,False
 2080,Pediatrics,"Myringotomy, general anesthesia",4,8,2,17:00,18:00,60,1,False
 1290,Orthopedics,"Arthroplasty, knee, hinge prothesis",5,1,3,08:00,10:00,120,1,False
 401,ENT,Tonsillectomy,3,1,3,10:00,11:00,60,1,False
 396,OBGYN,Cervical biopsy,5,1,3,11:00,12:15,75,1,False
-1936,Ophthalmology,Extracapsular cataract removal,4,1,3,12:15,13:00,45,0,False
+1901,Ophthalmology,Extracapsular cataract removal,3,1,3,12:15,13:00,45,0,False
 1066,Plastic,Removal of benign skin lesion,4,1,3,13:00,14:00,60,1,False
-1812,ENT,Tonsillectomy,4,1,3,14:00,15:00,60,1,False
-299,Plastic,Removal of benign skin lesion,4,1,3,15:00,16:00,60,1,False
+330,ENT,Tonsillectomy,5,1,3,14:00,15:00,60,1,False
+1077,Podiatry,Plantar fasciotomy,3,1,3,15:00,16:00,60,1,False
 1037,General,Sleeve gastrectomy,5,1,3,16:00,18:00,120,1,False
 1260,Ophthalmology,Extracapsular cataract removal,4,2,3,08:00,08:45,45,0,False
-1725,Ophthalmology,Extracapsular cataract removal,4,2,3,08:45,09:30,45,0,False
+1726,Ophthalmology,Extracapsular cataract removal,4,2,3,08:45,09:30,45,0,False
 2003,Ophthalmology,Extracapsular cataract removal,4,2,3,09:30,10:15,45,0,False
-1198,ENT,Tonsillectomy,3,2,3,10:15,11:15,60,1,False
+1812,ENT,Tonsillectomy,4,2,3,10:15,11:15,60,1,False
 565,Ophthalmology,Extracapsular cataract removal,4,2,3,11:15,12:00,45,0,False
-330,ENT,Tonsillectomy,5,2,3,12:00,13:00,60,1,False
-1779,Plastic,Removal of benign skin lesion,4,2,3,13:00,14:00,60,1,False
+1131,ENT,Tonsillectomy,5,2,3,12:00,13:00,60,1,False
+538,ENT,Tonsillectomy,3,2,3,13:00,14:00,60,1,False
 2086,ENT,Tonsillectomy,4,2,3,14:00,15:00,60,1,False
 1684,Orthopedics,"Arthroplasty, knee, hinge prothesis",5,2,3,15:00,17:00,120,1,False
 2118,Urology,Vasectomy,4,2,3,17:00,18:00,60,1,False
-1858,Podiatry,Plantar fasciotomy,4,3,3,08:00,09:00,60,1,False
+1185,Orthopedics,"Arthroscopy, knee, surgical",5,3,3,08:00,09:00,60,1,False
 1154,Ophthalmology,Extracapsular cataract removal,3,3,3,09:00,09:45,45,0,False
-1332,Ophthalmology,Extracapsular cataract removal,4,3,3,09:45,10:30,45,0,False
-1328,Ophthalmology,Extracapsular cataract removal,5,3,3,10:30,11:15,45,0,False
+1256,Ophthalmology,Extracapsular cataract removal,3,3,3,09:45,10:30,45,0,False
+1259,Ophthalmology,Extracapsular cataract removal,4,3,3,10:30,11:15,45,0,False
 1067,Plastic,Removal of benign skin lesion,5,3,3,11:15,12:15,60,1,False
-2113,Ophthalmology,Extracapsular cataract removal,4,3,3,12:15,13:00,45,0,False
-1848,Plastic,Rhinoplasty,5,3,3,13:00,15:00,120,2,False
+1897,Ophthalmology,Extracapsular cataract removal,4,3,3,12:15,13:00,45,0,False
+675,ENT,Tonsillectomy,3,3,3,13:00,14:00,60,1,False
+1779,Plastic,Removal of benign skin lesion,4,3,3,14:00,15:00,60,1,False
 1957,Pediatrics,"Myringotomy, general anesthesia",4,3,3,15:00,16:00,60,1,False
-2093,Vascular,"Digital amputation, metatarsophalangeal joint",5,3,3,16:00,17:00,60,1,False
+1217,Podiatry,"Correction, hammertoe",5,3,3,16:00,17:00,60,1,False
 1123,Pediatrics,"Myringotomy, general anesthesia",5,3,3,17:00,18:00,60,1,False
 499,OBGYN,Cervical biopsy,5,4,3,08:00,09:15,75,1,False
 1015,Ophthalmology,Extracapsular cataract removal,5,4,3,09:15,10:00,45,0,False
 2166,Pediatrics,"Tympanostomy, general anesthesia",4,4,3,10:00,11:00,60,1,False
-538,ENT,Tonsillectomy,3,4,3,11:00,12:00,60,1,False
+1343,ENT,Tonsillectomy,5,4,3,11:00,12:00,60,1,False
 2055,Plastic,Removal of benign skin lesion,5,4,3,12:00,13:00,60,1,False
-1061,ENT,Septoplasty,5,4,3,13:00,14:30,90,0,False
+2156,ENT,Septoplasty,4,4,3,13:00,14:30,90,0,False
 413,Orthopedics,"Arthroplasty, hip",5,4,3,14:30,16:30,120,1,False
-1162,Urology,Cryosurgery of the prostate gland,4,4,3,16:30,18:00,90,1,False
+1304,Urology,Cryosurgery of the prostate gland,5,4,3,16:30,18:00,90,1,False
 2154,OBGYN,Cervical biopsy,5,5,3,08:00,09:15,75,1,False
 592,Orthopedics,"Carpal tunnel release, open",5,5,3,09:15,10:15,60,1,False
 2089,ENT,Tonsillectomy,4,5,3,10:15,11:15,60,1,False
@@ -193,14 +195,14 @@ Correlativo,Servicio,Descripción,Prioridad,Pabellón,Día,Hora inicio,Hora fin,
 513,Pediatrics,"Myringotomy, general anesthesia",4,5,3,15:45,16:45,60,1,False
 475,Vascular,AV fistula,5,5,3,16:45,18:00,75,1,True
 1195,OBGYN,Cervical biopsy,5,6,3,08:00,09:15,75,1,False
-1681,Podiatry,"Neurectomy, intrinsic musculature of foot",4,6,3,09:15,10:15,60,1,False
+323,Pediatrics,"Myringotomy, general anesthesia",4,6,3,09:15,10:15,60,1,False
 587,Podiatry,Plantar fasciotomy,4,6,3,10:15,11:15,60,1,False
-517,Podiatry,Plantar fasciotomy,3,6,3,11:15,12:15,60,1,False
+505,Plastic,Removal of benign skin lesion,5,6,3,11:15,12:15,60,1,False
 1153,Ophthalmology,Extracapsular cataract removal,3,6,3,12:15,13:00,45,0,False
 1065,Plastic,Removal of benign skin lesion,4,6,3,13:00,14:00,60,1,False
 576,Plastic,Removal of benign skin lesion,3,6,3,14:00,15:00,60,1,False
 1841,Urology,Vasectomy,4,6,3,15:00,16:00,60,1,False
-1006,Podiatry,"Neurectomy, intrinsic musculature of foot",5,6,3,16:00,17:00,60,1,False
+639,Urology,Cystourethroscopy,4,6,3,16:00,17:00,60,1,False
 580,Pediatrics,"Tympanostomy, general anesthesia",3,6,3,17:00,18:00,60,1,False
 621,Podiatry,"Neurectomy, intrinsic musculature of foot",5,7,3,08:00,09:00,60,1,False
 465,Urology,Cryosurgery of the prostate gland,4,7,3,09:00,10:30,90,1,False
@@ -208,115 +210,115 @@ Correlativo,Servicio,Descripción,Prioridad,Pabellón,Día,Hora inicio,Hora fin,
 1190,Ophthalmology,Extracapsular cataract removal,5,7,3,11:30,12:15,45,0,False
 1690,Ophthalmology,Extracapsular cataract removal,3,7,3,12:15,13:00,45,0,False
 1951,Plastic,Removal of benign skin lesion,4,7,3,13:00,14:00,60,1,False
-1343,ENT,Tonsillectomy,5,7,3,14:00,15:00,60,1,False
-645,Vascular,"Digital amputation, metatarsophalangeal joint",3,7,3,15:00,16:00,60,1,False
+517,Podiatry,Plantar fasciotomy,3,7,3,14:00,15:00,60,1,False
+2070,Podiatry,"Correction, hammertoe",5,7,3,15:00,16:00,60,1,False
 598,Pediatrics,"Tympanostomy, general anesthesia",3,7,3,16:00,17:00,60,1,False
 384,Orthopedics,"Arthroscopy, knee, surgical",4,7,3,17:00,18:00,60,1,False
 1315,Vascular,AV fistula,5,8,3,08:00,09:15,75,1,True
 1216,Podiatry,"Correction, hammertoe",3,8,3,09:15,10:15,60,1,False
 1022,OBGYN,Cervical biopsy,4,8,3,10:15,11:30,75,1,False
-502,ENT,Septoplasty,4,8,3,11:30,13:00,90,0,False
+1761,Ophthalmology,Extracapsular cataract removal,4,8,3,11:30,12:15,45,0,False
+2041,Ophthalmology,Extracapsular cataract removal,4,8,3,12:15,13:00,45,0,False
 1778,Plastic,Removal of benign skin lesion,4,8,3,13:00,14:00,60,1,False
 1952,Plastic,Removal of benign skin lesion,4,8,3,14:00,15:00,60,1,False
-2075,Orthopedics,Flexor tendon repair,4,8,3,15:00,16:30,90,1,False
-1176,General,Laparoscopic cholecystectomy,4,8,3,16:30,18:00,90,1,False
-1215,Podiatry,Plantar fasciotomy,3,1,4,08:00,09:00,60,1,False
-376,Podiatry,Bunionectomy with distal osteotomy,5,1,4,09:00,11:00,120,1,False
-455,Ophthalmology,Extracapsular cataract removal,4,1,4,11:00,11:45,45,0,False
-1259,Ophthalmology,Extracapsular cataract removal,4,1,4,11:45,12:30,45,0,False
+1858,Podiatry,Plantar fasciotomy,4,8,3,15:00,16:00,60,1,False
+2026,General,Sleeve gastrectomy,5,8,3,16:00,18:00,120,1,False
+2075,Orthopedics,Flexor tendon repair,4,1,4,08:00,09:30,90,1,False
+595,Orthopedics,Flexor tendon repair,4,1,4,09:30,11:00,90,1,False
+2052,ENT,Septoplasty,5,1,4,11:00,12:30,90,0,False
 571,ENT,Septoplasty,5,1,4,12:30,14:00,90,0,False
-435,ENT,Tonsillectomy,4,1,4,14:00,15:00,60,1,False
+590,Podiatry,"Correction, hammertoe",5,1,4,14:00,15:00,60,1,False
 1219,Orthopedics,"Carpal tunnel release, open",4,1,4,15:00,16:00,60,1,False
-2142,Orthopedics,"Arthroscopy, knee, surgical",5,1,4,16:00,17:00,60,1,False
-278,Orthopedics,"Arthroscopy, knee, surgical",3,1,4,17:00,18:00,60,1,False
-489,Ophthalmology,Extracapsular cataract removal,5,2,4,08:00,08:45,45,0,False
-1196,OBGYN,"Hysterectomy, surgical",5,2,4,08:45,10:45,120,1,False
+1215,Podiatry,Plantar fasciotomy,3,1,4,16:00,17:00,60,1,False
+303,Pediatrics,"Tympanostomy, general anesthesia",4,1,4,17:00,18:00,60,1,False
+1103,Vascular,"Digital amputation, metatarsophalangeal joint",4,2,4,08:00,09:00,60,1,False
+361,Urology,Vasectomy,3,2,4,09:00,10:00,60,1,False
+2147,Ophthalmology,Extracapsular cataract removal,4,2,4,10:00,10:45,45,0,False
 1191,Ophthalmology,Extracapsular cataract removal,5,2,4,10:45,11:30,45,0,False
 532,Urology,Cryosurgery of the prostate gland,5,2,4,11:30,13:00,90,1,False
 575,Plastic,Removal of benign skin lesion,5,2,4,13:00,14:00,60,1,False
 1225,Pediatrics,"Tympanostomy, general anesthesia",4,2,4,14:00,15:00,60,1,False
 1844,Urology,Vasectomy,4,2,4,15:00,16:00,60,1,False
-515,Orthopedics,"Arthroplasty, knee, hinge prothesis",5,2,4,16:00,18:00,120,1,False
+1707,Vascular,"Digital amputation, metatarsophalangeal joint",4,2,4,16:00,17:00,60,1,False
+604,Urology,Vasectomy,3,2,4,17:00,18:00,60,1,False
 1835,Ophthalmology,Extracapsular cataract removal,3,3,4,08:00,08:45,45,0,False
 1224,Pediatrics,"Tympanostomy, general anesthesia",4,3,4,08:45,09:45,60,1,False
 1302,OBGYN,Cervical biopsy,5,3,4,09:45,11:00,75,1,False
 1694,OBGYN,"Hysterectomy, surgical",5,3,4,11:00,13:00,120,1,False
 1341,ENT,Septoplasty,5,3,4,13:00,14:30,90,0,False
 1682,Podiatry,Lapidus bunionectomy,5,3,4,14:30,17:00,150,1,False
-1253,Orthopedics,"Arthroscopy, knee, surgical",4,3,4,17:00,18:00,60,1,False
-1050,Ophthalmology,Extracapsular cataract removal,4,4,4,08:00,08:45,45,0,False
+1218,Orthopedics,"Carpal tunnel release, open",4,3,4,17:00,18:00,60,1,False
+391,Ophthalmology,Extracapsular cataract removal,4,4,4,08:00,08:45,45,0,False
 1337,OBGYN,Cervical biopsy,5,4,4,08:45,10:00,75,1,False
-521,Orthopedics,"Carpal tunnel release, open",3,4,4,10:00,11:00,60,1,False
+2142,Orthopedics,"Arthroscopy, knee, surgical",5,4,4,10:00,11:00,60,1,False
 1754,Podiatry,Bunionectomy with distal osteotomy,5,4,4,11:00,13:00,120,1,False
 2087,ENT,Tonsillectomy,5,4,4,13:00,14:00,60,1,False
 380,Orthopedics,"Arthroscopy, knee, surgical",3,4,4,14:00,15:00,60,1,False
 2029,Podiatry,Bunionectomy with distal osteotomy,5,4,4,15:00,17:00,120,1,False
-579,Pediatrics,"Tympanostomy, general anesthesia",4,4,4,17:00,18:00,60,1,False
-1898,Ophthalmology,Extracapsular cataract removal,5,5,4,08:00,08:45,45,0,False
-1155,Ophthalmology,Extracapsular cataract removal,3,5,4,08:45,09:30,45,0,False
+306,Pediatrics,"Myringotomy, general anesthesia",4,4,4,17:00,18:00,60,1,False
+350,Ophthalmology,Extracapsular cataract removal,4,5,4,08:00,08:45,45,0,False
+560,Ophthalmology,Extracapsular cataract removal,4,5,4,08:45,09:30,45,0,False
 1763,Ophthalmology,Extracapsular cataract removal,3,5,4,09:30,10:15,45,0,False
 387,Ophthalmology,Extracapsular cataract removal,5,5,4,10:15,11:00,45,0,False
 1285,Podiatry,"Partial ostectomy, fifth metatarsal head",5,5,4,11:00,12:30,90,1,False
 1200,ENT,Septoplasty,4,5,4,12:30,14:00,90,0,False
-667,Urology,Vasectomy,5,5,4,14:00,15:00,60,1,False
+1346,Plastic,Removal of benign skin lesion,5,5,4,14:00,15:00,60,1,False
 1251,Orthopedics,"Arthroscopy, knee, surgical",4,5,4,15:00,16:00,60,1,False
 1307,Urology,Cystourethroscopy,5,5,4,16:00,17:00,60,1,False
 2036,Orthopedics,"Arthroscopy, knee, surgical",4,5,4,17:00,18:00,60,1,False
-361,Urology,Vasectomy,3,6,4,08:00,09:00,60,1,False
-1707,Vascular,"Digital amputation, metatarsophalangeal joint",4,6,4,09:00,10:00,60,1,False
+376,Podiatry,Bunionectomy with distal osteotomy,5,6,4,08:00,10:00,120,1,False
 2011,OBGYN,"Hysterectomy, surgical",5,6,4,10:00,12:00,120,1,False
-604,Urology,Vasectomy,3,6,4,12:00,13:00,60,1,False
-505,Plastic,Removal of benign skin lesion,5,6,4,13:00,14:00,60,1,False
-1680,Podiatry,"Partial ostectomy, fifth metatarsal head",4,6,4,14:00,15:30,90,1,False
+373,General,Sleeve gastrectomy,5,6,4,12:00,14:00,120,1,False
+1970,Orthopedics,Flexor tendon repair,4,6,4,14:00,15:30,90,1,False
 420,Orthopedics,"Fasciotomy, palmar, open",4,6,4,15:30,17:00,90,1,False
 326,Urology,Cystourethroscopy,5,6,4,17:00,18:00,60,1,False
-1304,Urology,Cryosurgery of the prostate gland,5,7,4,08:00,09:30,90,1,False
-554,Orthopedics,"Arthroscopy, knee, surgical",5,7,4,09:30,10:30,60,1,False
+655,Podiatry,"Correction, hammertoe",5,7,4,08:00,09:00,60,1,False
+2001,Ophthalmology,Extracapsular cataract removal,5,7,4,09:00,09:45,45,0,False
+1936,Ophthalmology,Extracapsular cataract removal,4,7,4,09:45,10:30,45,0,False
 620,Podiatry,"Partial ostectomy, fifth metatarsal head",4,7,4,10:30,12:00,90,1,False
 434,ENT,Tonsillectomy,4,7,4,12:00,13:00,60,1,False
 1125,Urology,Cryosurgery of the prostate gland,5,7,4,13:00,14:30,90,1,False
 661,Orthopedics,Flexor tendon repair,4,7,4,14:30,16:00,90,1,False
 1182,Orthopedics,"Arthroscopy, knee, surgical",4,7,4,16:00,17:00,60,1,False
-1103,Vascular,"Digital amputation, metatarsophalangeal joint",4,7,4,17:00,18:00,60,1,False
+1253,Orthopedics,"Arthroscopy, knee, surgical",4,7,4,17:00,18:00,60,1,False
 1091,Urology,Vasectomy,5,8,4,08:00,09:00,60,1,False
-1751,Orthopedics,"Arthroplasty, hip",5,8,4,09:00,11:00,120,1,False
-1257,Ophthalmology,Extracapsular cataract removal,4,8,4,11:00,11:45,45,0,False
-1897,Ophthalmology,Extracapsular cataract removal,4,8,4,11:45,12:30,45,0,False
+521,Orthopedics,"Carpal tunnel release, open",3,8,4,09:00,10:00,60,1,False
+2106,Ophthalmology,Extracapsular cataract removal,3,8,4,10:00,10:45,45,0,False
+1201,ENT,Tonsillectomy,4,8,4,10:45,11:45,60,1,False
+1689,Ophthalmology,Extracapsular cataract removal,5,8,4,11:45,12:30,45,0,False
 1036,General,Sleeve gastrectomy,5,8,4,12:30,14:30,120,1,False
-1958,Pediatrics,"Myringotomy, general anesthesia",4,8,4,14:30,15:30,60,1,False
-595,Orthopedics,Flexor tendon repair,4,8,4,15:30,17:00,90,1,False
-526,Pediatrics,"Tympanostomy, general anesthesia",5,8,4,17:00,18:00,60,1,False
+2102,Podiatry,Lapidus bunionectomy,5,8,4,14:30,17:00,150,1,False
+1958,Pediatrics,"Myringotomy, general anesthesia",4,8,4,17:00,18:00,60,1,False
 1339,OBGYN,Cervical biopsy,4,1,5,08:00,09:15,75,1,False
-558,Ophthalmology,Extracapsular cataract removal,3,1,5,09:15,10:00,45,0,False
-1909,Urology,Cryosurgery of the prostate gland,4,1,5,10:00,11:30,90,1,False
+1968,Orthopedics,"Fasciotomy, palmar, open",5,1,5,09:15,10:45,90,1,False
+1048,Ophthalmology,Extracapsular cataract removal,5,1,5,10:45,11:30,45,0,False
 1268,ENT,Tonsillectomy,5,1,5,11:30,12:30,60,1,False
 1345,Plastic,Removal of benign skin lesion,5,1,5,12:30,13:30,60,1,False
-1131,ENT,Tonsillectomy,5,1,5,13:30,14:30,60,1,False
+297,ENT,Tonsillectomy,3,1,5,13:30,14:30,60,1,False
 1220,Orthopedics,"Fasciotomy, palmar, open",5,1,5,14:30,16:00,90,1,False
 555,Orthopedics,"Arthroscopy, knee, surgical",4,1,5,16:00,17:00,60,1,False
-306,Pediatrics,"Myringotomy, general anesthesia",4,1,5,17:00,18:00,60,1,False
-1085,Orthopedics,Flexor tendon repair,5,2,5,08:00,09:30,90,1,False
+1784,Pediatrics,"Tympanostomy, general anesthesia",4,1,5,17:00,18:00,60,1,False
+1162,Urology,Cryosurgery of the prostate gland,4,2,5,08:00,09:30,90,1,False
 1264,OBGYN,"Hysterectomy, surgical",4,2,5,09:30,11:30,120,1,False
 1949,ENT,Tonsillectomy,5,2,5,11:30,12:30,60,1,False
 501,ENT,Septoplasty,4,2,5,12:30,14:00,90,0,False
-1201,ENT,Tonsillectomy,4,2,5,14:00,15:00,60,1,False
+402,Plastic,Removal of benign skin lesion,3,2,5,14:00,15:00,60,1,False
 415,Podiatry,Plantar fasciotomy,3,2,5,15:00,16:00,60,1,False
-408,Pediatrics,"Tympanostomy, general anesthesia",4,2,5,16:00,17:00,60,1,False
-1218,Orthopedics,"Carpal tunnel release, open",4,2,5,17:00,18:00,60,1,False
+669,Urology,Cystourethroscopy,3,2,5,16:00,17:00,60,1,False
+408,Pediatrics,"Tympanostomy, general anesthesia",4,2,5,17:00,18:00,60,1,False
 1299,OBGYN,"Hysterectomy, surgical",5,3,5,08:00,10:00,120,1,False
 452,Ophthalmology,Extracapsular cataract removal,5,3,5,10:00,10:45,45,0,False
-1730,Ophthalmology,Extracapsular cataract removal,5,3,5,10:45,11:30,45,0,False
-2088,ENT,Tonsillectomy,5,3,5,11:30,12:30,60,1,False
+1688,Ophthalmology,Extracapsular cataract removal,4,3,5,10:45,11:30,45,0,False
+435,ENT,Tonsillectomy,4,3,5,11:30,12:30,60,1,False
 572,ENT,Septoplasty,5,3,5,12:30,14:00,90,0,False
-590,Podiatry,"Correction, hammertoe",5,3,5,14:00,15:00,60,1,False
+404,Plastic,Removal of benign skin lesion,5,3,5,14:00,15:00,60,1,False
 550,Podiatry,Bunionectomy with distal osteotomy,5,3,5,15:00,17:00,120,1,False
 1971,Pediatrics,"Tympanostomy, general anesthesia",5,3,5,17:00,18:00,60,1,False
-1217,Podiatry,"Correction, hammertoe",5,4,5,08:00,09:00,60,1,False
+589,Podiatry,"Correction, hammertoe",3,4,5,08:00,09:00,60,1,False
 1151,Ophthalmology,Extracapsular cataract removal,5,4,5,09:00,09:45,45,0,False
 1106,Vascular,AV fistula,5,4,5,09:45,11:00,75,1,True
-1776,ENT,Tonsillectomy,5,4,5,11:00,12:00,60,1,False
-1068,Plastic,"Adjacent tissue transfer, eyelids, nose, ears, lip",5,4,5,12:00,14:00,120,1,False
-297,ENT,Tonsillectomy,3,4,5,14:00,15:00,60,1,False
+1068,Plastic,"Adjacent tissue transfer, eyelids, nose, ears, lip",5,4,5,11:00,13:00,120,1,False
+1848,Plastic,Rhinoplasty,5,4,5,13:00,15:00,120,2,False
 2134,Podiatry,Bunionectomy with distal osteotomy,5,4,5,15:00,17:00,120,1,False
 431,Urology,Vasectomy,3,4,5,17:00,18:00,60,1,False
 2004,Ophthalmology,Extracapsular cataract removal,3,5,5,08:00,08:45,45,0,False
@@ -324,179 +326,177 @@ Correlativo,Servicio,Descripción,Prioridad,Pabellón,Día,Hora inicio,Hora fin,
 425,Pediatrics,"Tympanostomy, general anesthesia",4,5,5,09:30,10:30,60,1,False
 1014,Ophthalmology,Extracapsular cataract removal,4,5,5,10:30,11:15,45,0,False
 1877,ENT,Tonsillectomy,5,5,5,11:15,12:15,60,1,False
-1156,Ophthalmology,Extracapsular cataract removal,3,5,5,12:15,13:00,45,0,False
-602,Urology,Cryosurgery of the prostate gland,4,5,5,13:00,14:30,90,1,False
+1898,Ophthalmology,Extracapsular cataract removal,5,5,5,12:15,13:00,45,0,False
+502,ENT,Septoplasty,4,5,5,13:00,14:30,90,0,False
 588,Podiatry,Plantar fasciotomy,5,5,5,14:30,15:30,60,1,False
-1968,Orthopedics,"Fasciotomy, palmar, open",5,5,5,15:30,17:00,90,1,False
+1085,Orthopedics,Flexor tendon repair,5,5,5,15:30,17:00,90,1,False
 277,Orthopedics,"Arthroscopy, knee, surgical",4,5,5,17:00,18:00,60,1,False
 310,Podiatry,Plantar fasciotomy,5,6,5,08:00,09:00,60,1,False
 1842,Urology,Cryosurgery of the prostate gland,4,6,5,09:00,10:30,90,1,False
 1058,OBGYN,"Hysterectomy, surgical",5,6,5,10:30,12:30,120,1,False
 540,Plastic,"Adjacent tissue transfer, eyelids, nose, ears, lip",5,6,5,12:30,14:30,120,1,False
 1083,Orthopedics,"Fasciotomy, palmar, open",5,6,5,14:30,16:00,90,1,False
-313,Podiatry,"Correction, hammertoe",3,6,5,16:00,17:00,60,1,False
+1286,Podiatry,"Neurectomy, intrinsic musculature of foot",5,6,5,16:00,17:00,60,1,False
 1082,Orthopedics,"Carpal tunnel release, open",4,6,5,17:00,18:00,60,1,False
 1267,OBGYN,Cervical biopsy,4,7,5,08:00,09:15,75,1,False
-626,Ophthalmology,Extracapsular cataract removal,4,7,5,09:15,10:00,45,0,False
+288,Ophthalmology,Extracapsular cataract removal,4,7,5,09:15,10:00,45,0,False
 656,Podiatry,"Correction, hammertoe",5,7,5,10:00,11:00,60,1,False
 357,OBGYN,"Hysterectomy, surgical",5,7,5,11:00,13:00,120,1,False
 644,Plastic,Rhinoplasty,5,7,5,13:00,15:00,120,2,False
-1784,Pediatrics,"Tympanostomy, general anesthesia",4,7,5,15:00,16:00,60,1,False
+298,Plastic,Removal of benign skin lesion,5,7,5,15:00,16:00,60,1,False
 1254,Orthopedics,"Arthroscopy, knee, surgical",4,7,5,16:00,17:00,60,1,False
-323,Pediatrics,"Myringotomy, general anesthesia",4,7,5,17:00,18:00,60,1,False
-1688,Ophthalmology,Extracapsular cataract removal,4,8,5,08:00,08:45,45,0,False
+526,Pediatrics,"Tympanostomy, general anesthesia",5,7,5,17:00,18:00,60,1,False
+1730,Ophthalmology,Extracapsular cataract removal,5,8,5,08:00,08:45,45,0,False
 1941,OBGYN,"Hysterectomy, surgical",5,8,5,08:45,10:45,120,1,False
 1288,Podiatry,Bunionectomy with distal osteotomy,5,8,5,10:45,12:45,120,1,False
 2098,General,Sleeve gastrectomy,5,8,5,12:45,14:45,120,1,False
 657,Orthopedics,"Carpal tunnel release, open",4,8,5,14:45,15:45,60,1,False
 1080,Podiatry,"Correction, hammertoe",5,8,5,15:45,16:45,60,1,False
 372,Vascular,AV fistula,5,8,5,16:45,18:00,75,1,True
-391,Ophthalmology,Extracapsular cataract removal,4,1,6,08:00,08:45,45,0,False
+495,Ophthalmology,Extracapsular cataract removal,5,1,6,08:00,08:45,45,0,False
 459,Ophthalmology,Extracapsular cataract removal,4,1,6,08:45,09:30,45,0,False
 281,Ophthalmology,Extracapsular cataract removal,3,1,6,09:30,10:15,45,0,False
-1768,Ophthalmology,Extracapsular cataract removal,3,1,6,10:15,11:00,45,0,False
-1077,Podiatry,Plantar fasciotomy,3,1,6,11:00,12:00,60,1,False
+2145,Ophthalmology,Extracapsular cataract removal,5,1,6,10:15,11:00,45,0,False
+1964,Podiatry,"Correction, hammertoe",5,1,6,11:00,12:00,60,1,False
 1984,ENT,Tonsillectomy,4,1,6,12:00,13:00,60,1,False
 1098,ENT,Tonsillectomy,4,1,6,13:00,14:00,60,1,False
 300,Plastic,Removal of benign skin lesion,3,1,6,14:00,15:00,60,1,False
 1088,Pediatrics,"Tympanostomy, general anesthesia",4,1,6,15:00,16:00,60,1,False
-520,Podiatry,"Correction, hammertoe",5,1,6,16:00,17:00,60,1,False
-1866,Pediatrics,"Tympanostomy, general anesthesia",5,1,6,17:00,18:00,60,1,False
+313,Podiatry,"Correction, hammertoe",3,1,6,16:00,17:00,60,1,False
+368,Vascular,"Digital amputation, metatarsophalangeal joint",3,1,6,17:00,18:00,60,1,False
 289,OBGYN,"Hysterectomy, surgical",5,2,6,08:00,10:00,120,1,False
-1769,OBGYN,"Hysterectomy, surgical",5,2,6,10:00,12:00,120,1,False
+663,Pediatrics,"Tympanostomy, general anesthesia",5,2,6,10:00,11:00,60,1,False
+1860,Podiatry,"Correction, hammertoe",4,2,6,11:00,12:00,60,1,False
 1234,ENT,Tonsillectomy,4,2,6,12:00,13:00,60,1,False
 2015,Urology,Cystourethroscopy,5,2,6,13:00,14:00,60,1,False
 2066,Orthopedics,"Arthroplasty, hip",5,2,6,14:00,16:00,120,1,False
-1860,Podiatry,"Correction, hammertoe",4,2,6,16:00,17:00,60,1,False
-614,Vascular,"Digital amputation, metatarsophalangeal joint",3,2,6,17:00,18:00,60,1,False
+515,Orthopedics,"Arthroplasty, knee, hinge prothesis",5,2,6,16:00,18:00,120,1,False
 627,Ophthalmology,Extracapsular cataract removal,3,3,6,08:00,08:45,45,0,False
-559,Ophthalmology,Extracapsular cataract removal,4,3,6,08:45,09:30,45,0,False
+626,Ophthalmology,Extracapsular cataract removal,4,3,6,08:45,09:30,45,0,False
 2117,OBGYN,Cervical biopsy,5,3,6,09:30,10:45,75,1,False
 2044,Ophthalmology,Extracapsular cataract removal,3,3,6,10:45,11:30,45,0,False
-1761,Ophthalmology,Extracapsular cataract removal,4,3,6,11:30,12:15,45,0,False
-562,Ophthalmology,Extracapsular cataract removal,4,3,6,12:15,13:00,45,0,False
+1680,Podiatry,"Partial ostectomy, fifth metatarsal head",4,3,6,11:30,13:00,90,1,False
 1950,Plastic,Removal of benign skin lesion,5,3,6,13:00,14:00,60,1,False
-402,Plastic,Removal of benign skin lesion,3,3,6,14:00,15:00,60,1,False
+2139,Orthopedics,"Arthroscopy, knee, surgical",4,3,6,14:00,15:00,60,1,False
 1174,General,Sleeve gastrectomy,5,3,6,15:00,17:00,120,1,False
 468,Urology,Cystourethroscopy,4,3,6,17:00,18:00,60,1,False
-1057,OBGYN,Cervical biopsy,5,4,6,08:00,09:15,75,1,False
-349,Ophthalmology,Extracapsular cataract removal,5,4,6,09:15,10:00,45,0,False
+1196,OBGYN,"Hysterectomy, surgical",5,4,6,08:00,10:00,120,1,False
 1939,Ophthalmology,Extracapsular cataract removal,5,4,6,10:00,10:45,45,0,False
-1248,Podiatry,Hallux rigidus correction with cheilectomy,5,4,6,10:45,11:45,60,1,False
-2043,Ophthalmology,Extracapsular cataract removal,3,4,6,11:45,12:30,45,0,False
+397,ENT,Tonsillectomy,5,4,6,10:45,11:45,60,1,False
+1296,Ophthalmology,Extracapsular cataract removal,3,4,6,11:45,12:30,45,0,False
 332,ENT,Tonsillectomy,3,4,6,12:30,13:30,60,1,False
 507,Plastic,Removal of benign skin lesion,5,4,6,13:30,14:30,60,1,False
-655,Podiatry,"Correction, hammertoe",5,4,6,14:30,15:30,60,1,False
-2070,Podiatry,"Correction, hammertoe",5,4,6,15:30,16:30,60,1,False
+2069,Podiatry,"Correction, hammertoe",5,4,6,14:30,15:30,60,1,False
+1866,Pediatrics,"Tympanostomy, general anesthesia",5,4,6,15:30,16:30,60,1,False
 668,Urology,Cryosurgery of the prostate gland,4,4,6,16:30,18:00,90,1,False
 1197,OBGYN,Cervical biopsy,4,5,6,08:00,09:15,75,1,False
 1112,Podiatry,"Correction, hammertoe",4,5,6,09:15,10:15,60,1,False
-1691,Ophthalmology,Extracapsular cataract removal,5,5,6,10:15,11:00,45,0,False
+455,Ophthalmology,Extracapsular cataract removal,4,5,6,10:15,11:00,45,0,False
 518,Podiatry,Plantar fasciotomy,3,5,6,11:00,12:00,60,1,False
 606,ENT,Tonsillectomy,4,5,6,12:00,13:00,60,1,False
 548,General,Sleeve gastrectomy,5,5,6,13:00,15:00,120,1,False
-2139,Orthopedics,"Arthroscopy, knee, surgical",4,5,6,15:00,16:00,60,1,False
+520,Podiatry,"Correction, hammertoe",5,5,6,15:00,16:00,60,1,False
 1895,Orthopedics,"Arthroplasty, knee, hinge prothesis",5,5,6,16:00,18:00,120,1,False
 445,General,Laparoscopic cholecystectomy,4,6,6,08:00,09:30,90,1,False
-1964,Podiatry,"Correction, hammertoe",5,6,6,09:30,10:30,60,1,False
+1715,Podiatry,Hallux rigidus correction with cheilectomy,4,6,6,09:30,10:30,60,1,False
 1907,OBGYN,Cervical biopsy,4,6,6,10:30,11:45,75,1,False
 292,OBGYN,Cervical biopsy,4,6,6,11:45,13:00,75,1,False
 533,Urology,Cystourethroscopy,5,6,6,13:00,14:00,60,1,False
-589,Podiatry,"Correction, hammertoe",3,6,6,14:00,15:00,60,1,False
-663,Pediatrics,"Tympanostomy, general anesthesia",5,6,6,15:00,16:00,60,1,False
-1245,General,Sleeve gastrectomy,4,6,6,16:00,18:00,120,1,False
+1909,Urology,Cryosurgery of the prostate gland,4,6,6,14:00,15:30,90,1,False
+1079,Podiatry,"Correction, hammertoe",3,6,6,15:30,16:30,60,1,False
+1176,General,Laparoscopic cholecystectomy,4,6,6,16:30,18:00,90,1,False
 394,OBGYN,Cervical biopsy,5,7,6,08:00,09:15,75,1,False
-639,Urology,Cystourethroscopy,4,7,6,09:15,10:15,60,1,False
-1286,Podiatry,"Neurectomy, intrinsic musculature of foot",5,7,6,10:15,11:15,60,1,False
+1937,Ophthalmology,Extracapsular cataract removal,3,7,6,09:15,10:00,45,0,False
+1057,OBGYN,Cervical biopsy,5,7,6,10:00,11:15,75,1,False
 1979,Urology,Vasectomy,4,7,6,11:15,12:15,60,1,False
-1689,Ophthalmology,Extracapsular cataract removal,5,7,6,12:15,13:00,45,0,False
-404,Plastic,Removal of benign skin lesion,5,7,6,13:00,14:00,60,1,False
+1728,Ophthalmology,Extracapsular cataract removal,4,7,6,12:15,13:00,45,0,False
+1204,Plastic,Removal of benign skin lesion,3,7,6,13:00,14:00,60,1,False
 1685,Orthopedics,"Arthroplasty, knee, hinge prothesis",5,7,6,14:00,16:00,120,1,False
 1925,Podiatry,Hallux rigidus correction with cheilectomy,5,7,6,16:00,17:00,60,1,False
-368,Vascular,"Digital amputation, metatarsophalangeal joint",3,7,6,17:00,18:00,60,1,False
-1896,Ophthalmology,Extracapsular cataract removal,4,8,6,08:00,08:45,45,0,False
+1843,Urology,Cystourethroscopy,4,7,6,17:00,18:00,60,1,False
+1156,Ophthalmology,Extracapsular cataract removal,3,8,6,08:00,08:45,45,0,False
 632,Ophthalmology,Extracapsular cataract removal,5,8,6,08:45,09:30,45,0,False
 1055,Ophthalmology,Extracapsular cataract removal,3,8,6,09:30,10:15,45,0,False
-354,Ophthalmology,Extracapsular cataract removal,5,8,6,10:15,11:00,45,0,False
+1329,Ophthalmology,Extracapsular cataract removal,5,8,6,10:15,11:00,45,0,False
 1845,Urology,Cystourethroscopy,4,8,6,11:00,12:00,60,1,False
 2135,Podiatry,Hallux rigidus correction with cheilectomy,5,8,6,12:00,13:00,60,1,False
 1271,ENT,Tonsillectomy,3,8,6,13:00,14:00,60,1,False
 424,Pediatrics,"Tympanostomy, general anesthesia",5,8,6,14:00,15:00,60,1,False
-1079,Podiatry,"Correction, hammertoe",3,8,6,15:00,16:00,60,1,False
-2069,Podiatry,"Correction, hammertoe",5,8,6,16:00,17:00,60,1,False
+1751,Orthopedics,"Arthroplasty, hip",5,8,6,15:00,17:00,120,1,False
 280,Orthopedics,"Arthroscopy, knee, surgical",5,8,6,17:00,18:00,60,1,False
 2082,Urology,Cryosurgery of the prostate gland,4,1,7,08:00,09:30,90,1,False
 528,Pediatrics,"Tympanostomy, general anesthesia",3,1,7,09:30,10:30,60,1,False
 282,Ophthalmology,Extracapsular cataract removal,4,1,7,10:30,11:15,45,0,False
 1740,Plastic,Removal of benign skin lesion,4,1,7,11:15,12:15,60,1,False
-1295,Ophthalmology,Extracapsular cataract removal,4,1,7,12:15,13:00,45,0,False
-296,ENT,Tonsillectomy,4,1,7,13:00,14:00,60,1,False
+1692,Ophthalmology,Extracapsular cataract removal,3,1,7,12:15,13:00,45,0,False
+573,ENT,Tonsillectomy,4,1,7,13:00,14:00,60,1,False
 1773,ENT,Tonsillectomy,5,1,7,14:00,15:00,60,1,False
 1169,Vascular,"Digital amputation, metatarsophalangeal joint",5,1,7,15:00,16:00,60,1,False
-597,Pediatrics,"Tympanostomy, general anesthesia",3,1,7,16:00,17:00,60,1,False
+278,Orthopedics,"Arthroscopy, knee, surgical",3,1,7,16:00,17:00,60,1,False
 1989,Vascular,"Digital amputation, metatarsophalangeal joint",4,1,7,17:00,18:00,60,1,False
 1186,Ophthalmology,Extracapsular cataract removal,3,2,7,08:00,08:45,45,0,False
 302,Pediatrics,"Tympanostomy, general anesthesia",3,2,7,08:45,09:45,60,1,False
 358,OBGYN,Cervical biopsy,5,2,7,09:45,11:00,75,1,False
-1728,Ophthalmology,Extracapsular cataract removal,4,2,7,11:00,11:45,45,0,False
+286,Ophthalmology,Extracapsular cataract removal,4,2,7,11:00,11:45,45,0,False
 301,Plastic,"Adjacent tissue transfer, eyelids, nose, ears, lip",4,2,7,11:45,13:45,120,1,False
 1873,Urology,Cystourethroscopy,4,2,7,13:45,14:45,60,1,False
-303,Pediatrics,"Tympanostomy, general anesthesia",4,2,7,14:45,15:45,60,1,False
+1745,Pediatrics,"Tympanostomy, general anesthesia",5,2,7,14:45,15:45,60,1,False
 599,Pediatrics,"Myringotomy, general anesthesia",3,2,7,15:45,16:45,60,1,False
 474,Vascular,AV fistula,5,2,7,16:45,18:00,75,1,True
-2033,Orthopedics,"Arthroscopy, knee, surgical",5,3,7,08:00,09:00,60,1,False
-1291,Ophthalmology,Extracapsular cataract removal,5,3,7,09:00,09:45,45,0,False
+579,Pediatrics,"Tympanostomy, general anesthesia",4,3,7,08:00,09:00,60,1,False
+457,Ophthalmology,Extracapsular cataract removal,5,3,7,09:00,09:45,45,0,False
 1183,Orthopedics,"Arthroscopy, knee, surgical",3,3,7,09:45,10:45,60,1,False
 355,Ophthalmology,Extracapsular cataract removal,5,3,7,10:45,11:30,45,0,False
-457,Ophthalmology,Extracapsular cataract removal,5,3,7,11:30,12:15,45,0,False
+562,Ophthalmology,Extracapsular cataract removal,4,3,7,11:30,12:15,45,0,False
 329,ENT,Tonsillectomy,4,3,7,12:15,13:15,60,1,False
-675,ENT,Tonsillectomy,3,3,7,13:15,14:15,60,1,False
+577,Plastic,Removal of benign skin lesion,3,3,7,13:15,14:15,60,1,False
 2167,Pediatrics,"Myringotomy, general anesthesia",5,3,7,14:15,15:15,60,1,False
 1994,General,Laparoscopic cholecystectomy,5,3,7,15:15,16:45,90,1,False
 1886,Vascular,AV fistula,5,3,7,16:45,18:00,75,1,True
-1901,Ophthalmology,Extracapsular cataract removal,3,4,7,08:00,08:45,45,0,False
-1767,Ophthalmology,Extracapsular cataract removal,5,4,7,08:45,09:30,45,0,False
+488,Ophthalmology,Extracapsular cataract removal,4,4,7,08:00,08:45,45,0,False
+1725,Ophthalmology,Extracapsular cataract removal,4,4,7,08:45,09:30,45,0,False
 449,Podiatry,Bunionectomy with distal osteotomy,5,4,7,09:30,11:30,120,1,False
 1737,ENT,Septoplasty,4,4,7,11:30,13:00,90,0,False
-397,ENT,Tonsillectomy,5,4,7,13:00,14:00,60,1,False
-1008,Podiatry,Bunionectomy with distal osteotomy,5,4,7,14:00,16:00,120,1,False
-1047,Orthopedics,"Arthroscopy, knee, surgical",5,4,7,16:00,17:00,60,1,False
-418,Orthopedics,"Carpal tunnel release, open",5,4,7,17:00,18:00,60,1,False
+294,ENT,Septoplasty,4,4,7,13:00,14:30,90,0,False
+1006,Podiatry,"Neurectomy, intrinsic musculature of foot",5,4,7,14:30,15:30,60,1,False
+602,Urology,Cryosurgery of the prostate gland,4,4,7,15:30,17:00,90,1,False
+597,Pediatrics,"Tympanostomy, general anesthesia",3,4,7,17:00,18:00,60,1,False
 1059,OBGYN,Cervical biopsy,5,5,7,08:00,09:15,75,1,False
-1726,Ophthalmology,Extracapsular cataract removal,4,5,7,09:15,10:00,45,0,False
+349,Ophthalmology,Extracapsular cataract removal,5,5,7,09:15,10:00,45,0,False
 1701,Urology,Vasectomy,4,5,7,10:00,11:00,60,1,False
-488,Ophthalmology,Extracapsular cataract removal,4,5,7,11:00,11:45,45,0,False
-1692,Ophthalmology,Extracapsular cataract removal,3,5,7,11:45,12:30,45,0,False
+559,Ophthalmology,Extracapsular cataract removal,4,5,7,11:00,11:45,45,0,False
+1291,Ophthalmology,Extracapsular cataract removal,5,5,7,11:45,12:30,45,0,False
 399,ENT,Septoplasty,5,5,7,12:30,14:00,90,0,False
 2032,Podiatry,Bunionectomy with distal osteotomy,5,5,7,14:00,16:00,120,1,False
-440,Vascular,"Digital amputation, metatarsophalangeal joint",5,5,7,16:00,17:00,60,1,False
+1681,Podiatry,"Neurectomy, intrinsic musculature of foot",4,5,7,16:00,17:00,60,1,False
 419,Orthopedics,"Carpal tunnel release, open",5,5,7,17:00,18:00,60,1,False
-530,Pediatrics,"Myringotomy, general anesthesia",3,6,7,08:00,09:00,60,1,False
+1208,Pediatrics,"Tympanostomy, general anesthesia",3,6,7,08:00,09:00,60,1,False
 596,Pediatrics,"Tympanostomy, general anesthesia",4,6,7,09:00,10:00,60,1,False
-439,Vascular,"Digital amputation, metatarsophalangeal joint",5,6,7,10:00,11:00,60,1,False
-577,Plastic,Removal of benign skin lesion,3,6,7,11:00,12:00,60,1,False
-1712,General,Sleeve gastrectomy,5,6,7,12:00,14:00,120,1,False
-1929,Orthopedics,"Arthroscopy, knee, surgical",5,6,7,14:00,15:00,60,1,False
+1255,Orthopedics,"Arthroscopy, knee, surgical",5,6,7,10:00,11:00,60,1,False
+1248,Podiatry,Hallux rigidus correction with cheilectomy,5,6,7,11:00,12:00,60,1,False
+2088,ENT,Tonsillectomy,5,6,7,12:00,13:00,60,1,False
+296,ENT,Tonsillectomy,4,6,7,13:00,14:00,60,1,False
+418,Orthopedics,"Carpal tunnel release, open",5,6,7,14:00,15:00,60,1,False
 1179,Podiatry,Bunionectomy with distal osteotomy,5,6,7,15:00,17:00,120,1,False
 1043,Orthopedics,"Arthroscopy, knee, surgical",5,6,7,17:00,18:00,60,1,False
 1938,Ophthalmology,Extracapsular cataract removal,3,7,7,08:00,08:45,45,0,False
 1935,Ophthalmology,Extracapsular cataract removal,4,7,7,08:45,09:30,45,0,False
 473,Vascular,"Digital amputation, metatarsophalangeal joint",4,7,7,09:30,10:30,60,1,False
 637,Urology,Vasectomy,4,7,7,10:30,11:30,60,1,False
-2150,Ophthalmology,Extracapsular cataract removal,3,7,7,11:30,12:15,45,0,False
-1256,Ophthalmology,Extracapsular cataract removal,3,7,7,12:15,13:00,45,0,False
+1257,Ophthalmology,Extracapsular cataract removal,4,7,7,11:30,12:15,45,0,False
+489,Ophthalmology,Extracapsular cataract removal,5,7,7,12:15,13:00,45,0,False
 674,ENT,Tonsillectomy,3,7,7,13:00,14:00,60,1,False
-1255,Orthopedics,"Arthroscopy, knee, surgical",5,7,7,14:00,15:00,60,1,False
+427,Pediatrics,"Myringotomy, general anesthesia",3,7,7,14:00,15:00,60,1,False
 2101,Podiatry,"Neurectomy, intrinsic musculature of foot",4,7,7,15:00,16:00,60,1,False
-1069,Pediatrics,"Tympanostomy, general anesthesia",3,7,7,16:00,17:00,60,1,False
+1791,Podiatry,Plantar fasciotomy,4,7,7,16:00,17:00,60,1,False
 406,Pediatrics,"Tympanostomy, general anesthesia",3,7,7,17:00,18:00,60,1,False
-392,Ophthalmology,Extracapsular cataract removal,4,8,7,08:00,08:45,45,0,False
-495,Ophthalmology,Extracapsular cataract removal,5,8,7,08:45,09:30,45,0,False
-1329,Ophthalmology,Extracapsular cataract removal,5,8,7,09:30,10:15,45,0,False
+1896,Ophthalmology,Extracapsular cataract removal,4,8,7,08:00,08:45,45,0,False
+2113,Ophthalmology,Extracapsular cataract removal,4,8,7,08:45,09:30,45,0,False
+354,Ophthalmology,Extracapsular cataract removal,5,8,7,09:30,10:15,45,0,False
 1790,Podiatry,Plantar fasciotomy,4,8,7,10:15,11:15,60,1,False
-1296,Ophthalmology,Extracapsular cataract removal,3,8,7,11:15,12:00,45,0,False
-673,ENT,Tonsillectomy,3,8,7,12:00,13:00,60,1,False
+2030,Podiatry,Hallux rigidus correction with cheilectomy,4,8,7,11:15,12:15,60,1,False
+2144,Ophthalmology,Extracapsular cataract removal,4,8,7,12:15,13:00,45,0,False
 2053,ENT,Tonsillectomy,5,8,7,13:00,14:00,60,1,False
 1717,Podiatry,Bunionectomy with distal osteotomy,5,8,7,14:00,16:00,120,1,False
-1791,Podiatry,Plantar fasciotomy,4,8,7,16:00,17:00,60,1,False
+2033,Orthopedics,"Arthroscopy, knee, surgical",5,8,7,16:00,17:00,60,1,False
 1350,Pediatrics,"Tympanostomy, general anesthesia",5,8,7,17:00,18:00,60,1,False
