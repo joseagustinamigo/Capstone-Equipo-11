@@ -21,47 +21,17 @@ import numpy as np
 import gurobipy as gp
 from gurobipy import GRB
 from math import ceil
-import os
 from os import path
-from datetime import datetime, timedelta
 
 # =============================================================================
 # 1. PARÁMETROS DE CONFIGURACIÓN — AJUSTAR SEGÚN NECESIDAD
 # =============================================================================
 
-SCRIPT_DIR = path.dirname(path.abspath(__file__))
-RUTA_ESPERA = path.join(SCRIPT_DIR, "Estado_Inicial", "lista_espera_base.csv")
-RUTA_OPERACIONES = path.join(SCRIPT_DIR, "Estados_Simulacion", "Operaciones_realizadas.csv")
-RUTA_PENDIENTES = path.join(SCRIPT_DIR, "Estados_Simulacion", "Estado_pendientes.csv")
-RUTA_PROGRAMACION_INICIAL = path.join(SCRIPT_DIR, "Estado_Inicial", "programacion_inicial.csv")
+# Ruta del archivo Excel con los datos
+RUTA_EXCEL = path.join("..","Capstone-Equipo-11","preprocesamiento","Datos","Datos Operaciones y lista de espera.xlsx")
 
-BASE_DATE = datetime(2026, 1, 1)
-
-ruta_general = path.join(SCRIPT_DIR, "Estados_Simulacion", "estado_general.csv")
-if path.exists(ruta_general):
-    df_gen = pd.read_csv(ruta_general)
-
-
-if not path.exists(ruta_general):
-    raise RuntimeError(
-        "No existe estado_general.csv. No se puede reconstruir current_time."
-    )
-
-df_gen = pd.read_csv(ruta_general)
-
-if "current_time" not in df_gen.columns:
-    raise RuntimeError(
-        "estado_general.csv no contiene la columna 'current_time'."
-    )
-
-current_time = pd.to_datetime(df_gen["current_time"].iloc[0])
-
-full_week = df_gen.get("full_week", [True]).iloc[0]  # default True
-
-print(f"[Reprogramar] current_time detectado: {current_time}")
-print(f"[Reprogramar] full_week: {full_week}")
-
-
+# Parámetros del horizonte
+N_DIAS = 28                  # |D|
 SLOT_MIN = 15               # tamaño del slot en minutos
 HORA_INICIO_JORNADA = 8     # 8:00 AM
 HORA_FIN_JORNADA = 18       # 6:00 PM
@@ -74,150 +44,11 @@ DIAS_UCI = 2                # σ — días obligatorios en UCI para Vascular/AV 
 
 # Filtro inicial: usar solo los N pacientes con mayor prioridad para acotar tamaño
 # Pon None para usar TODOS los pacientes (puede tardar mucho)
-N_PACIENTES_MAX = 300
+N_PACIENTES_MAX = 1257
 
 # Parámetros de Gurobi
-TIEMPO_LIMITE_SEG = 300     # 5 minutos
-MIP_GAP = 0.05              # detener cuando el gap sea menor al 1%
-
-
-def normalize_columns(df):
-    mapping = {}
-    for col in df.columns:
-        clean = col.strip()
-        if "Correl" in clean:
-            mapping[col] = "Correlativo"
-        elif "Servicio" in clean:
-            mapping[col] = "Servicio"
-        elif "Descr" in clean:
-            mapping[col] = "Descripción"
-        elif "Prioridad" in clean and "paciente" in clean.lower():
-            mapping[col] = "Prioridad de paciente"
-        elif clean == "Prioridad":
-            mapping[col] = "Prioridad"
-        elif "Duración agendada" in clean or ("Duraci" in clean and "agendada" in clean.lower()):
-            mapping[col] = "Duración agendada (min)"
-        elif "Duración (min)" in clean or "Duraci" in clean and "min" in clean.lower():
-            mapping[col] = "Duración (min)"
-        elif "dias_permanencia_programados" in clean:
-            mapping[col] = "dias_permanencia_programados"
-        elif "dias_permanencia_efectivos" in clean:
-            mapping[col] = "dias_permanencia_efectivos"
-        elif "Día" in clean or "Dia" in clean:
-            mapping[col] = "Día"
-        elif "Requiere UCI" in clean or "Requiere Uci" in clean:
-            mapping[col] = "Requiere UCI"
-    return df.rename(columns=mapping)
-
-
-def get_first_remaining_day():
-    if not path.exists(RUTA_PENDIENTES):
-        return 1
-    df_pend = pd.read_csv(RUTA_PENDIENTES, encoding="latin1")
-    df_pend = normalize_columns(df_pend)
-    if "Día" not in df_pend.columns or df_pend.empty:
-        return 1
-    return int(df_pend["Día"].min())
-
-
-def get_operated_correlativos():
-    if not path.exists(RUTA_OPERACIONES):
-        return set()
-
-    df_ops = pd.read_csv(RUTA_OPERACIONES, encoding="latin1")
-    df_ops = normalize_columns(df_ops)
-    if "Correlativo" not in df_ops.columns:
-        return set()
-    return set(df_ops["Correlativo"].dropna().astype(int).tolist())
-
-
-def get_pending_correlativos():
-    if not path.exists(RUTA_PENDIENTES):
-        return set()
-
-    df_pend = pd.read_csv(RUTA_PENDIENTES, encoding="latin1")
-    df_pend = normalize_columns(df_pend)
-    if "Correlativo" not in df_pend.columns:
-        return set()
-    return set(df_pend["Correlativo"].dropna().astype(int).tolist())
-
-
-def get_programmed_correlativos():
-    if not path.exists(RUTA_PROGRAMACION_INICIAL):
-        return set()
-
-    df_prog = pd.read_csv(RUTA_PROGRAMACION_INICIAL, encoding="latin1")
-    df_prog = normalize_columns(df_prog)
-    if "Correlativo" not in df_prog.columns:
-        return set()
-    return set(df_prog["Correlativo"].dropna().astype(int).tolist())
-
-
-# Horizonte fijo de reprogramación desde el tiempo actual (días absolutos)
-if full_week:
-    HORIZONTE_DIAS = 7
-    offset = 7
-else:
-    HORIZONTE_DIAS = 1
-    offset = 1
-
-# d = 0 → hoy + offset, d = 1 → mañana + offset, ..., d = HORIZONTE_DIAS-1 → hoy + offset + HORIZONTE_DIAS-1
-D = list(range(HORIZONTE_DIAS))
-N_DIAS = len(D)
-
-# Cargar estado de camas ocupadas
-RUTA_ESTADO_CAMAS = path.join(SCRIPT_DIR, "Estados_Simulacion", "Estado_camas.csv")
-RUTA_ESTADO_UCI = path.join(SCRIPT_DIR, "Estados_Simulacion", "Estado_uci.csv")
-# =========================================
-# OCUPACIÓN DE CAMAS PARA EL MODELO
-# =========================================
-
-# Horizonte fijo de planificación desde current_time
-N_DIAS = len(D)
-
-ocupadas_bas = [0] * N_DIAS
-ocupadas_uci = [0] * N_DIAS
-
-if path.exists(RUTA_ESTADO_CAMAS):
-    df_camas = pd.read_csv(RUTA_ESTADO_CAMAS)
-    df_camas["inicio"] = pd.to_datetime(df_camas["inicio"])
-    df_camas["fin"] = pd.to_datetime(df_camas["fin"])
-
-    for idx, d in enumerate(D):
-        fecha_dia = current_time.date() + timedelta(days=offset + d)
-        instante = datetime.combine(
-            fecha_dia,
-            datetime.strptime("08:00", "%H:%M").time()
-        )
-        ocupadas_bas[idx] = len(
-            df_camas[
-                (df_camas["inicio"] <= instante) &
-                (df_camas["fin"] > instante)
-            ]
-        )
-
-if path.exists(RUTA_ESTADO_UCI):
-    df_uci = pd.read_csv(RUTA_ESTADO_UCI)
-    df_uci["inicio"] = pd.to_datetime(df_uci["inicio"])
-    df_uci["fin"] = pd.to_datetime(df_uci["fin"])
-
-    for idx, d in enumerate(D):
-        fecha_dia = current_time.date() + timedelta(days=offset + d)
-        instante = datetime.combine(
-            fecha_dia,
-            datetime.strptime("08:00", "%H:%M").time()
-        )
-        ocupadas_uci[idx] = len(
-            df_uci[
-                (df_uci["inicio"] <= instante) &
-                (df_uci["fin"] > instante)
-            ]
-        )
-
-print(f"Ocupación inicial camas básicas por día: {ocupadas_bas}")
-print(f"Ocupación inicial camas UCI por día: {ocupadas_uci}")
-print(f"Ocupación inicial de camas por día: {ocupadas_bas}")
-print(f"Ocupación inicial de UCI por día: {ocupadas_uci}")
+TIEMPO_LIMITE_SEG = 20000     # 10 minutos
+MIP_GAP = 0            # detener cuando el gap sea menor al 1%
 
 # =============================================================================
 # 2. CARGA Y PREPARACIÓN DE DATOS
@@ -227,58 +58,34 @@ print("=" * 70)
 print("CARGA DE DATOS")
 print("=" * 70)
 
-if not path.exists(RUTA_ESPERA):
-    raise FileNotFoundError(f"No se encontró el archivo de lista de espera: {RUTA_ESPERA}")
+df_base = pd.read_excel(RUTA_EXCEL, sheet_name="Datos base")
+df_espera = pd.read_excel(RUTA_EXCEL, sheet_name="Lista de espera")
 
+print(f"Registros históricos (Datos base): {len(df_base)}")
+print(f"Lista de espera: {len(df_espera)}")
 
-df_espera = pd.read_csv(RUTA_ESPERA, encoding="latin1")
-df_espera = normalize_columns(df_espera)
+# --- Estimar días de permanencia para la lista de espera ---
+# La lista de espera no incluye 'Días de permanencia programados'. Estimamos
+# usando el mínmo del histórico agrupando por descripción de la cirugía.
+permanencia_por_desc = (
+    df_base.groupby("Descripción")["Días de permanencia efectivos"]
+    .apply(lambda x: x.value_counts().idxmax())
+    .astype(int)
+    .to_dict()
+)
 
-if "Prioridad de paciente" not in df_espera.columns and "Prioridad" in df_espera.columns:
-    df_espera["Prioridad de paciente"] = df_espera["Prioridad"]
+df_espera["Permanencia_estimada"] = df_espera["Descripción"].map(permanencia_por_desc)
 
-if "Duración agendada (min)" not in df_espera.columns and "Duración (min)" in df_espera.columns:
-    df_espera["Duración agendada (min)"] = df_espera["Duración (min)"]
-
-operados = get_operated_correlativos()
-pendientes = get_pending_correlativos()
-
-# Filtrar pacientes ya operados y los que están actualmente en operación.
-df_disponibles = df_espera[
-    ~df_espera["Correlativo"].isin(operados)].copy()
-df_pendientes = df_disponibles[df_disponibles["Correlativo"].isin(pendientes)].copy()
-df_pendientes = df_disponibles[
-    df_disponibles["Correlativo"].isin(pendientes)
-].drop_duplicates(subset="Correlativo")
-
-df_restantes = df_disponibles[~df_disponibles["Correlativo"].isin(pendientes)].copy()
-
-if N_PACIENTES_MAX is not None:
-    objetivo = N_PACIENTES_MAX - len(df_pendientes)
-    if objetivo > 0:
-        df_adicionales = df_restantes.sort_values(
-            by=["Prioridad de paciente", "Duración agendada (min)"],
-            ascending=[True, True],
-        ).head(objetivo)
-
-        df_espera = pd.concat([df_pendientes, df_adicionales], ignore_index=True)
-print(f"Pacientes totales en lista de espera: {len(df_espera) + len(operados)}")
-print(f"Pacientes ya operados: {len(operados)}")
-print(f"Pacientes por reprogramar: {len(df_espera)}")
-
-if df_espera.empty:
-    print("No hay pacientes nuevos por operar en la lista de espera.")
-    raise SystemExit(0)
-
-if "dias_permanencia_programados" in df_espera.columns:
-    df_espera["Permanencia_estimada"] = df_espera["dias_permanencia_programados"].fillna(0).astype(int)
-else:
-    df_espera["Permanencia_estimada"] = 0
+# Verificación: que todas las descripciones tengan permanencia asignada
+faltantes = df_espera["Permanencia_estimada"].isna().sum()
+if faltantes > 0:
+    print(f"ADVERTENCIA: {faltantes} pacientes sin permanencia estimada. Se asume 0.")
+    df_espera["Permanencia_estimada"] = df_espera["Permanencia_estimada"].fillna(0).astype(int)
 
 # --- Identificar pacientes que requieren UCI (Vascular + AV Fistula) ---
 df_espera["Requiere_UCI"] = (
-    (df_espera["Servicio"].astype(str).str.lower() == "vascular")
-    & (df_espera["Descripción"].astype(str).str.lower().str.contains("fistula", na=False))
+    (df_espera["Servicio"].str.lower() == "vascular")
+    & (df_espera["Descripción"].str.lower().str.contains("fistula", na=False))
 )
 
 # --- Filtro opcional para reducir el tamaño del problema ---
@@ -300,7 +107,8 @@ print(f"  - Ambulatorios (permanencia=0): {(df_espera['Permanencia_estimada']==0
 # Conjuntos
 I = df_espera.index.tolist()                           # pacientes
 J = list(range(1, N_PABELLONES + 1))                   # pabellones
-N_SLOTS = (HORA_FIN_JORNADA - HORA_INICIO_JORNADA) * 60 // SLOT_MIN 
+D = list(range(1, N_DIAS + 1))                         # días
+N_SLOTS = (HORA_FIN_JORNADA - HORA_INICIO_JORNADA) * 60 // SLOT_MIN
 S = list(range(1, N_SLOTS + 1))                        # slots
 print(f"\n|I|={len(I)}, |J|={len(J)}, |D|={len(D)}, |S|={len(S)}")
 
@@ -355,6 +163,7 @@ combinaciones_validas = []  # lista de tuplas (i, j, d, s)
 
 # Diagnóstico: contar pacientes sin slots de inicio válidos
 pacientes_sin_slot = []
+or_suite = df_espera["OR Suite"].to_dict()
 
 for i in I:
     li = ell[i]
@@ -364,12 +173,6 @@ for i in I:
     for s in S:
         if s + li - 1 > N_SLOTS:
             continue  # R2: no cabe en la jornada
-
-        hora_inicio = HORA_INICIO_JORNADA * 60 + (s - 1) * SLOT_MIN
-        hora_fin = hora_inicio + li * SLOT_MIN
-        if hora_fin > HORA_FIN_JORNADA * 60:
-            continue  # no puede terminar después del cierre de la jornada
-
         # R3: todos los slots ocupados deben estar en la ventana del servicio
         if all((s + k) in Wg for k in range(li)):
             slots_inicio_validos.append(s)
@@ -378,10 +181,10 @@ for i in I:
         pacientes_sin_slot.append((i, g[i], df_espera.loc[i, "Descripción"],
                                     df_espera.loc[i, "Duración agendada (min)"]))
 
-    for j in J:
-        for d in D:
-            for s in slots_inicio_validos:
-                combinaciones_validas.append((i, j, d, s))
+    j_permitido = or_suite[i]
+    for d in D:
+        for s in slots_inicio_validos:
+            combinaciones_validas.append((i, j_permitido, d, s))
 
 print(f"Combinaciones (i,j,d,s) válidas: {len(combinaciones_validas):,}")
 total_teorico = len(I) * len(J) * len(D) * len(S)
@@ -470,7 +273,7 @@ for i in I:
         if (i, d_prima) not in combs_por_id:
             continue
         suma_x = gp.quicksum(x[i, j, d_prima, s] for (j, s) in combs_por_id[(i, d_prima)])
-        for d in range(d_prima, min(d_prima + si - 1, N_DIAS-1) + 1):
+        for d in range(d_prima, min(d_prima + si - 1, N_DIAS) + 1):
             m.addConstr(u[i, d] >= suma_x, name=f"R5_i{i}_dp{d_prima}_d{d}")
 
 # --- R6: vinculación cama básica para pacientes UCI (después de los días UCI) ---
@@ -482,7 +285,7 @@ for i in I_UCI:
         if (i, d_prima) not in combs_por_id:
             continue
         suma_x = gp.quicksum(x[i, j, d_prima, s] for (j, s) in combs_por_id[(i, d_prima)])
-        for d in range(d_prima + DIAS_UCI, min(d_prima + si - 1, N_DIAS-1) + 1):
+        for d in range(d_prima + DIAS_UCI, min(d_prima + si - 1, N_DIAS) + 1):
             m.addConstr(u[i, d] >= suma_x, name=f"R6_i{i}_dp{d_prima}_d{d}")
 
 # --- R7: vinculación cama UCI durante los primeros DIAS_UCI días ---
@@ -491,20 +294,20 @@ for i in I_UCI:
         if (i, d_prima) not in combs_por_id:
             continue
         suma_x = gp.quicksum(x[i, j, d_prima, s] for (j, s) in combs_por_id[(i, d_prima)])
-        for d in range(d_prima, min(d_prima + DIAS_UCI - 1, N_DIAS-1) + 1):
+        for d in range(d_prima, min(d_prima + DIAS_UCI - 1, N_DIAS) + 1):
             m.addConstr(v[i, d] >= suma_x, name=f"R7_i{i}_dp{d_prima}_d{d}")
 
 # --- R8: capacidad de camas básicas ---
-for idx, d in enumerate(D):
+for d in D:
     m.addConstr(
-        gp.quicksum(u[i, d] for i in I) <= CAP_CAMAS_BASICAS - ocupadas_bas[idx],
+        gp.quicksum(u[i, d] for i in I) <= CAP_CAMAS_BASICAS,
         name=f"R8_camasBas_d{d}",
     )
 
 # --- R9: capacidad de camas UCI ---
-for idx, d in enumerate(D):
+for d in D:
     m.addConstr(
-        gp.quicksum(v[i, d] for i in I_UCI) <= CAP_CAMAS_UCI - ocupadas_uci[idx],
+        gp.quicksum(v[i, d] for i in I_UCI) <= CAP_CAMAS_UCI,
         name=f"R9_camasUCI_d{d}",
     )
 
@@ -550,7 +353,7 @@ else:
                 "Descripción": df_espera.loc[i, "Descripción"],
                 "Prioridad": p[i],
                 "Pabellón": j,
-                "Día": d + 1,
+                "Día": d,
                 "Hora inicio": f"{hora_inicio//60:02d}:{hora_inicio%60:02d}",
                 "Hora fin": f"{hora_fin//60:02d}:{hora_fin%60:02d}",
                 "Duración (min)": ell[i] * SLOT_MIN,
@@ -579,7 +382,6 @@ else:
 
         # Exportar resultados a CSV
         archivo_salida = path.join("..","Capstone-Equipo-11","Simulacion","resultados","resultado_programacion.csv")
-        os.makedirs(path.dirname(archivo_salida), exist_ok=True)
         df_resultado.to_csv(archivo_salida, index=False)
         print(f"\nResultados exportados a: {archivo_salida}")
 

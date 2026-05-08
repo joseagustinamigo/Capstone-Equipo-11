@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, time
 import tkinter as tk
 import os
 import subprocess
@@ -26,7 +26,7 @@ reprogramacion_pendiente = False
 # =========================
 # CARGAR CSV
 # =========================
-ruta = path.join("..","Capstone-Equipo-11","Simulacion","Estado_Inicial", "programacion_inicial.csv")
+ruta = path.join("..","Capstone-Equipo-11","Simulacion","Estado_Inicial", "28_días.csv")
 ruta2 = path.join("..", "Capstone-Equipo-11","Simulacion","Estado_Inicial","lista_espera_base.csv")
 df_programacion = pd.read_csv(ruta, sep=",", encoding="utf-8-sig")
 df_caso_base = pd.read_csv(ruta2, sep=",", encoding="utf-8-sig")
@@ -85,36 +85,45 @@ df_final = df_final.drop(columns=["Descripción_prog", "Descripción_caso_base",
 df = df_final.copy()
 
 # Ordenar por inicio
-df = df.sort_values("inicio_dt")
+df = df.sort_values(["Día", "inicio_dt"])
 
 
 # =========================
 # ESTADO
 # =========================
-
+idx_evento = 0
 current_time = df["inicio_dt"].min()
-SCHEDULE_ANCHOR_DATE = current_time.date()
 
 RUNNING = True
 
 pabellones = df["Pabellón"].unique()
 
+
+estado_pabellones = {
+    p: {
+        "ocupado": False,
+        "cirugia_actual": None,
+        "fin_programado": None
+    }
+    for p in pabellones}
+
 estado_pabellones = {p: None for p in pabellones}
+
 camas = []
 camas_uci = []
 operaciones_realizadas = []
 operaciones_exportadas = 0
-cancelaciones_pendientes = []
 cirugias_canceladas = set()
+cancelaciones_pendientes = []
 
 eventos = []
 day_paused = False
 last_paused_date = None
-reprogram_triggered_today = False
 cancelaciones_dia = 0
 
 # Crear eventos
-for _, row in df.iterrows():
+records = df.to_dict("records")
+for row in records:
     eventos.append({
         "tipo": "inicio",
         "tiempo": row["inicio_dt"],
@@ -126,7 +135,11 @@ for _, row in df.iterrows():
         "data": row
     })
 
-eventos = sorted(eventos, key=lambda x: x["tiempo"])
+
+eventos = sorted(
+    eventos,
+    key=lambda x: (x["tiempo"], 0 if x["tipo"] == "fin" else 1))
+
 final_time = eventos[-1]["tiempo"] if eventos else current_time
 week_finished = False
 
@@ -139,26 +152,118 @@ modo_saturado = False
 # =========================
 root = tk.Tk()
 root.title("Simulación Pabellones")
+root.geometry("900x600")
+root.configure(bg="#f4f6f7")
 
-frame = tk.Frame(root)
-frame.pack()
+# =========================
+# HEADER
+# =========================
+header = tk.Frame(root, bg="#2c3e50", height=60)
+header.pack(fill=tk.X)
+
+title = tk.Label(
+    header,
+    text="Simulación Hospitalaria",
+    fg="white",
+    bg="#2c3e50",
+    font=("Arial", 16, "bold")
+)
+title.pack(pady=10)
+
+# =========================
+# CONTENEDOR PRINCIPAL
+# =========================
+main_frame = tk.Frame(root, bg="#f4f6f7")
+main_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+
+# =========================
+# PANEL IZQUIERDO (PABELLONES)
+# =========================
+frame_pabellones = tk.LabelFrame(
+    main_frame,
+    text="Pabellones",
+    padx=10,
+    pady=10,
+    bg="white",
+    font=("Arial", 11, "bold")
+)
+frame_pabellones.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=5)
 
 labels_pabellon = {}
-for p in pabellones:
-    lbl = tk.Label(frame, text=f"Pabellón {p}: Libre", width=40, bg="green")
-    lbl.pack()
+
+# Grilla fija 
+COLUMNAS = 4
+
+for i, p in enumerate(pabellones):
+    fila = i // COLUMNAS
+    col = i % COLUMNAS
+
+    card = tk.Frame(frame_pabellones, bg="#ecf0f1", bd=1, relief="solid")
+    card.grid(row=fila, column=col, padx=8, pady=8, sticky="nsew")
+
+    lbl = tk.Label(
+        card,
+        text=f"Pabellón {p}\nLibre",
+        width=20,
+        height=4,
+        bg="#27ae60",
+        fg="white",
+        font=("Arial", 10, "bold"),
+        justify="center"
+    )
+    lbl.pack(fill=tk.BOTH, expand=True)
+
     labels_pabellon[p] = lbl
 
-label_camas = tk.Label(root, text="Camas: 0")
-label_camas.pack()
+# Expandir columnas
+for c in range(COLUMNAS):
+    frame_pabellones.grid_columnconfigure(c, weight=1)
 
-label_tiempo = tk.Label(root, text=str(current_time))
-label_tiempo.pack()
+# =========================
+# PANEL DERECHO (INFO + CONTROLES)
+# =========================
+panel_derecho = tk.Frame(main_frame, bg="#f4f6f7")
+panel_derecho.pack(side=tk.RIGHT, fill=tk.Y, padx=5)
 
-label_resumen = tk.Label(root, text="", justify=tk.LEFT, anchor="w", font=("Arial", 10))
-label_resumen.pack(fill=tk.X, padx=10, pady=5)
+# ---- INFO ----
+frame_info = tk.LabelFrame(
+    panel_derecho,
+    text="Estado",
+    padx=10,
+    pady=10,
+    bg="white",
+    font=("Arial", 11, "bold")
+)
+frame_info.pack(fill=tk.X, pady=5)
 
-# BOTONES PAUSA/REANUDAR
+label_tiempo = tk.Label(frame_info, text=str(current_time), font=("Arial", 10))
+label_tiempo.pack(anchor="w")
+
+label_camas = tk.Label(frame_info, text="Camas: 0", font=("Arial", 10))
+label_camas.pack(anchor="w")
+
+label_resumen = tk.Label(
+    frame_info,
+    text="",
+    justify=tk.LEFT,
+    anchor="w",
+    font=("Arial", 10),
+    wraplength=250
+)
+label_resumen.pack(anchor="w", pady=5)
+
+# ---- CONTROLES ----
+frame_controles = tk.LabelFrame(
+    panel_derecho,
+    text="Controles",
+    padx=10,
+    pady=10,
+    bg="white",
+    font=("Arial", 11, "bold")
+)
+frame_controles.pack(fill=tk.X, pady=5)
+
+# BOTONES
 def pausar():
     global RUNNING
     RUNNING = False
@@ -175,22 +280,77 @@ def reanudar():
     label_tiempo.config(text=str(current_time))
 
 
-# Control velocidad
 def faster():
     global SPEED
-    SPEED = max(50, SPEED - 50)
+    SPEED = max(100, SPEED - 50)
+
 
 def slower():
     global SPEED
     SPEED += 50
 
-tk.Button(root, text="Más rápido", command=faster).pack()
-tk.Button(root, text="Más lento", command=slower).pack()
 
-tk.Button(root, text="⏸ Pausar", command=pausar, bg="orange").pack(pady=5)
-tk.Button(root, text="▶ Reanudar", command=reanudar, bg="lightgreen").pack(pady=5)
-tk.Button(root, text="🔁 Reprogramar semana", command=lambda: request_reprogramar(full_week=False), bg="lightblue").pack(pady=5)
+def saltar_a_manana():
+    global current_time, RUNNING, day_paused
 
+    if not day_paused:
+        print("Solo puedes saltar desde la pausa del día.")
+        return
+
+    # Ir al día siguiente 07:50
+    siguiente_dia = current_time.date() + timedelta(days=1)
+    current_time = datetime.combine(siguiente_dia, time(7, 50))
+
+    print(f" Saltando a {current_time}")
+
+    # Mantener la simulación pausada (el usuario decide después)
+    RUNNING = False
+
+    # Limpiar resumen visual
+    label_resumen.config(
+        text=f" Saltado a {current_time.strftime('%Y-%m-%d %H:%M')}\nPresiona 'Reanudar'."
+    )
+
+    label_tiempo.config(
+        text=str(current_time) + " (Saltado)"
+    )
+
+
+btn_pausa = tk.Button(frame_controles, text="⏸ Pausar", command=pausar, bg="#f39c12", width=20)
+btn_pausa.pack(pady=3)
+
+btn_rea = tk.Button(frame_controles, text="▶ Reanudar", command=reanudar, bg="#2ecc71", width=20)
+btn_rea.pack(pady=3)
+
+btn_fast = tk.Button(frame_controles, text="⚡ Más rápido", command=faster, width=20)
+btn_fast.pack(pady=3)
+
+btn_slow = tk.Button(frame_controles, text="🐢 Más lento", command=slower, width=20)
+btn_slow.pack(pady=3)
+
+btn_rep = tk.Button(
+    frame_controles,
+    text="🔁 Reprogramar semana",
+    command=lambda: request_reprogramar(full_week=False),
+    bg="#3498db",
+    fg="white",
+    width=20
+)
+btn_rep.pack(pady=5)
+
+
+tk.Button(
+    frame_controles,
+    text="⏩ Saltar a mañana (07:50)",
+    command=saltar_a_manana,
+    bg="#9b59b6",
+    fg="white",
+    width=20
+).pack(pady=5)
+
+
+
+#-------------------------------   Revisar esto ---------------------------------
 
 def on_closing():
     # Eliminar archivos de estado temporales creados durante la simulación
@@ -206,77 +366,134 @@ def on_closing():
 
 root.protocol("WM_DELETE_WINDOW", on_closing)
 
+# --------------------------------           ----------------------------------------
 
 # =========================
 # LÓGICA SIMULACIÓN
 # =========================
-def eliminar_eventos_correlativo(correlativo):
-    global eventos
-    eventos = [
-        ev for ev in eventos
-        if ev["data"]["Correlativo"] != correlativo
-    ]
-
-
 def registrar_cancelacion(row, motivo):
     global cancelaciones_dia, cancelaciones_pendientes, cirugias_canceladas
 
-    cancelaciones_dia += 1
-    cancelaciones_pendientes.append(row.to_dict())
-    cirugias_canceladas.add(row["Correlativo"])
-    eliminar_eventos_correlativo(row["Correlativo"])
-
-    detalle = (
-        f"Operación {row['Correlativo']} ({row['descripcion']}) cancelada por {motivo}."
-    )
-    label_resumen.config(
-        text=label_resumen.cget("text") + "\n" + detalle
-        if label_resumen.cget("text") else detalle
-    )
-
-
-def procesar_evento(ev):
-    global camas, camas_uci, modo_saturado, df
-
-    row = ev["data"]
+    correlativo = row["Correlativo"]
     pab = row["Pabellón"]
 
-    if ev["tipo"] == "inicio":
-        if row["Correlativo"] in cirugias_canceladas:
-            return
+    # Evitar doble cancelación
+    if correlativo in cirugias_canceladas:
+        return
 
-        estado_pabellones[pab] = row
-        labels_pabellon[pab].config(
-            text=f"Pabellón {pab}: {row['descripcion']}",
-            bg="red"
-        )
+    cancelaciones_dia += 1
 
-        #  Si estamos saturados, NO iniciar cirugías con cama
-        dias = int(row["dias_permanencia_efectivos"].total_seconds() / 86400)
-        if modo_saturado and dias > 0:
-            registrar_cancelacion(row, "saturación total de camas")
-            # Liberar pabellón
-            estado_pabellones[pab] = None
-            labels_pabellon[pab].config(text=f"Pabellón {pab}: Libre", bg="green")
-            return
+    
+    # Guardar copia segura con prioridad actualizada
+    row_cancelado = row.copy()
 
-    elif ev["tipo"] == "fin":
-        if row["Correlativo"] in cirugias_canceladas:
-            return
+    #  subir prioridad a 1
+    if "Prioridad" in row_cancelado:
+        row_cancelado["Prioridad"] = 1
 
+    if "Prioridad de paciente" in row_cancelado:
+        row_cancelado["Prioridad de paciente"] = 1
+
+    cancelaciones_pendientes.append(row_cancelado)
+
+    
+    if estado_pabellones.get(pab) is not None:
         estado_pabellones[pab] = None
         labels_pabellon[pab].config(
             text=f"Pabellón {pab}: Libre",
             bg="green"
         )
 
-        # --- asignar cama ---
-        dias = int(row["dias_permanencia_efectivos"].total_seconds() / 86400)
+    # Mensaje
+    detalle = f"Operación {correlativo} ({row['descripcion']}) cancelada por {motivo}."
+
+    # --- UI 
+    texto_actual = label_resumen.cget("text")
+    lineas = texto_actual.split("\n") if texto_actual else []
+
+    lineas.append(detalle)
+
+    # limitar tamaño del log
+    MAX_LOG = 10
+    lineas = lineas[-MAX_LOG:]
+
+    label_resumen.config(text="\n".join(lineas))
+
+# =========================
+# LIBERAR CAMAS
+# =========================
+def liberar_camas(current_time):
+    global camas, camas_uci
+
+    camas = [
+        (inicio, fin)
+        for (inicio, fin) in camas
+        if fin > current_time
+    ]
+
+    camas_uci = [
+        (inicio, fin)
+        for (inicio, fin) in camas_uci
+        if fin > current_time
+    ]
+
+
+def procesar_evento(ev):
+    global camas, camas_uci
+
+    row = ev["data"]
+    pab = row["Pabellón"]
+
+    #  liberar camas primero
+    liberar_camas(ev["tiempo"])
+
+    #  recalcular saturación dinámicamente
+    modo_saturado = (len(camas) >= TOTAL_CAMAS and len(camas_uci) >= TOTAL_UCI)
+
+    #  ignorar si ya fue cancelada
+    if row["Correlativo"] in cirugias_canceladas:
+        return
+
+    if ev["tipo"] == "inicio":
+
+        dias = int(np.ceil(row["dias_permanencia_efectivos"].total_seconds() / 86400))
+
+        #  validar pabellón ocupado
+        if estado_pabellones[pab] is not None:
+            registrar_cancelacion(row, "pabellón ocupado")
+            return
+
+        #  validar saturación ANTES de ocupar
+        if modo_saturado and dias > 0:
+            registrar_cancelacion(row, "saturación total de camas")
+            return
+
+        #  ocupar pabellón
+        estado_pabellones[pab] = row
+
+        labels_pabellon[pab].config(
+            text=f"Pabellón {pab}: {row['descripcion']}",
+            bg="red"
+        )
+
+    elif ev["tipo"] == "fin":
+
+        #  liberar pabellón
+        estado_pabellones[pab] = None
+        labels_pabellon[pab].config(
+            text=f"Pabellón {pab}: Libre",
+            bg="green"
+        )
+
+        dias = int(np.ceil(row["dias_permanencia_efectivos"].total_seconds() / 86400))
 
         cancelada = False
+        alta = None
+
+        #  lógica correcta de alta (día + dias, a las 08:00)
         if dias > 0:
-            alta_dia = (ev["tiempo"] + timedelta(days=dias)).date()
-            alta = datetime.combine(alta_dia, datetime.strptime("08:00", "%H:%M").time())
+            fecha_alta = (ev["tiempo"] + timedelta(days=dias)).date()
+            alta = datetime.combine(fecha_alta, time(8, 0))
 
             if row["Requiere UCI"]:
                 if len(camas_uci) >= TOTAL_UCI:
@@ -291,20 +508,18 @@ def procesar_evento(ev):
                 else:
                     camas.append((ev["tiempo"], alta))
 
-        if not cancelada and row["Correlativo"] not in cirugias_canceladas:
+        #  registrar operación exitosa
+        if not cancelada:
             operaciones_realizadas.append({
-            "Correlativo": row["Correlativo"],
-            "Servicio": row["servicio"],
-            "Descripción": row["descripcion"],
-            "Pabellón": pab,
-            "Día": row["Día"],
-            "Hora inicio": row["Hora inicio"],
-            "Hora fin": row["Hora fin"],
-            "Requiere UCI": row["Requiere UCI"],
-            "Fin operación": ev["tiempo"].strftime("%Y-%m-%d %H:%M"),
-            "Alta cama": alta.strftime("%Y-%m-%d %H:%M") if dias > 0 else "",
-        })
-            df.drop(index=df[df["Correlativo"] == row["Correlativo"]].index, inplace=True)
+                "Correlativo": row["Correlativo"],
+                "Servicio": row["servicio"],
+                "Descripción": row["descripcion"],
+                "Pabellón": pab,
+                "Inicio operación": row["Hora inicio"],
+                "Fin operación": ev["tiempo"].strftime("%Y-%m-%d %H:%M"),
+                "Alta cama": alta.strftime("%Y-%m-%d %H:%M") if alta else "",
+            })
+
 
 # =========================
 # EXPORTAR ESTADO ACTUAL
@@ -313,58 +528,118 @@ RUTA_ESTADO_ACTUAL = path.join(SIMULACION_DIR, "Estados_Simulacion")
 
 def exportar_estado():
     global operaciones_exportadas, BASE_DATE
+
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     os.makedirs(RUTA_ESTADO_ACTUAL, exist_ok=True)
 
-    # ---- Estado general
+    # =========================
+    # ESTADO GENERAL
+    # =========================
     ruta_general = path.join(RUTA_ESTADO_ACTUAL, "estado_general.csv")
-    estado_general = {"current_time": current_time}
+
+    estado_general = {
+        "current_time": current_time,
+    }
+
     if 'full_week_param' in globals():
         estado_general["full_week"] = full_week_param
+
     pd.DataFrame([estado_general]).to_csv(ruta_general, index=False)
 
-    # ---- Operaciones pendientes
+    # =========================
+    # CIRUGÍAS FUTURAS
+    # =========================
     pendientes = df[df["inicio_dt"] > current_time].copy()
+
     if cirugias_canceladas:
-        pendientes = pendientes[~pendientes["Correlativo"].isin(cirugias_canceladas)]
-    if cancelaciones_pendientes:
-        pendientes = pd.concat(
-            [pendientes, pd.DataFrame(cancelaciones_pendientes)],
-            ignore_index=True,
-            sort=False,
+        pendientes = pendientes[
+            ~pendientes["Correlativo"].isin(cirugias_canceladas)
+        ]
+
+    ruta_pendientes = path.join(RUTA_ESTADO_ACTUAL, "Estado_pendientes.csv")
+    pendientes.to_csv(ruta_pendientes, index=False)
+
+    # =========================
+    # CIRUGÍAS EN CURSO (NUEVO - CRÍTICO)
+    # =========================
+    en_curso = df[
+        (df["inicio_dt"] <= current_time) &
+        (df["fin_dt"] > current_time)
+    ].copy()
+
+    ruta_en_curso = path.join(RUTA_ESTADO_ACTUAL, "Estado_en_curso.csv")
+    en_curso.to_csv(ruta_en_curso, index=False)
+
+    # =========================
+    # ESTADO DE CAMAS
+    # =========================
+    camas_estado = (
+        pd.DataFrame([{"inicio": c[0], "fin": c[1]} for c in camas])
+        if camas else pd.DataFrame(columns=["inicio", "fin"])
+    )
+
+    camas_uci_estado = (
+        pd.DataFrame([{"inicio": c[0], "fin": c[1]} for c in camas_uci])
+        if camas_uci else pd.DataFrame(columns=["inicio", "fin"])
+    )
+
+    camas_estado.to_csv(path.join(RUTA_ESTADO_ACTUAL, "Estado_camas.csv"), index=False)
+    camas_uci_estado.to_csv(path.join(RUTA_ESTADO_ACTUAL, "Estado_uci.csv"), index=False)
+
+    # =========================
+    # OPERACIONES REALIZADAS (INCREMENTAL)
+    # =========================
+    ruta_operaciones = path.join(RUTA_ESTADO_ACTUAL, "Operaciones_realizadas.csv")
+
+    if operaciones_exportadas < len(operaciones_realizadas):
+        nuevas_ops = pd.DataFrame(
+            operaciones_realizadas[operaciones_exportadas:]
         )
 
-    # ---- Estado de camas
-    camas_estado = pd.DataFrame([{"inicio": c[0], "fin": c[1]} for c in camas], columns=["inicio", "fin"]) if camas else pd.DataFrame(columns=["inicio", "fin"])
-
-    camas_uci_estado = pd.DataFrame([{"inicio": c[0], "fin": c[1]} for c in camas_uci], columns=["inicio", "fin"]) if camas_uci else pd.DataFrame(columns=["inicio", "fin"])
-
-    # ---- Guardar estado
-    pendientes.to_csv(path.join(RUTA_ESTADO_ACTUAL, f"Estado_pendientes.csv"), index=False)
-    camas_estado.to_csv(path.join(RUTA_ESTADO_ACTUAL, f"Estado_camas.csv"), index=False)
-    camas_uci_estado.to_csv(path.join(RUTA_ESTADO_ACTUAL, f"Estado_uci.csv"), index=False)
-
-    # ---- Guardar operaciones realizadas
-    ruta_operaciones = path.join(RUTA_ESTADO_ACTUAL, "Operaciones_realizadas.csv")
-    if operaciones_exportadas < len(operaciones_realizadas):
-        nuevas_ops = pd.DataFrame(operaciones_realizadas[operaciones_exportadas:])
         if path.exists(ruta_operaciones):
-            nuevas_ops.to_csv(ruta_operaciones, mode="a", index=False, header=False)
+            nuevas_ops.to_csv(
+                ruta_operaciones,
+                mode="a",
+                index=False,
+                header=False
+            )
         else:
             nuevas_ops.to_csv(ruta_operaciones, index=False)
+
         operaciones_exportadas = len(operaciones_realizadas)
 
-    # ---- Guardar cancelaciones diarias
+    # =========================
+    # CANCELACIONES (SEPARADAS)
+    # =========================
     ruta_cancelaciones = path.join(RUTA_ESTADO_ACTUAL, "Estado_cancelaciones.csv")
-    pd.DataFrame([{
+
+    df_cancelaciones = pd.DataFrame([{
         "Fecha": current_time.strftime("%Y-%m-%d"),
         "Cancelaciones": cancelaciones_dia,
-    }]).to_csv(ruta_cancelaciones, index=False)
+    }])
 
+    if path.exists(ruta_cancelaciones):
+        df_cancelaciones.to_csv(
+            ruta_cancelaciones,
+            mode="a",
+            index=False,
+            header=False
+        )
+    else:
+        df_cancelaciones.to_csv(ruta_cancelaciones, index=False)
+
+    # Guardar cancelaciones detalladas (NO mezcladas con pendientes)
     if cancelaciones_pendientes:
-        ruta_cancelaciones_pendientes = path.join(RUTA_ESTADO_ACTUAL, "Pendientes_cancelados.csv")
-        pd.DataFrame(cancelaciones_pendientes).to_csv(ruta_cancelaciones_pendientes, index=False)
+        ruta_cancelaciones_pendientes = path.join(
+            RUTA_ESTADO_ACTUAL,
+            "Pendientes_cancelados.csv"
+        )
+
+        pd.DataFrame(cancelaciones_pendientes).to_csv(
+            ruta_cancelaciones_pendientes,
+            index=False
+        )
 
     print(f"Estado exportado: {timestamp} ✔")
 
@@ -377,35 +652,61 @@ def asegurarse_resultados_dir():
 
 def eventos_desde_dataframe(df_schedule):
     eventos_nuevos = []
-    for _, row in df_schedule.iterrows():
-        row = row.copy()
-        inicio = construir_datetime(row["Día"], row["Hora inicio"])
-        fin = construir_datetime(
-            row["Día"] + (row["Hora fin"] < row["Hora inicio"]),
-            row["Hora fin"],
-        )
-        row["inicio_dt"] = inicio
-        row["fin_dt"] = fin
-        eventos_nuevos.append({"tipo": "inicio", "tiempo": inicio, "data": row})
-        eventos_nuevos.append({"tipo": "fin", "tiempo": fin, "data": row})
+
+    records = df_schedule.to_dict("records")
+
+    for row in records:
+        inicio = row["inicio_dt"]
+        fin = row["fin_dt"]
+
+        eventos_nuevos.append({
+            "tipo": "inicio",
+            "tiempo": inicio,
+            "data": row
+        })
+
+        eventos_nuevos.append({
+            "tipo": "fin",
+            "tiempo": fin,
+            "data": row
+        })
+
     return eventos_nuevos
 
 
 def merge_active_events(new_events):
+    global eventos
+
+    # Eventos de fin de cirugías en curso
     active_fin = [
         ev for ev in eventos
         if ev["tipo"] == "fin"
         and ev["tiempo"] > current_time
         and ev["data"]["inicio_dt"] <= current_time
     ]
-    future_events = [ev for ev in new_events if ev["tiempo"] > current_time]
-    return sorted(active_fin + future_events, key=lambda x: x["tiempo"])
 
+    # Eventos futuros nuevos
+    future_events = [
+        ev for ev in new_events
+        if ev["tiempo"] > current_time
+    ]
+
+    # Merge robusto con orden correcto
+    eventos_merge = active_fin + future_events
+
+    eventos_merge = sorted(
+        eventos_merge,
+        key=lambda x: (x["tiempo"], 0 if x["tipo"] == "fin" else 1)
+    )
+
+    return eventos_merge
 
 def restaurar_camas_estado():
     global camas, camas_uci
+
     camas = []
     camas_uci = []
+
     ruta_camas = path.join(RUTA_ESTADO_ACTUAL, "Estado_camas.csv")
     ruta_uci = path.join(RUTA_ESTADO_ACTUAL, "Estado_uci.csv")
 
@@ -413,90 +714,125 @@ def restaurar_camas_estado():
         df_camas = pd.read_csv(ruta_camas)
         df_camas["inicio"] = pd.to_datetime(df_camas["inicio"])
         df_camas["fin"] = pd.to_datetime(df_camas["fin"])
-        for _, row in df_camas.iterrows():
-            if row["fin"] > current_time:
-                camas.append((row["inicio"], row["fin"]))
+
+        camas = [
+            (row["inicio"], row["fin"])
+            for _, row in df_camas.iterrows()
+            if row["fin"] > current_time
+        ]
 
     if path.exists(ruta_uci):
         df_uci = pd.read_csv(ruta_uci)
         df_uci["inicio"] = pd.to_datetime(df_uci["inicio"])
         df_uci["fin"] = pd.to_datetime(df_uci["fin"])
-        for _, row in df_uci.iterrows():
-            if row["fin"] > current_time:
-                camas_uci.append((row["inicio"], row["fin"]))
 
+        camas_uci = [
+            (row["inicio"], row["fin"])
+            for _, row in df_uci.iterrows()
+            if row["fin"] > current_time
+        ]
 
 def cargar_agenda_desde_csv(ruta_csv):
-    global df_programacion, df_final, df, eventos, idx_evento, pabellones, final_time
+    global df_programacion, df, eventos, idx_evento, pabellones, final_time
 
     if not path.exists(ruta_csv):
         raise FileNotFoundError(f"No existe el archivo de agenda: {ruta_csv}")
 
-    df_programacion = pd.read_csv(ruta_csv, sep="," , encoding="utf-8-sig")
+    df_programacion = pd.read_csv(ruta_csv, sep=",", encoding="utf-8-sig")
 
-    # Normalize columns from reprogrammed CSV
+    # =========================
+    # NORMALIZACIÓN
+    # =========================
     df_programacion = df_programacion.rename(columns={
         "Permanencia": "dias_permanencia_efectivos",
         "Duración (min)": "Duración agendada (min)",
         "Descripción": "descripcion",
         "Servicio": "servicio",
-        "Requiere UCI": "Requiere UCI",
     })
 
-    # Add missing columns
-    df_programacion["dias_permanencia_programados"] = df_programacion["dias_permanencia_efectivos"]
+    # =========================
+    # CONVERSIONES
+    # =========================
+    df_programacion["Duración agendada (min)"] = pd.to_timedelta(
+        df_programacion["Duración agendada (min)"], unit="m"
+    )
     df_programacion["duracion_efectiva_intervencion"] = df_programacion["Duración agendada (min)"]
 
-    # Convert to timedelta
-    df_programacion["Duración agendada (min)"] = pd.to_timedelta(df_programacion["Duración agendada (min)"], unit="m")
-    df_programacion["duracion_efectiva_intervencion"] = pd.to_timedelta(df_programacion["duracion_efectiva_intervencion"], unit="m")
-    df_programacion["dias_permanencia_programados"] = pd.to_timedelta(df_programacion["dias_permanencia_programados"], unit="d")
-    df_programacion["dias_permanencia_efectivos"] = pd.to_timedelta(df_programacion["dias_permanencia_efectivos"], unit="d")
+    df_programacion["dias_permanencia_efectivos"] = pd.to_timedelta(
+        df_programacion["dias_permanencia_efectivos"], unit="d"
+    )
+    df_programacion["dias_permanencia_programados"] = df_programacion["dias_permanencia_efectivos"]
 
-    df_programacion["descripcion"] = df_programacion["descripcion"]
-    df_programacion["servicio"] = df_programacion["servicio"]
-    df_programacion["inicio_dt"] = df_programacion.apply(
-        lambda r: construir_datetime(r["Día"], r["Hora inicio"]),
-        axis=1,
-    )
-    df_programacion["fin_dt"] = df_programacion.apply(
-        lambda r: construir_datetime(
-            r["Día"] + (r["Hora fin"] < r["Hora inicio"]),
-            r["Hora fin"],
-        ),
-        axis=1,
-    )
+    # =========================
+    # USAR DIRECTAMENTE LOS DATETIME (NO RECALCULAR)
+    # =========================
+    if "inicio_dt" not in df_programacion.columns:
+        raise ValueError("La agenda reprogramada debe incluir 'inicio_dt'")
+
+    if "fin_dt" not in df_programacion.columns:
+        raise ValueError("La agenda reprogramada debe incluir 'fin_dt'")
+
     df = df_programacion.copy()
     df = df.sort_values("inicio_dt")
-    df = df[df["inicio_dt"] > current_time]
 
+    # =========================
+    # RESTAURAR CAMAS
+    # =========================
     restaurar_camas_estado()
+
+    # =========================
+    # CREAR EVENTOS NUEVOS
+    # =========================
     nuevos_eventos = eventos_desde_dataframe(df)
+
+    # =========================
+    # MEZCLAR EVENTOS CORRECTAMENTE
+    # =========================
     eventos = merge_active_events(nuevos_eventos)
+
     idx_evento = 0
 
-
+    # =========================
+    # PABELLONES (NO RESETEAR OCUPACIÓN)
+    # =========================
     pabellones = sorted(set(df["Pabellón"]).union(set(estado_pabellones.keys())))
+
     for p in pabellones:
         if p not in labels_pabellon:
-            lbl = tk.Label(frame, text=f"Pabellón {p}: Libre", width=40, bg="green")
-            lbl.pack()
-            labels_pabellon[p] = lbl
-        if estado_pabellones.get(p) is None:
-            labels_pabellon[p].config(text=f"Pabellón {p}: Libre", bg="green")
+            #  usar mismo layout
+            continue
 
+        if estado_pabellones.get(p) is None:
+            labels_pabellon[p].config(
+                text=f"Pabellón {p}: Libre",
+                bg="green"
+            )
+
+    # =========================
+    # TIEMPO FINAL
+    # =========================
     final_time = max((ev["tiempo"] for ev in eventos), default=current_time)
+
     print(f"Nueva agenda cargada desde: {ruta_csv}")
 
-def request_reprogramar(full_week=False, already_retried=False):
-    global current_time, RUNNING, week_finished, day_paused, reprogram_triggered_today, full_week_param
 
-    print("Iniciando reprogramación...")
+def request_reprogramar(full_week=False):
+    global RUNNING, week_finished, day_paused, reprogram_triggered_today, full_week_param
+
+    #  SOLO permitir reprogramación en pausa (20:00)
+    if not day_paused:
+        print(" Solo se puede reprogramar durante la pausa de las 20:00.")
+        return
+
+    print("Iniciando reprogramación manual...")
+
     full_week_param = full_week
+
+    #  Exportar estado actual
     exportar_estado()
     asegurarse_resultados_dir()
 
-    # La simulación DEBE estar pausada durante la reprogramación
+    #  Pausar simulación
     RUNNING = False
 
     try:
@@ -509,263 +845,47 @@ def request_reprogramar(full_week=False, already_retried=False):
         print(f"Error al ejecutar Reprogramar.py: {err}")
         return
 
-    # --- Avance temporal controlado ---
+    #  NO modificar current_time
+    #  NO cambiar SCHEDULE_ANCHOR_DATE
 
-    current_time = current_time
-
-    #  NUEVO: actualizar ancla de agenda
-    global SCHEDULE_ANCHOR_DATE
-    SCHEDULE_ANCHOR_DATE = current_time.date()
-
-    # --- Cargar nueva agenda ---
+    #  Cargar nueva agenda
     cargar_agenda_desde_csv(RUTA_REPROGRAMACION_SALIDA)
 
-    # Resetear estado de pabellones
-    for p in estado_pabellones:
-        estado_pabellones[p] = None
-        labels_pabellon[p].config(text=f"Pabellón {p}: Libre", bg="green")
+    #  NO resetear pabellones (mantener estado real)
 
-    # --- Reset de banderas ---
+    # =========================
+    # RESET DE FLAGS CONTROLADOS
+    # =========================
     week_finished = False
-    day_paused = False
-    reprogram_triggered_today = True  # importantísimo
+    reprogram_triggered_today = True
 
-    #  NO decidir RUNNING aquí
-    # quien llama (botón, saturación, pausa diaria) decide si reanudar
-
-    print("Reprogramación completada.")
-
-    # Reanudar automáticamente si es reprogramación por saturación (daily)
-    if not full_week:
-        RUNNING = True
-        print("Simulación reanudada automáticamente después de reprogramación por saturación.")
-
-    # --- Reintento por baja ocupación ---
-    if not full_week and len(camas) < 15 and not already_retried:
-        print("Ocupación baja, reintentando reprogramación...")
-        request_reprogramar(full_week=False, already_retried=True)
-
-# =========================
-# UPDATE LOOP
-# =========================
-idx_evento = 0
-
-
-def calcular_altas_proximas(dias_futuros=3):
-    """Predice cuántas camas se liberarán en los próximos N días."""
-    altas_camas_basicas = 0
-    altas_camas_uci = 0
-    fecha_limite = current_time + timedelta(days=dias_futuros)
-    
-    for inicio, alta in camas:
-        if current_time < alta <= fecha_limite:
-            altas_camas_basicas += 1
-    
-    for inicio, alta in camas_uci:
-        if current_time < alta <= fecha_limite:
-            altas_camas_uci += 1
-    
-    return altas_camas_basicas, altas_camas_uci
-
+    print(" Reprogramación completada. Esperando decisión de reanudación.")
 
 def transferir_uci_a_normal():
     """Transfiere pacientes de UCI a cama normal si llevan > 2 días en UCI."""
     global camas, camas_uci
+
     DIAS_UCI_MAX = 2
-    
-    camas_uci_vigentes = []
+    nuevos_uci = []
+
     for inicio, alta in camas_uci:
-        dias_en_uci = (current_time - inicio).days
+        #  tiempo REAL en días (no truncado)
+        dias_en_uci = (current_time - inicio).total_seconds() / 86400
+
+        #  condición correcta
         if dias_en_uci > DIAS_UCI_MAX and len(camas) < TOTAL_CAMAS:
-            # Transferir a cama normal
             camas.append((current_time, alta))
-            print(f"Paciente transferido de UCI a cama normal (estaba {dias_en_uci} días en UCI)")
+            print(f"Paciente transferido de UCI a cama normal ({dias_en_uci:.2f} días en UCI)")
         else:
-            camas_uci_vigentes.append((inicio, alta))
-    
-    camas_uci = camas_uci_vigentes
+            nuevos_uci.append((inicio, alta))
 
-
-def riesgo_proyectado():
-    ocupacion_actual = len(camas)
-    
-    # cirugías próximas (ej: próximas 24h)
-    proximas = df[
-        (df["inicio_dt"] > current_time) &
-        (df["inicio_dt"] <= current_time + timedelta(hours=24)) &
-        (df["dias_permanencia_efectivos"] > pd.Timedelta(0))
-    ]
-
-    demanda_futura = len(proximas)
-
-    return ocupacion_actual + demanda_futura > TOTAL_CAMAS
-
-
-def seleccionar_cancelaciones():
-    futuras = df[df["inicio_dt"] > current_time].copy()
-
-    # ordenar por peor prioridad primero
-    futuras = futuras.sort_values("Prioridad")
-
-    ocupacion = len(camas)
-    canceladas = []
-
-    for _, row in futuras.iterrows():
-        if ocupacion < TOTAL_CAMAS:
-            break
-
-        canceladas.append(row)
-        ocupacion -= 1  # liberar impacto futuro
-
-    return canceladas
-
-
-def remover_eventos(canceladas):
-    global eventos
-
-    ids_cancelados = set(canceladas["Correlativo"])
-
-    eventos = [
-        ev for ev in eventos
-        if ev["data"]["Correlativo"] not in ids_cancelados
-    ]
-
-
-def hay_riesgo_saturacion():
-    return riesgo_proyectado()
-
-def update():
-    global current_time, idx_evento, camas, camas_uci
-    global RUNNING, week_finished, day_paused
-    global last_paused_date, reprogram_triggered_today, cancelaciones_dia, modo_saturado
-
-    # ======================
-    # AVANCE DE TIEMPO
-    # ======================
-    if RUNNING:
-        current_time += timedelta(minutes=5)
-
-        while idx_evento < len(eventos) and eventos[idx_evento]["tiempo"] <= current_time:
-            procesar_evento(eventos[idx_evento])
-            idx_evento += 1
-
-        camas = [c for c in camas if c[1] > current_time]
-        camas_uci = [c for c in camas_uci if c[1] > current_time]
-
-        transferir_uci_a_normal()
-
-    # ======================
-    # SATURACIÓN REAL (HARD)
-    # ======================
-    if RUNNING and len(camas) >= TOTAL_CAMAS:
-
-        if not modo_saturado:
-            print(" CAMAS LLENAS → entrando en modo saturado")
-
-            modo_saturado = True
-
-            label_resumen.config(
-                text=(
-                    " Saturación total de camas\n"
-                    "Se detienen cirugías con hospitalización\n"
-                    "Esperando altas..."
-                )
-            )
-
-        # El tiempo sigue avanzando, pero las cirugías con cama se cancelan en procesar_evento
-
-    # ======================
-    # UI BÁSICA
-    # ======================
-    label_camas.config(
-        text=f"Camas: {len(camas)}/{TOTAL_CAMAS} | UCI: {len(camas_uci)}/{TOTAL_UCI}"
-    )
-    label_tiempo.config(
-        text=str(current_time) + (" (Pausado)" if not RUNNING else "")
-    )
-
-    # ======================
-    # RESET DIARIO
-    # ======================
-    if last_paused_date is not None and current_time.date() != last_paused_date:
-        day_paused = False
-        last_paused_date = None
-        reprogram_triggered_today = False
-        cancelaciones_dia = 0
-        label_resumen.config(text="")
-
-    # ======================
-    # RIESGO DE SATURACIÓN
-    # ======================
-    if RUNNING and not modo_saturado and not reprogram_triggered_today and riesgo_proyectado():
-        request_reprogramar(full_week=False)
-        reprogram_triggered_today = True
-
-    # ======================
-    # SALIDA DE SATURACIÓN
-    # ======================
-    if modo_saturado and len(camas) < TOTAL_CAMAS * 0.9:
-
-        print(" Camas liberadas → saliendo de modo saturado")
-
-        modo_saturado = False
-
-        #  IMPORTANTE: NO reprogramar aquí inmediatamente
-
-    # ======================
-    # PAUSA DIARIA
-    # ======================
-    if (
-        RUNNING and
-        not day_paused and
-        current_time.hour >= 20 and
-        (last_paused_date is None or current_time.date() != last_paused_date)
-    ):
-        RUNNING = False
-        day_paused = True
-        last_paused_date = current_time.date()
-        reprogram_triggered_today = True
-
-        operaciones_dia = [
-            op for op in operaciones_realizadas
-            if pd.to_datetime(op["Fin operación"]).date() == current_time.date()
-        ]
-
-        resumen = (
-            f"--- Resumen del día {current_time.date()} ---\n"
-            f"Operaciones realizadas: {len(operaciones_dia)}\n"
-            f"Ocupación camas: {len(camas)}/{TOTAL_CAMAS} | "
-            f"UCI: {len(camas_uci)}/{TOTAL_UCI}\n"
-            f"Operaciones pendientes: {len(df[df['inicio_dt'] > current_time])}\n"
-        )
-
-        if cancelaciones_dia > 0:
-            resumen += f"Cancelaciones: {cancelaciones_dia}\n"
-
-        resumen += "Presiona 'Reprogramar semana'."
-
-        label_resumen.config(text=resumen)
-        label_tiempo.config(text=f"{current_time} (Día terminado)")
-
-        guardar_estado_diario(resumen)
-
-    # ======================
-    # FIN DE SEMANA
-    # ======================
-    if (
-        idx_evento >= len(eventos) and
-        current_time >= final_time and
-        not week_finished
-    ):
-        week_finished = True
-        RUNNING = False
-        label_tiempo.config(text=f"{current_time} (Semana terminada)")
-
-    root.after(SPEED, update)
+    camas_uci = nuevos_uci
 
 
 def guardar_estado_diario(resumen_text):
-    global current_time, camas, camas_uci, operaciones_realizadas, cancelaciones_pendientes, modo_saturado, cancelaciones_dia, df
+    global current_time, camas, camas_uci
+    global operaciones_realizadas, cancelaciones_pendientes
+    global modo_saturado, cancelaciones_dia, df
 
     fecha_str = current_time.strftime("%Y-%m-%d")
 
@@ -831,11 +951,14 @@ def guardar_estado_diario(resumen_text):
     # 4. CANCELACIONES
     # =========================
     if cancelaciones_pendientes:
+
         df_cancel = pd.DataFrame(cancelaciones_pendientes)
 
         if "inicio_dt" in df_cancel.columns:
             df_cancel["inicio_dt"] = pd.to_datetime(df_cancel["inicio_dt"])
-            df_cancel_dia = df_cancel[df_cancel["inicio_dt"].dt.date == current_time.date()]
+            df_cancel_dia = df_cancel[
+                df_cancel["inicio_dt"].dt.date == current_time.date()
+            ]
         else:
             df_cancel_dia = df_cancel
 
@@ -846,7 +969,7 @@ def guardar_estado_diario(resumen_text):
             )
 
         # =========================
-        # 6. CIRUGÍAS CANCELADAS (DETALLADO)
+        # DETALLE CANCELACIONES
         # =========================
         columnas_utiles = [
             "Correlativo",
@@ -857,12 +980,17 @@ def guardar_estado_diario(resumen_text):
             "inicio_dt"
         ]
 
-        columnas_existentes = [c for c in columnas_utiles if c in df_cancel.columns]
+        columnas_existentes = [
+            c for c in columnas_utiles if c in df_cancel.columns
+        ]
+
         df_cancel_detalle = df_cancel[columnas_existentes].copy()
 
         if "inicio_dt" in df_cancel_detalle.columns:
             df_cancel_detalle["inicio_dt"] = pd.to_datetime(df_cancel_detalle["inicio_dt"])
-            df_cancel_detalle = df_cancel_detalle[df_cancel_detalle["inicio_dt"].dt.date == current_time.date()]
+            df_cancel_detalle = df_cancel_detalle[
+                df_cancel_detalle["inicio_dt"].dt.date == current_time.date()
+            ]
 
         if not df_cancel_detalle.empty:
             df_cancel_detalle.to_csv(
@@ -871,7 +999,7 @@ def guardar_estado_diario(resumen_text):
             )
 
     # =========================
-    # 5. OPERACIONES PENDIENTES
+    # 5. PENDIENTES
     # =========================
     if not pendientes.empty:
         pendientes.to_csv(
@@ -879,7 +1007,151 @@ def guardar_estado_diario(resumen_text):
             index=False
         )
 
-    print(f" Estado diario guardado para {fecha_str}")
+    print(f"Estado diario guardado para {fecha_str}")
+
+def update():
+    global current_time, idx_evento
+    global RUNNING, week_finished, day_paused
+    global last_paused_date, reprogram_triggered_today
+    global cancelaciones_dia, modo_saturado
+
+    # ======================
+    # AVANCE DE TIEMPO
+    # ======================
+    if RUNNING:
+        current_time += timedelta(minutes=5)
+
+        # Procesar eventos en orden
+        while (
+            idx_evento < len(eventos) and
+            eventos[idx_evento]["tiempo"] <= current_time
+        ):
+            procesar_evento(eventos[idx_evento])
+            idx_evento += 1
+
+        #  usar SOLO liberar_camas (no duplicar lógica)
+        liberar_camas(current_time)
+
+        # Transferencias UCI → normal
+        transferir_uci_a_normal()
+
+    # ======================
+    # SATURACIÓN REAL 
+    # ======================
+    if RUNNING and len(camas) >= TOTAL_CAMAS:
+
+        if not modo_saturado:
+            print("CAMAS LLENAS → entrando en modo saturado")
+
+            modo_saturado = True
+
+            label_resumen.config(
+                text=(
+                    "Saturación total de camas\n"
+                    "Se cancelarán cirugías con hospitalización\n"
+                    "Esperando altas..."
+                )
+            )
+
+    # ======================
+    # SALIDA DE SATURACIÓN
+    # ======================
+    if modo_saturado and len(camas) < TOTAL_CAMAS:
+        print("Camas liberadas → saliendo de modo saturado")
+        modo_saturado = False
+
+    # ======================
+    # UI
+    # ======================
+    label_camas.config(
+        text=f"Camas: {len(camas)}/{TOTAL_CAMAS} | UCI: {len(camas_uci)}/{TOTAL_UCI}"
+    )
+
+    label_tiempo.config(
+        text=str(current_time) + (" (Pausado)" if not RUNNING else "")
+    )
+
+    # ======================
+    # RESET DIARIO
+    # ======================
+    if last_paused_date is not None and current_time.date() != last_paused_date:
+        day_paused = False
+        last_paused_date = None
+        reprogram_triggered_today = False
+        cancelaciones_dia = 0
+        label_resumen.config(text="")
+
+    # ======================
+    # PAUSA DIARIA (20:00)
+    # ======================
+    if (
+        RUNNING
+        and not day_paused
+        and current_time.hour >= 20
+        and (last_paused_date is None or current_time.date() != last_paused_date)
+    ):
+        RUNNING = False
+        day_paused = True
+        last_paused_date = current_time.date()
+
+        # ======================
+        # RESUMEN DEL DÍA
+        # ======================
+        operaciones_dia = [
+            op for op in operaciones_realizadas
+            if pd.to_datetime(op["Fin operación"]).date() == current_time.date()
+        ]
+
+        pendientes = df[df["inicio_dt"] > current_time]
+
+        camas_disponibles = TOTAL_CAMAS - len(camas)
+
+        resumen = (
+            f"--- Resumen del día {current_time.date()} ---\n"
+            f"Operaciones realizadas: {len(operaciones_dia)}\n"
+            f"Ocupación camas: {len(camas)}/{TOTAL_CAMAS} | "
+            f"UCI: {len(camas_uci)}/{TOTAL_UCI}\n"
+            f"Operaciones pendientes: {len(pendientes)}\n"
+        )
+
+        if cancelaciones_dia > 0:
+            resumen += f"Cancelaciones: {cancelaciones_dia}\n"
+
+        #  sugerencia 
+        if camas_disponibles < 10:
+            resumen += (
+                "\n Baja disponibilidad de camas\n"
+                "Evaluar reprogramación manual\n"
+                "Presiona 'Reprogramar semana' si lo deseas."
+            )
+        else:
+            resumen += "\nPresiona 'Reanudar' para continuar."
+
+        label_resumen.config(text=resumen)
+        label_tiempo.config(text=f"{current_time} (Día terminado)")
+
+        guardar_estado_diario(resumen)
+        exportar_estado()
+
+    # ======================
+    # FIN DE SEMANA
+    # ======================
+    if (
+        idx_evento >= len(eventos)
+        and current_time >= final_time
+        and not week_finished
+    ):
+        week_finished = True
+        RUNNING = False
+
+        label_tiempo.config(
+            text=f"{current_time} (Semana terminada)"
+        )
+
+    # ======================
+    # LOOP
+    # ======================
+    root.after(SPEED, update)
 
 # =========================
 # START
