@@ -1,0 +1,1258 @@
+﻿Correlativo,ID paciente,Fecha,OR Suite,Servicio,Código CPT,Descripción,Duración agendada (min),Prioridad de paciente,duracion_efectiva_intervencion,dias_permanencia_programados,dias_permanencia_efectivos
+273,10274,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,5,76,1,5
+274,10275,,1,Podiatry,28289,Hallux rigidus correction with cheilectomy,60,4,51,2,4
+275,10276,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,5,84,1,5
+276,10277,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,5,86,1,5
+277,10278,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,51,1,7
+278,10279,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,3,40,1,2
+279,10280,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,4,36,1,2
+280,10281,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,1,40,1,5
+281,10282,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,21,0,0
+282,10283,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,23,0,0
+283,10284,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,29,0,0
+284,10285,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,40,0,0
+285,10286,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,20,0,0
+286,10287,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,49,0,0
+287,10288,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,21,0,0
+288,10289,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,32,0,0
+289,10290,,4,OBGYN,58562,"Hysterectomy, surgical",120,1,69,1,4
+290,10291,,4,OBGYN,57460,Cervical biopsy,75,3,38,1,3
+291,10292,,4,OBGYN,58562,"Hysterectomy, surgical",120,4,84,1,3
+292,10293,,4,OBGYN,57460,Cervical biopsy,75,2,32,1,3
+293,10294,,5,ENT,42826,Tonsillectomy,60,5,52,1,2
+294,10295,,5,ENT,30520,Septoplasty,90,2,63,0,0
+295,10296,,5,ENT,30520,Septoplasty,90,3,53,0,0
+296,10297,,5,ENT,42826,Tonsillectomy,60,2,65,1,1
+297,10298,,5,ENT,42826,Tonsillectomy,60,3,43,1,1
+298,10299,,6,Plastic,17110,Removal of benign skin lesion,60,1,34,1,6
+299,10300,,6,Plastic,17110,Removal of benign skin lesion,60,2,41,1,4
+300,10301,,6,Plastic,17110,Removal of benign skin lesion,60,3,37,1,2
+301,10302,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,2,76,1,2
+302,10303,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,36,1,6
+303,10304,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,2,34,1,5
+304,10305,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,36,1,2
+305,10306,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,4,32,1,6
+306,10307,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,2,35,1,2
+307,10308,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,93,1,4
+308,10309,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,107,1,5
+309,10310,,8,Orthopedics,27130,"Arthroplasty, hip",120,3,86,2,3
+310,10311,,1,Podiatry,28060,Plantar fasciotomy,60,1,38,2,2
+311,10312,,1,Podiatry,28060,Plantar fasciotomy,60,5,50,2,5
+312,10313,,1,Podiatry,28285,"Correction, hammertoe",60,5,43,1,7
+313,10314,,1,Podiatry,28285,"Correction, hammertoe",60,3,55,1,2
+314,10315,,2,Orthopedics,64721,"Carpal tunnel release, open",60,4,62,2,5
+315,10316,,2,Orthopedics,64721,"Carpal tunnel release, open",60,5,38,2,3
+316,10317,,2,Orthopedics,26045,"Fasciotomy, palmar, open",90,5,55,2,5
+317,10318,,2,Orthopedics,26735,"ORIF, phalangeal shaft fracture",120,5,97,1,5
+318,10319,,2,Orthopedics,26356,Flexor tendon repair,90,3,62,1,2
+319,10320,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,39,1,4
+320,10321,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,38,1,7
+321,10322,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,58,1,1
+322,10323,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,4,41,1,6
+323,10324,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,2,45,1,6
+324,10325,,4,Urology,55250,Vasectomy,60,4,35,1,3
+325,10326,,4,Urology,55873,Cryosurgery of the prostate gland,90,4,68,2,3
+326,10327,,4,Urology,52353,Cystourethroscopy,60,1,29,1,5
+327,10328,,4,Urology,55250,Vasectomy,60,3,43,1,3
+328,10329,,4,Urology,52353,Cystourethroscopy,60,5,36,1,1
+329,10330,,5,ENT,42826,Tonsillectomy,60,2,33,1,1
+330,10331,,5,ENT,42826,Tonsillectomy,60,1,34,1,1
+331,10332,,5,ENT,42826,Tonsillectomy,60,4,30,1,2
+332,10333,,5,ENT,42826,Tonsillectomy,60,3,33,1,1
+333,10334,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,5,73,1,3
+334,10335,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,2,77,1,4
+335,10336,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,5,86,1,3
+336,10337,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,5,32,1,5
+337,10338,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,4,34,1,4
+338,10339,,7,Vascular,36901,AV fistula,75,5,55,1,2
+339,10340,,7,Vascular,36901,AV fistula,75,2,64,1,4
+340,10341,,8,General,43775,Sleeve gastrectomy,120,2,97,1,3
+341,10342,,8,General,43775,Sleeve gastrectomy,120,3,97,1,3
+342,10343,,8,General,47562,Laparoscopic cholecystectomy,90,4,52,2,5
+343,10344,,1,Podiatry,28110,"Partial ostectomy, fifth metatarsal head",90,4,83,1,2
+344,10345,,1,Podiatry,28055,"Neurectomy, intrinsic musculature of foot",60,5,57,3,4
+345,10346,,1,Podiatry,28297,Lapidus bunionectomy,150,3,23,1,3
+346,10347,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,2,82,1,3
+347,10348,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,100,1,6
+348,10349,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,5,109,1,6
+349,10350,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,19,0,0
+350,10351,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,37,0,0
+351,10352,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,18,0,0
+352,10353,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,18,0,0
+353,10354,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,20,0,0
+354,10355,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,21,0,0
+355,10356,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,30,0,0
+356,10357,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,18,0,0
+357,10358,,4,OBGYN,58562,"Hysterectomy, surgical",120,1,72,1,4
+358,10359,,4,OBGYN,57460,Cervical biopsy,75,1,39,1,3
+359,10360,,4,OBGYN,58562,"Hysterectomy, surgical",120,3,114,1,5
+360,10361,,4,OBGYN,57460,Cervical biopsy,75,4,42,1,3
+361,10362,,5,Urology,55250,Vasectomy,60,3,31,1,6
+362,10363,,5,Urology,55873,Cryosurgery of the prostate gland,90,3,56,2,2
+363,10364,,5,Urology,52353,Cystourethroscopy,60,2,60,1,1
+364,10365,,5,Urology,55250,Vasectomy,60,4,33,1,2
+365,10366,,5,Urology,52353,Cystourethroscopy,60,4,33,1,7
+366,10367,,6,Plastic,15773,Liposuction,180,1,154,2,5
+367,10368,,6,Plastic,15773,Liposuction,180,2,128,2,3
+368,10369,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,3,36,1,7
+369,10370,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,4,33,1,5
+370,10371,,7,Vascular,36901,AV fistula,75,1,59,1,5
+371,10372,,7,Vascular,36901,AV fistula,75,4,65,1,3
+372,10373,,7,Vascular,36901,AV fistula,75,1,59,1,5
+373,10374,,8,General,43775,Sleeve gastrectomy,120,1,104,1,5
+374,10375,,8,General,43775,Sleeve gastrectomy,120,3,94,1,2
+375,10376,,8,General,47562,Laparoscopic cholecystectomy,90,5,50,2,4
+376,10377,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,1,79,1,4
+377,10378,,1,Podiatry,28289,Hallux rigidus correction with cheilectomy,60,5,44,2,4
+378,10379,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,5,103,1,4
+379,10380,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,5,78,1,5
+380,10381,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,3,35,1,1
+381,10382,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,5,46,1,5
+382,10383,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,5,37,1,5
+383,10384,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,47,1,2
+384,10385,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,39,1,5
+385,10386,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,20,0,0
+386,10387,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,38,0,0
+387,10388,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,19,0,0
+388,10389,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,22,0,0
+389,10390,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,20,0,0
+390,10391,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,20,0,0
+391,10392,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,28,0,0
+392,10393,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,29,0,0
+393,10394,,4,OBGYN,58562,"Hysterectomy, surgical",120,2,83,1,4
+394,10395,,4,OBGYN,57460,Cervical biopsy,75,1,41,1,2
+395,10396,,4,OBGYN,58562,"Hysterectomy, surgical",120,3,74,1,1
+396,10397,,4,OBGYN,57460,Cervical biopsy,75,1,45,1,3
+397,10398,,5,ENT,42826,Tonsillectomy,60,1,39,1,1
+398,10399,,5,ENT,30520,Septoplasty,90,4,66,0,0
+399,10400,,5,ENT,30520,Septoplasty,90,1,55,0,0
+400,10401,,5,ENT,42826,Tonsillectomy,60,5,42,1,1
+401,10402,,5,ENT,42826,Tonsillectomy,60,3,28,1,2
+402,10403,,6,Plastic,17110,Removal of benign skin lesion,60,3,39,1,1
+403,10404,,6,Plastic,17110,Removal of benign skin lesion,60,1,33,1,2
+404,10405,,6,Plastic,17110,Removal of benign skin lesion,60,1,43,1,4
+405,10406,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,5,95,1,2
+406,10407,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,46,1,4
+407,10408,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,33,1,5
+408,10409,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,2,34,1,6
+409,10410,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,4,36,1,4
+410,10411,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,1,32,1,1
+411,10412,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,5,101,1,3
+412,10413,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,101,1,6
+413,10414,,8,Orthopedics,27130,"Arthroplasty, hip",120,1,91,2,3
+414,10415,,1,Podiatry,28060,Plantar fasciotomy,60,5,66,2,2
+415,10416,,1,Podiatry,28060,Plantar fasciotomy,60,3,59,2,3
+416,10417,,1,Podiatry,28285,"Correction, hammertoe",60,5,47,1,7
+417,10418,,1,Podiatry,28285,"Correction, hammertoe",60,5,55,1,2
+418,10419,,2,Orthopedics,64721,"Carpal tunnel release, open",60,1,38,2,4
+419,10420,,2,Orthopedics,64721,"Carpal tunnel release, open",60,1,40,2,7
+420,10421,,2,Orthopedics,26045,"Fasciotomy, palmar, open",90,2,56,2,5
+421,10422,,2,Orthopedics,26735,"ORIF, phalangeal shaft fracture",120,3,102,1,1
+422,10423,,2,Orthopedics,26356,Flexor tendon repair,90,4,48,1,6
+423,10424,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,37,1,5
+424,10425,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,1,33,1,3
+425,10426,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,2,31,1,4
+426,10427,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,2,38,1,1
+427,10428,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,3,46,1,3
+428,10429,,4,Urology,55250,Vasectomy,60,1,27,1,3
+429,10430,,4,Urology,55873,Cryosurgery of the prostate gland,90,4,68,2,5
+430,10431,,4,Urology,52353,Cystourethroscopy,60,1,26,1,4
+431,10432,,4,Urology,55250,Vasectomy,60,3,29,1,2
+432,10433,,5,ENT,42826,Tonsillectomy,60,5,30,1,1
+433,10434,,5,ENT,42826,Tonsillectomy,60,4,29,1,1
+434,10435,,5,ENT,42826,Tonsillectomy,60,2,32,1,1
+435,10436,,5,ENT,42826,Tonsillectomy,60,2,34,1,1
+436,10437,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,5,89,1,1
+437,10438,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,5,91,1,4
+438,10439,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,3,86,1,5
+439,10440,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,1,34,1,2
+440,10441,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,1,31,1,5
+441,10442,,7,Vascular,36901,AV fistula,75,4,87,1,2
+442,10443,,7,Vascular,36901,AV fistula,75,1,57,1,3
+443,10444,,8,General,43775,Sleeve gastrectomy,120,5,94,1,4
+444,10445,,8,General,43775,Sleeve gastrectomy,120,4,88,1,1
+445,10446,,8,General,47562,Laparoscopic cholecystectomy,90,2,53,2,4
+446,10447,,1,Podiatry,28110,"Partial ostectomy, fifth metatarsal head",90,3,102,1,5
+447,10448,,1,Podiatry,28055,"Neurectomy, intrinsic musculature of foot",60,3,49,3,5
+448,10449,,1,Podiatry,28297,Lapidus bunionectomy,150,2,22,1,4
+449,10450,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,1,87,1,2
+450,10451,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,96,1,5
+451,10452,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,5,111,1,5
+452,10453,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,22,0,0
+453,10454,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,21,0,0
+454,10455,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,28,0,0
+455,10456,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,19,0,0
+456,10457,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,27,0,0
+457,10458,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,19,0,0
+458,10459,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,21,0,0
+459,10460,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,21,0,0
+460,10461,,4,OBGYN,58562,"Hysterectomy, surgical",120,5,86,1,6
+461,10462,,4,OBGYN,57460,Cervical biopsy,75,3,36,1,3
+462,10463,,4,OBGYN,58562,"Hysterectomy, surgical",120,5,88,1,3
+463,10464,,4,OBGYN,57460,Cervical biopsy,75,5,33,1,5
+464,10465,,5,Urology,55250,Vasectomy,60,2,49,1,1
+465,10466,,5,Urology,55873,Cryosurgery of the prostate gland,90,2,65,2,5
+466,10467,,5,Urology,52353,Cystourethroscopy,60,3,32,1,6
+467,10468,,5,Urology,55250,Vasectomy,60,5,31,1,1
+468,10469,,5,Urology,52353,Cystourethroscopy,60,2,43,1,1
+469,10470,,6,Plastic,15773,Liposuction,180,2,132,2,2
+470,10471,,6,Plastic,15773,Liposuction,180,2,109,2,5
+471,10472,,6,Plastic,30400,Rhinoplasty,120,2,79,3,5
+472,10473,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,5,56,1,5
+473,10474,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,2,66,1,7
+474,10475,,7,Vascular,36901,AV fistula,75,1,54,1,4
+475,10476,,7,Vascular,36901,AV fistula,75,1,70,1,1
+476,10477,,7,Vascular,36901,AV fistula,75,3,93,1,4
+477,10478,,8,General,43775,Sleeve gastrectomy,120,3,108,1,3
+478,10479,,8,General,43775,Sleeve gastrectomy,120,2,81,1,3
+479,10480,,8,General,47562,Laparoscopic cholecystectomy,90,3,56,2,5
+480,10481,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,2,88,1,3
+481,10482,,1,Podiatry,28289,Hallux rigidus correction with cheilectomy,60,4,61,2,3
+482,10483,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,2,79,1,7
+483,10484,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,5,84,1,5
+484,10485,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,4,41,1,5
+485,10486,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,4,36,1,4
+486,10487,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,4,34,1,5
+487,10488,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,47,1,6
+488,10489,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,19,0,0
+489,10490,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,19,0,0
+490,10491,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,28,0,0
+491,10492,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,31,0,0
+492,10493,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,44,0,0
+493,10494,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,20,0,0
+494,10495,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,18,0,0
+495,10496,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,34,0,0
+496,10497,,4,OBGYN,58562,"Hysterectomy, surgical",120,5,90,1,3
+497,10498,,4,OBGYN,57460,Cervical biopsy,75,5,51,1,6
+498,10499,,4,OBGYN,58562,"Hysterectomy, surgical",120,3,87,1,3
+499,10500,,4,OBGYN,57460,Cervical biopsy,75,1,42,1,4
+500,10501,,5,ENT,42826,Tonsillectomy,60,3,28,1,2
+501,10502,,5,ENT,30520,Septoplasty,90,2,70,0,0
+502,10503,,5,ENT,30520,Septoplasty,90,2,80,0,0
+503,10504,,5,ENT,42826,Tonsillectomy,60,5,32,1,1
+504,10505,,5,ENT,42826,Tonsillectomy,60,4,34,1,1
+505,10506,,6,Plastic,17110,Removal of benign skin lesion,60,1,39,1,3
+506,10507,,6,Plastic,17110,Removal of benign skin lesion,60,3,50,1,1
+507,10508,,6,Plastic,17110,Removal of benign skin lesion,60,1,36,1,4
+508,10509,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,5,81,1,6
+509,10510,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,35,1,5
+510,10511,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,33,1,5
+511,10512,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,58,1,3
+512,10513,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,3,36,1,5
+513,10514,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,2,39,1,5
+514,10515,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,3,88,1,5
+515,10516,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,1,134,1,4
+516,10517,,8,Orthopedics,27130,"Arthroplasty, hip",120,4,104,2,2
+517,10518,,1,Podiatry,28060,Plantar fasciotomy,60,3,56,2,4
+518,10519,,1,Podiatry,28060,Plantar fasciotomy,60,3,60,2,4
+519,10520,,1,Podiatry,28285,"Correction, hammertoe",60,5,81,1,6
+520,10521,,1,Podiatry,28285,"Correction, hammertoe",60,1,39,1,5
+521,10522,,2,Orthopedics,64721,"Carpal tunnel release, open",60,3,41,2,5
+522,10523,,2,Orthopedics,64721,"Carpal tunnel release, open",60,3,37,2,6
+523,10524,,2,Orthopedics,26045,"Fasciotomy, palmar, open",90,3,70,2,5
+524,10525,,2,Orthopedics,26735,"ORIF, phalangeal shaft fracture",120,2,96,1,3
+525,10526,,2,Orthopedics,26356,Flexor tendon repair,90,4,76,1,3
+526,10527,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,1,31,1,6
+527,10528,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,34,1,3
+528,10529,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,31,1,2
+529,10530,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,5,50,1,1
+530,10531,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,3,31,1,6
+531,10532,,4,Urology,55250,Vasectomy,60,3,43,1,7
+532,10533,,4,Urology,55873,Cryosurgery of the prostate gland,90,1,64,2,3
+533,10534,,4,Urology,52353,Cystourethroscopy,60,1,25,1,1
+534,10535,,4,Urology,55250,Vasectomy,60,2,28,1,2
+535,10536,,4,Urology,52353,Cystourethroscopy,60,5,37,1,3
+536,10537,,5,ENT,42826,Tonsillectomy,60,5,47,1,1
+537,10538,,5,ENT,42826,Tonsillectomy,60,5,34,1,1
+538,10539,,5,ENT,42826,Tonsillectomy,60,3,32,1,1
+539,10540,,5,ENT,42826,Tonsillectomy,60,5,29,1,1
+540,10541,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,1,80,1,3
+541,10542,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,3,83,1,2
+542,10543,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,5,73,1,6
+543,10544,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,5,34,1,7
+544,10545,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,4,36,1,1
+545,10546,,7,Vascular,36901,AV fistula,75,2,55,1,4
+546,10547,,7,Vascular,36901,AV fistula,75,2,50,1,6
+547,10548,,8,General,43775,Sleeve gastrectomy,120,5,108,1,7
+548,10549,,8,General,43775,Sleeve gastrectomy,120,1,95,1,7
+549,10550,,8,General,47562,Laparoscopic cholecystectomy,90,5,51,2,2
+550,10551,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,1,91,1,5
+551,10552,,1,Podiatry,28289,Hallux rigidus correction with cheilectomy,60,3,53,2,6
+552,10553,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,4,75,1,6
+553,10554,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,72,1,4
+554,10555,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,1,50,1,5
+555,10556,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,38,1,2
+556,10557,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,1,53,1,6
+557,10558,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,4,34,1,6
+558,10559,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,47,0,0
+559,10560,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,19,0,0
+560,10561,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,43,0,0
+561,10562,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,43,0,0
+562,10563,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,33,0,0
+563,10564,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,26,0,0
+564,10565,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,41,0,0
+565,10566,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,37,0,0
+566,10567,,4,OBGYN,58562,"Hysterectomy, surgical",120,4,81,1,3
+567,10568,,4,OBGYN,57460,Cervical biopsy,75,4,35,1,1
+568,10569,,4,OBGYN,58562,"Hysterectomy, surgical",120,4,70,1,2
+569,10570,,4,OBGYN,57460,Cervical biopsy,75,3,39,1,1
+570,10571,,5,ENT,42826,Tonsillectomy,60,4,33,1,1
+571,10572,,5,ENT,30520,Septoplasty,90,1,62,0,0
+572,10573,,5,ENT,30520,Septoplasty,90,1,70,0,0
+573,10574,,5,ENT,42826,Tonsillectomy,60,2,50,1,1
+574,10575,,5,ENT,42826,Tonsillectomy,60,4,39,1,1
+575,10576,,6,Plastic,17110,Removal of benign skin lesion,60,1,34,1,4
+576,10577,,6,Plastic,17110,Removal of benign skin lesion,60,3,70,1,4
+577,10578,,6,Plastic,17110,Removal of benign skin lesion,60,3,39,1,2
+578,10579,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,3,71,1,7
+579,10580,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,2,49,1,4
+580,10581,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,51,1,1
+581,10582,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,52,1,5
+582,10583,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,1,33,1,6
+583,10584,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,4,44,1,5
+584,10585,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,107,1,6
+585,10586,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,80,1,5
+586,10587,,8,Orthopedics,27130,"Arthroplasty, hip",120,2,97,2,3
+587,10588,,1,Podiatry,28060,Plantar fasciotomy,60,2,48,2,3
+588,10589,,1,Podiatry,28060,Plantar fasciotomy,60,1,43,2,5
+589,10590,,1,Podiatry,28285,"Correction, hammertoe",60,3,47,1,6
+590,10591,,1,Podiatry,28285,"Correction, hammertoe",60,1,47,1,1
+591,10592,,2,Orthopedics,64721,"Carpal tunnel release, open",60,3,67,2,6
+592,10593,,2,Orthopedics,64721,"Carpal tunnel release, open",60,1,44,2,5
+593,10594,,2,Orthopedics,26045,"Fasciotomy, palmar, open",90,3,55,2,3
+594,10595,,2,Orthopedics,26735,"ORIF, phalangeal shaft fracture",120,3,103,1,1
+595,10596,,2,Orthopedics,26356,Flexor tendon repair,90,2,55,1,5
+596,10597,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,2,47,1,5
+597,10598,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,47,1,5
+598,10599,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,51,1,4
+599,10600,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,3,47,1,2
+600,10601,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,2,45,1,3
+601,10602,,4,Urology,55250,Vasectomy,60,5,28,1,2
+602,10603,,4,Urology,55873,Cryosurgery of the prostate gland,90,2,75,2,3
+603,10604,,4,Urology,52353,Cystourethroscopy,60,4,37,1,7
+604,10605,,4,Urology,55250,Vasectomy,60,3,39,1,6
+605,10606,,4,Urology,52353,Cystourethroscopy,60,1,30,1,7
+606,10607,,5,ENT,42826,Tonsillectomy,60,2,49,1,1
+607,10608,,5,ENT,42826,Tonsillectomy,60,4,38,1,1
+608,10609,,5,ENT,42826,Tonsillectomy,60,2,42,1,1
+609,10610,,5,ENT,42826,Tonsillectomy,60,2,41,1,1
+610,10611,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,2,85,1,5
+611,10612,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,3,86,1,6
+612,10613,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,5,72,1,5
+613,10614,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,3,36,1,1
+614,10615,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,3,36,1,1
+615,10616,,7,Vascular,36901,AV fistula,75,3,56,1,4
+616,10617,,7,Vascular,36901,AV fistula,75,4,50,1,5
+617,10618,,8,General,43775,Sleeve gastrectomy,120,4,98,1,2
+618,10619,,8,General,43775,Sleeve gastrectomy,120,5,89,1,7
+619,10620,,8,General,47562,Laparoscopic cholecystectomy,90,4,47,2,5
+620,10621,,1,Podiatry,28110,"Partial ostectomy, fifth metatarsal head",90,2,105,1,5
+621,10622,,1,Podiatry,28055,"Neurectomy, intrinsic musculature of foot",60,1,38,3,4
+622,10623,,1,Podiatry,28297,Lapidus bunionectomy,150,3,43,1,5
+623,10624,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,3,98,1,5
+624,10625,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,87,1,1
+625,10626,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,5,102,1,1
+626,10627,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,23,0,0
+627,10628,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,19,0,0
+628,10629,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,19,0,0
+629,10630,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,19,0,0
+630,10631,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,21,0,0
+631,10632,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,48,0,0
+632,10633,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,51,0,0
+633,10634,,4,OBGYN,58562,"Hysterectomy, surgical",120,4,78,1,3
+634,10635,,4,OBGYN,57460,Cervical biopsy,75,4,36,1,1
+635,10636,,4,OBGYN,58562,"Hysterectomy, surgical",120,3,74,1,3
+636,10637,,4,OBGYN,57460,Cervical biopsy,75,2,41,1,7
+637,10638,,5,Urology,55250,Vasectomy,60,2,33,1,3
+638,10639,,5,Urology,55873,Cryosurgery of the prostate gland,90,5,59,2,2
+639,10640,,5,Urology,52353,Cystourethroscopy,60,2,37,1,4
+640,10641,,5,Urology,55250,Vasectomy,60,5,44,1,2
+641,10642,,5,Urology,52353,Cystourethroscopy,60,4,38,1,5
+642,10643,,6,Plastic,15773,Liposuction,180,2,127,2,5
+643,10644,,6,Plastic,15773,Liposuction,180,3,125,2,5
+644,10645,,6,Plastic,30400,Rhinoplasty,120,1,92,3,5
+645,10646,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,3,48,1,5
+646,10647,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,4,44,1,1
+647,10648,,7,Vascular,36901,AV fistula,75,5,82,1,3
+648,10649,,7,Vascular,36901,AV fistula,75,5,62,1,3
+649,10650,,7,Vascular,36901,AV fistula,75,3,64,1,5
+650,10651,,8,General,43775,Sleeve gastrectomy,120,5,85,1,2
+651,10652,,8,General,43775,Sleeve gastrectomy,120,5,99,1,1
+652,10653,,8,General,47562,Laparoscopic cholecystectomy,90,4,49,2,2
+653,10654,,1,Podiatry,28060,Plantar fasciotomy,60,5,59,2,3
+654,10655,,1,Podiatry,28060,Plantar fasciotomy,60,1,71,2,6
+655,10656,,1,Podiatry,28285,"Correction, hammertoe",60,1,36,1,5
+656,10657,,1,Podiatry,28285,"Correction, hammertoe",60,1,40,1,3
+657,10658,,2,Orthopedics,64721,"Carpal tunnel release, open",60,2,57,2,7
+658,10659,,2,Orthopedics,64721,"Carpal tunnel release, open",60,5,43,2,2
+659,10660,,2,Orthopedics,26045,"Fasciotomy, palmar, open",90,2,54,2,2
+660,10661,,2,Orthopedics,26735,"ORIF, phalangeal shaft fracture",120,5,106,1,2
+661,10662,,2,Orthopedics,26356,Flexor tendon repair,90,2,58,1,4
+662,10663,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,53,1,5
+663,10664,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,1,44,1,1
+664,10665,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,30,1,2
+665,10666,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,5,40,1,2
+666,10667,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,3,33,1,2
+667,10668,,4,Urology,55250,Vasectomy,60,1,42,1,3
+668,10669,,4,Urology,55873,Cryosurgery of the prostate gland,90,2,73,2,4
+669,10670,,4,Urology,52353,Cystourethroscopy,60,3,31,1,6
+670,10671,,4,Urology,55250,Vasectomy,60,5,31,1,3
+671,10672,,4,Urology,52353,Cystourethroscopy,60,5,29,1,6
+672,10673,,5,ENT,42826,Tonsillectomy,60,4,42,1,1
+673,10674,,5,ENT,42826,Tonsillectomy,60,3,28,1,1
+674,10675,,5,ENT,42826,Tonsillectomy,60,3,33,1,1
+675,10676,,5,ENT,42826,Tonsillectomy,60,3,28,1,1
+676,10677,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,4,93,1,1
+677,10678,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,3,91,1,4
+678,10679,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,5,77,1,7
+679,10680,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,4,33,1,5
+680,10681,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,5,61,1,1
+681,10682,,7,Vascular,36901,AV fistula,75,4,51,1,2
+682,10683,,7,Vascular,36901,AV fistula,75,3,79,1,5
+683,10684,,8,General,43775,Sleeve gastrectomy,120,2,110,1,6
+684,10685,,8,General,43775,Sleeve gastrectomy,120,5,97,1,2
+685,10686,,8,General,47562,Laparoscopic cholecystectomy,90,4,54,2,5
+1005,11006,,1,Podiatry,28110,"Partial ostectomy, fifth metatarsal head",90,3,86,1,5
+1006,11007,,1,Podiatry,28055,"Neurectomy, intrinsic musculature of foot",60,1,41,3,3
+1007,11008,,1,Podiatry,28297,Lapidus bunionectomy,150,4,25,1,2
+1008,11009,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,1,71,1,5
+1009,11010,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,4,89,1,7
+1010,11011,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,4,122,1,5
+1011,11012,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,33,0,0
+1012,11013,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,22,0,0
+1013,11014,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,25,0,0
+1014,11015,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,19,0,0
+1015,11016,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,28,0,0
+1016,11017,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,19,0,0
+1017,11018,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,19,0,0
+1018,11019,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,21,0,0
+1019,11020,,4,OBGYN,58562,"Hysterectomy, surgical",120,5,81,1,1
+1020,11021,,4,OBGYN,57460,Cervical biopsy,75,5,70,1,7
+1021,11022,,4,OBGYN,58562,"Hysterectomy, surgical",120,2,74,1,3
+1022,11023,,4,OBGYN,57460,Cervical biopsy,75,2,40,1,4
+1023,11024,,5,Urology,55250,Vasectomy,60,5,29,1,6
+1024,11025,,5,Urology,55873,Cryosurgery of the prostate gland,90,3,53,2,5
+1025,11026,,5,Urology,52353,Cystourethroscopy,60,5,33,1,5
+1026,11027,,5,Urology,55250,Vasectomy,60,5,33,1,1
+1027,11028,,5,Urology,52353,Cystourethroscopy,60,4,64,1,4
+1028,11029,,6,Plastic,15773,Liposuction,180,5,122,2,4
+1029,11030,,6,Plastic,15773,Liposuction,180,1,149,2,2
+1030,11031,,6,Plastic,30400,Rhinoplasty,120,2,75,3,4
+1031,11032,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,1,59,1,5
+1032,11033,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,4,65,1,1
+1033,11034,,7,Vascular,36901,AV fistula,75,1,63,1,1
+1034,11035,,7,Vascular,36901,AV fistula,75,5,50,1,5
+1035,11036,,7,Vascular,36901,AV fistula,75,4,62,1,5
+1036,11037,,8,General,43775,Sleeve gastrectomy,120,1,89,1,5
+1037,11038,,8,General,43775,Sleeve gastrectomy,120,1,111,1,1
+1038,11039,,8,General,47562,Laparoscopic cholecystectomy,90,3,79,2,5
+1039,11040,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,5,81,1,1
+1040,11041,,1,Podiatry,28289,Hallux rigidus correction with cheilectomy,60,4,43,2,5
+1041,11042,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,3,84,1,1
+1042,11043,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,4,106,1,5
+1043,11044,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,1,37,1,5
+1044,11045,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,46,1,5
+1045,11046,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,37,1,5
+1046,11047,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,5,44,1,5
+1047,11048,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,1,48,1,7
+1048,11049,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,21,0,0
+1049,11050,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,25,0,0
+1050,11051,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,27,0,0
+1051,11052,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,21,0,0
+1052,11053,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,21,0,0
+1053,11054,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,34,0,0
+1054,11055,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,18,0,0
+1055,11056,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,34,0,0
+1056,11057,,4,OBGYN,58562,"Hysterectomy, surgical",120,2,81,1,6
+1057,11058,,4,OBGYN,57460,Cervical biopsy,75,1,33,1,2
+1058,11059,,4,OBGYN,58562,"Hysterectomy, surgical",120,1,76,1,6
+1059,11060,,4,OBGYN,57460,Cervical biopsy,75,1,34,1,3
+1060,11061,,5,ENT,42826,Tonsillectomy,60,4,30,1,1
+1061,11062,,5,ENT,30520,Septoplasty,90,1,68,0,0
+1062,11063,,5,ENT,30520,Septoplasty,90,4,73,0,0
+1063,11064,,5,ENT,42826,Tonsillectomy,60,4,64,1,1
+1064,11065,,5,ENT,42826,Tonsillectomy,60,5,33,1,1
+1065,11066,,6,Plastic,17110,Removal of benign skin lesion,60,2,68,1,1
+1066,11067,,6,Plastic,17110,Removal of benign skin lesion,60,2,34,1,6
+1067,11068,,6,Plastic,17110,Removal of benign skin lesion,60,1,42,1,4
+1068,11069,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,1,75,1,1
+1069,11070,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,37,1,6
+1070,11071,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,48,1,5
+1071,11072,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,2,32,1,4
+1072,11073,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,5,37,1,1
+1073,11074,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,2,35,1,6
+1074,11075,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,5,92,1,3
+1075,11076,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,4,105,1,4
+1076,11077,,8,Orthopedics,27130,"Arthroplasty, hip",120,5,99,2,2
+1077,11078,,1,Podiatry,28060,Plantar fasciotomy,60,3,43,2,2
+1078,11079,,1,Podiatry,28060,Plantar fasciotomy,60,4,46,2,3
+1079,11080,,1,Podiatry,28285,"Correction, hammertoe",60,3,47,1,6
+1080,11081,,1,Podiatry,28285,"Correction, hammertoe",60,1,42,1,6
+1081,11082,,2,Orthopedics,64721,"Carpal tunnel release, open",60,4,35,2,5
+1082,11083,,2,Orthopedics,64721,"Carpal tunnel release, open",60,2,70,2,5
+1083,11084,,2,Orthopedics,26045,"Fasciotomy, palmar, open",90,1,51,2,5
+1084,11085,,2,Orthopedics,26735,"ORIF, phalangeal shaft fracture",120,3,100,1,3
+1085,11086,,2,Orthopedics,26356,Flexor tendon repair,90,1,50,1,1
+1086,11087,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,32,1,4
+1087,11088,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,39,1,5
+1088,11089,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,2,30,1,4
+1089,11090,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,5,40,1,6
+1090,11091,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,4,31,1,4
+1091,11092,,4,Urology,55250,Vasectomy,60,1,29,1,7
+1092,11093,,4,Urology,55873,Cryosurgery of the prostate gland,90,4,74,2,4
+1093,11094,,4,Urology,52353,Cystourethroscopy,60,1,29,1,4
+1094,11095,,4,Urology,55250,Vasectomy,60,5,37,1,2
+1095,11096,,4,Urology,52353,Cystourethroscopy,60,3,34,1,3
+1096,11097,,5,ENT,42826,Tonsillectomy,60,2,31,1,2
+1097,11098,,5,ENT,42826,Tonsillectomy,60,4,44,1,1
+1098,11099,,5,ENT,42826,Tonsillectomy,60,2,35,1,1
+1099,11100,,5,ENT,42826,Tonsillectomy,60,5,60,1,1
+1100,11101,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,4,72,1,3
+1101,11102,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,4,69,1,5
+1102,11103,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,4,82,1,6
+1103,11104,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,2,32,1,3
+1104,11105,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,4,33,1,3
+1105,11106,,7,Vascular,36901,AV fistula,75,3,52,1,2
+1106,11107,,7,Vascular,36901,AV fistula,75,1,62,1,6
+1107,11108,,8,General,43775,Sleeve gastrectomy,120,4,117,1,7
+1108,11109,,8,General,43775,Sleeve gastrectomy,120,5,97,1,5
+1109,11110,,8,General,47562,Laparoscopic cholecystectomy,90,5,82,2,4
+1110,11111,,1,Podiatry,28060,Plantar fasciotomy,60,5,46,2,5
+1111,11112,,1,Podiatry,28060,Plantar fasciotomy,60,5,45,2,3
+1112,11113,,1,Podiatry,28285,"Correction, hammertoe",60,2,41,1,6
+1113,11114,,1,Podiatry,28285,"Correction, hammertoe",60,4,71,1,2
+1114,11115,,2,Orthopedics,64721,"Carpal tunnel release, open",60,5,70,2,7
+1115,11116,,2,Orthopedics,64721,"Carpal tunnel release, open",60,3,35,2,5
+1116,11117,,2,Orthopedics,26045,"Fasciotomy, palmar, open",90,4,56,2,4
+1117,11118,,2,Orthopedics,26735,"ORIF, phalangeal shaft fracture",120,5,89,1,1
+1118,11119,,2,Orthopedics,26356,Flexor tendon repair,90,5,48,1,5
+1119,11120,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,36,1,6
+1120,11121,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,62,1,5
+1121,11122,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,40,1,5
+1122,11123,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,2,31,1,6
+1123,11124,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,1,63,1,4
+1124,11125,,4,Urology,55250,Vasectomy,60,5,37,1,2
+1125,11126,,4,Urology,55873,Cryosurgery of the prostate gland,90,1,66,2,5
+1126,11127,,4,Urology,52353,Cystourethroscopy,60,5,29,1,4
+1127,11128,,4,Urology,55250,Vasectomy,60,4,61,1,2
+1128,11129,,4,Urology,52353,Cystourethroscopy,60,5,28,1,1
+1129,11130,,5,ENT,42826,Tonsillectomy,60,5,44,1,1
+1130,11131,,5,ENT,42826,Tonsillectomy,60,4,45,1,1
+1131,11132,,5,ENT,42826,Tonsillectomy,60,1,35,1,1
+1132,11133,,5,ENT,42826,Tonsillectomy,60,4,30,1,1
+1133,11134,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,4,80,1,6
+1134,11135,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,5,74,1,6
+1135,11136,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,4,79,1,5
+1136,11137,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,1,30,1,7
+1137,11138,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,4,34,1,1
+1138,11139,,7,Vascular,36901,AV fistula,75,2,56,1,3
+1139,11140,,7,Vascular,36901,AV fistula,75,2,54,1,6
+1140,11141,,8,General,43775,Sleeve gastrectomy,120,2,103,1,2
+1141,11142,,8,General,43775,Sleeve gastrectomy,120,5,128,1,6
+1142,11143,,8,General,47562,Laparoscopic cholecystectomy,90,3,73,2,3
+1143,11144,,1,Podiatry,28110,"Partial ostectomy, fifth metatarsal head",90,3,102,1,3
+1144,11145,,1,Podiatry,28055,"Neurectomy, intrinsic musculature of foot",60,5,48,3,3
+1145,11146,,1,Podiatry,28297,Lapidus bunionectomy,150,1,47,1,5
+1146,11147,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,3,74,1,1
+1147,11148,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,89,1,1
+1148,11149,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,108,1,5
+1149,11150,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,21,0,0
+1150,11151,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,20,0,0
+1151,11152,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,19,0,0
+1152,11153,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,17,0,0
+1153,11154,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,20,0,0
+1154,11155,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,32,0,0
+1155,11156,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,20,0,0
+1156,11157,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,48,0,0
+1157,11158,,4,OBGYN,58562,"Hysterectomy, surgical",120,2,102,1,1
+1158,11159,,4,OBGYN,57460,Cervical biopsy,75,4,41,1,2
+1159,11160,,4,OBGYN,58562,"Hysterectomy, surgical",120,4,79,1,5
+1160,11161,,4,OBGYN,57460,Cervical biopsy,75,3,36,1,3
+1161,11162,,5,Urology,55250,Vasectomy,60,4,63,1,2
+1162,11163,,5,Urology,55873,Cryosurgery of the prostate gland,90,2,72,2,4
+1163,11164,,5,Urology,52353,Cystourethroscopy,60,1,32,1,2
+1164,11165,,5,Urology,55250,Vasectomy,60,1,49,1,1
+1165,11166,,5,Urology,52353,Cystourethroscopy,60,5,36,1,2
+1166,11167,,6,Plastic,15773,Liposuction,180,2,131,2,5
+1167,11168,,6,Plastic,15773,Liposuction,180,1,131,2,6
+1168,11169,,6,Plastic,30400,Rhinoplasty,120,4,72,3,6
+1169,11170,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,1,41,1,6
+1170,11171,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,5,34,1,7
+1171,11172,,7,Vascular,36901,AV fistula,75,5,57,1,4
+1172,11173,,7,Vascular,36901,AV fistula,75,3,58,1,3
+1173,11174,,7,Vascular,36901,AV fistula,75,1,56,1,3
+1174,11175,,8,General,43775,Sleeve gastrectomy,120,1,85,1,7
+1175,11176,,8,General,43775,Sleeve gastrectomy,120,5,98,1,5
+1176,11177,,8,General,47562,Laparoscopic cholecystectomy,90,2,52,2,2
+1177,11178,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,1,94,1,6
+1178,11179,,1,Podiatry,28289,Hallux rigidus correction with cheilectomy,60,5,71,2,2
+1179,11180,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,1,74,1,3
+1180,11181,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,2,76,1,5
+1181,11182,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,5,52,1,5
+1182,11183,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,39,1,3
+1183,11184,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,3,35,1,3
+1184,11185,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,3,35,1,3
+1185,11186,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,1,50,1,6
+1186,11187,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,19,0,0
+1187,11188,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,35,0,0
+1188,11189,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,21,0,0
+1189,11190,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,19,0,0
+1190,11191,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,25,0,0
+1191,11192,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,21,0,0
+1192,11193,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,29,0,0
+1193,11194,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,35,0,0
+1194,11195,,4,OBGYN,58562,"Hysterectomy, surgical",120,4,77,1,6
+1195,11196,,4,OBGYN,57460,Cervical biopsy,75,1,34,1,4
+1196,11197,,4,OBGYN,58562,"Hysterectomy, surgical",120,1,69,1,5
+1197,11198,,4,OBGYN,57460,Cervical biopsy,75,2,49,1,2
+1198,11199,,5,ENT,42826,Tonsillectomy,60,3,62,1,1
+1199,11200,,5,ENT,30520,Septoplasty,90,2,59,0,0
+1200,11201,,5,ENT,30520,Septoplasty,90,2,67,0,0
+1201,11202,,5,ENT,42826,Tonsillectomy,60,2,40,1,1
+1202,11203,,6,Plastic,17110,Removal of benign skin lesion,60,5,32,1,4
+1203,11204,,6,Plastic,17110,Removal of benign skin lesion,60,4,66,1,3
+1204,11205,,6,Plastic,17110,Removal of benign skin lesion,60,3,39,1,2
+1205,11206,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,2,70,1,5
+1206,11207,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,36,1,6
+1207,11208,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,33,1,5
+1208,11209,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,34,1,1
+1209,11210,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,5,32,1,4
+1210,11211,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,5,36,1,4
+1211,11212,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,85,1,1
+1212,11213,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,5,85,1,7
+1213,11214,,8,Orthopedics,27130,"Arthroplasty, hip",120,4,104,2,5
+1214,11215,,1,Podiatry,28060,Plantar fasciotomy,60,4,45,2,5
+1215,11216,,1,Podiatry,28060,Plantar fasciotomy,60,3,47,2,6
+1216,11217,,1,Podiatry,28285,"Correction, hammertoe",60,3,62,1,5
+1217,11218,,1,Podiatry,28285,"Correction, hammertoe",60,1,58,1,6
+1218,11219,,2,Orthopedics,64721,"Carpal tunnel release, open",60,2,36,2,5
+1219,11220,,2,Orthopedics,64721,"Carpal tunnel release, open",60,2,39,2,4
+1220,11221,,2,Orthopedics,26045,"Fasciotomy, palmar, open",90,1,52,2,5
+1221,11222,,2,Orthopedics,26735,"ORIF, phalangeal shaft fracture",120,3,98,1,6
+1222,11223,,2,Orthopedics,26356,Flexor tendon repair,90,5,52,1,7
+1223,11224,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,32,1,1
+1224,11225,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,2,32,1,1
+1225,11226,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,2,30,1,6
+1226,11227,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,4,32,1,5
+1227,11228,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,3,65,1,4
+1228,11229,,4,Urology,55250,Vasectomy,60,5,32,1,1
+1229,11230,,4,Urology,55873,Cryosurgery of the prostate gland,90,4,83,2,2
+1230,11231,,4,Urology,52353,Cystourethroscopy,60,5,30,1,2
+1231,11232,,4,Urology,55250,Vasectomy,60,1,26,1,1
+1232,11233,,4,Urology,52353,Cystourethroscopy,60,4,41,1,4
+1233,11234,,5,ENT,42826,Tonsillectomy,60,5,47,1,1
+1234,11235,,5,ENT,42826,Tonsillectomy,60,2,30,1,1
+1235,11236,,5,ENT,42826,Tonsillectomy,60,3,37,1,1
+1236,11237,,5,ENT,42826,Tonsillectomy,60,4,48,1,1
+1237,11238,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,5,75,1,4
+1238,11239,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,2,83,1,5
+1239,11240,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,3,81,1,1
+1240,11241,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,5,32,1,4
+1241,11242,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,4,32,1,7
+1242,11243,,7,Vascular,36901,AV fistula,75,2,56,1,2
+1243,11244,,7,Vascular,36901,AV fistula,75,2,51,1,4
+1244,11245,,8,General,43775,Sleeve gastrectomy,120,3,93,1,7
+1245,11246,,8,General,43775,Sleeve gastrectomy,120,2,90,1,6
+1246,11247,,8,General,47562,Laparoscopic cholecystectomy,90,3,83,2,4
+1247,11248,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,1,72,1,5
+1248,11249,,1,Podiatry,28289,Hallux rigidus correction with cheilectomy,60,1,39,2,3
+1249,11250,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,2,90,1,6
+1250,11251,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,2,81,1,1
+1251,11252,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,56,1,1
+1252,11253,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,3,42,1,5
+1253,11254,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,47,1,6
+1254,11255,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,67,1,3
+1255,11256,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,1,45,1,3
+1256,11257,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,19,0,0
+1257,11258,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,21,0,0
+1258,11259,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,26,0,0
+1259,11260,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,21,0,0
+1260,11261,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,21,0,0
+1261,11262,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,19,0,0
+1262,11263,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,23,0,0
+1263,11264,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,23,0,0
+1264,11265,,4,OBGYN,58562,"Hysterectomy, surgical",120,2,70,1,6
+1265,11266,,4,OBGYN,57460,Cervical biopsy,75,5,43,1,4
+1266,11267,,4,OBGYN,58562,"Hysterectomy, surgical",120,2,95,1,3
+1267,11268,,4,OBGYN,57460,Cervical biopsy,75,2,66,1,7
+1268,11269,,5,ENT,42826,Tonsillectomy,60,1,51,1,1
+1269,11270,,5,ENT,30520,Septoplasty,90,4,66,0,0
+1270,11271,,5,ENT,30520,Septoplasty,90,4,58,0,0
+1271,11272,,5,ENT,42826,Tonsillectomy,60,3,38,1,1
+1272,11273,,5,ENT,42826,Tonsillectomy,60,3,38,1,1
+1273,11274,,6,Plastic,17110,Removal of benign skin lesion,60,5,54,1,4
+1274,11275,,6,Plastic,17110,Removal of benign skin lesion,60,3,45,1,3
+1275,11276,,6,Plastic,17110,Removal of benign skin lesion,60,5,33,1,1
+1276,11277,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,2,117,1,1
+1277,11278,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,36,1,5
+1278,11279,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,34,1,6
+1279,11280,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,38,1,5
+1280,11281,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,2,35,1,3
+1281,11282,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,3,53,1,2
+1282,11283,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,4,98,1,6
+1283,11284,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,91,1,6
+1284,11285,,8,Orthopedics,27130,"Arthroplasty, hip",120,5,90,2,4
+1285,11286,,1,Podiatry,28110,"Partial ostectomy, fifth metatarsal head",90,1,80,1,5
+1286,11287,,1,Podiatry,28055,"Neurectomy, intrinsic musculature of foot",60,1,41,3,3
+1287,11288,,1,Podiatry,28297,Lapidus bunionectomy,150,5,32,1,5
+1288,11289,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,1,86,1,4
+1289,11290,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,5,104,1,1
+1290,11291,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,1,98,1,6
+1291,11292,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,27,0,0
+1292,11293,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,22,0,0
+1293,11294,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,25,0,0
+1294,11295,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,19,0,0
+1295,11296,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,24,0,0
+1296,11297,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,28,0,0
+1297,11298,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,20,0,0
+1298,11299,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,23,0,0
+1299,11300,,4,OBGYN,58562,"Hysterectomy, surgical",120,1,75,1,1
+1300,11301,,4,OBGYN,57460,Cervical biopsy,75,3,40,1,4
+1301,11302,,4,OBGYN,58562,"Hysterectomy, surgical",120,2,94,1,1
+1302,11303,,4,OBGYN,57460,Cervical biopsy,75,1,34,1,4
+1303,11304,,5,Urology,55250,Vasectomy,60,4,30,1,6
+1304,11305,,5,Urology,55873,Cryosurgery of the prostate gland,90,1,57,2,5
+1305,11306,,5,Urology,52353,Cystourethroscopy,60,3,56,1,6
+1306,11307,,5,Urology,55250,Vasectomy,60,3,61,1,5
+1307,11308,,5,Urology,52353,Cystourethroscopy,60,1,32,1,7
+1308,11309,,6,Plastic,15773,Liposuction,180,2,111,2,2
+1309,11310,,6,Plastic,15773,Liposuction,180,3,133,2,5
+1310,11311,,6,Plastic,30400,Rhinoplasty,120,2,68,3,6
+1311,11312,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,5,35,1,7
+1312,11313,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,4,61,1,5
+1313,11314,,7,Vascular,36901,AV fistula,75,3,65,1,3
+1314,11315,,7,Vascular,36901,AV fistula,75,5,53,1,4
+1315,11316,,7,Vascular,36901,AV fistula,75,1,67,1,5
+1316,11317,,8,General,43775,Sleeve gastrectomy,120,1,89,1,6
+1317,11318,,8,General,43775,Sleeve gastrectomy,120,5,95,1,6
+1318,11319,,8,General,47562,Laparoscopic cholecystectomy,90,5,49,2,3
+1319,11320,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,3,92,1,1
+1320,11321,,1,Podiatry,28289,Hallux rigidus correction with cheilectomy,60,3,43,2,6
+1321,11322,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,5,86,1,4
+1322,11323,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,5,100,1,6
+1323,11324,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,5,37,1,5
+1324,11325,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,1,48,1,5
+1325,11326,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,3,37,1,3
+1326,11327,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,4,37,1,2
+1327,11328,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,5,40,1,3
+1328,11329,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,36,0,0
+1329,11330,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,28,0,0
+1330,11331,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,48,0,0
+1331,11332,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,20,0,0
+1332,11333,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,28,0,0
+1333,11334,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,30,0,0
+1334,11335,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,20,0,0
+1335,11336,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,20,0,0
+1336,11337,,4,OBGYN,58562,"Hysterectomy, surgical",120,3,96,1,4
+1337,11338,,4,OBGYN,57460,Cervical biopsy,75,1,45,1,4
+1338,11339,,4,OBGYN,58562,"Hysterectomy, surgical",120,3,94,1,3
+1339,11340,,4,OBGYN,57460,Cervical biopsy,75,2,42,1,4
+1340,11341,,5,ENT,42826,Tonsillectomy,60,5,51,1,1
+1341,11342,,5,ENT,30520,Septoplasty,90,1,49,0,0
+1342,11343,,5,ENT,30520,Septoplasty,90,2,62,0,0
+1343,11344,,5,ENT,42826,Tonsillectomy,60,1,50,1,1
+1344,11345,,5,ENT,42826,Tonsillectomy,60,4,40,1,1
+1345,11346,,6,Plastic,17110,Removal of benign skin lesion,60,1,35,1,4
+1346,11347,,6,Plastic,17110,Removal of benign skin lesion,60,1,34,1,1
+1347,11348,,6,Plastic,17110,Removal of benign skin lesion,60,5,34,1,4
+1348,11349,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,2,91,1,2
+1349,11350,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,37,1,5
+1350,11351,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,1,33,1,5
+1351,11352,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,63,1,3
+1352,11353,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,1,58,1,1
+1353,11354,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,5,35,1,6
+1354,11355,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,100,1,2
+1355,11356,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,4,93,1,3
+1356,11357,,8,Orthopedics,27130,"Arthroplasty, hip",120,3,98,2,5
+1680,11681,,1,Podiatry,28110,"Partial ostectomy, fifth metatarsal head",90,2,115,1,5
+1681,11682,,1,Podiatry,28055,"Neurectomy, intrinsic musculature of foot",60,2,40,3,3
+1682,11683,,1,Podiatry,28297,Lapidus bunionectomy,150,1,28,1,1
+1683,11684,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,3,88,1,3
+1684,11685,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,1,105,1,1
+1685,11686,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,1,87,1,6
+1686,11687,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,21,0,0
+1687,11688,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,40,0,0
+1688,11689,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,27,0,0
+1689,11690,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,21,0,0
+1690,11691,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,33,0,0
+1691,11692,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,19,0,0
+1692,11693,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,30,0,0
+1693,11694,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,24,0,0
+1694,11695,,4,OBGYN,58562,"Hysterectomy, surgical",120,1,71,1,6
+1695,11696,,4,OBGYN,57460,Cervical biopsy,75,3,55,1,7
+1696,11697,,4,OBGYN,58562,"Hysterectomy, surgical",120,5,81,1,6
+1697,11698,,4,OBGYN,57460,Cervical biopsy,75,2,40,1,2
+1698,11699,,5,Urology,55250,Vasectomy,60,4,53,1,2
+1699,11700,,5,Urology,55873,Cryosurgery of the prostate gland,90,5,62,2,5
+1700,11701,,5,Urology,52353,Cystourethroscopy,60,3,29,1,4
+1701,11702,,5,Urology,55250,Vasectomy,60,2,41,1,6
+1702,11703,,5,Urology,52353,Cystourethroscopy,60,5,44,1,2
+1703,11704,,6,Plastic,15773,Liposuction,180,1,114,2,3
+1704,11705,,6,Plastic,15773,Liposuction,180,1,123,2,5
+1705,11706,,6,Plastic,30400,Rhinoplasty,120,5,81,3,6
+1706,11707,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,5,31,1,1
+1707,11708,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,2,43,1,5
+1708,11709,,7,Vascular,36901,AV fistula,75,5,58,1,4
+1709,11710,,7,Vascular,36901,AV fistula,75,4,57,1,4
+1710,11711,,7,Vascular,36901,AV fistula,75,2,61,1,4
+1711,11712,,8,General,43775,Sleeve gastrectomy,120,2,108,1,2
+1712,11713,,8,General,43775,Sleeve gastrectomy,120,1,94,1,7
+1713,11714,,8,General,47562,Laparoscopic cholecystectomy,90,4,64,2,6
+1714,11715,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,4,74,1,6
+1715,11716,,1,Podiatry,28289,Hallux rigidus correction with cheilectomy,60,2,39,2,3
+1716,11717,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,4,74,1,2
+1717,11718,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,1,89,1,4
+1718,11719,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,3,56,1,6
+1719,11720,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,4,64,1,2
+1720,11721,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,3,59,1,5
+1721,11722,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,3,34,1,6
+1722,11723,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,4,38,1,2
+1723,11724,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,18,0,0
+1724,11725,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,31,0,0
+1725,11726,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,27,0,0
+1726,11727,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,22,0,0
+1727,11728,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,29,0,0
+1728,11729,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,18,0,0
+1729,11730,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,49,0,0
+1730,11731,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,49,0,0
+1731,11732,,4,OBGYN,58562,"Hysterectomy, surgical",120,2,84,1,2
+1732,11733,,4,OBGYN,57460,Cervical biopsy,75,3,42,1,3
+1733,11734,,4,OBGYN,58562,"Hysterectomy, surgical",120,2,78,1,1
+1734,11735,,4,OBGYN,57460,Cervical biopsy,75,5,38,1,6
+1735,11736,,5,ENT,42826,Tonsillectomy,60,4,33,1,1
+1736,11737,,5,ENT,30520,Septoplasty,90,5,59,0,0
+1737,11738,,5,ENT,30520,Septoplasty,90,2,60,0,0
+1738,11739,,5,ENT,42826,Tonsillectomy,60,4,41,1,1
+1739,11740,,5,ENT,42826,Tonsillectomy,60,2,62,1,1
+1740,11741,,6,Plastic,17110,Removal of benign skin lesion,60,2,40,1,4
+1741,11742,,6,Plastic,17110,Removal of benign skin lesion,60,3,45,1,2
+1742,11743,,6,Plastic,17110,Removal of benign skin lesion,60,4,33,1,4
+1743,11744,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,5,84,1,1
+1744,11745,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,33,1,6
+1745,11746,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,1,34,1,6
+1746,11747,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,2,32,1,5
+1747,11748,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,1,32,1,5
+1748,11749,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,5,30,1,6
+1749,11750,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,86,1,2
+1750,11751,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,92,1,6
+1751,11752,,8,Orthopedics,27130,"Arthroplasty, hip",120,1,101,2,6
+1752,11753,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,2,89,1,3
+1753,11754,,1,Podiatry,28289,Hallux rigidus correction with cheilectomy,60,3,43,2,4
+1754,11755,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,1,79,1,5
+1755,11756,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,3,96,1,4
+1756,11757,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,36,1,5
+1757,11758,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,3,39,1,4
+1758,11759,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,4,37,1,6
+1759,11760,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,1,39,1,1
+1760,11761,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,4,42,1,6
+1761,11762,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,22,0,0
+1762,11763,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,20,0,0
+1763,11764,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,25,0,0
+1764,11765,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,20,0,0
+1765,11766,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,31,0,0
+1766,11767,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,30,0,0
+1767,11768,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,49,0,0
+1768,11769,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,21,0,0
+1769,11770,,4,OBGYN,58562,"Hysterectomy, surgical",120,1,71,1,1
+1770,11771,,4,OBGYN,57460,Cervical biopsy,75,5,51,1,2
+1771,11772,,4,OBGYN,58562,"Hysterectomy, surgical",120,2,86,1,6
+1772,11773,,4,OBGYN,57460,Cervical biopsy,75,4,48,1,3
+1773,11774,,5,ENT,42826,Tonsillectomy,60,1,65,1,2
+1774,11775,,5,ENT,30520,Septoplasty,90,5,67,0,0
+1775,11776,,5,ENT,30520,Septoplasty,90,4,76,0,0
+1776,11777,,5,ENT,42826,Tonsillectomy,60,1,44,1,1
+1777,11778,,5,ENT,42826,Tonsillectomy,60,5,48,1,2
+1778,11779,,6,Plastic,17110,Removal of benign skin lesion,60,2,34,1,4
+1779,11780,,6,Plastic,17110,Removal of benign skin lesion,60,2,33,1,4
+1780,11781,,6,Plastic,17110,Removal of benign skin lesion,60,5,33,1,4
+1781,11782,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,4,81,1,1
+1782,11783,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,49,1,1
+1783,11784,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,51,1,5
+1784,11785,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,2,37,1,3
+1785,11786,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,2,39,1,3
+1786,11787,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,4,33,1,1
+1787,11788,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,3,89,1,5
+1788,11789,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,3,97,1,5
+1789,11790,,8,Orthopedics,27130,"Arthroplasty, hip",120,5,99,2,3
+1790,11791,,1,Podiatry,28060,Plantar fasciotomy,60,2,40,2,4
+1791,11792,,1,Podiatry,28060,Plantar fasciotomy,60,2,34,2,4
+1792,11793,,1,Podiatry,28285,"Correction, hammertoe",60,5,79,1,7
+1793,11794,,1,Podiatry,28285,"Correction, hammertoe",60,3,55,1,6
+1794,11795,,2,Orthopedics,64721,"Carpal tunnel release, open",60,4,34,2,4
+1795,11796,,2,Orthopedics,64721,"Carpal tunnel release, open",60,5,33,2,3
+1796,11797,,2,Orthopedics,26045,"Fasciotomy, palmar, open",90,5,53,2,5
+1797,11798,,2,Orthopedics,26735,"ORIF, phalangeal shaft fracture",120,5,106,1,6
+1798,11799,,2,Orthopedics,26356,Flexor tendon repair,90,2,66,1,2
+1799,11800,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,35,1,5
+1800,11801,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,29,1,4
+1801,11802,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,32,1,6
+1802,11803,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,3,46,1,3
+1803,11804,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,4,34,1,2
+1804,11805,,4,Urology,55250,Vasectomy,60,3,45,1,5
+1805,11806,,4,Urology,55873,Cryosurgery of the prostate gland,90,3,79,2,5
+1806,11807,,4,Urology,52353,Cystourethroscopy,60,4,43,1,5
+1807,11808,,4,Urology,55250,Vasectomy,60,1,29,1,1
+1808,11809,,4,Urology,52353,Cystourethroscopy,60,1,28,1,1
+1809,11810,,5,ENT,42826,Tonsillectomy,60,4,30,1,2
+1810,11811,,5,ENT,42826,Tonsillectomy,60,5,48,1,1
+1811,11812,,5,ENT,42826,Tonsillectomy,60,3,48,1,1
+1812,11813,,5,ENT,42826,Tonsillectomy,60,2,34,1,1
+1813,11814,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,2,88,1,5
+1814,11815,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,2,83,1,5
+1815,11816,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,3,73,1,2
+1816,11817,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,5,32,1,5
+1817,11818,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,3,45,1,7
+1818,11819,,7,Vascular,36901,AV fistula,75,1,60,1,1
+1819,11820,,7,Vascular,36901,AV fistula,75,3,78,1,2
+1820,11821,,8,General,43775,Sleeve gastrectomy,120,5,112,1,5
+1821,11822,,8,General,43775,Sleeve gastrectomy,120,5,101,1,4
+1822,11823,,8,General,47562,Laparoscopic cholecystectomy,90,3,57,2,3
+1823,11824,,1,Podiatry,28110,"Partial ostectomy, fifth metatarsal head",90,4,118,1,4
+1824,11825,,1,Podiatry,28055,"Neurectomy, intrinsic musculature of foot",60,5,46,3,4
+1825,11826,,1,Podiatry,28297,Lapidus bunionectomy,150,5,33,1,5
+1826,11827,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,5,94,1,5
+1827,11828,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,3,113,1,4
+1828,11829,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,5,88,1,3
+1829,11830,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,21,0,0
+1830,11831,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,18,0,0
+1831,11832,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,32,0,0
+1832,11833,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,31,0,0
+1833,11834,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,24,0,0
+1834,11835,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,36,0,0
+1835,11836,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,29,0,0
+1836,11837,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,19,0,0
+1837,11838,,4,OBGYN,58562,"Hysterectomy, surgical",120,3,77,1,2
+1838,11839,,4,OBGYN,57460,Cervical biopsy,75,5,69,1,2
+1839,11840,,4,OBGYN,58562,"Hysterectomy, surgical",120,5,87,1,2
+1840,11841,,4,OBGYN,57460,Cervical biopsy,75,4,35,1,5
+1841,11842,,5,Urology,55250,Vasectomy,60,2,42,1,2
+1842,11843,,5,Urology,55873,Cryosurgery of the prostate gland,90,2,77,2,2
+1843,11844,,5,Urology,52353,Cystourethroscopy,60,2,34,1,7
+1844,11845,,5,Urology,55250,Vasectomy,60,2,46,1,1
+1845,11846,,5,Urology,52353,Cystourethroscopy,60,2,59,1,1
+1846,11847,,6,Plastic,15773,Liposuction,180,2,112,2,5
+1847,11848,,6,Plastic,15773,Liposuction,180,2,126,2,5
+1848,11849,,6,Plastic,30400,Rhinoplasty,120,1,68,3,3
+1849,11850,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,3,44,1,3
+1850,11851,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,3,62,1,5
+1851,11852,,7,Vascular,36901,AV fistula,75,5,60,1,1
+1852,11853,,7,Vascular,36901,AV fistula,75,2,59,1,1
+1853,11854,,7,Vascular,36901,AV fistula,75,2,61,1,4
+1854,11855,,8,General,43775,Sleeve gastrectomy,120,5,99,1,5
+1855,11856,,8,General,43775,Sleeve gastrectomy,120,5,93,1,1
+1856,11857,,8,General,47562,Laparoscopic cholecystectomy,90,4,53,2,6
+1857,11858,,1,Podiatry,28060,Plantar fasciotomy,60,3,47,2,7
+1858,11859,,1,Podiatry,28060,Plantar fasciotomy,60,2,45,2,3
+1859,11860,,1,Podiatry,28285,"Correction, hammertoe",60,2,43,1,5
+1860,11861,,1,Podiatry,28285,"Correction, hammertoe",60,2,71,1,2
+1861,11862,,2,Orthopedics,64721,"Carpal tunnel release, open",60,4,37,2,2
+1862,11863,,2,Orthopedics,64721,"Carpal tunnel release, open",60,2,40,2,6
+1863,11864,,2,Orthopedics,26045,"Fasciotomy, palmar, open",90,3,50,2,3
+1864,11865,,2,Orthopedics,26735,"ORIF, phalangeal shaft fracture",120,3,101,1,5
+1865,11866,,2,Orthopedics,26356,Flexor tendon repair,90,2,68,1,3
+1866,11867,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,1,35,1,4
+1867,11868,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,1,33,1,2
+1868,11869,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,32,1,4
+1869,11870,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,3,31,1,1
+1870,11871,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,4,36,1,6
+1871,11872,,4,Urology,55250,Vasectomy,60,3,55,1,4
+1872,11873,,4,Urology,55873,Cryosurgery of the prostate gland,90,4,60,2,5
+1873,11874,,4,Urology,52353,Cystourethroscopy,60,2,39,1,5
+1874,11875,,4,Urology,55250,Vasectomy,60,4,31,1,1
+1875,11876,,4,Urology,52353,Cystourethroscopy,60,4,38,1,2
+1876,11877,,5,ENT,42826,Tonsillectomy,60,5,33,1,1
+1877,11878,,5,ENT,42826,Tonsillectomy,60,1,31,1,1
+1878,11879,,5,ENT,42826,Tonsillectomy,60,5,33,1,1
+1879,11880,,5,ENT,42826,Tonsillectomy,60,5,34,1,1
+1880,11881,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,4,90,1,6
+1881,11882,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,2,73,1,7
+1882,11883,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,3,73,1,2
+1883,11884,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,3,41,1,4
+1884,11885,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,1,35,1,5
+1885,11886,,7,Vascular,36901,AV fistula,75,2,52,1,4
+1886,11887,,7,Vascular,36901,AV fistula,75,1,55,1,5
+1887,11888,,8,General,43775,Sleeve gastrectomy,120,5,100,1,1
+1888,11889,,8,General,43775,Sleeve gastrectomy,120,2,104,1,4
+1889,11890,,8,General,47562,Laparoscopic cholecystectomy,90,3,52,2,2
+1890,11891,,1,Podiatry,28110,"Partial ostectomy, fifth metatarsal head",90,5,99,1,3
+1891,11892,,1,Podiatry,28055,"Neurectomy, intrinsic musculature of foot",60,5,45,3,4
+1892,11893,,1,Podiatry,28297,Lapidus bunionectomy,150,3,25,1,2
+1893,11894,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,5,110,1,6
+1894,11895,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,4,87,1,3
+1895,11896,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,1,112,1,5
+1896,11897,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,22,0,0
+1897,11898,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,20,0,0
+1898,11899,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,25,0,0
+1899,11900,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,48,0,0
+1900,11901,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,18,0,0
+1901,11902,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,35,0,0
+1902,11903,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,31,0,0
+1903,11904,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,20,0,0
+1904,11905,,4,OBGYN,58562,"Hysterectomy, surgical",120,2,72,1,3
+1905,11906,,4,OBGYN,57460,Cervical biopsy,75,5,46,1,7
+1906,11907,,4,OBGYN,58562,"Hysterectomy, surgical",120,4,87,1,1
+1907,11908,,4,OBGYN,57460,Cervical biopsy,75,2,42,1,4
+1908,11909,,5,Urology,55250,Vasectomy,60,3,39,1,6
+1909,11910,,5,Urology,55873,Cryosurgery of the prostate gland,90,2,60,2,2
+1910,11911,,5,Urology,52353,Cystourethroscopy,60,1,65,1,2
+1911,11912,,5,Urology,55250,Vasectomy,60,4,37,1,3
+1912,11913,,5,Urology,52353,Cystourethroscopy,60,5,30,1,4
+1913,11914,,6,Plastic,15773,Liposuction,180,5,138,2,5
+1914,11915,,6,Plastic,15773,Liposuction,180,2,152,2,5
+1915,11916,,6,Plastic,30400,Rhinoplasty,120,1,80,3,4
+1916,11917,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,1,38,1,6
+1917,11918,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,4,32,1,3
+1918,11919,,7,Vascular,36901,AV fistula,75,2,60,1,2
+1919,11920,,7,Vascular,36901,AV fistula,75,3,52,1,1
+1920,11921,,7,Vascular,36901,AV fistula,75,2,57,1,4
+1921,11922,,8,General,43775,Sleeve gastrectomy,120,1,107,1,2
+1922,11923,,8,General,43775,Sleeve gastrectomy,120,4,83,1,7
+1923,11924,,8,General,47562,Laparoscopic cholecystectomy,90,3,48,2,5
+1924,11925,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,3,82,1,4
+1925,11926,,1,Podiatry,28289,Hallux rigidus correction with cheilectomy,60,1,50,2,2
+1926,11927,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,1,80,1,4
+1927,11928,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,5,86,1,7
+1928,11929,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,4,36,1,2
+1929,11930,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,1,40,1,3
+1930,11931,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,3,44,1,4
+1931,11932,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,4,69,1,5
+1932,11933,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,1,52,1,3
+1933,11934,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,24,0,0
+1934,11935,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,20,0,0
+1935,11936,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,33,0,0
+1936,11937,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,52,0,0
+1937,11938,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,21,0,0
+1938,11939,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,21,0,0
+1939,11940,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,34,0,0
+1940,11941,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,49,0,0
+1941,11942,,4,OBGYN,58562,"Hysterectomy, surgical",120,1,111,1,4
+1942,11943,,4,OBGYN,57460,Cervical biopsy,75,4,68,1,5
+1943,11944,,4,OBGYN,58562,"Hysterectomy, surgical",120,4,77,1,5
+1944,11945,,4,OBGYN,57460,Cervical biopsy,75,1,38,1,4
+1945,11946,,5,ENT,42826,Tonsillectomy,60,2,41,1,1
+1946,11947,,5,ENT,30520,Septoplasty,90,3,53,0,0
+1947,11948,,5,ENT,30520,Septoplasty,90,3,65,0,0
+1948,11949,,5,ENT,42826,Tonsillectomy,60,3,35,1,1
+1949,11950,,5,ENT,42826,Tonsillectomy,60,1,61,1,1
+1950,11951,,6,Plastic,17110,Removal of benign skin lesion,60,1,34,1,2
+1951,11952,,6,Plastic,17110,Removal of benign skin lesion,60,2,32,1,4
+1952,11953,,6,Plastic,17110,Removal of benign skin lesion,60,2,45,1,5
+1953,11954,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,3,100,1,6
+1954,11955,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,37,1,2
+1955,11956,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,49,1,6
+1956,11957,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,35,1,6
+1957,11958,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,2,31,1,6
+1958,11959,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,2,32,1,5
+1959,11960,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,103,1,5
+1960,11961,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,5,88,1,5
+1961,11962,,8,Orthopedics,27130,"Arthroplasty, hip",120,4,109,2,2
+1962,11963,,1,Podiatry,28060,Plantar fasciotomy,60,4,52,2,2
+1963,11964,,1,Podiatry,28060,Plantar fasciotomy,60,4,43,2,5
+1964,11965,,1,Podiatry,28285,"Correction, hammertoe",60,1,37,1,4
+1965,11966,,1,Podiatry,28285,"Correction, hammertoe",60,4,39,1,1
+1966,11967,,2,Orthopedics,64721,"Carpal tunnel release, open",60,2,41,2,6
+1967,11968,,2,Orthopedics,64721,"Carpal tunnel release, open",60,4,38,2,4
+1968,11969,,2,Orthopedics,26045,"Fasciotomy, palmar, open",90,1,58,2,2
+1969,11970,,2,Orthopedics,26735,"ORIF, phalangeal shaft fracture",120,2,91,1,6
+1970,11971,,2,Orthopedics,26356,Flexor tendon repair,90,2,63,1,7
+1971,11972,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,1,34,1,5
+1972,11973,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,4,32,1,4
+1973,11974,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,31,1,1
+1974,11975,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,3,33,1,2
+1975,11976,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,5,37,1,5
+1976,11977,,4,Urology,55250,Vasectomy,60,3,45,1,6
+1977,11978,,4,Urology,55873,Cryosurgery of the prostate gland,90,4,70,2,5
+1978,11979,,4,Urology,52353,Cystourethroscopy,60,5,32,1,6
+1979,11980,,4,Urology,55250,Vasectomy,60,2,33,1,7
+1980,11981,,4,Urology,52353,Cystourethroscopy,60,4,28,1,3
+1981,11982,,5,ENT,42826,Tonsillectomy,60,5,30,1,1
+1982,11983,,5,ENT,42826,Tonsillectomy,60,5,28,1,1
+1983,11984,,5,ENT,42826,Tonsillectomy,60,3,28,1,1
+1984,11985,,5,ENT,42826,Tonsillectomy,60,2,33,1,1
+1985,11986,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,5,101,1,5
+1986,11987,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,4,78,1,6
+1987,11988,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,4,72,1,5
+1988,11989,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,3,35,1,2
+1989,11990,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,2,65,1,2
+1990,11991,,7,Vascular,36901,AV fistula,75,2,60,1,2
+1991,11992,,7,Vascular,36901,AV fistula,75,2,68,1,1
+1992,11993,,8,General,43775,Sleeve gastrectomy,120,5,91,1,1
+1993,11994,,8,General,43775,Sleeve gastrectomy,120,2,101,1,5
+1994,11995,,8,General,47562,Laparoscopic cholecystectomy,90,1,51,2,3
+1995,11996,,1,Podiatry,28110,"Partial ostectomy, fifth metatarsal head",90,3,99,1,5
+1996,11997,,1,Podiatry,28055,"Neurectomy, intrinsic musculature of foot",60,3,55,3,4
+1997,11998,,1,Podiatry,28297,Lapidus bunionectomy,150,2,24,1,5
+1998,11999,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,3,96,1,3
+1999,12000,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,103,1,7
+2000,12001,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,4,95,1,5
+2001,12002,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,34,0,0
+2002,12003,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,31,0,0
+2003,12004,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,32,0,0
+2004,12005,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,50,0,0
+2005,12006,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,28,0,0
+2006,12007,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,21,0,0
+2007,12008,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,21,0,0
+2008,12009,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,21,0,0
+2009,12010,,4,OBGYN,58562,"Hysterectomy, surgical",120,3,81,1,3
+2010,12011,,4,OBGYN,57460,Cervical biopsy,75,3,46,1,2
+2011,12012,,4,OBGYN,58562,"Hysterectomy, surgical",120,1,87,1,2
+2012,12013,,4,OBGYN,57460,Cervical biopsy,75,3,45,1,1
+2013,12014,,5,Urology,55250,Vasectomy,60,4,31,1,1
+2014,12015,,5,Urology,55873,Cryosurgery of the prostate gland,90,4,56,2,4
+2015,12016,,5,Urology,52353,Cystourethroscopy,60,1,61,1,2
+2016,12017,,5,Urology,55250,Vasectomy,60,4,32,1,1
+2017,12018,,5,Urology,52353,Cystourethroscopy,60,3,28,1,5
+2018,12019,,6,Plastic,15773,Liposuction,180,1,118,2,3
+2019,12020,,6,Plastic,15773,Liposuction,180,4,134,2,4
+2020,12021,,6,Plastic,30400,Rhinoplasty,120,1,83,3,6
+2021,12022,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,3,33,1,5
+2022,12023,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,3,67,1,3
+2023,12024,,7,Vascular,36901,AV fistula,75,3,52,1,4
+2024,12025,,7,Vascular,36901,AV fistula,75,4,74,1,2
+2025,12026,,7,Vascular,36901,AV fistula,75,3,54,1,5
+2026,12027,,8,General,43775,Sleeve gastrectomy,120,1,99,1,7
+2027,12028,,8,General,43775,Sleeve gastrectomy,120,1,123,1,3
+2028,12029,,8,General,47562,Laparoscopic cholecystectomy,90,4,52,2,4
+2029,12030,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,1,113,1,5
+2030,12031,,1,Podiatry,28289,Hallux rigidus correction with cheilectomy,60,2,47,2,2
+2031,12032,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,4,74,1,4
+2032,12033,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,1,93,1,5
+2033,12034,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,1,56,1,6
+2034,12035,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,5,45,1,4
+2035,12036,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,5,40,1,5
+2036,12037,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,34,1,4
+2037,12038,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,3,51,1,6
+2038,12039,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,20,0,0
+2039,12040,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,18,0,0
+2040,12041,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,19,0,0
+2041,12042,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,51,0,0
+2042,12043,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,26,0,0
+2043,12044,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,21,0,0
+2044,12045,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,28,0,0
+2045,12046,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,26,0,0
+2046,12047,,4,OBGYN,58562,"Hysterectomy, surgical",120,5,91,1,3
+2047,12048,,4,OBGYN,57460,Cervical biopsy,75,5,38,1,2
+2048,12049,,4,OBGYN,58562,"Hysterectomy, surgical",120,2,113,1,2
+2049,12050,,4,OBGYN,57460,Cervical biopsy,75,5,50,1,1
+2050,12051,,5,ENT,42826,Tonsillectomy,60,3,33,1,1
+2051,12052,,5,ENT,30520,Septoplasty,90,4,59,0,0
+2052,12053,,5,ENT,30520,Septoplasty,90,1,61,0,0
+2053,12054,,5,ENT,42826,Tonsillectomy,60,1,42,1,1
+2054,12055,,5,ENT,42826,Tonsillectomy,60,3,36,1,1
+2055,12056,,6,Plastic,17110,Removal of benign skin lesion,60,1,34,1,2
+2056,12057,,6,Plastic,17110,Removal of benign skin lesion,60,1,31,1,4
+2057,12058,,6,Plastic,17110,Removal of benign skin lesion,60,4,36,1,4
+2058,12059,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,3,86,1,6
+2059,12060,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,31,1,3
+2060,12061,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,36,1,3
+2061,12062,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,41,1,3
+2062,12063,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,1,33,1,6
+2063,12064,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,3,35,1,5
+2064,12065,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,5,107,1,5
+2065,12066,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,5,96,1,5
+2066,12067,,8,Orthopedics,27130,"Arthroplasty, hip",120,1,104,2,3
+2067,12068,,1,Podiatry,28060,Plantar fasciotomy,60,5,47,2,4
+2068,12069,,1,Podiatry,28060,Plantar fasciotomy,60,3,44,2,3
+2069,12070,,1,Podiatry,28285,"Correction, hammertoe",60,1,48,1,5
+2070,12071,,1,Podiatry,28285,"Correction, hammertoe",60,1,63,1,2
+2071,12072,,2,Orthopedics,64721,"Carpal tunnel release, open",60,5,43,2,7
+2072,12073,,2,Orthopedics,64721,"Carpal tunnel release, open",60,1,50,2,7
+2073,12074,,2,Orthopedics,26045,"Fasciotomy, palmar, open",90,5,50,2,5
+2074,12075,,2,Orthopedics,26735,"ORIF, phalangeal shaft fracture",120,4,96,1,1
+2075,12076,,2,Orthopedics,26356,Flexor tendon repair,90,2,53,1,5
+2076,12077,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,1,49,1,6
+2077,12078,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,2,40,1,6
+2078,12079,,3,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,35,1,4
+2079,12080,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,3,49,1,6
+2080,12081,,3,Pediatrics,69421,"Myringotomy, general anesthesia",60,2,33,1,5
+2081,12082,,4,Urology,55250,Vasectomy,60,5,59,1,2
+2082,12083,,4,Urology,55873,Cryosurgery of the prostate gland,90,2,65,2,5
+2083,12084,,4,Urology,52353,Cystourethroscopy,60,4,32,1,1
+2084,12085,,4,Urology,55250,Vasectomy,60,5,33,1,7
+2085,12086,,4,Urology,52353,Cystourethroscopy,60,3,40,1,4
+2086,12087,,5,ENT,42826,Tonsillectomy,60,2,31,1,1
+2087,12088,,5,ENT,42826,Tonsillectomy,60,1,39,1,1
+2088,12089,,5,ENT,42826,Tonsillectomy,60,1,48,1,2
+2089,12090,,5,ENT,42826,Tonsillectomy,60,2,46,1,1
+2090,12091,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,2,78,1,2
+2091,12092,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,5,84,1,7
+2092,12093,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,3,83,1,5
+2093,12094,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,1,34,1,7
+2094,12095,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,5,47,1,4
+2095,12096,,7,Vascular,36901,AV fistula,75,2,52,1,4
+2096,12097,,7,Vascular,36901,AV fistula,75,2,67,1,4
+2097,12098,,8,General,43775,Sleeve gastrectomy,120,5,90,1,3
+2098,12099,,8,General,43775,Sleeve gastrectomy,120,1,88,1,2
+2099,12100,,8,General,47562,Laparoscopic cholecystectomy,90,4,53,2,2
+2100,12101,,1,Podiatry,28110,"Partial ostectomy, fifth metatarsal head",90,5,86,1,4
+2101,12102,,1,Podiatry,28055,"Neurectomy, intrinsic musculature of foot",60,2,44,3,4
+2102,12103,,1,Podiatry,28297,Lapidus bunionectomy,150,1,33,1,5
+2103,12104,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,4,77,1,1
+2104,12105,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,111,1,2
+2105,12106,,2,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,2,103,1,1
+2106,12107,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,26,0,0
+2107,12108,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,18,0,0
+2108,12109,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,48,0,0
+2109,12110,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,20,0,0
+2110,12111,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,49,0,0
+2111,12112,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,19,0,0
+2112,12113,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,26,0,0
+2113,12114,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,26,0,0
+2114,12115,,4,OBGYN,58562,"Hysterectomy, surgical",120,3,81,1,1
+2115,12116,,4,OBGYN,57460,Cervical biopsy,75,1,35,1,3
+2116,12117,,4,OBGYN,58562,"Hysterectomy, surgical",120,2,106,1,5
+2117,12118,,4,OBGYN,57460,Cervical biopsy,75,1,62,1,5
+2118,12119,,5,Urology,55250,Vasectomy,60,2,61,1,4
+2119,12120,,5,Urology,55873,Cryosurgery of the prostate gland,90,4,76,2,5
+2120,12121,,5,Urology,52353,Cystourethroscopy,60,5,31,1,5
+2121,12122,,5,Urology,55250,Vasectomy,60,1,31,1,2
+2122,12123,,5,Urology,52353,Cystourethroscopy,60,5,32,1,4
+2123,12124,,6,Plastic,15773,Liposuction,180,2,135,2,5
+2124,12125,,6,Plastic,15773,Liposuction,180,3,136,2,3
+2125,12126,,6,Plastic,30400,Rhinoplasty,120,4,76,3,5
+2126,12127,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,4,39,1,4
+2127,12128,,7,Vascular,28820,"Digital amputation, metatarsophalangeal joint",60,4,38,1,5
+2128,12129,,7,Vascular,36901,AV fistula,75,2,58,1,1
+2129,12130,,7,Vascular,36901,AV fistula,75,5,77,1,4
+2130,12131,,7,Vascular,36901,AV fistula,75,4,55,1,4
+2131,12132,,8,General,43775,Sleeve gastrectomy,120,5,90,1,6
+2132,12133,,8,General,43775,Sleeve gastrectomy,120,3,91,1,5
+2133,12134,,8,General,47562,Laparoscopic cholecystectomy,90,5,62,2,4
+2134,12135,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,1,73,1,5
+2135,12136,,1,Podiatry,28289,Hallux rigidus correction with cheilectomy,60,1,44,2,6
+2136,12137,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,5,84,1,5
+2137,12138,,1,Podiatry,28296,Bunionectomy with distal osteotomy,120,4,94,1,1
+2138,12139,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,5,41,1,5
+2139,12140,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,2,40,1,2
+2140,12141,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,3,35,1,3
+2141,12142,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,3,41,1,6
+2142,12143,,2,Orthopedics,29877,"Arthroscopy, knee, surgical",60,1,47,1,3
+2143,12144,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,21,0,0
+2144,12145,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,28,0,0
+2145,12146,,3,Ophthalmology,66982,Extracapsular cataract removal,45,1,20,0,0
+2146,12147,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,30,0,0
+2147,12148,,3,Ophthalmology,66982,Extracapsular cataract removal,45,2,20,0,0
+2148,12149,,3,Ophthalmology,66982,Extracapsular cataract removal,45,4,36,0,0
+2149,12150,,3,Ophthalmology,66982,Extracapsular cataract removal,45,5,30,0,0
+2150,12151,,3,Ophthalmology,66982,Extracapsular cataract removal,45,3,37,0,0
+2151,12152,,4,OBGYN,58562,"Hysterectomy, surgical",120,5,80,1,3
+2152,12153,,4,OBGYN,57460,Cervical biopsy,75,3,49,1,5
+2153,12154,,4,OBGYN,58562,"Hysterectomy, surgical",120,5,92,1,3
+2154,12155,,4,OBGYN,57460,Cervical biopsy,75,1,34,1,4
+2155,12156,,5,ENT,42826,Tonsillectomy,60,5,31,1,1
+2156,12157,,5,ENT,30520,Septoplasty,90,2,71,0,0
+2157,12158,,5,ENT,30520,Septoplasty,90,4,60,0,0
+2158,12159,,5,ENT,42826,Tonsillectomy,60,3,32,1,1
+2159,12160,,5,ENT,42826,Tonsillectomy,60,3,28,1,1
+2160,12161,,6,Plastic,17110,Removal of benign skin lesion,60,3,40,1,3
+2161,12162,,6,Plastic,17110,Removal of benign skin lesion,60,4,37,1,4
+2162,12163,,6,Plastic,17110,Removal of benign skin lesion,60,4,59,1,4
+2163,12164,,6,Plastic,14060,"Adjacent tissue transfer, eyelids, nose, ears, lip",120,1,95,1,7
+2164,12165,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,3,34,1,4
+2165,12166,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,5,35,1,7
+2166,12167,,7,Pediatrics,69436,"Tympanostomy, general anesthesia",60,2,35,1,1
+2167,12168,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,1,30,1,5
+2168,12169,,7,Pediatrics,69421,"Myringotomy, general anesthesia",60,3,45,1,4
+2169,12170,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,3,96,1,6
+2170,12171,,8,Orthopedics,27445,"Arthroplasty, knee, hinge prothesis",120,4,80,1,1
+2171,12172,,8,Orthopedics,27130,"Arthroplasty, hip",120,3,85,2,3

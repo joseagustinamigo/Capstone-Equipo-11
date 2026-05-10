@@ -45,7 +45,7 @@ from openpyxl.styles import Font, PatternFill, Alignment
 # ============================================================================
 
 # Ruta al Excel de datos. Cambiar si el archivo está en otra ubicación.
-ARCHIVO_DATOS = r'Datos Operaciones y lista de espera.xlsx'
+ARCHIVO_DATOS = os.path.join("preprocesamiento","Datos", "Datos Operaciones y lista de espera.xlsx")
 
 # Carpeta de salida (se crea automáticamente si no existe)
 CARPETA_OUTPUTS = 'outputs'
@@ -183,31 +183,30 @@ def asignar_greedy(lista_espera):
                 if not cabe_cama:
                     continue
 
-            for p in PABELLONES:
-                hora = encontrar_hora_inicio(ocupacion[d][p], ventanas, duracion)
-                if hora is not None:
-                    insertar_ordenado(ocupacion[d][p], (hora, hora + duracion))
-                    if dias_cama > 0:
-                        for k in range(dias_cama):
-                            if d + k < DIAS:
-                                uso_actual[d + k] += 1
-                    asignaciones.append({
-                        'ID paciente': paciente['ID paciente'],
-                        'Servicio': servicio,
-                        'Descripción': paciente['Descripción'],
-                        'Prioridad': paciente['Prioridad de paciente'],
-                        'Duración (min)': duracion,
-                        'Días cama': dias_cama,
-                        'Tipo cama': 'UCI' if es_uci else (
-                            'Hosp.' if dias_cama > 0 else 'Ambulatorio'),
-                        'Día': d + 1,
-                        'Pabellón': p,
-                        'Hora inicio (min)': hora,
-                        'Hora inicio': f'{hora//60:02d}:{hora%60:02d}',
-                        'Hora fin': f'{(hora+duracion)//60:02d}:{(hora+duracion)%60:02d}',
-                    })
-                    asignado = True
-                    break
+            p = int(paciente['OR Suite'])
+            hora = encontrar_hora_inicio(ocupacion[d][p], ventanas, duracion)
+            if hora is not None:
+                insertar_ordenado(ocupacion[d][p], (hora, hora + duracion))
+                if dias_cama > 0:
+                    for k in range(dias_cama):
+                        if d + k < DIAS:
+                            uso_actual[d + k] += 1
+                asignaciones.append({
+                    'ID paciente': paciente['ID paciente'],
+                    'Servicio': servicio,
+                    'Descripción': paciente['Descripción'],
+                    'Prioridad': paciente['Prioridad de paciente'],
+                    'Duración (min)': duracion,
+                    'Días cama': dias_cama,
+                    'Tipo cama': 'UCI' if es_uci else (
+                        'Hosp.' if dias_cama > 0 else 'Ambulatorio'),
+                    'Día': d + 1,
+                    'Pabellón': p,
+                    'Hora inicio (min)': hora,
+                    'Hora inicio': f'{hora//60:02d}:{hora%60:02d}',
+                    'Hora fin': f'{(hora+duracion)//60:02d}:{(hora+duracion)%60:02d}',
+                })
+                asignado = True
 
         if not asignado:
             no_asignados.append({**paciente.to_dict(),
