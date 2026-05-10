@@ -31,7 +31,7 @@ from os import path
 RUTA_EXCEL = path.join("..","Capstone-Equipo-11","preprocesamiento","Datos","Datos Operaciones y lista de espera.xlsx")
 
 # Parámetros del horizonte
-N_DIAS = 28                  # |D|
+N_DIAS = 7                  # |D|
 SLOT_MIN = 15               # tamaño del slot en minutos
 HORA_INICIO_JORNADA = 8     # 8:00 AM
 HORA_FIN_JORNADA = 18       # 6:00 PM

@@ -26,7 +26,7 @@ reprogramacion_pendiente = False
 # =========================
 # CARGAR CSV
 # =========================
-ruta = path.join("..","Capstone-Equipo-11","Simulacion","Estado_Inicial", "28_días.csv")
+ruta = path.join("..","Capstone-Equipo-11","Simulacion","Estado_Inicial", "28_días.csv") 
 ruta2 = path.join("..", "Capstone-Equipo-11","Simulacion","Estado_Inicial","lista_espera_base.csv")
 df_programacion = pd.read_csv(ruta, sep=",", encoding="utf-8-sig")
 df_caso_base = pd.read_csv(ruta2, sep=",", encoding="utf-8-sig")
