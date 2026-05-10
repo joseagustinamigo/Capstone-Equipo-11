@@ -54,7 +54,7 @@ CARPETA_OUTPUTS = 'outputs'
 PRIORIDAD_MAX_ES_MAYOR = False   # 1 = mayor prioridad
 
 # Parámetros del problema
-DIAS = 5                                # horizonte: 1 semana hábil
+DIAS = 7                                # horizonte: 1 semana hábil
 PABELLONES = list(range(1, 9))          # 8 pabellones
 HORA_INICIO = 8 * 60                    # 8:00 en minutos
 HORA_FIN = 18 * 60                      # 18:00 en minutos
@@ -192,7 +192,7 @@ def asignar_greedy(lista_espera):
                         if d + k < DIAS:
                             uso_actual[d + k] += 1
                 asignaciones.append({
-                    'ID paciente': paciente['ID paciente'],
+                    'Correlativo': paciente['Correlativo'],
                     'Servicio': servicio,
                     'Descripción': paciente['Descripción'],
                     'Prioridad': paciente['Prioridad de paciente'],
@@ -386,7 +386,7 @@ def exportar_excel(asign, no_asign, kpis, res_prio, res_serv, ruta_salida):
     ws4.append(['Tabla quirúrgica generada por el caso base'])
     ws4['A1'].font = Font(bold=True, size=12, name='Arial')
     ws4.append([])
-    cols = ['ID paciente', 'Servicio', 'Descripción', 'Prioridad', 'Duración (min)',
+    cols = ['Correlativo', 'Servicio', 'Descripción', 'Prioridad', 'Duración (min)',
             'Días cama', 'Tipo cama', 'Día', 'Pabellón', 'Hora inicio', 'Hora fin']
     ws4.append(cols)
     for c in ws4[3]:
@@ -402,7 +402,7 @@ def exportar_excel(asign, no_asign, kpis, res_prio, res_serv, ruta_salida):
     ws5.append(['Pacientes no asignados'])
     ws5['A1'].font = Font(bold=True, size=12, name='Arial')
     ws5.append([])
-    cols_na = ['ID paciente', 'Servicio', 'Descripción',
+    cols_na = ['Correlativo', 'Servicio', 'Descripción',
                'Duración agendada (min)', 'Prioridad de paciente', 'motivo']
     ws5.append(cols_na)
     for c in ws5[3]:
@@ -414,6 +414,22 @@ def exportar_excel(asign, no_asign, kpis, res_prio, res_serv, ruta_salida):
         ws5.column_dimensions[col].width = w
 
     wb.save(ruta_salida)
+
+    # =========================
+    # Exportar CSV de asignaciones
+    # =========================
+    ruta_csv = ruta_salida.replace('.xlsx', '_asignaciones.csv')
+
+    cols = ['Correlativo', 'Servicio', 'Descripción', 'Prioridad', 'Duración (min)',
+            'Días cama', 'Tipo cama', 'Día', 'Pabellón', 'Hora inicio', 'Hora fin']
+
+    asign_export = (
+        asign
+        .sort_values(['Día', 'Pabellón', 'Hora inicio (min)'])
+        [cols]
+    )
+
+    asign_export.to_csv(ruta_csv, index=False, encoding='utf-8-sig')
 
 
 # ============================================================================
@@ -573,6 +589,8 @@ def main():
 
     print("\nListo.")
     return asign, no_asign, kpis
+
+
 
 
 if __name__ == '__main__':

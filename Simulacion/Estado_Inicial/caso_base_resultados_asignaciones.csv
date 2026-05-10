@@ -1,0 +1,281 @@
+﻿Correlativo,Servicio,Descripción,Prioridad,Duración (min),Días cama,Tipo cama,Día,Pabellón,Hora inicio,Hora fin
+310,Podiatry,Plantar fasciotomy,1,60,3,Hosp.,1,1,08:00,09:00
+520,Podiatry,"Correction, hammertoe",1,60,3,Hosp.,1,1,09:00,10:00
+588,Podiatry,Plantar fasciotomy,1,60,3,Hosp.,1,1,10:00,11:00
+590,Podiatry,"Correction, hammertoe",1,60,3,Hosp.,1,1,11:00,12:00
+621,Podiatry,"Neurectomy, intrinsic musculature of foot",1,60,2,Hosp.,1,1,12:00,13:00
+654,Podiatry,Plantar fasciotomy,1,60,3,Hosp.,1,1,14:00,15:00
+655,Podiatry,"Correction, hammertoe",1,60,3,Hosp.,1,1,15:00,16:00
+656,Podiatry,"Correction, hammertoe",1,60,3,Hosp.,1,1,16:00,17:00
+280,Orthopedics,"Arthroscopy, knee, surgical",1,60,3,Hosp.,1,2,08:00,09:00
+418,Orthopedics,"Carpal tunnel release, open",1,60,3,Hosp.,1,2,09:00,10:00
+419,Orthopedics,"Carpal tunnel release, open",1,60,3,Hosp.,1,2,10:00,11:00
+554,Orthopedics,"Arthroscopy, knee, surgical",1,60,3,Hosp.,1,2,14:00,15:00
+556,Orthopedics,"Arthroscopy, knee, surgical",1,60,3,Hosp.,1,2,15:00,16:00
+592,Orthopedics,"Carpal tunnel release, open",1,60,3,Hosp.,1,2,16:00,17:00
+1043,Orthopedics,"Arthroscopy, knee, surgical",1,60,3,Hosp.,1,2,17:00,18:00
+284,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,1,3,08:00,08:45
+349,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,1,3,08:45,09:30
+354,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,1,3,09:30,10:15
+355,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,1,3,10:15,11:00
+385,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,1,3,11:00,11:45
+387,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,1,3,11:45,12:30
+424,Pediatrics,"Tympanostomy, general anesthesia",1,60,3,Hosp.,1,3,14:00,15:00
+526,Pediatrics,"Tympanostomy, general anesthesia",1,60,3,Hosp.,1,3,15:00,16:00
+663,Pediatrics,"Tympanostomy, general anesthesia",1,60,3,Hosp.,1,3,16:00,17:00
+1123,Pediatrics,"Myringotomy, general anesthesia",1,60,2,Hosp.,1,3,17:00,18:00
+326,Urology,Cystourethroscopy,1,60,2,Hosp.,1,4,08:00,09:00
+428,Urology,Vasectomy,1,60,3,Hosp.,1,4,09:00,10:00
+430,Urology,Cystourethroscopy,1,60,2,Hosp.,1,4,10:00,11:00
+533,Urology,Cystourethroscopy,1,60,2,Hosp.,1,4,11:00,12:00
+605,Urology,Cystourethroscopy,1,60,2,Hosp.,1,4,12:00,13:00
+667,Urology,Vasectomy,1,60,3,Hosp.,1,4,13:00,14:00
+1091,Urology,Vasectomy,1,60,3,Hosp.,1,4,14:00,15:00
+1093,Urology,Cystourethroscopy,1,60,2,Hosp.,1,4,15:00,16:00
+1231,Urology,Vasectomy,1,60,3,Hosp.,1,4,16:00,17:00
+1807,Urology,Vasectomy,1,60,3,Hosp.,1,4,17:00,18:00
+1163,Urology,Cystourethroscopy,1,60,2,Hosp.,1,5,08:00,09:00
+1164,Urology,Vasectomy,1,60,3,Hosp.,1,5,09:00,10:00
+330,ENT,Tonsillectomy,1,60,1,Hosp.,1,5,10:00,11:00
+397,ENT,Tonsillectomy,1,60,1,Hosp.,1,5,11:00,12:00
+1131,ENT,Tonsillectomy,1,60,1,Hosp.,1,5,12:00,13:00
+1268,ENT,Tonsillectomy,1,60,1,Hosp.,1,5,13:00,14:00
+1307,Urology,Cystourethroscopy,1,60,2,Hosp.,1,5,14:00,15:00
+1910,Urology,Cystourethroscopy,1,60,2,Hosp.,1,5,15:00,16:00
+298,Plastic,Removal of benign skin lesion,1,60,2,Hosp.,1,6,11:00,12:00
+403,Plastic,Removal of benign skin lesion,1,60,2,Hosp.,1,6,12:00,13:00
+404,Plastic,Removal of benign skin lesion,1,60,2,Hosp.,1,6,13:00,14:00
+505,Plastic,Removal of benign skin lesion,1,60,2,Hosp.,1,6,14:00,15:00
+507,Plastic,Removal of benign skin lesion,1,60,2,Hosp.,1,6,15:00,16:00
+410,Pediatrics,"Myringotomy, general anesthesia",1,60,2,Hosp.,1,7,08:00,09:00
+439,Vascular,"Digital amputation, metatarsophalangeal joint",1,60,3,Hosp.,1,7,09:00,10:00
+440,Vascular,"Digital amputation, metatarsophalangeal joint",1,60,3,Hosp.,1,7,10:00,11:00
+582,Pediatrics,"Myringotomy, general anesthesia",1,60,2,Hosp.,1,7,14:00,15:00
+1031,Vascular,"Digital amputation, metatarsophalangeal joint",1,60,3,Hosp.,1,7,15:00,16:00
+1136,Vascular,"Digital amputation, metatarsophalangeal joint",1,60,3,Hosp.,1,7,16:00,17:00
+1169,Vascular,"Digital amputation, metatarsophalangeal joint",1,60,3,Hosp.,1,7,17:00,18:00
+1006,Podiatry,"Neurectomy, intrinsic musculature of foot",1,60,2,Hosp.,2,1,08:00,09:00
+1080,Podiatry,"Correction, hammertoe",1,60,3,Hosp.,2,1,09:00,10:00
+1217,Podiatry,"Correction, hammertoe",1,60,3,Hosp.,2,1,10:00,11:00
+1248,Podiatry,Hallux rigidus correction with cheilectomy,1,60,3,Hosp.,2,1,11:00,12:00
+1286,Podiatry,"Neurectomy, intrinsic musculature of foot",1,60,2,Hosp.,2,1,12:00,13:00
+1925,Podiatry,Hallux rigidus correction with cheilectomy,1,60,3,Hosp.,2,1,14:00,15:00
+1047,Orthopedics,"Arthroscopy, knee, surgical",1,60,3,Hosp.,2,2,08:00,09:00
+1185,Orthopedics,"Arthroscopy, knee, surgical",1,60,3,Hosp.,2,2,09:00,10:00
+1255,Orthopedics,"Arthroscopy, knee, surgical",1,60,3,Hosp.,2,2,10:00,11:00
+1324,Orthopedics,"Arthroscopy, knee, surgical",1,60,3,Hosp.,2,2,14:00,15:00
+1759,Orthopedics,"Arthroscopy, knee, surgical",1,60,3,Hosp.,2,2,15:00,16:00
+1929,Orthopedics,"Arthroscopy, knee, surgical",1,60,3,Hosp.,2,2,16:00,17:00
+1932,Orthopedics,"Arthroscopy, knee, surgical",1,60,3,Hosp.,2,2,17:00,18:00
+452,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,2,3,08:00,08:45
+457,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,2,3,08:45,09:30
+489,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,2,3,09:30,10:15
+494,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,2,3,10:15,11:00
+495,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,2,3,11:00,11:45
+632,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,2,3,11:45,12:30
+1866,Pediatrics,"Tympanostomy, general anesthesia",1,60,3,Hosp.,2,3,14:00,15:00
+1867,Pediatrics,"Tympanostomy, general anesthesia",1,60,3,Hosp.,2,3,15:00,16:00
+1808,Urology,Cystourethroscopy,1,60,2,Hosp.,2,4,08:00,09:00
+1343,ENT,Tonsillectomy,1,60,1,Hosp.,2,5,10:00,11:00
+1773,ENT,Tonsillectomy,1,60,1,Hosp.,2,5,11:00,12:00
+1776,ENT,Tonsillectomy,1,60,1,Hosp.,2,5,12:00,13:00
+1877,ENT,Tonsillectomy,1,60,1,Hosp.,2,5,13:00,14:00
+575,Plastic,Removal of benign skin lesion,1,60,2,Hosp.,2,6,11:00,12:00
+1067,Plastic,Removal of benign skin lesion,1,60,2,Hosp.,2,6,12:00,13:00
+1345,Plastic,Removal of benign skin lesion,1,60,2,Hosp.,2,6,13:00,14:00
+1346,Plastic,Removal of benign skin lesion,1,60,2,Hosp.,2,6,14:00,15:00
+1350,Pediatrics,"Tympanostomy, general anesthesia",1,60,3,Hosp.,2,7,08:00,09:00
+1352,Pediatrics,"Myringotomy, general anesthesia",1,60,2,Hosp.,2,7,09:00,10:00
+1745,Pediatrics,"Tympanostomy, general anesthesia",1,60,3,Hosp.,2,7,10:00,11:00
+1747,Pediatrics,"Myringotomy, general anesthesia",1,60,2,Hosp.,2,7,14:00,15:00
+1884,Vascular,"Digital amputation, metatarsophalangeal joint",1,60,3,Hosp.,2,7,15:00,16:00
+1916,Vascular,"Digital amputation, metatarsophalangeal joint",1,60,3,Hosp.,2,7,16:00,17:00
+1964,Podiatry,"Correction, hammertoe",1,60,3,Hosp.,3,1,08:00,09:00
+2069,Podiatry,"Correction, hammertoe",1,60,3,Hosp.,3,1,09:00,10:00
+2070,Podiatry,"Correction, hammertoe",1,60,3,Hosp.,3,1,10:00,11:00
+2135,Podiatry,Hallux rigidus correction with cheilectomy,1,60,3,Hosp.,3,1,11:00,12:00
+2033,Orthopedics,"Arthroscopy, knee, surgical",1,60,3,Hosp.,3,2,08:00,09:00
+2072,Orthopedics,"Carpal tunnel release, open",1,60,3,Hosp.,3,2,09:00,10:00
+2142,Orthopedics,"Arthroscopy, knee, surgical",1,60,3,Hosp.,3,2,10:00,11:00
+1015,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,3,3,08:00,08:45
+1016,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,3,3,08:45,09:30
+1048,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,3,3,09:30,10:15
+1151,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,3,3,10:15,11:00
+1187,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,3,3,11:00,11:45
+1190,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,3,3,11:45,12:30
+1971,Pediatrics,"Tympanostomy, general anesthesia",1,60,3,Hosp.,3,3,14:00,15:00
+2076,Pediatrics,"Tympanostomy, general anesthesia",1,60,3,Hosp.,3,3,15:00,16:00
+2015,Urology,Cystourethroscopy,1,60,2,Hosp.,3,5,08:00,09:00
+2121,Urology,Vasectomy,1,60,3,Hosp.,3,5,09:00,10:00
+1949,ENT,Tonsillectomy,1,60,1,Hosp.,3,5,10:00,11:00
+2053,ENT,Tonsillectomy,1,60,1,Hosp.,3,5,11:00,12:00
+2087,ENT,Tonsillectomy,1,60,1,Hosp.,3,5,12:00,13:00
+2088,ENT,Tonsillectomy,1,60,1,Hosp.,3,5,13:00,14:00
+1950,Plastic,Removal of benign skin lesion,1,60,2,Hosp.,3,6,11:00,12:00
+2055,Plastic,Removal of benign skin lesion,1,60,2,Hosp.,3,6,12:00,13:00
+2056,Plastic,Removal of benign skin lesion,1,60,2,Hosp.,3,6,13:00,14:00
+2062,Pediatrics,"Myringotomy, general anesthesia",1,60,2,Hosp.,3,7,08:00,09:00
+2093,Vascular,"Digital amputation, metatarsophalangeal joint",1,60,3,Hosp.,3,7,09:00,10:00
+2167,Pediatrics,"Myringotomy, general anesthesia",1,60,2,Hosp.,3,7,10:00,11:00
+370,Vascular,AV fistula,1,75,2,UCI,3,7,15:00,16:15
+372,Vascular,AV fistula,1,75,2,UCI,3,7,16:15,17:30
+1285,Podiatry,"Partial ostectomy, fifth metatarsal head",1,90,2,Hosp.,4,1,08:00,09:30
+376,Podiatry,Bunionectomy with distal osteotomy,1,120,3,Hosp.,4,1,09:30,11:30
+449,Podiatry,Bunionectomy with distal osteotomy,1,120,3,Hosp.,4,1,14:00,16:00
+587,Podiatry,Plantar fasciotomy,2,60,3,Hosp.,4,1,16:00,17:00
+1083,Orthopedics,"Fasciotomy, palmar, open",1,90,3,Hosp.,4,2,08:00,09:30
+1085,Orthopedics,Flexor tendon repair,1,90,2,Hosp.,4,2,09:30,11:00
+1220,Orthopedics,"Fasciotomy, palmar, open",1,90,3,Hosp.,4,2,14:00,15:30
+1968,Orthopedics,"Fasciotomy, palmar, open",1,90,3,Hosp.,4,2,15:30,17:00
+277,Orthopedics,"Arthroscopy, knee, surgical",2,60,3,Hosp.,4,2,17:00,18:00
+1191,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,4,3,08:00,08:45
+1291,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,4,3,08:45,09:30
+1328,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,4,3,09:30,10:15
+1329,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,4,3,10:15,11:00
+1689,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,4,3,11:00,11:45
+1691,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,4,3,11:45,12:30
+323,Pediatrics,"Myringotomy, general anesthesia",2,60,2,Hosp.,4,3,14:00,15:00
+425,Pediatrics,"Tympanostomy, general anesthesia",2,60,3,Hosp.,4,3,15:00,16:00
+426,Pediatrics,"Myringotomy, general anesthesia",2,60,2,Hosp.,4,3,16:00,17:00
+596,Pediatrics,"Tympanostomy, general anesthesia",2,60,3,Hosp.,4,3,17:00,18:00
+358,OBGYN,Cervical biopsy,1,75,3,Hosp.,4,4,08:00,09:15
+394,OBGYN,Cervical biopsy,1,75,3,Hosp.,4,4,09:15,10:30
+396,OBGYN,Cervical biopsy,1,75,3,Hosp.,4,4,10:30,11:45
+499,OBGYN,Cervical biopsy,1,75,3,Hosp.,4,4,11:45,13:00
+532,Urology,Cryosurgery of the prostate gland,1,90,3,Hosp.,4,4,13:00,14:30
+1125,Urology,Cryosurgery of the prostate gland,1,90,3,Hosp.,4,4,14:30,16:00
+534,Urology,Vasectomy,2,60,3,Hosp.,4,4,16:00,17:00
+1873,Urology,Cystourethroscopy,2,60,2,Hosp.,4,4,17:00,18:00
+1304,Urology,Cryosurgery of the prostate gland,1,90,3,Hosp.,4,5,08:00,09:30
+399,ENT,Septoplasty,1,90,0,Ambulatorio,4,5,10:00,11:30
+571,ENT,Septoplasty,1,90,0,Ambulatorio,4,5,11:30,13:00
+572,ENT,Septoplasty,1,90,0,Ambulatorio,4,5,13:00,14:30
+363,Urology,Cystourethroscopy,2,60,2,Hosp.,4,5,14:30,15:30
+464,Urology,Vasectomy,2,60,3,Hosp.,4,5,15:30,16:30
+468,Urology,Cystourethroscopy,2,60,2,Hosp.,4,5,16:30,17:30
+540,Plastic,"Adjacent tissue transfer, eyelids, nose, ears, lip",1,120,3,Hosp.,4,6,11:00,13:00
+644,Plastic,Rhinoplasty,1,120,3,Hosp.,4,6,13:00,15:00
+299,Plastic,Removal of benign skin lesion,2,60,2,Hosp.,4,6,15:00,16:00
+303,Pediatrics,"Tympanostomy, general anesthesia",2,60,3,Hosp.,4,7,08:00,09:00
+306,Pediatrics,"Myringotomy, general anesthesia",2,60,2,Hosp.,4,7,09:00,10:00
+408,Pediatrics,"Tympanostomy, general anesthesia",2,60,3,Hosp.,4,7,10:00,11:00
+513,Pediatrics,"Myringotomy, general anesthesia",2,60,2,Hosp.,4,7,14:00,15:00
+473,Vascular,"Digital amputation, metatarsophalangeal joint",2,60,3,Hosp.,4,7,15:00,16:00
+579,Pediatrics,"Tympanostomy, general anesthesia",2,60,3,Hosp.,4,7,16:00,17:00
+1071,Pediatrics,"Tympanostomy, general anesthesia",2,60,3,Hosp.,4,7,17:00,18:00
+1994,General,Laparoscopic cholecystectomy,1,90,3,Hosp.,4,8,08:00,09:30
+373,General,Sleeve gastrectomy,1,120,3,Hosp.,4,8,09:30,11:30
+548,General,Sleeve gastrectomy,1,120,3,Hosp.,4,8,11:30,13:30
+413,Orthopedics,"Arthroplasty, hip",1,120,2,Hosp.,4,8,14:00,16:00
+515,Orthopedics,"Arthroplasty, knee, hinge prothesis",1,120,2,Hosp.,4,8,16:00,18:00
+550,Podiatry,Bunionectomy with distal osteotomy,1,120,3,Hosp.,5,1,08:00,10:00
+1008,Podiatry,Bunionectomy with distal osteotomy,1,120,3,Hosp.,5,1,10:00,12:00
+1177,Podiatry,Bunionectomy with distal osteotomy,1,120,3,Hosp.,5,1,14:00,16:00
+1290,Orthopedics,"Arthroplasty, knee, hinge prothesis",1,120,2,Hosp.,5,2,08:00,10:00
+1684,Orthopedics,"Arthroplasty, knee, hinge prothesis",1,120,2,Hosp.,5,2,14:00,16:00
+1685,Orthopedics,"Arthroplasty, knee, hinge prothesis",1,120,2,Hosp.,5,2,16:00,18:00
+1730,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,5,3,08:00,08:45
+1762,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,5,3,08:45,09:30
+1767,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,5,3,09:30,10:15
+1834,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,5,3,10:15,11:00
+1898,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,5,3,11:00,11:45
+1939,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,5,3,11:45,12:30
+600,Pediatrics,"Myringotomy, general anesthesia",2,60,2,Hosp.,5,3,14:00,15:00
+1057,OBGYN,Cervical biopsy,1,75,3,Hosp.,5,4,08:00,09:15
+1059,OBGYN,Cervical biopsy,1,75,3,Hosp.,5,4,09:15,10:30
+1195,OBGYN,Cervical biopsy,1,75,3,Hosp.,5,4,10:30,11:45
+1302,OBGYN,Cervical biopsy,1,75,3,Hosp.,5,4,11:45,13:00
+637,Urology,Vasectomy,2,60,3,Hosp.,5,5,08:00,09:00
+639,Urology,Cystourethroscopy,2,60,2,Hosp.,5,5,09:00,10:00
+1061,ENT,Septoplasty,1,90,0,Ambulatorio,5,5,10:00,11:30
+1341,ENT,Septoplasty,1,90,0,Ambulatorio,5,5,11:30,13:00
+2052,ENT,Septoplasty,1,90,0,Ambulatorio,5,5,13:00,14:30
+1068,Plastic,"Adjacent tissue transfer, eyelids, nose, ears, lip",1,120,3,Hosp.,5,6,11:00,13:00
+1848,Plastic,Rhinoplasty,1,120,3,Hosp.,5,6,13:00,15:00
+1065,Plastic,Removal of benign skin lesion,2,60,2,Hosp.,5,6,15:00,16:00
+442,Vascular,AV fistula,1,75,2,UCI,5,7,08:00,09:15
+474,Vascular,AV fistula,1,75,2,UCI,5,7,09:15,10:30
+1036,General,Sleeve gastrectomy,1,120,3,Hosp.,5,8,08:00,10:00
+1037,General,Sleeve gastrectomy,1,120,3,Hosp.,5,8,10:00,12:00
+1174,General,Sleeve gastrectomy,1,120,3,Hosp.,5,8,12:00,14:00
+1316,General,Sleeve gastrectomy,1,120,3,Hosp.,5,8,14:00,16:00
+1712,General,Sleeve gastrectomy,1,120,3,Hosp.,5,8,16:00,18:00
+1179,Podiatry,Bunionectomy with distal osteotomy,1,120,3,Hosp.,6,1,08:00,10:00
+1247,Podiatry,Bunionectomy with distal osteotomy,1,120,3,Hosp.,6,1,10:00,12:00
+1288,Podiatry,Bunionectomy with distal osteotomy,1,120,3,Hosp.,6,1,14:00,16:00
+1895,Orthopedics,"Arthroplasty, knee, hinge prothesis",1,120,2,Hosp.,6,2,08:00,10:00
+383,Orthopedics,"Arthroscopy, knee, surgical",2,60,3,Hosp.,6,2,10:00,11:00
+384,Orthopedics,"Arthroscopy, knee, surgical",2,60,3,Hosp.,6,2,14:00,15:00
+487,Orthopedics,"Arthroscopy, knee, surgical",2,60,3,Hosp.,6,2,15:00,16:00
+553,Orthopedics,"Arthroscopy, knee, surgical",2,60,3,Hosp.,6,2,16:00,17:00
+555,Orthopedics,"Arthroscopy, knee, surgical",2,60,3,Hosp.,6,2,17:00,18:00
+2001,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,6,3,08:00,08:45
+2006,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,6,3,08:45,09:30
+2042,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,6,3,09:30,10:15
+2145,Ophthalmology,Extracapsular cataract removal,1,45,0,Ambulatorio,6,3,10:15,11:00
+282,Ophthalmology,Extracapsular cataract removal,2,45,0,Ambulatorio,6,3,11:00,11:45
+286,Ophthalmology,Extracapsular cataract removal,2,45,0,Ambulatorio,6,3,11:45,12:30
+1337,OBGYN,Cervical biopsy,1,75,3,Hosp.,6,4,08:00,09:15
+1944,OBGYN,Cervical biopsy,1,75,3,Hosp.,6,4,09:15,10:30
+2115,OBGYN,Cervical biopsy,1,75,3,Hosp.,6,4,10:30,11:45
+2117,OBGYN,Cervical biopsy,1,75,3,Hosp.,6,4,11:45,13:00
+296,ENT,Tonsillectomy,2,60,1,Hosp.,6,5,10:00,11:00
+329,ENT,Tonsillectomy,2,60,1,Hosp.,6,5,11:00,12:00
+434,ENT,Tonsillectomy,2,60,1,Hosp.,6,5,12:00,13:00
+435,ENT,Tonsillectomy,2,60,1,Hosp.,6,5,13:00,14:00
+573,ENT,Tonsillectomy,2,60,1,Hosp.,6,5,14:00,15:00
+1915,Plastic,Rhinoplasty,1,120,3,Hosp.,6,6,11:00,13:00
+2020,Plastic,Rhinoplasty,1,120,3,Hosp.,6,6,13:00,15:00
+1066,Plastic,Removal of benign skin lesion,2,60,2,Hosp.,6,6,15:00,16:00
+1751,Orthopedics,"Arthroplasty, hip",1,120,2,Hosp.,6,8,08:00,10:00
+1921,General,Sleeve gastrectomy,1,120,3,Hosp.,6,8,10:00,12:00
+2026,General,Sleeve gastrectomy,1,120,3,Hosp.,6,8,12:00,14:00
+2027,General,Sleeve gastrectomy,1,120,3,Hosp.,6,8,14:00,16:00
+2066,Orthopedics,"Arthroplasty, hip",1,120,2,Hosp.,6,8,16:00,18:00
+1717,Podiatry,Bunionectomy with distal osteotomy,1,120,3,Hosp.,7,1,08:00,10:00
+1754,Podiatry,Bunionectomy with distal osteotomy,1,120,3,Hosp.,7,1,10:00,12:00
+1926,Podiatry,Bunionectomy with distal osteotomy,1,120,3,Hosp.,7,1,14:00,16:00
+1112,Podiatry,"Correction, hammertoe",2,60,3,Hosp.,7,1,16:00,17:00
+657,Orthopedics,"Carpal tunnel release, open",2,60,3,Hosp.,7,2,08:00,09:00
+1044,Orthopedics,"Arthroscopy, knee, surgical",2,60,3,Hosp.,7,2,09:00,10:00
+1045,Orthopedics,"Arthroscopy, knee, surgical",2,60,3,Hosp.,7,2,10:00,11:00
+1082,Orthopedics,"Carpal tunnel release, open",2,60,3,Hosp.,7,2,14:00,15:00
+1182,Orthopedics,"Arthroscopy, knee, surgical",2,60,3,Hosp.,7,2,15:00,16:00
+1218,Orthopedics,"Carpal tunnel release, open",2,60,3,Hosp.,7,2,16:00,17:00
+1219,Orthopedics,"Carpal tunnel release, open",2,60,3,Hosp.,7,2,17:00,18:00
+288,Ophthalmology,Extracapsular cataract removal,2,45,0,Ambulatorio,7,3,08:00,08:45
+350,Ophthalmology,Extracapsular cataract removal,2,45,0,Ambulatorio,7,3,08:45,09:30
+391,Ophthalmology,Extracapsular cataract removal,2,45,0,Ambulatorio,7,3,09:30,10:15
+392,Ophthalmology,Extracapsular cataract removal,2,45,0,Ambulatorio,7,3,10:15,11:00
+455,Ophthalmology,Extracapsular cataract removal,2,45,0,Ambulatorio,7,3,11:00,11:45
+459,Ophthalmology,Extracapsular cataract removal,2,45,0,Ambulatorio,7,3,11:45,12:30
+1088,Pediatrics,"Tympanostomy, general anesthesia",2,60,3,Hosp.,7,3,14:00,15:00
+1122,Pediatrics,"Myringotomy, general anesthesia",2,60,2,Hosp.,7,3,15:00,16:00
+1224,Pediatrics,"Tympanostomy, general anesthesia",2,60,3,Hosp.,7,3,16:00,17:00
+1225,Pediatrics,"Tympanostomy, general anesthesia",2,60,3,Hosp.,7,3,17:00,18:00
+2154,OBGYN,Cervical biopsy,1,75,3,Hosp.,7,4,08:00,09:15
+289,OBGYN,"Hysterectomy, surgical",1,120,2,Hosp.,7,4,09:15,11:15
+1979,Urology,Vasectomy,2,60,3,Hosp.,7,4,11:15,12:15
+602,Urology,Cryosurgery of the prostate gland,2,90,3,Hosp.,7,4,12:15,13:45
+668,Urology,Cryosurgery of the prostate gland,2,90,3,Hosp.,7,4,13:45,15:15
+1701,Urology,Vasectomy,2,60,3,Hosp.,7,5,08:00,09:00
+1841,Urology,Vasectomy,2,60,3,Hosp.,7,5,09:00,10:00
+606,ENT,Tonsillectomy,2,60,1,Hosp.,7,5,10:00,11:00
+608,ENT,Tonsillectomy,2,60,1,Hosp.,7,5,11:00,12:00
+609,ENT,Tonsillectomy,2,60,1,Hosp.,7,5,12:00,13:00
+1096,ENT,Tonsillectomy,2,60,1,Hosp.,7,5,13:00,14:00
+1098,ENT,Tonsillectomy,2,60,1,Hosp.,7,5,14:00,15:00
+1843,Urology,Cystourethroscopy,2,60,2,Hosp.,7,5,15:00,16:00
+1844,Urology,Vasectomy,2,60,3,Hosp.,7,5,16:00,17:00
+1845,Urology,Cystourethroscopy,2,60,2,Hosp.,7,5,17:00,18:00
+2163,Plastic,"Adjacent tissue transfer, eyelids, nose, ears, lip",1,120,3,Hosp.,7,6,11:00,13:00
+366,Plastic,Liposuction,1,180,3,Hosp.,7,6,13:00,16:00
+475,Vascular,AV fistula,1,75,2,UCI,7,7,08:00,09:15
+1033,Vascular,AV fistula,1,75,2,UCI,7,7,09:15,10:30
+1073,Pediatrics,"Myringotomy, general anesthesia",2,60,2,Hosp.,7,7,14:00,15:00
+1103,Vascular,"Digital amputation, metatarsophalangeal joint",2,60,3,Hosp.,7,7,15:00,16:00
+1280,Pediatrics,"Myringotomy, general anesthesia",2,60,2,Hosp.,7,7,16:00,17:00
+1707,Vascular,"Digital amputation, metatarsophalangeal joint",2,60,3,Hosp.,7,7,17:00,18:00
+2098,General,Sleeve gastrectomy,1,120,3,Hosp.,7,8,08:00,10:00
+445,General,Laparoscopic cholecystectomy,2,90,3,Hosp.,7,8,10:00,11:30
+1176,General,Laparoscopic cholecystectomy,2,90,3,Hosp.,7,8,11:30,13:00
