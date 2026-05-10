@@ -26,14 +26,20 @@ reprogramacion_pendiente = False
 # =========================
 # CARGAR CSV
 # =========================
-ruta = path.join("..","Capstone-Equipo-11","Simulacion","Estado_Inicial", "28_días.csv") 
+ruta = path.join("..","Capstone-Equipo-11","Simulacion","Estado_Inicial", "7_dias.csv") 
 ruta2 = path.join("..", "Capstone-Equipo-11","Simulacion","Estado_Inicial","lista_espera_base.csv")
+ruta3 = path.join("..", "Capstone-Equipo-11","Simulacion","Estado_Inicial","caso_base_resultados_asignaciones.csv")
 df_programacion = pd.read_csv(ruta, sep=",", encoding="utf-8-sig")
-df_caso_base = pd.read_csv(ruta2, sep=",", encoding="utf-8-sig")
+df_escenario_1 = pd.read_csv(ruta2, sep=",", encoding="utf-8-sig")
+df_caso_base = pd.read_csv(ruta3, sep=",", encoding="utf-8-sig")
 
+if "Requiere UCI" not in df_caso_base.columns:
+    df_caso_base["Requiere UCI"] = (
+        df_caso_base["Descripción"] == "AV Fistula"
+    )
 
-df_final = df_programacion.merge(
-    df_caso_base,
+df_final = df_programacion.merge(  # Cambiar aquí para que caso probar (  df_programacion  / df_caso_base    )
+    df_escenario_1,                     
     on="Correlativo",
     how="left",
     suffixes=("_prog", "_caso_base")
