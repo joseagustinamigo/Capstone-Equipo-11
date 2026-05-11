@@ -1,0 +1,10 @@
+Fecha,Hora corte,Operaciones realizadas,Ocupacion camas,Capacidad camas,Ocupacion UCI,Capacidad UCI,Operaciones pendientes,Cancelaciones del dia,Modo saturado,Resumen
+2026-01-05,20:00,29,75,75,0,2,79,3,True,"--- Resumen del día 2026-01-05 ---
+Operaciones realizadas: 29
+Ocupación camas: 75/75 | UCI: 0/2
+Operaciones pendientes: 79
+Cancelaciones: 3
+
+ Baja disponibilidad de camas
+Evaluar reprogramación manual
+Presiona 'Reprogramar semana' si lo deseas."

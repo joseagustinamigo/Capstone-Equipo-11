@@ -27,7 +27,7 @@ reprogramacion_pendiente = False
 # CARGAR CSV
 # =========================
 ruta = path.join("..","Capstone-Equipo-11","Simulacion","Estado_Inicial", "7_dias.csv") 
-ruta2 = path.join("..", "Capstone-Equipo-11","Simulacion","Estado_Inicial","lista_espera_base.csv")
+ruta2 = path.join("..", "Capstone-Equipo-11","Simulacion","Estado_Inicial","Escenarios","escenario_1.csv")
 ruta3 = path.join("..", "Capstone-Equipo-11","Simulacion","Estado_Inicial","caso_base_resultados_asignaciones.csv")
 df_programacion = pd.read_csv(ruta, sep=",", encoding="utf-8-sig")
 df_escenario_1 = pd.read_csv(ruta2, sep=",", encoding="utf-8-sig")
@@ -288,7 +288,7 @@ def reanudar():
 
 def faster():
     global SPEED
-    SPEED = max(100, SPEED - 50)
+    SPEED = max(20, SPEED - 50)
 
 
 def slower():

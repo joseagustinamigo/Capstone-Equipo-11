@@ -1,0 +1,48 @@
+Correlativo,Prioridad,Días cama,Tipo cama,Día,Pabellón,Hora inicio,Hora fin,Requiere UCI,ID paciente,Fecha,OR Suite,Código CPT,Duración agendada (min),Prioridad de paciente,duracion_efectiva_intervencion,dias_permanencia_programados,dias_permanencia_efectivos,inicio_dt,fin_dt,descripcion,servicio
+1717,1,3,Hosp.,7,1,08:00,10:00,False,11718,,1,28296,0 days 02:00:00,1,0 days 01:48:00,1 days,1 days,2026-01-07 08:00:00,2026-01-07 10:00:00,Bunionectomy with distal osteotomy,Podiatry
+657,2,3,Hosp.,7,2,08:00,09:00,False,10658,,2,64721,0 days 01:00:00,2,0 days 00:38:00,2 days,5 days,2026-01-07 08:00:00,2026-01-07 09:00:00,"Carpal tunnel release, open",Orthopedics
+288,2,0,Ambulatorio,7,3,08:00,08:45,False,10289,,3,66982,0 days 00:45:00,2,0 days 00:22:00,0 days,0 days,2026-01-07 08:00:00,2026-01-07 08:45:00,Extracapsular cataract removal,Ophthalmology
+2154,1,3,Hosp.,7,4,08:00,09:15,False,12155,,4,57460,0 days 01:15:00,1,0 days 00:35:00,1 days,5 days,2026-01-07 08:00:00,2026-01-07 09:15:00,Cervical biopsy,OBGYN
+1701,2,3,Hosp.,7,5,08:00,09:00,False,11702,,5,55250,0 days 01:00:00,2,0 days 00:41:00,1 days,4 days,2026-01-07 08:00:00,2026-01-07 09:00:00,Vasectomy,Urology
+475,1,2,UCI,7,7,08:00,09:15,False,10476,,7,36901,0 days 01:15:00,1,0 days 00:55:00,1 days,5 days,2026-01-07 08:00:00,2026-01-07 09:15:00,AV fistula,Vascular
+2098,1,3,Hosp.,7,8,08:00,10:00,False,12099,,8,43775,0 days 02:00:00,1,0 days 01:34:00,1 days,6 days,2026-01-07 08:00:00,2026-01-07 10:00:00,Sleeve gastrectomy,General
+350,2,0,Ambulatorio,7,3,08:45,09:30,False,10351,,3,66982,0 days 00:45:00,2,0 days 00:22:00,0 days,0 days,2026-01-07 08:45:00,2026-01-07 09:30:00,Extracapsular cataract removal,Ophthalmology
+1044,2,3,Hosp.,7,2,09:00,10:00,False,11045,,2,29877,0 days 01:00:00,2,0 days 00:40:00,1 days,6 days,2026-01-07 09:00:00,2026-01-07 10:00:00,"Arthroscopy, knee, surgical",Orthopedics
+1841,2,3,Hosp.,7,5,09:00,10:00,False,11842,,5,55250,0 days 01:00:00,2,0 days 00:33:00,1 days,2 days,2026-01-07 09:00:00,2026-01-07 10:00:00,Vasectomy,Urology
+289,1,2,Hosp.,7,4,09:15,11:15,False,10290,,4,58562,0 days 02:00:00,1,0 days 01:15:00,1 days,6 days,2026-01-07 09:15:00,2026-01-07 11:15:00,"Hysterectomy, surgical",OBGYN
+1033,1,2,UCI,7,7,09:15,10:30,False,11034,,7,36901,0 days 01:15:00,1,0 days 01:07:00,1 days,5 days,2026-01-07 09:15:00,2026-01-07 10:30:00,AV fistula,Vascular
+391,2,0,Ambulatorio,7,3,09:30,10:15,False,10392,,3,66982,0 days 00:45:00,2,0 days 00:51:00,0 days,0 days,2026-01-07 09:30:00,2026-01-07 10:15:00,Extracapsular cataract removal,Ophthalmology
+1754,1,3,Hosp.,7,1,10:00,12:00,False,11755,,1,28296,0 days 02:00:00,1,0 days 01:29:00,1 days,6 days,2026-01-07 10:00:00,2026-01-07 12:00:00,Bunionectomy with distal osteotomy,Podiatry
+1045,2,3,Hosp.,7,2,10:00,11:00,False,11046,,2,29877,0 days 01:00:00,2,0 days 00:35:00,1 days,1 days,2026-01-07 10:00:00,2026-01-07 11:00:00,"Arthroscopy, knee, surgical",Orthopedics
+606,2,1,Hosp.,7,5,10:00,11:00,False,10607,,5,42826,0 days 01:00:00,2,0 days 00:41:00,1 days,1 days,2026-01-07 10:00:00,2026-01-07 11:00:00,Tonsillectomy,ENT
+445,2,3,Hosp.,7,8,10:00,11:30,False,10446,,8,47562,0 days 01:30:00,2,0 days 01:27:00,2 days,5 days,2026-01-07 10:00:00,2026-01-07 11:30:00,Laparoscopic cholecystectomy,General
+392,2,0,Ambulatorio,7,3,10:15,11:00,False,10393,,3,66982,0 days 00:45:00,2,0 days 00:27:00,0 days,0 days,2026-01-07 10:15:00,2026-01-07 11:00:00,Extracapsular cataract removal,Ophthalmology
+455,2,0,Ambulatorio,7,3,11:00,11:45,False,10456,,3,66982,0 days 00:45:00,2,0 days 00:26:00,0 days,0 days,2026-01-07 11:00:00,2026-01-07 11:45:00,Extracapsular cataract removal,Ophthalmology
+608,2,1,Hosp.,7,5,11:00,12:00,False,10609,,5,42826,0 days 01:00:00,2,0 days 00:30:00,1 days,1 days,2026-01-07 11:00:00,2026-01-07 12:00:00,Tonsillectomy,ENT
+2163,1,3,Hosp.,7,6,11:00,13:00,False,12164,,6,14060,0 days 02:00:00,1,0 days 01:37:00,1 days,5 days,2026-01-07 11:00:00,2026-01-07 13:00:00,"Adjacent tissue transfer, eyelids, nose, ears, lip",Plastic
+1979,2,3,Hosp.,7,4,11:15,12:15,False,11980,,4,55250,0 days 01:00:00,2,0 days 00:48:00,1 days,2 days,2026-01-07 11:15:00,2026-01-07 12:15:00,Vasectomy,Urology
+1176,2,3,Hosp.,7,8,11:30,13:00,False,11177,,8,47562,0 days 01:30:00,2,0 days 01:26:00,2 days,3 days,2026-01-07 11:30:00,2026-01-07 13:00:00,Laparoscopic cholecystectomy,General
+459,2,0,Ambulatorio,7,3,11:45,12:30,False,10460,,3,66982,0 days 00:45:00,2,0 days 00:28:00,0 days,0 days,2026-01-07 11:45:00,2026-01-07 12:30:00,Extracapsular cataract removal,Ophthalmology
+609,2,1,Hosp.,7,5,12:00,13:00,False,10610,,5,42826,0 days 01:00:00,2,0 days 00:38:00,1 days,1 days,2026-01-07 12:00:00,2026-01-07 13:00:00,Tonsillectomy,ENT
+602,2,3,Hosp.,7,4,12:15,13:45,False,10603,,4,55873,0 days 01:30:00,2,0 days 01:08:00,2 days,5 days,2026-01-07 12:15:00,2026-01-07 13:45:00,Cryosurgery of the prostate gland,Urology
+1096,2,1,Hosp.,7,5,13:00,14:00,False,11097,,5,42826,0 days 01:00:00,2,0 days 00:42:00,1 days,1 days,2026-01-07 13:00:00,2026-01-07 14:00:00,Tonsillectomy,ENT
+366,1,3,Hosp.,7,6,13:00,16:00,False,10367,,6,15773,0 days 03:00:00,1,0 days 02:01:00,2 days,4 days,2026-01-07 13:00:00,2026-01-07 16:00:00,Liposuction,Plastic
+668,2,3,Hosp.,7,4,13:45,15:15,False,10669,,4,55873,0 days 01:30:00,2,0 days 01:18:00,2 days,5 days,2026-01-07 13:45:00,2026-01-07 15:15:00,Cryosurgery of the prostate gland,Urology
+1926,1,3,Hosp.,7,1,14:00,16:00,False,11927,,1,28296,0 days 02:00:00,1,0 days 01:18:00,1 days,5 days,2026-01-07 14:00:00,2026-01-07 16:00:00,Bunionectomy with distal osteotomy,Podiatry
+1082,2,3,Hosp.,7,2,14:00,15:00,False,11083,,2,64721,0 days 01:00:00,2,0 days 00:38:00,2 days,7 days,2026-01-07 14:00:00,2026-01-07 15:00:00,"Carpal tunnel release, open",Orthopedics
+1088,2,3,Hosp.,7,3,14:00,15:00,False,11089,,3,69436,0 days 01:00:00,2,0 days 00:41:00,1 days,3 days,2026-01-07 14:00:00,2026-01-07 15:00:00,"Tympanostomy, general anesthesia",Pediatrics
+1098,2,1,Hosp.,7,5,14:00,15:00,False,11099,,5,42826,0 days 01:00:00,2,0 days 01:04:00,1 days,1 days,2026-01-07 14:00:00,2026-01-07 15:00:00,Tonsillectomy,ENT
+1073,2,2,Hosp.,7,7,14:00,15:00,False,11074,,7,69421,0 days 01:00:00,2,0 days 00:32:00,1 days,4 days,2026-01-07 14:00:00,2026-01-07 15:00:00,"Myringotomy, general anesthesia",Pediatrics
+1182,2,3,Hosp.,7,2,15:00,16:00,False,11183,,2,29877,0 days 01:00:00,2,0 days 00:39:00,1 days,7 days,2026-01-07 15:00:00,2026-01-07 16:00:00,"Arthroscopy, knee, surgical",Orthopedics
+1122,2,2,Hosp.,7,3,15:00,16:00,False,11123,,3,69421,0 days 01:00:00,2,0 days 00:33:00,1 days,5 days,2026-01-07 15:00:00,2026-01-07 16:00:00,"Myringotomy, general anesthesia",Pediatrics
+1843,2,2,Hosp.,7,5,15:00,16:00,False,11844,,5,52353,0 days 01:00:00,2,0 days 00:31:00,1 days,2 days,2026-01-07 15:00:00,2026-01-07 16:00:00,Cystourethroscopy,Urology
+1103,2,3,Hosp.,7,7,15:00,16:00,False,11104,,7,28820,0 days 01:00:00,2,0 days 00:31:00,1 days,5 days,2026-01-07 15:00:00,2026-01-07 16:00:00,"Digital amputation, metatarsophalangeal joint",Vascular
+1112,2,3,Hosp.,7,1,16:00,17:00,False,11113,,1,28285,0 days 01:00:00,2,0 days 00:47:00,1 days,4 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Correction, hammertoe",Podiatry
+1218,2,3,Hosp.,7,2,16:00,17:00,False,11219,,2,64721,0 days 01:00:00,2,0 days 00:48:00,2 days,5 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Carpal tunnel release, open",Orthopedics
+1224,2,3,Hosp.,7,3,16:00,17:00,False,11225,,3,69436,0 days 01:00:00,2,0 days 00:56:00,1 days,5 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Tympanostomy, general anesthesia",Pediatrics
+1844,2,3,Hosp.,7,5,16:00,17:00,False,11845,,5,55250,0 days 01:00:00,2,0 days 00:40:00,1 days,3 days,2026-01-07 16:00:00,2026-01-07 17:00:00,Vasectomy,Urology
+1280,2,2,Hosp.,7,7,16:00,17:00,False,11281,,7,69421,0 days 01:00:00,2,0 days 00:32:00,1 days,6 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Myringotomy, general anesthesia",Pediatrics
+1219,2,3,Hosp.,7,2,17:00,18:00,False,11220,,2,64721,0 days 01:00:00,2,0 days 00:42:00,2 days,5 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Carpal tunnel release, open",Orthopedics
+1225,2,3,Hosp.,7,3,17:00,18:00,False,11226,,3,69436,0 days 01:00:00,2,0 days 00:33:00,1 days,2 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Tympanostomy, general anesthesia",Pediatrics
+1845,2,2,Hosp.,7,5,17:00,18:00,False,11846,,5,52353,0 days 01:00:00,2,0 days 01:02:00,1 days,4 days,2026-01-07 17:00:00,2026-01-07 18:00:00,Cystourethroscopy,Urology
+1707,2,3,Hosp.,7,7,17:00,18:00,False,11708,,7,28820,0 days 01:00:00,2,0 days 00:34:00,1 days,7 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Digital amputation, metatarsophalangeal joint",Vascular
