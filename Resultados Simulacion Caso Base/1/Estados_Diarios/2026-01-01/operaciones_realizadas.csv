@@ -1,0 +1,56 @@
+Correlativo,Servicio,Descripción,Pabellón,Inicio operación,Fin operación,Alta cama
+284,Ophthalmology,Extracapsular cataract removal,3,08:00,2026-01-01 08:45,
+310,Podiatry,Plantar fasciotomy,1,08:00,2026-01-01 09:00,2026-01-04 08:00
+280,Orthopedics,"Arthroscopy, knee, surgical",2,08:00,2026-01-01 09:00,2026-01-07 08:00
+326,Urology,Cystourethroscopy,4,08:00,2026-01-01 09:00,2026-01-04 08:00
+1163,Urology,Cystourethroscopy,5,08:00,2026-01-01 09:00,2026-01-05 08:00
+410,Pediatrics,"Myringotomy, general anesthesia",7,08:00,2026-01-01 09:00,2026-01-06 08:00
+349,Ophthalmology,Extracapsular cataract removal,3,08:45,2026-01-01 09:30,
+520,Podiatry,"Correction, hammertoe",1,09:00,2026-01-01 10:00,2026-01-02 08:00
+418,Orthopedics,"Carpal tunnel release, open",2,09:00,2026-01-01 10:00,2026-01-05 08:00
+428,Urology,Vasectomy,4,09:00,2026-01-01 10:00,2026-01-03 08:00
+1164,Urology,Vasectomy,5,09:00,2026-01-01 10:00,2026-01-07 08:00
+439,Vascular,"Digital amputation, metatarsophalangeal joint",7,09:00,2026-01-01 10:00,2026-01-07 08:00
+354,Ophthalmology,Extracapsular cataract removal,3,09:30,2026-01-01 10:15,
+588,Podiatry,Plantar fasciotomy,1,10:00,2026-01-01 11:00,2026-01-04 08:00
+419,Orthopedics,"Carpal tunnel release, open",2,10:00,2026-01-01 11:00,2026-01-05 08:00
+430,Urology,Cystourethroscopy,4,10:00,2026-01-01 11:00,2026-01-06 08:00
+330,ENT,Tonsillectomy,5,10:00,2026-01-01 11:00,2026-01-02 08:00
+440,Vascular,"Digital amputation, metatarsophalangeal joint",7,10:00,2026-01-01 11:00,2026-01-02 08:00
+355,Ophthalmology,Extracapsular cataract removal,3,10:15,2026-01-01 11:00,
+385,Ophthalmology,Extracapsular cataract removal,3,11:00,2026-01-01 11:45,
+590,Podiatry,"Correction, hammertoe",1,11:00,2026-01-01 12:00,2026-01-06 08:00
+533,Urology,Cystourethroscopy,4,11:00,2026-01-01 12:00,2026-01-08 08:00
+397,ENT,Tonsillectomy,5,11:00,2026-01-01 12:00,2026-01-02 08:00
+298,Plastic,Removal of benign skin lesion,6,11:00,2026-01-01 12:00,2026-01-03 08:00
+387,Ophthalmology,Extracapsular cataract removal,3,11:45,2026-01-01 12:30,
+621,Podiatry,"Neurectomy, intrinsic musculature of foot",1,12:00,2026-01-01 13:00,2026-01-04 08:00
+605,Urology,Cystourethroscopy,4,12:00,2026-01-01 13:00,2026-01-04 08:00
+1131,ENT,Tonsillectomy,5,12:00,2026-01-01 13:00,2026-01-02 08:00
+403,Plastic,Removal of benign skin lesion,6,12:00,2026-01-01 13:00,2026-01-03 08:00
+667,Urology,Vasectomy,4,13:00,2026-01-01 14:00,2026-01-02 08:00
+1268,ENT,Tonsillectomy,5,13:00,2026-01-01 14:00,2026-01-02 08:00
+404,Plastic,Removal of benign skin lesion,6,13:00,2026-01-01 14:00,2026-01-03 08:00
+654,Podiatry,Plantar fasciotomy,1,14:00,2026-01-01 15:00,2026-01-06 08:00
+554,Orthopedics,"Arthroscopy, knee, surgical",2,14:00,2026-01-01 15:00,2026-01-02 08:00
+424,Pediatrics,"Tympanostomy, general anesthesia",3,14:00,2026-01-01 15:00,2026-01-07 08:00
+1091,Urology,Vasectomy,4,14:00,2026-01-01 15:00,2026-01-03 08:00
+1307,Urology,Cystourethroscopy,5,14:00,2026-01-01 15:00,2026-01-05 08:00
+505,Plastic,Removal of benign skin lesion,6,14:00,2026-01-01 15:00,2026-01-04 08:00
+582,Pediatrics,"Myringotomy, general anesthesia",7,14:00,2026-01-01 15:00,2026-01-03 08:00
+655,Podiatry,"Correction, hammertoe",1,15:00,2026-01-01 16:00,2026-01-06 08:00
+556,Orthopedics,"Arthroscopy, knee, surgical",2,15:00,2026-01-01 16:00,2026-01-02 08:00
+526,Pediatrics,"Tympanostomy, general anesthesia",3,15:00,2026-01-01 16:00,2026-01-05 08:00
+1093,Urology,Cystourethroscopy,4,15:00,2026-01-01 16:00,2026-01-02 08:00
+1910,Urology,Cystourethroscopy,5,15:00,2026-01-01 16:00,2026-01-02 08:00
+507,Plastic,Removal of benign skin lesion,6,15:00,2026-01-01 16:00,2026-01-05 08:00
+1031,Vascular,"Digital amputation, metatarsophalangeal joint",7,15:00,2026-01-01 16:00,2026-01-03 08:00
+656,Podiatry,"Correction, hammertoe",1,16:00,2026-01-01 17:00,2026-01-07 08:00
+592,Orthopedics,"Carpal tunnel release, open",2,16:00,2026-01-01 17:00,2026-01-03 08:00
+663,Pediatrics,"Tympanostomy, general anesthesia",3,16:00,2026-01-01 17:00,2026-01-06 08:00
+1231,Urology,Vasectomy,4,16:00,2026-01-01 17:00,2026-01-03 08:00
+1136,Vascular,"Digital amputation, metatarsophalangeal joint",7,16:00,2026-01-01 17:00,2026-01-03 08:00
+1043,Orthopedics,"Arthroscopy, knee, surgical",2,17:00,2026-01-01 18:00,2026-01-07 08:00
+1123,Pediatrics,"Myringotomy, general anesthesia",3,17:00,2026-01-01 18:00,2026-01-06 08:00
+1807,Urology,Vasectomy,4,17:00,2026-01-01 18:00,2026-01-02 08:00
+1169,Vascular,"Digital amputation, metatarsophalangeal joint",7,17:00,2026-01-01 18:00,2026-01-03 08:00

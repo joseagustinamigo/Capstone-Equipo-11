@@ -1,0 +1,34 @@
+Correlativo,Prioridad,Días cama,Tipo cama,Día,Pabellón,Hora inicio,Hora fin,Requiere UCI,ID paciente,Fecha,OR Suite,Código CPT,Duración agendada (min),Prioridad de paciente,duracion_efectiva_intervencion,dias_permanencia_programados,dias_permanencia_efectivos,inicio_dt,fin_dt,descripcion,servicio
+548,1,3,Hosp.,4,8,11:30,13:30,False,10549,,8,43775,0 days 02:00:00,1,0 days 01:38:00,1 days,7 days,2026-01-04 11:30:00,2026-01-04 13:30:00,Sleeve gastrectomy,General
+532,1,3,Hosp.,4,4,13:00,14:30,False,10533,,4,55873,0 days 01:30:00,1,0 days 01:05:00,2 days,4 days,2026-01-04 13:00:00,2026-01-04 14:30:00,Cryosurgery of the prostate gland,Urology
+644,1,3,Hosp.,4,6,13:00,15:00,False,10645,,6,30400,0 days 02:00:00,1,0 days 01:07:00,3 days,4 days,2026-01-04 13:00:00,2026-01-04 15:00:00,Rhinoplasty,Plastic
+323,1,2,Hosp.,4,3,14:00,15:00,False,10324,,3,69421,0 days 01:00:00,1,0 days 00:40:00,1 days,2 days,2026-01-04 14:00:00,2026-01-04 15:00:00,"Myringotomy, general anesthesia",Pediatrics
+513,1,2,Hosp.,4,7,14:00,15:00,False,10514,,7,69421,0 days 01:00:00,1,0 days 00:31:00,1 days,6 days,2026-01-04 14:00:00,2026-01-04 15:00:00,"Myringotomy, general anesthesia",Pediatrics
+1220,1,3,Hosp.,4,2,14:00,15:30,False,11221,,2,26045,0 days 01:30:00,1,0 days 00:47:00,2 days,2 days,2026-01-04 14:00:00,2026-01-04 15:30:00,"Fasciotomy, palmar, open",Orthopedics
+363,1,2,Hosp.,4,5,14:30,15:30,False,10364,,5,52353,0 days 01:00:00,1,0 days 00:30:00,1 days,3 days,2026-01-04 14:30:00,2026-01-04 15:30:00,Cystourethroscopy,Urology
+449,1,3,Hosp.,4,1,14:00,16:00,False,10450,,1,28296,0 days 02:00:00,1,0 days 01:26:00,1 days,3 days,2026-01-04 14:00:00,2026-01-04 16:00:00,Bunionectomy with distal osteotomy,Podiatry
+413,1,2,Hosp.,4,8,14:00,16:00,False,10414,,8,27130,0 days 02:00:00,1,0 days 01:34:00,2 days,4 days,2026-01-04 14:00:00,2026-01-04 16:00:00,"Arthroplasty, hip",Orthopedics
+1125,1,3,Hosp.,4,4,14:30,16:00,False,11126,,4,55873,0 days 01:30:00,1,0 days 01:05:00,2 days,5 days,2026-01-04 14:30:00,2026-01-04 16:00:00,Cryosurgery of the prostate gland,Urology
+425,1,3,Hosp.,4,3,15:00,16:00,False,10426,,3,69436,0 days 01:00:00,1,0 days 00:30:00,1 days,3 days,2026-01-04 15:00:00,2026-01-04 16:00:00,"Tympanostomy, general anesthesia",Pediatrics
+299,1,2,Hosp.,4,6,15:00,16:00,False,10300,,6,17110,0 days 01:00:00,1,0 days 00:32:00,1 days,4 days,2026-01-04 15:00:00,2026-01-04 16:00:00,Removal of benign skin lesion,Plastic
+473,1,3,Hosp.,4,7,15:00,16:00,False,10474,,7,28820,0 days 01:00:00,1,0 days 00:40:00,1 days,5 days,2026-01-04 15:00:00,2026-01-04 16:00:00,"Digital amputation, metatarsophalangeal joint",Vascular
+464,1,3,Hosp.,4,5,15:30,16:30,False,10465,,5,55250,0 days 01:00:00,1,0 days 00:40:00,1 days,1 days,2026-01-04 15:30:00,2026-01-04 16:30:00,Vasectomy,Urology
+1968,1,3,Hosp.,4,2,15:30,17:00,False,11969,,2,26045,0 days 01:30:00,1,0 days 01:04:00,2 days,5 days,2026-01-04 15:30:00,2026-01-04 17:00:00,"Fasciotomy, palmar, open",Orthopedics
+587,1,3,Hosp.,4,1,16:00,17:00,False,10588,,1,28060,0 days 01:00:00,1,0 days 00:41:00,2 days,7 days,2026-01-04 16:00:00,2026-01-04 17:00:00,Plantar fasciotomy,Podiatry
+426,1,2,Hosp.,4,3,16:00,17:00,False,10427,,3,69421,0 days 01:00:00,1,0 days 00:32:00,1 days,5 days,2026-01-04 16:00:00,2026-01-04 17:00:00,"Myringotomy, general anesthesia",Pediatrics
+534,1,3,Hosp.,4,4,16:00,17:00,False,10535,,4,55250,0 days 01:00:00,1,0 days 00:29:00,1 days,5 days,2026-01-04 16:00:00,2026-01-04 17:00:00,Vasectomy,Urology
+579,1,3,Hosp.,4,7,16:00,17:00,False,10580,,7,69436,0 days 01:00:00,1,0 days 00:32:00,1 days,2 days,2026-01-04 16:00:00,2026-01-04 17:00:00,"Tympanostomy, general anesthesia",Pediatrics
+468,1,2,Hosp.,4,5,16:30,17:30,False,10469,,5,52353,0 days 01:00:00,1,0 days 00:32:00,1 days,5 days,2026-01-04 16:30:00,2026-01-04 17:30:00,Cystourethroscopy,Urology
+515,1,2,Hosp.,4,8,16:00,18:00,False,10516,,8,27445,0 days 02:00:00,1,0 days 01:27:00,1 days,3 days,2026-01-04 16:00:00,2026-01-04 18:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics
+277,1,3,Hosp.,4,2,17:00,18:00,False,10278,,2,29877,0 days 01:00:00,1,0 days 00:35:00,1 days,5 days,2026-01-04 17:00:00,2026-01-04 18:00:00,"Arthroscopy, knee, surgical",Orthopedics
+596,1,3,Hosp.,4,3,17:00,18:00,False,10597,,3,69436,0 days 01:00:00,1,0 days 00:58:00,1 days,1 days,2026-01-04 17:00:00,2026-01-04 18:00:00,"Tympanostomy, general anesthesia",Pediatrics
+1873,1,2,Hosp.,4,4,17:00,18:00,False,11874,,4,52353,0 days 01:00:00,1,0 days 00:29:00,1 days,3 days,2026-01-04 17:00:00,2026-01-04 18:00:00,Cystourethroscopy,Urology
+1071,1,3,Hosp.,4,7,17:00,18:00,False,11072,,7,69436,0 days 01:00:00,1,0 days 00:34:00,1 days,6 days,2026-01-04 17:00:00,2026-01-04 18:00:00,"Tympanostomy, general anesthesia",Pediatrics
+1065,1,2,Hosp.,5,6,15:00,16:00,False,11066,,6,17110,0 days 01:00:00,1,0 days 00:32:00,1 days,3 days,2026-01-05 15:00:00,2026-01-05 16:00:00,Removal of benign skin lesion,Plastic
+1685,1,2,Hosp.,5,2,16:00,18:00,False,11686,,2,27445,0 days 02:00:00,1,0 days 01:36:00,1 days,6 days,2026-01-05 16:00:00,2026-01-05 18:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics
+1712,1,3,Hosp.,5,8,16:00,18:00,False,11713,,8,43775,0 days 02:00:00,1,0 days 02:09:00,1 days,1 days,2026-01-05 16:00:00,2026-01-05 18:00:00,Sleeve gastrectomy,General
+487,1,3,Hosp.,6,2,15:00,16:00,False,10488,,2,29877,0 days 01:00:00,1,0 days 00:38:00,1 days,3 days,2026-01-06 15:00:00,2026-01-06 16:00:00,"Arthroscopy, knee, surgical",Orthopedics
+1066,1,2,Hosp.,6,6,15:00,16:00,False,11067,,6,17110,0 days 01:00:00,1,0 days 01:00:00,1 days,1 days,2026-01-06 15:00:00,2026-01-06 16:00:00,Removal of benign skin lesion,Plastic
+553,1,3,Hosp.,6,2,16:00,17:00,False,10554,,2,29877,0 days 01:00:00,1,0 days 00:39:00,1 days,4 days,2026-01-06 16:00:00,2026-01-06 17:00:00,"Arthroscopy, knee, surgical",Orthopedics
+2066,1,2,Hosp.,6,8,16:00,18:00,False,12067,,8,27130,0 days 02:00:00,1,0 days 01:24:00,2 days,2 days,2026-01-06 16:00:00,2026-01-06 18:00:00,"Arthroplasty, hip",Orthopedics
+555,1,3,Hosp.,6,2,17:00,18:00,False,10556,,2,29877,0 days 01:00:00,1,0 days 00:39:00,1 days,5 days,2026-01-06 17:00:00,2026-01-06 18:00:00,"Arthroscopy, knee, surgical",Orthopedics

@@ -1,0 +1,51 @@
+Correlativo,Prioridad,Pabellón,Día,Hora inicio,Hora fin,Permanencia,Requiere UCI,ID paciente,Fecha,OR Suite,Código CPT,Duración agendada (min),Prioridad de paciente,duracion_efectiva_intervencion,dias_permanencia_programados,dias_permanencia_efectivos,inicio_dt,fin_dt,descripcion,servicio
+2070,5,1,7,08:00,09:00,5,False,12071,,1,28285,0 days 01:00:00,1,0 days 00:45:00,1 days,1 days,2026-01-07 08:00:00,2026-01-07 09:00:00,"Correction, hammertoe",Podiatry
+1255,5,2,7,08:00,09:00,6,False,11256,,2,29877,0 days 01:00:00,1,0 days 00:39:00,1 days,4 days,2026-01-07 08:00:00,2026-01-07 09:00:00,"Arthroscopy, knee, surgical",Orthopedics
+349,5,3,7,08:00,08:45,0,False,10350,,3,66982,0 days 00:45:00,1,0 days 00:32:00,0 days,0 days,2026-01-07 08:00:00,2026-01-07 08:45:00,Extracapsular cataract removal,Ophthalmology
+1944,5,4,7,08:00,09:15,4,False,11945,,4,57460,0 days 01:15:00,1,0 days 01:08:00,1 days,2 days,2026-01-07 08:00:00,2026-01-07 09:15:00,Cervical biopsy,OBGYN
+2167,5,7,7,08:00,09:00,5,False,12168,,7,69421,0 days 01:00:00,1,0 days 00:36:00,1 days,5 days,2026-01-07 08:00:00,2026-01-07 09:00:00,"Myringotomy, general anesthesia",Pediatrics
+2026,5,8,7,08:00,10:00,5,False,12027,,8,43775,0 days 02:00:00,1,0 days 01:33:00,1 days,4 days,2026-01-07 08:00:00,2026-01-07 10:00:00,Sleeve gastrectomy,General
+655,5,1,7,09:00,10:00,5,False,10656,,1,28285,0 days 01:00:00,1,0 days 00:40:00,1 days,5 days,2026-01-07 09:00:00,2026-01-07 10:00:00,"Correction, hammertoe",Podiatry
+1043,5,2,7,09:00,10:00,6,False,11044,,2,29877,0 days 01:00:00,1,0 days 00:41:00,1 days,6 days,2026-01-07 09:00:00,2026-01-07 10:00:00,"Arthroscopy, knee, surgical",Orthopedics
+632,5,3,7,09:00,09:45,0,False,10633,,3,66982,0 days 00:45:00,1,0 days 00:22:00,0 days,0 days,2026-01-07 09:00:00,2026-01-07 09:45:00,Extracapsular cataract removal,Ophthalmology
+2093,5,7,7,09:00,10:00,5,False,12094,,7,28820,0 days 01:00:00,1,0 days 01:05:00,1 days,1 days,2026-01-07 09:00:00,2026-01-07 10:00:00,"Digital amputation, metatarsophalangeal joint",Vascular
+396,5,4,7,09:15,10:30,4,False,10397,,4,57460,0 days 01:15:00,1,0 days 00:37:00,1 days,7 days,2026-01-07 09:15:00,2026-01-07 10:30:00,Cervical biopsy,OBGYN
+590,5,1,7,10:00,11:00,5,False,10591,,1,28285,0 days 01:00:00,1,0 days 00:49:00,1 days,5 days,2026-01-07 10:00:00,2026-01-07 11:00:00,"Correction, hammertoe",Podiatry
+1047,5,2,7,10:00,11:00,6,False,11048,,2,29877,0 days 01:00:00,1,0 days 00:39:00,1 days,4 days,2026-01-07 10:00:00,2026-01-07 11:00:00,"Arthroscopy, knee, surgical",Orthopedics
+1762,5,3,7,10:00,10:45,0,False,11763,,3,66982,0 days 00:45:00,1,0 days 00:31:00,0 days,0 days,2026-01-07 10:00:00,2026-01-07 10:45:00,Extracapsular cataract removal,Ophthalmology
+1884,5,7,7,10:00,11:00,5,False,11885,,7,28820,0 days 01:00:00,1,0 days 00:38:00,1 days,5 days,2026-01-07 10:00:00,2026-01-07 11:00:00,"Digital amputation, metatarsophalangeal joint",Vascular
+2098,5,8,7,10:00,12:00,5,False,12099,,8,43775,0 days 02:00:00,1,0 days 01:34:00,1 days,6 days,2026-01-07 10:00:00,2026-01-07 12:00:00,Sleeve gastrectomy,General
+1195,5,4,7,10:30,11:45,4,False,11196,,4,57460,0 days 01:15:00,1,0 days 00:38:00,1 days,5 days,2026-01-07 10:30:00,2026-01-07 11:45:00,Cervical biopsy,OBGYN
+1061,5,5,7,10:30,12:00,0,False,11062,,5,30520,0 days 01:30:00,1,0 days 01:26:00,0 days,0 days,2026-01-07 10:30:00,2026-01-07 12:00:00,Septoplasty,ENT
+1015,5,3,7,10:45,11:30,0,False,11016,,3,66982,0 days 00:45:00,1,0 days 00:20:00,0 days,0 days,2026-01-07 10:45:00,2026-01-07 11:30:00,Extracapsular cataract removal,Ophthalmology
+1925,5,1,7,11:00,12:00,6,False,11926,,1,28289,0 days 01:00:00,1,0 days 00:56:00,2 days,5 days,2026-01-07 11:00:00,2026-01-07 12:00:00,Hallux rigidus correction with cheilectomy,Podiatry
+1915,5,6,7,11:00,13:00,6,False,11916,,6,30400,0 days 02:00:00,1,0 days 01:22:00,3 days,6 days,2026-01-07 11:00:00,2026-01-07 13:00:00,Rhinoplasty,Plastic
+2145,5,3,7,11:30,12:15,0,False,12146,,3,66982,0 days 00:45:00,1,0 days 00:20:00,0 days,0 days,2026-01-07 11:30:00,2026-01-07 12:15:00,Extracapsular cataract removal,Ophthalmology
+1302,5,4,7,11:45,13:00,4,False,11303,,4,57460,0 days 01:15:00,1,0 days 00:41:00,1 days,3 days,2026-01-07 11:45:00,2026-01-07 13:00:00,Cervical biopsy,OBGYN
+1080,5,1,7,12:00,13:00,5,False,11081,,1,28285,0 days 01:00:00,1,0 days 00:41:00,1 days,5 days,2026-01-07 12:00:00,2026-01-07 13:00:00,"Correction, hammertoe",Podiatry
+399,5,5,7,12:00,13:30,0,False,10400,,5,30520,0 days 01:30:00,1,0 days 00:54:00,0 days,0 days,2026-01-07 12:00:00,2026-01-07 13:30:00,Septoplasty,ENT
+1921,5,8,7,12:00,14:00,5,False,11922,,8,43775,0 days 02:00:00,1,0 days 02:09:00,1 days,3 days,2026-01-07 12:00:00,2026-01-07 14:00:00,Sleeve gastrectomy,General
+385,5,3,7,12:15,13:00,0,False,10386,,3,66982,0 days 00:45:00,1,0 days 00:33:00,0 days,0 days,2026-01-07 12:15:00,2026-01-07 13:00:00,Extracapsular cataract removal,Ophthalmology
+1848,5,6,7,13:00,15:00,6,False,11849,,6,30400,0 days 02:00:00,1,0 days 01:31:00,3 days,5 days,2026-01-07 13:00:00,2026-01-07 15:00:00,Rhinoplasty,Plastic
+1125,5,4,7,13:30,15:00,5,False,11126,,4,55873,0 days 01:30:00,1,0 days 01:05:00,2 days,5 days,2026-01-07 13:30:00,2026-01-07 15:00:00,Cryosurgery of the prostate gland,Urology
+2052,5,5,7,13:30,15:00,0,False,12053,,5,30520,0 days 01:30:00,1,0 days 00:51:00,0 days,0 days,2026-01-07 13:30:00,2026-01-07 15:00:00,Septoplasty,ENT
+1964,5,1,7,14:00,15:00,5,False,11965,,1,28285,0 days 01:00:00,1,0 days 00:39:00,1 days,6 days,2026-01-07 14:00:00,2026-01-07 15:00:00,"Correction, hammertoe",Podiatry
+554,5,2,7,14:00,15:00,6,False,10555,,2,29877,0 days 01:00:00,1,0 days 00:39:00,1 days,1 days,2026-01-07 14:00:00,2026-01-07 15:00:00,"Arthroscopy, knee, surgical",Orthopedics
+424,5,3,7,14:00,15:00,5,False,10425,,3,69436,0 days 01:00:00,1,0 days 00:44:00,1 days,6 days,2026-01-07 14:00:00,2026-01-07 15:00:00,"Tympanostomy, general anesthesia",Pediatrics
+1352,5,7,7,14:00,15:00,5,False,11353,,7,69421,0 days 01:00:00,1,0 days 00:31:00,1 days,1 days,2026-01-07 14:00:00,2026-01-07 15:00:00,"Myringotomy, general anesthesia",Pediatrics
+1712,5,8,7,14:00,16:00,5,False,11713,,8,43775,0 days 02:00:00,1,0 days 02:09:00,1 days,1 days,2026-01-07 14:00:00,2026-01-07 16:00:00,Sleeve gastrectomy,General
+2135,5,1,7,15:00,16:00,6,False,12136,,1,28289,0 days 01:00:00,1,0 days 00:49:00,2 days,4 days,2026-01-07 15:00:00,2026-01-07 16:00:00,Hallux rigidus correction with cheilectomy,Podiatry
+1185,5,2,7,15:00,16:00,6,False,11186,,2,29877,0 days 01:00:00,1,0 days 01:12:00,1 days,3 days,2026-01-07 15:00:00,2026-01-07 16:00:00,"Arthroscopy, knee, surgical",Orthopedics
+663,5,3,7,15:00,16:00,5,False,10664,,3,69436,0 days 01:00:00,1,0 days 00:47:00,1 days,5 days,2026-01-07 15:00:00,2026-01-07 16:00:00,"Tympanostomy, general anesthesia",Pediatrics
+532,5,4,7,15:00,16:30,5,False,10533,,4,55873,0 days 01:30:00,1,0 days 01:05:00,2 days,4 days,2026-01-07 15:00:00,2026-01-07 16:30:00,Cryosurgery of the prostate gland,Urology
+505,5,6,7,15:00,16:00,4,False,10506,,6,17110,0 days 01:00:00,1,0 days 00:37:00,1 days,3 days,2026-01-07 15:00:00,2026-01-07 16:00:00,Removal of benign skin lesion,Plastic
+410,5,7,7,15:00,16:00,5,False,10411,,7,69421,0 days 01:00:00,1,0 days 00:32:00,1 days,5 days,2026-01-07 15:00:00,2026-01-07 16:00:00,"Myringotomy, general anesthesia",Pediatrics
+2069,5,1,7,16:00,17:00,5,False,12070,,1,28285,0 days 01:00:00,1,0 days 00:40:00,1 days,2 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Correction, hammertoe",Podiatry
+1324,5,2,7,16:00,17:00,6,False,11325,,2,29877,0 days 01:00:00,1,0 days 00:45:00,1 days,6 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Arthroscopy, knee, surgical",Orthopedics
+2076,5,3,7,16:00,17:00,5,False,12077,,3,69436,0 days 01:00:00,1,0 days 00:39:00,1 days,2 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Tympanostomy, general anesthesia",Pediatrics
+1745,5,7,7,16:00,17:00,5,False,11746,,7,69436,0 days 01:00:00,1,0 days 00:34:00,1 days,3 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Tympanostomy, general anesthesia",Pediatrics
+1316,5,8,7,16:00,18:00,5,False,11317,,8,43775,0 days 02:00:00,1,0 days 01:27:00,1 days,6 days,2026-01-07 16:00:00,2026-01-07 18:00:00,Sleeve gastrectomy,General
+1304,5,5,7,16:30,18:00,5,False,11305,,5,55873,0 days 01:30:00,1,0 days 00:56:00,2 days,5 days,2026-01-07 16:30:00,2026-01-07 18:00:00,Cryosurgery of the prostate gland,Urology
+556,5,2,7,17:00,18:00,6,False,10557,,2,29877,0 days 01:00:00,1,0 days 00:44:00,1 days,1 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Arthroscopy, knee, surgical",Orthopedics
+1971,5,3,7,17:00,18:00,5,False,11972,,3,69436,0 days 01:00:00,1,0 days 00:34:00,1 days,4 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Tympanostomy, general anesthesia",Pediatrics
+439,5,7,7,17:00,18:00,5,False,10440,,7,28820,0 days 01:00:00,1,0 days 00:51:00,1 days,6 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Digital amputation, metatarsophalangeal joint",Vascular

@@ -1,0 +1,24 @@
+Correlativo,descripcion,servicio,Prioridad,Requiere UCI,inicio_dt
+609,Tonsillectomy,ENT,1,False,2026-01-07 12:00:00
+602,Cryosurgery of the prostate gland,Urology,1,False,2026-01-07 12:15:00
+1096,Tonsillectomy,ENT,1,False,2026-01-07 13:00:00
+1082,"Carpal tunnel release, open",Orthopedics,1,False,2026-01-07 14:00:00
+1088,"Tympanostomy, general anesthesia",Pediatrics,1,False,2026-01-07 14:00:00
+1098,Tonsillectomy,ENT,1,False,2026-01-07 14:00:00
+1073,"Myringotomy, general anesthesia",Pediatrics,1,False,2026-01-07 14:00:00
+668,Cryosurgery of the prostate gland,Urology,1,False,2026-01-07 13:45:00
+366,Liposuction,Plastic,1,False,2026-01-07 13:00:00
+1926,Bunionectomy with distal osteotomy,Podiatry,1,False,2026-01-07 14:00:00
+1182,"Arthroscopy, knee, surgical",Orthopedics,1,False,2026-01-07 15:00:00
+1122,"Myringotomy, general anesthesia",Pediatrics,1,False,2026-01-07 15:00:00
+1843,Cystourethroscopy,Urology,1,False,2026-01-07 15:00:00
+1103,"Digital amputation, metatarsophalangeal joint",Vascular,1,False,2026-01-07 15:00:00
+1112,"Correction, hammertoe",Podiatry,1,False,2026-01-07 16:00:00
+1218,"Carpal tunnel release, open",Orthopedics,1,False,2026-01-07 16:00:00
+1224,"Tympanostomy, general anesthesia",Pediatrics,1,False,2026-01-07 16:00:00
+1844,Vasectomy,Urology,1,False,2026-01-07 16:00:00
+1280,"Myringotomy, general anesthesia",Pediatrics,1,False,2026-01-07 16:00:00
+1219,"Carpal tunnel release, open",Orthopedics,1,False,2026-01-07 17:00:00
+1225,"Tympanostomy, general anesthesia",Pediatrics,1,False,2026-01-07 17:00:00
+1845,Cystourethroscopy,Urology,1,False,2026-01-07 17:00:00
+1707,"Digital amputation, metatarsophalangeal joint",Vascular,1,False,2026-01-07 17:00:00
