@@ -1,0 +1,2 @@
+﻿Fecha,Hora_Corte,Operaciones_Realizadas_Hoy,Operaciones_Canceladas_Hoy,Operaciones_Pendientes,Camas_Ocupadas,UCI_Ocupadas,Capacidad_Camas,Capacidad_UCI,Modo_Saturado
+2026-02-05,20:00,0,0,128,75,2,75,2,True

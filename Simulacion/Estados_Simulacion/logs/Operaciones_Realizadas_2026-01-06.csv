@@ -1,0 +1,188 @@
+﻿Correlativo,Prioridad,Pabellón,Día,Hora inicio,Hora fin,Permanencia,Requiere UCI,ID paciente,Fecha,OR Suite,Código CPT,Duración agendada (min),Prioridad de paciente,duracion_efectiva_intervencion,dias_permanencia_programados,dias_permanencia_efectivos,inicio_dt,fin_dt,descripcion,servicio,Estado,Timestamp Estado
+621,5,1,1,08:00,09:00,3,False,10622,,1,28055,0 days 01:00:00,1,0 days 01:12:00,3 days,3 days,2026-01-01 08:00:00,2026-01-01 09:00:00,"Neurectomy, intrinsic musculature of foot",Podiatry,REALIZADA,2026-01-01 09:00:00
+1047,5,2,1,08:00,09:00,6,False,11048,,2,29877,0 days 01:00:00,1,0 days 00:39:00,1 days,4 days,2026-01-01 08:00:00,2026-01-01 09:00:00,"Arthroscopy, knee, surgical",Orthopedics,REALIZADA,2026-01-01 09:00:00
+1150,4,3,1,08:00,08:45,0,False,11151,,3,66982,0 days 00:45:00,2,0 days 00:29:00,0 days,0 days,2026-01-01 08:00:00,2026-01-01 08:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-01 08:45:00
+2115,5,4,1,08:00,09:15,4,False,12116,,4,57460,0 days 01:15:00,1,0 days 00:39:00,1 days,2 days,2026-01-01 08:00:00,2026-01-01 09:15:00,Cervical biopsy,OBGYN,REALIZADA,2026-01-01 09:15:00
+2015,5,5,1,08:00,09:00,3,False,12016,,5,52353,0 days 01:00:00,1,0 days 00:41:00,1 days,3 days,2026-01-01 08:00:00,2026-01-01 09:00:00,Cystourethroscopy,Urology,REALIZADA,2026-01-01 09:00:00
+2093,5,7,1,08:00,09:00,5,False,12094,,7,28820,0 days 01:00:00,1,0 days 01:05:00,1 days,1 days,2026-01-01 08:00:00,2026-01-01 09:00:00,"Digital amputation, metatarsophalangeal joint",Vascular,REALIZADA,2026-01-01 09:00:00
+2066,5,8,1,08:00,10:00,4,False,12067,,8,27130,0 days 02:00:00,1,0 days 01:24:00,2 days,2 days,2026-01-01 08:00:00,2026-01-01 10:00:00,"Arthroplasty, hip",Orthopedics,REALIZADA,2026-01-01 10:00:00
+1286,5,1,1,09:00,10:00,3,False,11287,,1,28055,0 days 01:00:00,1,0 days 00:45:00,3 days,3 days,2026-01-01 09:00:00,2026-01-01 10:00:00,"Neurectomy, intrinsic musculature of foot",Podiatry,REALIZADA,2026-01-01 10:00:00
+1290,5,2,1,09:00,11:00,5,False,11291,,2,27445,0 days 02:00:00,1,0 days 01:28:00,1 days,5 days,2026-01-01 09:00:00,2026-01-01 11:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,REALIZADA,2026-01-01 11:00:00
+565,4,3,1,09:00,09:45,0,False,10566,,3,66982,0 days 00:45:00,2,0 days 00:52:00,0 days,0 days,2026-01-01 09:00:00,2026-01-01 09:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-01 09:45:00
+1307,5,5,1,09:00,10:00,3,False,11308,,5,52353,0 days 01:00:00,1,0 days 00:41:00,1 days,4 days,2026-01-01 09:00:00,2026-01-01 10:00:00,Cystourethroscopy,Urology,REALIZADA,2026-01-01 10:00:00
+440,5,7,1,09:00,10:00,5,False,10441,,7,28820,0 days 01:00:00,1,0 days 00:41:00,1 days,1 days,2026-01-01 09:00:00,2026-01-01 10:00:00,"Digital amputation, metatarsophalangeal joint",Vascular,REALIZADA,2026-01-01 10:00:00
+1944,5,4,1,09:15,10:30,4,False,11945,,4,57460,0 days 01:15:00,1,0 days 01:08:00,1 days,2 days,2026-01-01 09:15:00,2026-01-01 10:30:00,Cervical biopsy,OBGYN,REALIZADA,2026-01-01 10:30:00
+2101,4,1,1,10:00,11:00,3,False,12102,,1,28055,0 days 01:00:00,2,0 days 00:52:00,3 days,4 days,2026-01-01 10:00:00,2026-01-01 11:00:00,"Neurectomy, intrinsic musculature of foot",Podiatry,REALIZADA,2026-01-01 11:00:00
+1151,5,3,1,10:00,10:45,0,False,11152,,3,66982,0 days 00:45:00,1,0 days 00:22:00,0 days,0 days,2026-01-01 10:00:00,2026-01-01 10:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-01 10:45:00
+397,5,5,1,10:00,11:00,1,False,10398,,5,42826,0 days 01:00:00,1,0 days 00:32:00,1 days,1 days,2026-01-01 10:00:00,2026-01-01 11:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-01 11:00:00
+582,5,7,1,10:00,11:00,5,False,10583,,7,69421,0 days 01:00:00,1,0 days 00:35:00,1 days,2 days,2026-01-01 10:00:00,2026-01-01 11:00:00,"Myringotomy, general anesthesia",Pediatrics,REALIZADA,2026-01-01 11:00:00
+2027,5,8,1,10:00,12:00,5,False,12028,,8,43775,0 days 02:00:00,1,0 days 01:30:00,1 days,6 days,2026-01-01 10:00:00,2026-01-01 12:00:00,Sleeve gastrectomy,General,REALIZADA,2026-01-01 12:00:00
+1231,5,4,1,10:30,11:30,3,False,11232,,4,55250,0 days 01:00:00,1,0 days 00:33:00,1 days,2 days,2026-01-01 10:30:00,2026-01-01 11:30:00,Vasectomy,Urology,REALIZADA,2026-01-01 11:30:00
+1328,5,3,1,10:45,11:30,0,False,11329,,3,66982,0 days 00:45:00,1,0 days 00:19:00,0 days,0 days,2026-01-01 10:45:00,2026-01-01 11:30:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-01 11:30:00
+588,5,1,1,11:00,12:00,4,False,10589,,1,28060,0 days 01:00:00,1,0 days 01:09:00,2 days,3 days,2026-01-01 11:00:00,2026-01-01 12:00:00,Plantar fasciotomy,Podiatry,REALIZADA,2026-01-01 12:00:00
+2088,5,5,1,11:00,12:00,1,False,12089,,5,42826,0 days 01:00:00,1,0 days 00:33:00,1 days,1 days,2026-01-01 11:00:00,2026-01-01 12:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-01 12:00:00
+1067,5,6,1,11:00,12:00,4,False,11068,,6,17110,0 days 01:00:00,1,0 days 00:34:00,1 days,4 days,2026-01-01 11:00:00,2026-01-01 12:00:00,Removal of benign skin lesion,Plastic,REALIZADA,2026-01-01 12:00:00
+288,4,3,1,11:30,12:15,0,False,10289,,3,66982,0 days 00:45:00,2,0 days 00:22:00,0 days,0 days,2026-01-01 11:30:00,2026-01-01 12:15:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-01 12:15:00
+2154,5,4,1,11:45,13:00,4,False,12155,,4,57460,0 days 01:15:00,1,0 days 00:35:00,1 days,5 days,2026-01-01 11:45:00,2026-01-01 13:00:00,Cervical biopsy,OBGYN,REALIZADA,2026-01-01 13:00:00
+1681,4,1,1,12:00,13:00,3,False,11682,,1,28055,0 days 01:00:00,2,0 days 00:35:00,3 days,4 days,2026-01-01 12:00:00,2026-01-01 13:00:00,"Neurectomy, intrinsic musculature of foot",Podiatry,REALIZADA,2026-01-01 13:00:00
+2087,5,5,1,12:00,13:00,1,False,12088,,5,42826,0 days 01:00:00,1,0 days 00:33:00,1 days,1 days,2026-01-01 12:00:00,2026-01-01 13:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-01 13:00:00
+298,5,6,1,12:00,13:00,4,False,10299,,6,17110,0 days 01:00:00,1,0 days 00:33:00,1 days,2 days,2026-01-01 12:00:00,2026-01-01 13:00:00,Removal of benign skin lesion,Plastic,REALIZADA,2026-01-01 13:00:00
+1834,5,3,1,12:15,13:00,0,False,11835,,3,66982,0 days 00:45:00,1,0 days 00:21:00,0 days,0 days,2026-01-01 12:15:00,2026-01-01 13:00:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-01 13:00:00
+1994,5,8,1,12:30,14:00,4,False,11995,,8,47562,0 days 01:30:00,1,0 days 01:04:00,2 days,4 days,2026-01-01 12:30:00,2026-01-01 14:00:00,Laparoscopic cholecystectomy,General,REALIZADA,2026-01-01 14:00:00
+1873,4,4,1,13:00,14:00,3,False,11874,,4,52353,0 days 01:00:00,2,0 days 00:29:00,1 days,3 days,2026-01-01 13:00:00,2026-01-01 14:00:00,Cystourethroscopy,Urology,REALIZADA,2026-01-01 14:00:00
+1096,4,5,1,13:00,14:00,1,False,11097,,5,42826,0 days 01:00:00,2,0 days 00:42:00,1 days,1 days,2026-01-01 13:00:00,2026-01-01 14:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-01 14:00:00
+1068,5,6,1,13:00,15:00,5,False,11069,,6,14060,0 days 02:00:00,1,0 days 01:27:00,1 days,7 days,2026-01-01 13:00:00,2026-01-01 15:00:00,"Adjacent tissue transfer, eyelids, nose, ears, lip",Plastic,REALIZADA,2026-01-01 15:00:00
+310,5,1,1,14:00,15:00,4,False,10311,,1,28060,0 days 01:00:00,1,0 days 00:38:00,2 days,3 days,2026-01-01 14:00:00,2026-01-01 15:00:00,Plantar fasciotomy,Podiatry,REALIZADA,2026-01-01 15:00:00
+1968,5,2,1,14:00,15:30,5,False,11969,,2,26045,0 days 01:30:00,1,0 days 01:04:00,2 days,5 days,2026-01-01 14:00:00,2026-01-01 15:30:00,"Fasciotomy, palmar, open",Orthopedics,REALIZADA,2026-01-01 15:30:00
+526,5,3,1,14:00,15:00,5,False,10527,,3,69436,0 days 01:00:00,1,0 days 00:32:00,1 days,4 days,2026-01-01 14:00:00,2026-01-01 15:00:00,"Tympanostomy, general anesthesia",Pediatrics,REALIZADA,2026-01-01 15:00:00
+667,5,4,1,14:00,15:00,3,False,10668,,4,55250,0 days 01:00:00,1,0 days 00:42:00,1 days,1 days,2026-01-01 14:00:00,2026-01-01 15:00:00,Vasectomy,Urology,REALIZADA,2026-01-01 15:00:00
+1776,5,5,1,14:00,15:00,1,False,11777,,5,42826,0 days 01:00:00,1,0 days 00:31:00,1 days,1 days,2026-01-01 14:00:00,2026-01-01 15:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-01 15:00:00
+1352,5,7,1,14:00,15:00,5,False,11353,,7,69421,0 days 01:00:00,1,0 days 00:31:00,1 days,1 days,2026-01-01 14:00:00,2026-01-01 15:00:00,"Myringotomy, general anesthesia",Pediatrics,REALIZADA,2026-01-01 15:00:00
+2026,5,8,1,14:00,16:00,5,False,12027,,8,43775,0 days 02:00:00,1,0 days 01:33:00,1 days,4 days,2026-01-01 14:00:00,2026-01-01 16:00:00,Sleeve gastrectomy,General,REALIZADA,2026-01-01 16:00:00
+1006,5,1,1,15:00,16:00,3,False,11007,,1,28055,0 days 01:00:00,1,0 days 00:40:00,3 days,4 days,2026-01-01 15:00:00,2026-01-01 16:00:00,"Neurectomy, intrinsic musculature of foot",Podiatry,REALIZADA,2026-01-01 16:00:00
+1866,5,3,1,15:00,16:00,5,False,11867,,3,69436,0 days 01:00:00,1,0 days 00:30:00,1 days,6 days,2026-01-01 15:00:00,2026-01-01 16:00:00,"Tympanostomy, general anesthesia",Pediatrics,REALIZADA,2026-01-01 16:00:00
+1979,4,4,1,15:00,16:00,3,False,11980,,4,55250,0 days 01:00:00,2,0 days 00:48:00,1 days,2 days,2026-01-01 15:00:00,2026-01-01 16:00:00,Vasectomy,Urology,REALIZADA,2026-01-01 16:00:00
+1844,4,5,1,15:00,16:00,3,False,11845,,5,55250,0 days 01:00:00,2,0 days 00:40:00,1 days,3 days,2026-01-01 15:00:00,2026-01-01 16:00:00,Vasectomy,Urology,REALIZADA,2026-01-01 16:00:00
+2056,5,6,1,15:00,16:00,4,False,12057,,6,17110,0 days 01:00:00,1,0 days 00:42:00,1 days,3 days,2026-01-01 15:00:00,2026-01-01 16:00:00,Removal of benign skin lesion,Plastic,REALIZADA,2026-01-01 16:00:00
+410,5,7,1,15:00,16:00,5,False,10411,,7,69421,0 days 01:00:00,1,0 days 00:32:00,1 days,5 days,2026-01-01 15:00:00,2026-01-01 16:00:00,"Myringotomy, general anesthesia",Pediatrics,REALIZADA,2026-01-01 16:00:00
+654,5,1,1,16:00,17:00,4,False,10655,,1,28060,0 days 01:00:00,1,0 days 00:37:00,2 days,5 days,2026-01-01 16:00:00,2026-01-01 17:00:00,Plantar fasciotomy,Podiatry,REALIZADA,2026-01-01 17:00:00
+1895,5,2,1,16:00,18:00,5,False,11896,,2,27445,0 days 02:00:00,1,0 days 01:42:00,1 days,3 days,2026-01-01 16:00:00,2026-01-01 18:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,REALIZADA,2026-01-01 18:00:00
+424,5,3,1,16:00,17:00,5,False,10425,,3,69436,0 days 01:00:00,1,0 days 00:44:00,1 days,6 days,2026-01-01 16:00:00,2026-01-01 17:00:00,"Tympanostomy, general anesthesia",Pediatrics,REALIZADA,2026-01-01 17:00:00
+1807,5,4,1,16:00,17:00,3,False,11808,,4,55250,0 days 01:00:00,1,0 days 00:38:00,1 days,1 days,2026-01-01 16:00:00,2026-01-01 17:00:00,Vasectomy,Urology,REALIZADA,2026-01-01 17:00:00
+468,4,5,1,16:00,17:00,3,False,10469,,5,52353,0 days 01:00:00,2,0 days 00:32:00,1 days,5 days,2026-01-01 16:00:00,2026-01-01 17:00:00,Cystourethroscopy,Urology,REALIZADA,2026-01-01 17:00:00
+1916,5,7,1,16:00,17:00,5,False,11917,,7,28820,0 days 01:00:00,1,0 days 00:43:00,1 days,3 days,2026-01-01 16:00:00,2026-01-01 17:00:00,"Digital amputation, metatarsophalangeal joint",Vascular,REALIZADA,2026-01-01 17:00:00
+413,5,8,1,16:00,18:00,4,False,10414,,8,27130,0 days 02:00:00,1,0 days 01:34:00,2 days,4 days,2026-01-01 16:00:00,2026-01-01 18:00:00,"Arthroplasty, hip",Orthopedics,REALIZADA,2026-01-01 18:00:00
+1123,5,3,1,17:00,18:00,5,False,11124,,3,69421,0 days 01:00:00,1,0 days 00:29:00,1 days,5 days,2026-01-01 17:00:00,2026-01-01 18:00:00,"Myringotomy, general anesthesia",Pediatrics,REALIZADA,2026-01-01 18:00:00
+1808,5,4,1,17:00,18:00,3,False,11809,,4,52353,0 days 01:00:00,1,0 days 00:35:00,1 days,3 days,2026-01-01 17:00:00,2026-01-01 18:00:00,Cystourethroscopy,Urology,REALIZADA,2026-01-01 18:00:00
+1164,5,5,1,17:00,18:00,3,False,11165,,5,55250,0 days 01:00:00,1,0 days 00:42:00,1 days,6 days,2026-01-01 17:00:00,2026-01-01 18:00:00,Vasectomy,Urology,REALIZADA,2026-01-01 18:00:00
+1884,5,7,1,17:00,18:00,5,False,11885,,7,28820,0 days 01:00:00,1,0 days 00:38:00,1 days,5 days,2026-01-01 17:00:00,2026-01-01 18:00:00,"Digital amputation, metatarsophalangeal joint",Vascular,REALIZADA,2026-01-01 18:00:00
+2032,5,1,2,08:00,10:00,5,False,12033,,1,28296,0 days 02:00:00,1,0 days 01:12:00,1 days,3 days,2026-01-02 08:00:00,2026-01-02 10:00:00,Bunionectomy with distal osteotomy,Podiatry,REALIZADA,2026-01-02 10:00:00
+1220,5,2,2,08:00,09:30,5,False,11221,,2,26045,0 days 01:30:00,1,0 days 00:47:00,2 days,2 days,2026-01-02 08:00:00,2026-01-02 09:30:00,"Fasciotomy, palmar, open",Orthopedics,REALIZADA,2026-01-02 09:30:00
+494,5,3,2,08:00,08:45,0,False,10495,,3,66982,0 days 00:45:00,1,0 days 00:30:00,0 days,0 days,2026-01-02 08:00:00,2026-01-02 08:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-02 08:45:00
+394,5,4,2,08:00,09:15,4,False,10395,,4,57460,0 days 01:15:00,1,0 days 00:53:00,1 days,2 days,2026-01-02 08:00:00,2026-01-02 09:15:00,Cervical biopsy,OBGYN,REALIZADA,2026-01-02 09:15:00
+1818,5,7,2,08:00,09:15,5,True,11819,,7,36901,0 days 01:15:00,1,0 days 01:05:00,1 days,4 days,2026-01-02 08:00:00,2026-01-02 09:15:00,AV fistula,Vascular,REALIZADA,2026-01-02 09:15:00
+354,5,3,2,09:00,09:45,0,False,10355,,3,66982,0 days 00:45:00,1,0 days 00:24:00,0 days,0 days,2026-01-02 09:00:00,2026-01-02 09:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-02 09:45:00
+1057,5,4,2,09:15,10:30,4,False,11058,,4,57460,0 days 01:15:00,1,0 days 00:43:00,1 days,4 days,2026-01-02 09:15:00,2026-01-02 10:30:00,Cervical biopsy,OBGYN,REALIZADA,2026-01-02 10:30:00
+1083,5,2,2,09:30,11:00,5,False,11084,,2,26045,0 days 01:30:00,1,0 days 00:47:00,2 days,3 days,2026-01-02 09:30:00,2026-01-02 11:00:00,"Fasciotomy, palmar, open",Orthopedics,REALIZADA,2026-01-02 11:00:00
+655,5,1,2,10:00,11:00,5,False,10656,,1,28285,0 days 01:00:00,1,0 days 00:40:00,1 days,5 days,2026-01-02 10:00:00,2026-01-02 11:00:00,"Correction, hammertoe",Podiatry,REALIZADA,2026-01-02 11:00:00
+1048,5,3,2,10:00,10:45,0,False,11049,,3,66982,0 days 00:45:00,1,0 days 00:19:00,0 days,0 days,2026-01-02 10:00:00,2026-01-02 10:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-02 10:45:00
+1343,5,5,2,10:00,11:00,1,False,11344,,5,42826,0 days 01:00:00,1,0 days 00:38:00,1 days,1 days,2026-01-02 10:00:00,2026-01-02 11:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-02 11:00:00
+2117,5,4,2,10:30,11:45,4,False,12118,,4,57460,0 days 01:15:00,1,0 days 00:37:00,1 days,4 days,2026-01-02 10:30:00,2026-01-02 11:45:00,Cervical biopsy,OBGYN,REALIZADA,2026-01-02 11:45:00
+1903,4,3,2,10:45,11:30,0,False,11904,,3,66982,0 days 00:45:00,2,0 days 00:25:00,0 days,0 days,2026-01-02 10:45:00,2026-01-02 11:30:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-02 11:30:00
+550,5,1,2,11:00,13:00,5,False,10551,,1,28296,0 days 02:00:00,1,0 days 01:21:00,1 days,6 days,2026-01-02 11:00:00,2026-01-02 13:00:00,Bunionectomy with distal osteotomy,Podiatry,REALIZADA,2026-01-02 13:00:00
+435,4,5,2,11:00,12:00,1,False,10436,,5,42826,0 days 01:00:00,2,0 days 00:35:00,1 days,1 days,2026-01-02 11:00:00,2026-01-02 12:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-02 12:00:00
+507,5,6,2,11:00,12:00,4,False,10508,,6,17110,0 days 01:00:00,1,0 days 00:32:00,1 days,4 days,2026-01-02 11:00:00,2026-01-02 12:00:00,Removal of benign skin lesion,Plastic,REALIZADA,2026-01-02 12:00:00
+385,5,3,2,11:30,12:15,0,False,10386,,3,66982,0 days 00:45:00,1,0 days 00:33:00,0 days,0 days,2026-01-02 11:30:00,2026-01-02 12:15:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-02 12:15:00
+396,5,4,2,11:45,13:00,4,False,10397,,4,57460,0 days 01:15:00,1,0 days 00:37:00,1 days,7 days,2026-01-02 11:45:00,2026-01-02 13:00:00,Cervical biopsy,OBGYN,REALIZADA,2026-01-02 13:00:00
+608,4,5,2,12:00,13:00,1,False,10609,,5,42826,0 days 01:00:00,2,0 days 00:30:00,1 days,1 days,2026-01-02 12:00:00,2026-01-02 13:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-02 13:00:00
+2163,5,6,2,12:00,14:00,5,False,12164,,6,14060,0 days 02:00:00,1,0 days 01:37:00,1 days,5 days,2026-01-02 12:00:00,2026-01-02 14:00:00,"Adjacent tissue transfer, eyelids, nose, ears, lip",Plastic,REALIZADA,2026-01-02 14:00:00
+1691,5,3,2,12:15,13:00,0,False,11692,,3,66982,0 days 00:45:00,1,0 days 00:21:00,0 days,0 days,2026-01-02 12:15:00,2026-01-02 13:00:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-02 13:00:00
+296,4,5,2,13:00,14:00,1,False,10297,,5,42826,0 days 01:00:00,2,0 days 00:50:00,1 days,1 days,2026-01-02 13:00:00,2026-01-02 14:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-02 14:00:00
+376,5,1,2,14:00,16:00,5,False,10377,,1,28296,0 days 02:00:00,1,0 days 01:17:00,1 days,3 days,2026-01-02 14:00:00,2026-01-02 16:00:00,Bunionectomy with distal osteotomy,Podiatry,REALIZADA,2026-01-02 16:00:00
+1684,5,2,2,14:00,16:00,5,False,11685,,2,27445,0 days 02:00:00,1,0 days 01:28:00,1 days,1 days,2026-01-02 14:00:00,2026-01-02 16:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,REALIZADA,2026-01-02 16:00:00
+1268,5,5,2,14:00,15:00,1,False,11269,,5,42826,0 days 01:00:00,1,0 days 00:39:00,1 days,1 days,2026-01-02 14:00:00,2026-01-02 15:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-02 15:00:00
+1346,5,6,2,14:00,15:00,4,False,11347,,6,17110,0 days 01:00:00,1,0 days 00:45:00,1 days,4 days,2026-01-02 14:00:00,2026-01-02 15:00:00,Removal of benign skin lesion,Plastic,REALIZADA,2026-01-02 15:00:00
+1950,5,6,2,15:00,16:00,4,False,11951,,6,17110,0 days 01:00:00,1,0 days 00:37:00,1 days,4 days,2026-01-02 15:00:00,2026-01-02 16:00:00,Removal of benign skin lesion,Plastic,REALIZADA,2026-01-02 16:00:00
+1886,5,7,2,15:15,16:30,5,True,11887,,7,36901,0 days 01:15:00,1,0 days 01:06:00,1 days,5 days,2026-01-02 15:15:00,2026-01-02 16:30:00,AV fistula,Vascular,REALIZADA,2026-01-02 16:30:00
+1217,5,1,2,16:00,17:00,5,False,11218,,1,28285,0 days 01:00:00,1,0 days 00:39:00,1 days,6 days,2026-01-02 16:00:00,2026-01-02 17:00:00,"Correction, hammertoe",Podiatry,REALIZADA,2026-01-02 17:00:00
+1685,5,2,2,16:00,18:00,5,False,11686,,2,27445,0 days 02:00:00,1,0 days 01:36:00,1 days,6 days,2026-01-02 16:00:00,2026-01-02 18:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,REALIZADA,2026-01-02 18:00:00
+1751,5,8,2,16:00,18:00,4,False,11752,,8,27130,0 days 02:00:00,1,0 days 01:27:00,2 days,4 days,2026-01-02 16:00:00,2026-01-02 18:00:00,"Arthroplasty, hip",Orthopedics,REALIZADA,2026-01-02 18:00:00
+1015,5,3,3,08:00,08:45,0,False,11016,,3,66982,0 days 00:45:00,1,0 days 00:20:00,0 days,0 days,2026-01-03 08:00:00,2026-01-03 08:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-03 08:45:00
+1059,5,4,3,08:00,09:15,4,False,11060,,4,57460,0 days 01:15:00,1,0 days 00:46:00,1 days,5 days,2026-01-03 08:00:00,2026-01-03 09:15:00,Cervical biopsy,OBGYN,REALIZADA,2026-01-03 09:15:00
+355,5,3,3,09:00,09:45,0,False,10356,,3,66982,0 days 00:45:00,1,0 days 00:51:00,0 days,0 days,2026-01-03 09:00:00,2026-01-03 09:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-03 09:45:00
+358,5,4,3,09:15,10:30,4,False,10359,,4,57460,0 days 01:15:00,1,0 days 00:38:00,1 days,5 days,2026-01-03 09:15:00,2026-01-03 10:30:00,Cervical biopsy,OBGYN,REALIZADA,2026-01-03 10:30:00
+457,5,3,3,10:00,10:45,0,False,10458,,3,66982,0 days 00:45:00,1,0 days 00:24:00,0 days,0 days,2026-01-03 10:00:00,2026-01-03 10:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-03 10:45:00
+2052,5,5,3,10:00,11:30,0,False,12053,,5,30520,0 days 01:30:00,1,0 days 00:51:00,0 days,0 days,2026-01-03 10:00:00,2026-01-03 11:30:00,Septoplasty,ENT,REALIZADA,2026-01-03 11:30:00
+499,5,4,3,10:30,11:45,4,False,10500,,4,57460,0 days 01:15:00,1,0 days 00:33:00,1 days,5 days,2026-01-03 10:30:00,2026-01-03 11:45:00,Cervical biopsy,OBGYN,REALIZADA,2026-01-03 11:45:00
+2001,5,3,3,10:45,11:30,0,False,12002,,3,66982,0 days 00:45:00,1,0 days 00:19:00,0 days,0 days,2026-01-03 10:45:00,2026-01-03 11:30:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-03 11:30:00
+403,5,6,3,11:00,12:00,4,False,10404,,6,17110,0 days 01:00:00,1,0 days 00:41:00,1 days,2 days,2026-01-03 11:00:00,2026-01-03 12:00:00,Removal of benign skin lesion,Plastic,REALIZADA,2026-01-03 12:00:00
+1762,5,3,3,11:30,12:15,0,False,11763,,3,66982,0 days 00:45:00,1,0 days 00:31:00,0 days,0 days,2026-01-03 11:30:00,2026-01-03 12:15:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-03 12:15:00
+571,5,5,3,11:30,13:00,0,False,10572,,5,30520,0 days 01:30:00,1,0 days 01:08:00,0 days,0 days,2026-01-03 11:30:00,2026-01-03 13:00:00,Septoplasty,ENT,REALIZADA,2026-01-03 13:00:00
+1195,5,4,3,11:45,13:00,4,False,11196,,4,57460,0 days 01:15:00,1,0 days 00:38:00,1 days,5 days,2026-01-03 11:45:00,2026-01-03 13:00:00,Cervical biopsy,OBGYN,REALIZADA,2026-01-03 13:00:00
+2055,5,6,3,12:00,13:00,4,False,12056,,6,17110,0 days 01:00:00,1,0 days 00:53:00,1 days,3 days,2026-01-03 12:00:00,2026-01-03 13:00:00,Removal of benign skin lesion,Plastic,REALIZADA,2026-01-03 13:00:00
+349,5,3,3,12:15,13:00,0,False,10350,,3,66982,0 days 00:45:00,1,0 days 00:32:00,0 days,0 days,2026-01-03 12:15:00,2026-01-03 13:00:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-03 13:00:00
+330,5,5,3,13:00,14:00,1,False,10331,,5,42826,0 days 01:00:00,1,0 days 00:37:00,1 days,1 days,2026-01-03 13:00:00,2026-01-03 14:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-03 14:00:00
+1345,5,6,3,13:00,14:00,4,False,11346,,6,17110,0 days 01:00:00,1,0 days 01:00:00,1 days,5 days,2026-01-03 13:00:00,2026-01-03 14:00:00,Removal of benign skin lesion,Plastic,REALIZADA,2026-01-03 14:00:00
+2053,5,5,3,14:00,15:00,1,False,12054,,5,42826,0 days 01:00:00,1,0 days 00:33:00,1 days,1 days,2026-01-03 14:00:00,2026-01-03 15:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-03 15:00:00
+404,5,6,3,14:00,15:00,4,False,10405,,6,17110,0 days 01:00:00,1,0 days 00:45:00,1 days,2 days,2026-01-03 14:00:00,2026-01-03 15:00:00,Removal of benign skin lesion,Plastic,REALIZADA,2026-01-03 15:00:00
+575,5,6,3,15:00,16:00,4,False,10576,,6,17110,0 days 01:00:00,1,0 days 00:50:00,1 days,3 days,2026-01-03 15:00:00,2026-01-03 16:00:00,Removal of benign skin lesion,Plastic,REALIZADA,2026-01-03 16:00:00
+1939,5,3,4,08:00,08:45,0,False,11940,,3,66982,0 days 00:45:00,1,0 days 00:27:00,0 days,0 days,2026-01-04 08:00:00,2026-01-04 08:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-04 08:45:00
+428,5,4,4,08:00,09:00,3,False,10429,,4,55250,0 days 01:00:00,1,0 days 00:30:00,1 days,2 days,2026-01-04 08:00:00,2026-01-04 09:00:00,Vasectomy,Urology,REALIZADA,2026-01-04 09:00:00
+1163,5,5,4,08:00,09:00,3,False,11164,,5,52353,0 days 01:00:00,1,0 days 00:32:00,1 days,4 days,2026-01-04 08:00:00,2026-01-04 09:00:00,Cystourethroscopy,Urology,REALIZADA,2026-01-04 09:00:00
+1187,5,3,4,09:00,09:45,0,False,11188,,3,66982,0 days 00:45:00,1,0 days 00:37:00,0 days,0 days,2026-01-04 09:00:00,2026-01-04 09:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-04 09:45:00
+605,5,4,4,09:00,10:00,3,False,10606,,4,52353,0 days 01:00:00,1,0 days 00:26:00,1 days,3 days,2026-01-04 09:00:00,2026-01-04 10:00:00,Cystourethroscopy,Urology,REALIZADA,2026-01-04 10:00:00
+1767,5,3,4,10:00,10:45,0,False,11768,,3,66982,0 days 00:45:00,1,0 days 00:20:00,0 days,0 days,2026-01-04 10:00:00,2026-01-04 10:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-04 10:45:00
+1949,5,5,4,10:00,11:00,1,False,11950,,5,42826,0 days 01:00:00,1,0 days 00:33:00,1 days,2 days,2026-01-04 10:00:00,2026-01-04 11:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-04 11:00:00
+1190,5,3,4,10:45,11:30,0,False,11191,,3,66982,0 days 00:45:00,1,0 days 00:24:00,0 days,0 days,2026-01-04 10:45:00,2026-01-04 11:30:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-04 11:30:00
+1291,5,3,4,11:30,12:15,0,False,11292,,3,66982,0 days 00:45:00,1,0 days 00:21:00,0 days,0 days,2026-01-04 11:30:00,2026-01-04 12:15:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-04 12:15:00
+573,4,5,4,11:30,12:30,1,False,10574,,5,42826,0 days 01:00:00,2,0 days 00:31:00,1 days,1 days,2026-01-04 11:30:00,2026-01-04 12:30:00,Tonsillectomy,ENT,REALIZADA,2026-01-04 12:30:00
+534,4,4,4,12:00,13:00,3,False,10535,,4,55250,0 days 01:00:00,2,0 days 00:29:00,1 days,5 days,2026-01-04 12:00:00,2026-01-04 13:00:00,Vasectomy,Urology,REALIZADA,2026-01-04 13:00:00
+391,4,3,4,12:15,13:00,0,False,10392,,3,66982,0 days 00:45:00,2,0 days 00:51:00,0 days,0 days,2026-01-04 12:15:00,2026-01-04 13:00:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-04 13:00:00
+1234,4,5,4,12:30,13:30,1,False,11235,,5,42826,0 days 01:00:00,2,0 days 00:31:00,1 days,1 days,2026-01-04 12:30:00,2026-01-04 13:30:00,Tonsillectomy,ENT,REALIZADA,2026-01-04 13:30:00
+533,5,4,4,13:00,14:00,3,False,10534,,4,52353,0 days 01:00:00,1,0 days 00:59:00,1 days,7 days,2026-01-04 13:00:00,2026-01-04 14:00:00,Cystourethroscopy,Urology,REALIZADA,2026-01-04 14:00:00
+1061,5,5,4,13:30,15:00,0,False,11062,,5,30520,0 days 01:30:00,1,0 days 01:26:00,0 days,0 days,2026-01-04 13:30:00,2026-01-04 15:00:00,Septoplasty,ENT,REALIZADA,2026-01-04 15:00:00
+430,5,4,4,14:00,15:00,3,False,10431,,4,52353,0 days 01:00:00,1,0 days 00:44:00,1 days,5 days,2026-01-04 14:00:00,2026-01-04 15:00:00,Cystourethroscopy,Urology,REALIZADA,2026-01-04 15:00:00
+326,5,4,4,15:00,16:00,3,False,10327,,4,52353,0 days 01:00:00,1,0 days 00:45:00,1 days,3 days,2026-01-04 15:00:00,2026-01-04 16:00:00,Cystourethroscopy,Urology,REALIZADA,2026-01-04 16:00:00
+464,4,5,4,15:00,16:00,3,False,10465,,5,55250,0 days 01:00:00,2,0 days 00:40:00,1 days,1 days,2026-01-04 15:00:00,2026-01-04 16:00:00,Vasectomy,Urology,REALIZADA,2026-01-04 16:00:00
+1173,5,7,4,15:00,16:15,5,True,11174,,7,36901,0 days 01:15:00,1,0 days 00:59:00,1 days,5 days,2026-01-04 15:00:00,2026-01-04 16:15:00,AV fistula,Vascular,REALIZADA,2026-01-04 16:15:00
+1285,5,1,4,15:30,17:00,3,False,11286,,1,28110,0 days 01:30:00,1,0 days 01:31:00,1 days,5 days,2026-01-04 15:30:00,2026-01-04 17:00:00,"Partial ostectomy, fifth metatarsal head",Podiatry,REALIZADA,2026-01-04 17:00:00
+1093,5,4,4,16:00,17:00,3,False,11094,,4,52353,0 days 01:00:00,1,0 days 00:57:00,1 days,1 days,2026-01-04 16:00:00,2026-01-04 17:00:00,Cystourethroscopy,Urology,REALIZADA,2026-01-04 17:00:00
+1910,5,5,4,16:00,17:00,3,False,11911,,5,52353,0 days 01:00:00,1,0 days 00:31:00,1 days,1 days,2026-01-04 16:00:00,2026-01-04 17:00:00,Cystourethroscopy,Urology,REALIZADA,2026-01-04 17:00:00
+1091,5,4,4,17:00,18:00,3,False,11092,,4,55250,0 days 01:00:00,1,0 days 00:30:00,1 days,2 days,2026-01-04 17:00:00,2026-01-04 18:00:00,Vasectomy,Urology,REALIZADA,2026-01-04 18:00:00
+2121,5,5,4,17:00,18:00,3,False,12122,,5,55250,0 days 01:00:00,1,0 days 00:29:00,1 days,1 days,2026-01-04 17:00:00,2026-01-04 18:00:00,Vasectomy,Urology,REALIZADA,2026-01-04 18:00:00
+1926,5,1,5,08:00,10:00,5,False,11927,,1,28296,0 days 02:00:00,1,0 days 01:18:00,1 days,5 days,2026-01-05 08:00:00,2026-01-05 10:00:00,Bunionectomy with distal osteotomy,Podiatry,REALIZADA,2026-01-05 10:00:00
+280,5,2,5,08:00,09:00,6,False,10281,,2,29877,0 days 01:00:00,1,0 days 00:41:00,1 days,6 days,2026-01-05 08:00:00,2026-01-05 09:00:00,"Arthroscopy, knee, surgical",Orthopedics,REALIZADA,2026-01-05 09:00:00
+2145,5,3,5,08:00,08:45,0,False,12146,,3,66982,0 days 00:45:00,1,0 days 00:20:00,0 days,0 days,2026-01-05 08:00:00,2026-01-05 08:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-05 08:45:00
+1196,5,4,5,08:00,10:00,6,False,11197,,4,58562,0 days 02:00:00,1,0 days 01:25:00,1 days,4 days,2026-01-05 08:00:00,2026-01-05 10:00:00,"Hysterectomy, surgical",OBGYN,REALIZADA,2026-01-05 10:00:00
+1898,5,3,5,09:00,09:45,0,False,11899,,3,66982,0 days 00:45:00,1,0 days 00:26:00,0 days,0 days,2026-01-05 09:00:00,2026-01-05 09:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-05 09:45:00
+1260,4,3,5,10:00,10:45,0,False,11261,,3,66982,0 days 00:45:00,2,0 days 00:21:00,0 days,0 days,2026-01-05 10:00:00,2026-01-05 10:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-05 10:45:00
+1945,4,5,5,10:00,11:00,1,False,11946,,5,42826,0 days 01:00:00,2,0 days 01:05:00,1 days,1 days,2026-01-05 10:00:00,2026-01-05 11:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-05 11:00:00
+1769,5,4,5,10:30,12:30,6,False,11770,,4,58562,0 days 02:00:00,1,0 days 01:11:00,1 days,3 days,2026-01-05 10:30:00,2026-01-05 12:30:00,"Hysterectomy, surgical",OBGYN,REALIZADA,2026-01-05 12:30:00
+452,5,3,5,10:45,11:30,0,False,10453,,3,66982,0 days 00:45:00,1,0 days 00:19:00,0 days,0 days,2026-01-05 10:45:00,2026-01-05 11:30:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-05 11:30:00
+1717,5,1,5,11:00,13:00,5,False,11718,,1,28296,0 days 02:00:00,1,0 days 01:48:00,1 days,1 days,2026-01-05 11:00:00,2026-01-05 13:00:00,Bunionectomy with distal osteotomy,Podiatry,REALIZADA,2026-01-05 13:00:00
+1984,4,5,5,11:00,12:00,1,False,11985,,5,42826,0 days 01:00:00,2,0 days 00:48:00,1 days,1 days,2026-01-05 11:00:00,2026-01-05 12:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-05 12:00:00
+1915,5,6,5,11:00,13:00,6,False,11916,,6,30400,0 days 02:00:00,1,0 days 01:22:00,3 days,6 days,2026-01-05 11:00:00,2026-01-05 13:00:00,Rhinoplasty,Plastic,REALIZADA,2026-01-05 13:00:00
+1191,5,3,5,11:30,12:15,0,False,11192,,3,66982,0 days 00:45:00,1,0 days 00:32:00,0 days,0 days,2026-01-05 11:30:00,2026-01-05 12:15:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-05 12:15:00
+1131,5,5,5,12:00,13:00,1,False,11132,,5,42826,0 days 01:00:00,1,0 days 00:34:00,1 days,1 days,2026-01-05 12:00:00,2026-01-05 13:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-05 13:00:00
+2147,4,3,5,12:15,13:00,0,False,12148,,3,66982,0 days 00:45:00,2,0 days 00:21:00,0 days,0 days,2026-01-05 12:15:00,2026-01-05 13:00:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-05 13:00:00
+609,4,5,5,13:00,14:00,1,False,10610,,5,42826,0 days 01:00:00,2,0 days 00:38:00,1 days,1 days,2026-01-05 13:00:00,2026-01-05 14:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-05 14:00:00
+1029,5,6,5,13:00,16:00,5,False,11030,,6,15773,0 days 03:00:00,1,0 days 02:07:00,2 days,5 days,2026-01-05 13:00:00,2026-01-05 16:00:00,Liposuction,Plastic,REALIZADA,2026-01-05 16:00:00
+2134,5,1,5,14:00,16:00,5,False,12135,,1,28296,0 days 02:00:00,1,0 days 01:13:00,1 days,3 days,2026-01-05 14:00:00,2026-01-05 16:00:00,Bunionectomy with distal osteotomy,Podiatry,REALIZADA,2026-01-05 16:00:00
+1085,5,2,5,14:00,15:30,7,False,11086,,2,26356,0 days 01:30:00,1,0 days 00:45:00,1 days,1 days,2026-01-05 14:00:00,2026-01-05 15:30:00,Flexor tendon repair,Orthopedics,REALIZADA,2026-01-05 15:30:00
+1773,5,5,5,14:00,15:00,1,False,11774,,5,42826,0 days 01:00:00,1,0 days 00:34:00,1 days,1 days,2026-01-05 14:00:00,2026-01-05 15:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-05 15:00:00
+1043,5,2,5,17:00,18:00,6,False,11044,,2,29877,0 days 01:00:00,1,0 days 00:41:00,1 days,6 days,2026-01-05 17:00:00,2026-01-05 18:00:00,"Arthroscopy, knee, surgical",Orthopedics,REALIZADA,2026-01-05 18:00:00
+449,5,1,6,08:00,10:00,5,False,10450,,1,28296,0 days 02:00:00,1,0 days 01:26:00,1 days,3 days,2026-01-06 08:00:00,2026-01-06 10:00:00,Bunionectomy with distal osteotomy,Podiatry,REALIZADA,2026-01-06 10:00:00
+1929,5,2,6,08:00,09:00,6,False,11930,,2,29877,0 days 01:00:00,1,0 days 00:39:00,1 days,3 days,2026-01-06 08:00:00,2026-01-06 09:00:00,"Arthroscopy, knee, surgical",Orthopedics,REALIZADA,2026-01-06 09:00:00
+1730,5,3,6,08:00,08:45,0,False,11731,,3,66982,0 days 00:45:00,1,0 days 00:21:00,0 days,0 days,2026-01-06 08:00:00,2026-01-06 08:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-06 08:45:00
+357,5,4,6,08:00,10:00,6,False,10358,,4,58562,0 days 02:00:00,1,0 days 01:41:00,1 days,1 days,2026-01-06 08:00:00,2026-01-06 10:00:00,"Hysterectomy, surgical",OBGYN,REALIZADA,2026-01-06 10:00:00
+1315,5,7,6,08:00,09:15,5,True,11316,,7,36901,0 days 01:15:00,1,0 days 01:01:00,1 days,4 days,2026-01-06 08:00:00,2026-01-06 09:15:00,AV fistula,Vascular,REALIZADA,2026-01-06 09:15:00
+1037,5,8,6,08:00,10:00,5,False,11038,,8,43775,0 days 02:00:00,1,0 days 01:37:00,1 days,6 days,2026-01-06 08:00:00,2026-01-06 10:00:00,Sleeve gastrectomy,General,REALIZADA,2026-01-06 10:00:00
+1759,5,2,6,09:00,10:00,6,False,11760,,2,29877,0 days 01:00:00,1,0 days 00:43:00,1 days,6 days,2026-01-06 09:00:00,2026-01-06 10:00:00,"Arthroscopy, knee, surgical",Orthopedics,REALIZADA,2026-01-06 10:00:00
+1689,5,3,6,09:00,09:45,0,False,11690,,3,66982,0 days 00:45:00,1,0 days 00:30:00,0 days,0 days,2026-01-06 09:00:00,2026-01-06 09:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-06 09:45:00
+1288,5,1,6,10:00,12:00,5,False,11289,,1,28296,0 days 02:00:00,1,0 days 01:20:00,1 days,3 days,2026-01-06 10:00:00,2026-01-06 12:00:00,Bunionectomy with distal osteotomy,Podiatry,REALIZADA,2026-01-06 12:00:00
+1324,5,2,6,10:00,11:00,6,False,11325,,2,29877,0 days 01:00:00,1,0 days 00:45:00,1 days,6 days,2026-01-06 10:00:00,2026-01-06 11:00:00,"Arthroscopy, knee, surgical",Orthopedics,REALIZADA,2026-01-06 11:00:00
+284,5,3,6,10:00,10:45,0,False,10285,,3,66982,0 days 00:45:00,1,0 days 00:20:00,0 days,0 days,2026-01-06 10:00:00,2026-01-06 10:45:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-06 10:45:00
+1201,4,5,6,10:00,11:00,1,False,11202,,5,42826,0 days 01:00:00,2,0 days 00:32:00,1 days,1 days,2026-01-06 10:00:00,2026-01-06 11:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-06 11:00:00
+2098,5,8,6,10:00,12:00,5,False,12099,,8,43775,0 days 02:00:00,1,0 days 01:34:00,1 days,6 days,2026-01-06 10:00:00,2026-01-06 12:00:00,Sleeve gastrectomy,General,REALIZADA,2026-01-06 12:00:00
+489,5,3,6,10:45,11:30,0,False,10490,,3,66982,0 days 00:45:00,1,0 days 00:22:00,0 days,0 days,2026-01-06 10:45:00,2026-01-06 11:30:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-06 11:30:00
+1694,5,4,6,11:00,13:00,6,False,11695,,4,58562,0 days 02:00:00,1,0 days 01:09:00,1 days,2 days,2026-01-06 11:00:00,2026-01-06 13:00:00,"Hysterectomy, surgical",OBGYN,REALIZADA,2026-01-06 13:00:00
+1739,4,5,6,11:00,12:00,1,False,11740,,5,42826,0 days 01:00:00,2,0 days 00:39:00,1 days,1 days,2026-01-06 11:00:00,2026-01-06 12:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-06 12:00:00
+1848,5,6,6,11:00,13:00,6,False,11849,,6,30400,0 days 02:00:00,1,0 days 01:31:00,3 days,5 days,2026-01-06 11:00:00,2026-01-06 13:00:00,Rhinoplasty,Plastic,REALIZADA,2026-01-06 13:00:00
+632,5,3,6,11:30,12:15,0,False,10633,,3,66982,0 days 00:45:00,1,0 days 00:22:00,0 days,0 days,2026-01-06 11:30:00,2026-01-06 12:15:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-06 12:15:00
+1925,5,1,6,12:00,13:00,6,False,11926,,1,28289,0 days 01:00:00,1,0 days 00:56:00,2 days,5 days,2026-01-06 12:00:00,2026-01-06 13:00:00,Hallux rigidus correction with cheilectomy,Podiatry,REALIZADA,2026-01-06 13:00:00
+1877,5,5,6,12:00,13:00,1,False,11878,,5,42826,0 days 01:00:00,1,0 days 00:38:00,1 days,1 days,2026-01-06 12:00:00,2026-01-06 13:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-06 13:00:00
+1174,5,8,6,12:00,14:00,5,False,11175,,8,43775,0 days 02:00:00,1,0 days 01:25:00,1 days,4 days,2026-01-06 12:00:00,2026-01-06 14:00:00,Sleeve gastrectomy,General,REALIZADA,2026-01-06 14:00:00
+495,5,3,6,12:15,13:00,0,False,10496,,3,66982,0 days 00:45:00,1,0 days 00:22:00,0 days,0 days,2026-01-06 12:15:00,2026-01-06 13:00:00,Extracapsular cataract removal,Ophthalmology,REALIZADA,2026-01-06 13:00:00
+329,4,5,6,13:00,14:00,1,False,10330,,5,42826,0 days 01:00:00,2,0 days 00:36:00,1 days,1 days,2026-01-06 13:00:00,2026-01-06 14:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-06 14:00:00
+1080,5,1,6,14:00,15:00,5,False,11081,,1,28285,0 days 01:00:00,1,0 days 00:41:00,1 days,5 days,2026-01-06 14:00:00,2026-01-06 15:00:00,"Correction, hammertoe",Podiatry,REALIZADA,2026-01-06 15:00:00
+554,5,2,6,14:00,15:00,6,False,10555,,2,29877,0 days 01:00:00,1,0 days 00:39:00,1 days,1 days,2026-01-06 14:00:00,2026-01-06 15:00:00,"Arthroscopy, knee, surgical",Orthopedics,REALIZADA,2026-01-06 15:00:00
+2089,4,5,6,14:00,15:00,1,False,12090,,5,42826,0 days 01:00:00,2,0 days 00:31:00,1 days,1 days,2026-01-06 14:00:00,2026-01-06 15:00:00,Tonsillectomy,ENT,REALIZADA,2026-01-06 15:00:00
+540,5,6,6,14:00,16:00,5,False,10541,,6,14060,0 days 02:00:00,1,0 days 01:23:00,1 days,1 days,2026-01-06 14:00:00,2026-01-06 16:00:00,"Adjacent tissue transfer, eyelids, nose, ears, lip",Plastic,REALIZADA,2026-01-06 16:00:00
+2167,5,7,6,14:00,15:00,5,False,12168,,7,69421,0 days 01:00:00,1,0 days 00:36:00,1 days,5 days,2026-01-06 14:00:00,2026-01-06 15:00:00,"Myringotomy, general anesthesia",Pediatrics,REALIZADA,2026-01-06 15:00:00
+515,5,8,6,14:00,16:00,5,False,10516,,8,27445,0 days 02:00:00,1,0 days 01:27:00,1 days,3 days,2026-01-06 14:00:00,2026-01-06 16:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,REALIZADA,2026-01-06 16:00:00
+1247,5,1,6,15:00,17:00,5,False,11248,,1,28296,0 days 02:00:00,1,0 days 01:31:00,1 days,1 days,2026-01-06 15:00:00,2026-01-06 17:00:00,Bunionectomy with distal osteotomy,Podiatry,REALIZADA,2026-01-06 17:00:00
+419,5,2,6,15:00,16:00,8,False,10420,,2,64721,0 days 01:00:00,1,0 days 00:46:00,2 days,4 days,2026-01-06 15:00:00,2026-01-06 16:00:00,"Carpal tunnel release, open",Orthopedics,REALIZADA,2026-01-06 16:00:00
+1350,5,7,6,15:00,16:00,5,False,11351,,7,69436,0 days 01:00:00,1,0 days 00:30:00,1 days,4 days,2026-01-06 15:00:00,2026-01-06 16:00:00,"Tympanostomy, general anesthesia",Pediatrics,REALIZADA,2026-01-06 16:00:00
+1255,5,2,6,16:00,17:00,6,False,11256,,2,29877,0 days 01:00:00,1,0 days 00:39:00,1 days,4 days,2026-01-06 16:00:00,2026-01-06 17:00:00,"Arthroscopy, knee, surgical",Orthopedics,REALIZADA,2026-01-06 17:00:00
+548,5,8,6,16:00,18:00,5,False,10549,,8,43775,0 days 02:00:00,1,0 days 01:38:00,1 days,7 days,2026-01-06 16:00:00,2026-01-06 18:00:00,Sleeve gastrectomy,General,REALIZADA,2026-01-06 18:00:00
+2142,5,2,6,17:00,18:00,6,False,12143,,2,29877,0 days 01:00:00,1,0 days 00:46:00,1 days,3 days,2026-01-06 17:00:00,2026-01-06 18:00:00,"Arthroscopy, knee, surgical",Orthopedics,REALIZADA,2026-01-06 18:00:00

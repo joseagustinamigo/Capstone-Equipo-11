@@ -1,0 +1,35 @@
+﻿Correlativo,Servicio,Descripción,Pabellón,Día,Hora inicio,Hora fin,Prioridad,Requiere UCI,Duración agendada (min),Estado,Timestamp Estado
+415,Podiatry,Plantar fasciotomy,1,7,11:00,12:00,3,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+1226,Pediatrics,"Myringotomy, general anesthesia",3,7,10:00,11:00,4,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+583,Pediatrics,"Myringotomy, general anesthesia",7,7,09:00,10:00,4,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+1972,Pediatrics,"Tympanostomy, general anesthesia",3,7,08:00,09:00,4,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+1242,Vascular,AV fistula,7,7,15:15,16:30,2,True,0 days 01:15:00,PROGRAMADA,2026-02-11 20:00:00
+1719,Orthopedics,"Arthroscopy, knee, surgical",2,7,10:00,11:00,4,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+1119,Pediatrics,"Tympanostomy, general anesthesia",3,7,16:00,17:00,4,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+417,Podiatry,"Correction, hammertoe",1,7,08:00,09:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+1072,Pediatrics,"Myringotomy, general anesthesia",7,7,08:00,09:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+2034,Orthopedics,"Arthroscopy, knee, surgical",2,7,08:00,09:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+443,General,Sleeve gastrectomy,8,7,08:00,10:00,5,False,0 days 02:00:00,PROGRAMADA,2026-02-11 20:00:00
+321,Pediatrics,"Tympanostomy, general anesthesia",3,7,09:00,10:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+381,Orthopedics,"Arthroscopy, knee, surgical",2,7,09:00,10:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+312,Podiatry,"Correction, hammertoe",1,7,09:00,10:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+1159,OBGYN,"Hysterectomy, surgical",4,7,09:00,11:00,4,False,0 days 02:00:00,PROGRAMADA,2026-02-11 20:00:00
+1170,Vascular,"Digital amputation, metatarsophalangeal joint",7,7,10:00,11:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+1178,Podiatry,Hallux rigidus correction with cheilectomy,1,7,10:00,11:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+1943,OBGYN,"Hysterectomy, surgical",4,7,11:00,13:00,4,False,0 days 02:00:00,PROGRAMADA,2026-02-11 20:00:00
+2124,Plastic,Liposuction,6,7,11:00,14:00,3,False,0 days 03:00:00,PROGRAMADA,2026-02-11 20:00:00
+377,Podiatry,Hallux rigidus correction with cheilectomy,1,7,12:00,13:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+650,General,Sleeve gastrectomy,8,7,12:00,14:00,5,False,0 days 02:00:00,PROGRAMADA,2026-02-11 20:00:00
+2165,Pediatrics,"Tympanostomy, general anesthesia",7,7,14:00,15:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+1953,Plastic,"Adjacent tissue transfer, eyelids, nose, ears, lip",6,7,14:00,16:00,3,False,0 days 02:00:00,PROGRAMADA,2026-02-11 20:00:00
+2065,Orthopedics,"Arthroplasty, knee, hinge prothesis",8,7,14:00,16:00,5,False,0 days 02:00:00,PROGRAMADA,2026-02-11 20:00:00
+665,Pediatrics,"Myringotomy, general anesthesia",3,7,14:00,15:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+379,Podiatry,Bunionectomy with distal osteotomy,1,7,14:00,16:00,5,False,0 days 02:00:00,PROGRAMADA,2026-02-11 20:00:00
+1800,Pediatrics,"Tympanostomy, general anesthesia",3,7,15:00,16:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+2138,Orthopedics,"Arthroscopy, knee, surgical",2,7,15:00,16:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+658,Orthopedics,"Carpal tunnel release, open",2,7,16:00,17:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+416,Podiatry,"Correction, hammertoe",1,7,16:00,17:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+1992,General,Sleeve gastrectomy,8,7,16:00,18:00,5,False,0 days 02:00:00,PROGRAMADA,2026-02-11 20:00:00
+1313,Vascular,AV fistula,7,7,16:45,18:00,3,True,0 days 01:15:00,PROGRAMADA,2026-02-11 20:00:00
+1795,Orthopedics,"Carpal tunnel release, open",2,7,17:00,18:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00
+1089,Pediatrics,"Myringotomy, general anesthesia",3,7,17:00,18:00,5,False,0 days 01:00:00,PROGRAMADA,2026-02-11 20:00:00

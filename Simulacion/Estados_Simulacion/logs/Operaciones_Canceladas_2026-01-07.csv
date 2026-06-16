@@ -1,0 +1,11 @@
+﻿Correlativo,Prioridad,Pabellón,Día,Hora inicio,Hora fin,Permanencia,Requiere UCI,ID paciente,Fecha,OR Suite,Código CPT,Duración agendada (min),Prioridad de paciente,duracion_efectiva_intervencion,dias_permanencia_programados,dias_permanencia_efectivos,inicio_dt,fin_dt,descripcion,servicio,Estado,Timestamp Estado
+1033,5,7,4,08:00,09:15,5,True,11034,,7,36901,0 days 01:15:00,1,0 days 01:07:00,1 days,5 days,2026-01-04 08:00:00,2026-01-04 09:15:00,AV fistula,Vascular,CANCELADA,2026-01-04 09:15:00
+372,5,7,6,09:45,11:00,5,True,10373,,7,36901,0 days 01:15:00,1,0 days 01:09:00,1 days,4 days,2026-01-06 09:45:00,2026-01-06 11:00:00,AV fistula,Vascular,CANCELADA,2026-01-06 11:00:00
+1185,5,2,7,16:00,17:00,6,False,11186,,2,29877,0 days 01:00:00,1,0 days 01:12:00,1 days,3 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Arthroscopy, knee, surgical",Orthopedics,CANCELADA,2026-01-07 17:00:00
+1867,5,3,7,16:00,17:00,5,False,11868,,3,69436,0 days 01:00:00,1,0 days 00:32:00,1 days,1 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-07 17:00:00
+2062,5,7,7,16:00,17:00,5,False,12063,,7,69421,0 days 01:00:00,1,0 days 00:30:00,1 days,5 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Myringotomy, general anesthesia",Pediatrics,CANCELADA,2026-01-07 17:00:00
+1316,5,8,7,16:00,18:00,5,False,11317,,8,43775,0 days 02:00:00,1,0 days 01:27:00,1 days,6 days,2026-01-07 16:00:00,2026-01-07 18:00:00,Sleeve gastrectomy,General,CANCELADA,2026-01-07 18:00:00
+532,5,4,7,16:30,18:00,5,False,10533,,4,55873,0 days 01:30:00,1,0 days 01:05:00,2 days,4 days,2026-01-07 16:30:00,2026-01-07 18:00:00,Cryosurgery of the prostate gland,Urology,CANCELADA,2026-01-07 18:00:00
+418,5,2,7,17:00,18:00,8,False,10419,,2,64721,0 days 01:00:00,1,0 days 00:46:00,2 days,4 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Carpal tunnel release, open",Orthopedics,CANCELADA,2026-01-07 18:00:00
+1971,5,3,7,17:00,18:00,5,False,11972,,3,69436,0 days 01:00:00,1,0 days 00:34:00,1 days,4 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-07 18:00:00
+1745,5,7,7,17:00,18:00,5,False,11746,,7,69436,0 days 01:00:00,1,0 days 00:34:00,1 days,3 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-07 18:00:00

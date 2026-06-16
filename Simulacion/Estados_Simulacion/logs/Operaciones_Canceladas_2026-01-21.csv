@@ -1,0 +1,4 @@
+﻿Correlativo,Servicio,Descripción,Prioridad de paciente,Prioridad,Pabellón,Día,Hora inicio,Hora fin,Duración agendada (min),dias_permanencia_efectivos,Requiere UCI,OR Suite,descripcion,servicio,inicio_dt,fin_dt,duracion_efectiva_intervencion,dias_permanencia_programados,Estado,Timestamp Estado
+1771,OBGYN,"Hysterectomy, surgical",2,2,4,1,10:00,12:00,0 days 02:00:00,6 days,False,4,"Hysterectomy, surgical",OBGYN,2026-01-15 10:00:00,2026-01-15 12:00:00,0 days 02:00:00,6 days,CANCELADA,2026-01-15 10:00:00
+2090,Plastic,"Adjacent tissue transfer, eyelids, nose, ears, lip",2,2,6,1,11:00,13:00,0 days 02:00:00,5 days,False,6,"Adjacent tissue transfer, eyelids, nose, ears, lip",Plastic,2026-01-15 11:00:00,2026-01-15 13:00:00,0 days 02:00:00,5 days,CANCELADA,2026-01-15 11:00:00
+1918,Vascular,AV fistula,2,2,7,2,15:00,16:15,0 days 01:15:00,5 days,True,7,AV fistula,Vascular,2026-01-16 15:00:00,2026-01-16 16:15:00,0 days 01:15:00,5 days,CANCELADA,2026-01-16 15:00:00
