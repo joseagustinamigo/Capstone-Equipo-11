@@ -1,0 +1,186 @@
+﻿Correlativo,Prioridad,Pabellón,Día,Hora inicio,Hora fin,Permanencia,Requiere UCI,ID paciente,Fecha,OR Suite,Código CPT,Duración agendada (min),Prioridad de paciente,duracion_efectiva_intervencion,dias_permanencia_programados,dias_permanencia_efectivos,inicio_dt,fin_dt,descripcion,servicio,Estado,Timestamp Estado
+1033,5,7,4,08:00,09:15,5.0,True,11034.0,,7.0,36901.0,0 days 01:15:00,1,0 days 01:07:00,1 days,5 days,2026-01-04 08:00:00,2026-01-04 09:15:00,AV fistula,Vascular,CANCELADA,2026-01-04 09:15:00
+372,5,7,6,09:45,11:00,5.0,True,10373.0,,7.0,36901.0,0 days 01:15:00,1,0 days 01:09:00,1 days,4 days,2026-01-06 09:45:00,2026-01-06 11:00:00,AV fistula,Vascular,CANCELADA,2026-01-06 11:00:00
+1185,5,2,7,16:00,17:00,6.0,False,11186.0,,2.0,29877.0,0 days 01:00:00,1,0 days 01:12:00,1 days,3 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Arthroscopy, knee, surgical",Orthopedics,CANCELADA,2026-01-07 17:00:00
+1867,5,3,7,16:00,17:00,5.0,False,11868.0,,3.0,69436.0,0 days 01:00:00,1,0 days 00:32:00,1 days,1 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-07 17:00:00
+2062,5,7,7,16:00,17:00,5.0,False,12063.0,,7.0,69421.0,0 days 01:00:00,1,0 days 00:30:00,1 days,5 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Myringotomy, general anesthesia",Pediatrics,CANCELADA,2026-01-07 17:00:00
+1316,5,8,7,16:00,18:00,5.0,False,11317.0,,8.0,43775.0,0 days 02:00:00,1,0 days 01:27:00,1 days,6 days,2026-01-07 16:00:00,2026-01-07 18:00:00,Sleeve gastrectomy,General,CANCELADA,2026-01-07 18:00:00
+532,5,4,7,16:30,18:00,5.0,False,10533.0,,4.0,55873.0,0 days 01:30:00,1,0 days 01:05:00,2 days,4 days,2026-01-07 16:30:00,2026-01-07 18:00:00,Cryosurgery of the prostate gland,Urology,CANCELADA,2026-01-07 18:00:00
+418,5,2,7,17:00,18:00,8.0,False,10419.0,,2.0,64721.0,0 days 01:00:00,1,0 days 00:46:00,2 days,4 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Carpal tunnel release, open",Orthopedics,CANCELADA,2026-01-07 18:00:00
+1971,5,3,7,17:00,18:00,5.0,False,11972.0,,3.0,69436.0,0 days 01:00:00,1,0 days 00:34:00,1 days,4 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-07 18:00:00
+1745,5,7,7,17:00,18:00,5.0,False,11746.0,,7.0,69436.0,0 days 01:00:00,1,0 days 00:34:00,1 days,3 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-07 18:00:00
+517,3,1,1,08:00,09:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,4 days,4 days,2026-01-01 08:00:00,2026-01-01 09:00:00,Plantar fasciotomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+374,3,8,1,08:00,10:00,,False,,,,,0 days 02:00:00,3,0 days 02:00:00,5 days,5 days,2026-01-01 08:00:00,2026-01-01 10:00:00,Sleeve gastrectomy,General,CANCELADA,2026-01-08 07:55:00
+645,3,7,1,08:00,09:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-01 08:00:00,2026-01-01 09:00:00,"Digital amputation, metatarsophalangeal joint",Vascular,CANCELADA,2026-01-08 07:55:00
+1027,4,5,1,08:00,09:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,3 days,3 days,2026-01-01 08:00:00,2026-01-01 09:00:00,Cystourethroscopy,Urology,CANCELADA,2026-01-08 07:55:00
+604,3,4,1,08:00,09:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,3 days,3 days,2026-01-01 08:00:00,2026-01-01 09:00:00,Vasectomy,Urology,CANCELADA,2026-01-08 07:55:00
+659,2,2,1,08:00,09:30,,False,,,,,0 days 01:30:00,2,0 days 01:30:00,5 days,5 days,2026-01-01 08:00:00,2026-01-01 09:30:00,"Fasciotomy, palmar, open",Orthopedics,CANCELADA,2026-01-08 07:55:00
+1103,2,7,1,09:00,10:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-01 09:00:00,2026-01-01 10:00:00,"Digital amputation, metatarsophalangeal joint",Vascular,CANCELADA,2026-01-08 07:55:00
+1161,4,5,1,09:00,10:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,3 days,3 days,2026-01-01 09:00:00,2026-01-01 10:00:00,Vasectomy,Urology,CANCELADA,2026-01-08 07:55:00
+461,3,4,1,09:15,10:30,,False,,,,,0 days 01:15:00,3,0 days 01:15:00,4 days,4 days,2026-01-01 09:15:00,2026-01-01 10:30:00,Cervical biopsy,OBGYN,CANCELADA,2026-01-08 07:55:00
+587,2,1,1,09:30,10:30,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,4 days,4 days,2026-01-01 09:30:00,2026-01-01 10:30:00,Plantar fasciotomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+420,2,2,1,09:30,11:00,,False,,,,,0 days 01:30:00,2,0 days 01:30:00,5 days,5 days,2026-01-01 09:30:00,2026-01-01 11:00:00,"Fasciotomy, palmar, open",Orthopedics,CANCELADA,2026-01-08 07:55:00
+473,2,7,1,10:00,11:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-01 10:00:00,2026-01-01 11:00:00,"Digital amputation, metatarsophalangeal joint",Vascular,CANCELADA,2026-01-08 07:55:00
+479,3,8,1,10:00,11:30,,False,,,,,0 days 01:30:00,3,0 days 01:30:00,4 days,4 days,2026-01-01 10:00:00,2026-01-01 11:30:00,Laparoscopic cholecystectomy,General,CANCELADA,2026-01-08 07:55:00
+401,3,5,1,10:00,11:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,1 days,1 days,2026-01-01 10:00:00,2026-01-01 11:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+446,3,1,1,10:30,12:00,,False,,,,,0 days 01:30:00,3,0 days 01:30:00,3 days,3 days,2026-01-01 10:30:00,2026-01-01 12:00:00,"Partial ostectomy, fifth metatarsal head",Podiatry,CANCELADA,2026-01-08 07:55:00
+1205,2,6,1,11:00,13:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-01 11:00:00,2026-01-01 13:00:00,"Adjacent tissue transfer, eyelids, nose, ears, lip",Plastic,CANCELADA,2026-01-08 07:55:00
+669,3,4,1,11:00,12:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,3 days,3 days,2026-01-01 11:00:00,2026-01-01 12:00:00,Cystourethroscopy,Urology,CANCELADA,2026-01-08 07:55:00
+332,3,5,1,11:00,12:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,1 days,1 days,2026-01-01 11:00:00,2026-01-01 12:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+1142,3,8,1,12:00,13:30,,False,,,,,0 days 01:30:00,3,0 days 01:30:00,4 days,4 days,2026-01-01 12:00:00,2026-01-01 13:30:00,Laparoscopic cholecystectomy,General,CANCELADA,2026-01-08 07:55:00
+500,3,5,1,12:00,13:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,1 days,1 days,2026-01-01 12:00:00,2026-01-01 13:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+327,3,4,1,12:00,13:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,3 days,3 days,2026-01-01 12:00:00,2026-01-01 13:00:00,Vasectomy,Urology,CANCELADA,2026-01-08 07:55:00
+415,3,1,1,12:00,13:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,4 days,4 days,2026-01-01 12:00:00,2026-01-01 13:00:00,Plantar fasciotomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+1065,2,6,1,13:00,14:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,4 days,4 days,2026-01-01 13:00:00,2026-01-01 14:00:00,Removal of benign skin lesion,Plastic,CANCELADA,2026-01-08 07:55:00
+538,3,5,1,13:00,14:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,1 days,1 days,2026-01-01 13:00:00,2026-01-01 14:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+531,3,4,1,13:00,14:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,3 days,3 days,2026-01-01 13:00:00,2026-01-01 14:00:00,Vasectomy,Urology,CANCELADA,2026-01-08 07:55:00
+1176,2,8,1,13:30,15:00,,False,,,,,0 days 01:30:00,2,0 days 01:30:00,4 days,4 days,2026-01-01 13:30:00,2026-01-01 15:00:00,Laparoscopic cholecystectomy,General,CANCELADA,2026-01-08 07:55:00
+513,2,7,1,14:00,15:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-01 14:00:00,2026-01-01 15:00:00,"Myringotomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+301,2,6,1,14:00,16:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-01 14:00:00,2026-01-01 16:00:00,"Adjacent tissue transfer, eyelids, nose, ears, lip",Plastic,CANCELADA,2026-01-08 07:55:00
+450,2,2,1,14:00,16:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-01 14:00:00,2026-01-01 16:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,CANCELADA,2026-01-08 07:55:00
+433,4,5,1,14:00,15:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,1 days,1 days,2026-01-01 14:00:00,2026-01-01 15:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+518,3,1,1,14:00,15:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,4 days,4 days,2026-01-01 14:00:00,2026-01-01 15:00:00,Plantar fasciotomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+425,2,3,1,14:00,15:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-01 14:00:00,2026-01-01 15:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+1095,3,4,1,14:00,15:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,3 days,3 days,2026-01-01 14:00:00,2026-01-01 15:00:00,Cystourethroscopy,Urology,CANCELADA,2026-01-08 07:55:00
+361,3,5,1,15:00,16:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,3 days,3 days,2026-01-01 15:00:00,2026-01-01 16:00:00,Vasectomy,Urology,CANCELADA,2026-01-08 07:55:00
+445,2,8,1,15:00,16:30,,False,,,,,0 days 01:30:00,2,0 days 01:30:00,4 days,4 days,2026-01-01 15:00:00,2026-01-01 16:30:00,Laparoscopic cholecystectomy,General,CANCELADA,2026-01-08 07:55:00
+603,4,4,1,15:00,16:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,3 days,3 days,2026-01-01 15:00:00,2026-01-01 16:00:00,Cystourethroscopy,Urology,CANCELADA,2026-01-08 07:55:00
+482,2,1,1,15:00,17:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-01 15:00:00,2026-01-01 17:00:00,Bunionectomy with distal osteotomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+1208,3,7,1,15:00,16:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-01 15:00:00,2026-01-01 16:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+530,3,3,1,15:00,16:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-01 15:00:00,2026-01-01 16:00:00,"Myringotomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+363,2,5,1,16:00,17:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,3 days,3 days,2026-01-01 16:00:00,2026-01-01 17:00:00,Cystourethroscopy,Urology,CANCELADA,2026-01-08 07:55:00
+324,4,4,1,16:00,17:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,3 days,3 days,2026-01-01 16:00:00,2026-01-01 17:00:00,Vasectomy,Urology,CANCELADA,2026-01-08 07:55:00
+368,3,7,1,16:00,17:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-01 16:00:00,2026-01-01 17:00:00,"Digital amputation, metatarsophalangeal joint",Vascular,CANCELADA,2026-01-08 07:55:00
+347,2,2,1,16:00,18:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-01 16:00:00,2026-01-01 18:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,CANCELADA,2026-01-08 07:55:00
+600,2,3,1,16:00,17:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-01 16:00:00,2026-01-01 17:00:00,"Myringotomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+1038,3,8,1,16:30,18:00,,False,,,,,0 days 01:30:00,3,0 days 01:30:00,4 days,4 days,2026-01-01 16:30:00,2026-01-01 18:00:00,Laparoscopic cholecystectomy,General,CANCELADA,2026-01-08 07:55:00
+613,3,7,1,17:00,18:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-01 17:00:00,2026-01-01 18:00:00,"Digital amputation, metatarsophalangeal joint",Vascular,CANCELADA,2026-01-08 07:55:00
+431,3,4,1,17:00,18:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,3 days,3 days,2026-01-01 17:00:00,2026-01-01 18:00:00,Vasectomy,Urology,CANCELADA,2026-01-08 07:55:00
+637,2,5,1,17:00,18:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,3 days,3 days,2026-01-01 17:00:00,2026-01-01 18:00:00,Vasectomy,Urology,CANCELADA,2026-01-08 07:55:00
+596,2,3,1,17:00,18:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-01 17:00:00,2026-01-01 18:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+1008,1,1,2,08:00,10:00,,False,,,,,0 days 02:00:00,1,0 days 02:00:00,5 days,5 days,2026-01-02 08:00:00,2026-01-02 10:00:00,Bunionectomy with distal osteotomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+586,2,8,2,08:00,10:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,4 days,4 days,2026-01-02 08:00:00,2026-01-02 10:00:00,"Arthroplasty, hip",Orthopedics,CANCELADA,2026-01-08 07:55:00
+1022,2,4,2,08:00,09:15,,False,,,,,0 days 01:15:00,2,0 days 01:15:00,4 days,4 days,2026-01-02 08:00:00,2026-01-02 09:15:00,Cervical biopsy,OBGYN,CANCELADA,2026-01-08 07:55:00
+624,2,2,2,09:00,11:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-02 09:00:00,2026-01-02 11:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,CANCELADA,2026-01-08 07:55:00
+1160,3,4,2,09:15,10:30,,False,,,,,0 days 01:15:00,3,0 days 01:15:00,4 days,4 days,2026-01-02 09:15:00,2026-01-02 10:30:00,Cervical biopsy,OBGYN,CANCELADA,2026-01-08 07:55:00
+475,1,7,2,09:45,11:00,,True,,,,,0 days 01:15:00,1,0 days 01:15:00,5 days,5 days,2026-01-02 09:45:00,2026-01-02 11:00:00,AV fistula,Vascular,CANCELADA,2026-01-08 07:55:00
+1140,2,8,2,10:00,12:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-02 10:00:00,2026-01-02 12:00:00,Sleeve gastrectomy,General,CANCELADA,2026-01-08 07:55:00
+1097,4,5,2,10:00,11:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,1 days,1 days,2026-01-02 10:00:00,2026-01-02 11:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+1145,1,1,2,10:30,13:00,,False,,,,,0 days 02:30:00,1,0 days 02:30:00,5 days,5 days,2026-01-02 10:30:00,2026-01-02 13:00:00,Lapidus bunionectomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+290,3,4,2,10:30,11:45,,False,,,,,0 days 01:15:00,3,0 days 01:15:00,4 days,4 days,2026-01-02 10:30:00,2026-01-02 11:45:00,Cervical biopsy,OBGYN,CANCELADA,2026-01-08 07:55:00
+334,2,6,2,11:00,13:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-02 11:00:00,2026-01-02 13:00:00,"Adjacent tissue transfer, eyelids, nose, ears, lip",Plastic,CANCELADA,2026-01-08 07:55:00
+1063,4,5,2,11:00,12:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,1 days,1 days,2026-01-02 11:00:00,2026-01-02 12:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+1197,2,4,2,11:45,13:00,,False,,,,,0 days 01:15:00,2,0 days 01:15:00,4 days,4 days,2026-01-02 11:45:00,2026-01-02 13:00:00,Cervical biopsy,OBGYN,CANCELADA,2026-01-08 07:55:00
+574,4,5,2,12:00,13:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,1 days,1 days,2026-01-02 12:00:00,2026-01-02 13:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+673,3,5,2,13:00,14:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,1 days,1 days,2026-01-02 13:00:00,2026-01-02 14:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+1167,1,6,2,13:00,16:00,,False,,,,,0 days 03:00:00,1,0 days 03:00:00,5 days,5 days,2026-01-02 13:00:00,2026-01-02 16:00:00,Liposuction,Plastic,CANCELADA,2026-01-08 07:55:00
+1179,1,1,2,14:00,16:00,,False,,,,,0 days 02:00:00,1,0 days 02:00:00,5 days,5 days,2026-01-02 14:00:00,2026-01-02 16:00:00,Bunionectomy with distal osteotomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+309,3,8,2,14:00,16:00,,False,,,,,0 days 02:00:00,3,0 days 02:00:00,4 days,4 days,2026-01-02 14:00:00,2026-01-02 16:00:00,"Arthroplasty, hip",Orthopedics,CANCELADA,2026-01-08 07:55:00
+1084,3,2,2,14:00,16:00,,False,,,,,0 days 02:00:00,3,0 days 02:00:00,4 days,4 days,2026-01-02 14:00:00,2026-01-02 16:00:00,"ORIF, phalangeal shaft fracture",Orthopedics,CANCELADA,2026-01-08 07:55:00
+302,3,7,2,14:00,15:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-02 14:00:00,2026-01-02 15:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+1087,3,3,2,14:00,15:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-02 14:00:00,2026-01-02 15:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+675,3,5,2,14:00,15:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,1 days,1 days,2026-01-02 14:00:00,2026-01-02 15:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+1077,3,1,2,16:00,17:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,4 days,4 days,2026-01-02 16:00:00,2026-01-02 17:00:00,Plantar fasciotomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+585,2,8,2,16:00,18:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-02 16:00:00,2026-01-02 18:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,CANCELADA,2026-01-08 07:55:00
+524,2,2,2,16:00,18:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,4 days,4 days,2026-01-02 16:00:00,2026-01-02 18:00:00,"ORIF, phalangeal shaft fracture",Orthopedics,CANCELADA,2026-01-08 07:55:00
+1069,3,7,2,17:00,18:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-02 17:00:00,2026-01-02 18:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+426,2,3,2,17:00,18:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-02 17:00:00,2026-01-02 18:00:00,"Myringotomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+292,2,4,3,08:00,09:15,,False,,,,,0 days 01:15:00,2,0 days 01:15:00,4 days,4 days,2026-01-03 08:00:00,2026-01-03 09:15:00,Cervical biopsy,OBGYN,CANCELADA,2026-01-08 07:55:00
+636,2,4,3,09:15,10:30,,False,,,,,0 days 01:15:00,2,0 days 01:15:00,4 days,4 days,2026-01-03 09:15:00,2026-01-03 10:30:00,Cervical biopsy,OBGYN,CANCELADA,2026-01-08 07:55:00
+577,3,6,3,11:00,12:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,4 days,4 days,2026-01-03 11:00:00,2026-01-03 12:00:00,Removal of benign skin lesion,Plastic,CANCELADA,2026-01-08 07:55:00
+299,2,6,3,12:00,13:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,4 days,4 days,2026-01-03 12:00:00,2026-01-03 13:00:00,Removal of benign skin lesion,Plastic,CANCELADA,2026-01-08 07:55:00
+506,3,6,3,13:00,14:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,4 days,4 days,2026-01-03 13:00:00,2026-01-03 14:00:00,Removal of benign skin lesion,Plastic,CANCELADA,2026-01-08 07:55:00
+1066,2,6,3,14:00,15:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,4 days,4 days,2026-01-03 14:00:00,2026-01-03 15:00:00,Removal of benign skin lesion,Plastic,CANCELADA,2026-01-08 07:55:00
+594,3,2,3,14:00,16:00,,False,,,,,0 days 02:00:00,3,0 days 02:00:00,4 days,4 days,2026-01-03 14:00:00,2026-01-03 16:00:00,"ORIF, phalangeal shaft fracture",Orthopedics,CANCELADA,2026-01-08 07:55:00
+576,3,6,3,15:00,16:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,4 days,4 days,2026-01-03 15:00:00,2026-01-03 16:00:00,Removal of benign skin lesion,Plastic,CANCELADA,2026-01-08 07:55:00
+421,3,2,3,16:00,18:00,,False,,,,,0 days 02:00:00,3,0 days 02:00:00,4 days,4 days,2026-01-03 16:00:00,2026-01-03 18:00:00,"ORIF, phalangeal shaft fracture",Orthopedics,CANCELADA,2026-01-08 07:55:00
+620,2,1,4,08:00,09:30,,False,,,,,0 days 01:30:00,2,0 days 01:30:00,3 days,3 days,2026-01-04 08:00:00,2026-01-04 09:30:00,"Partial ostectomy, fifth metatarsal head",Podiatry,CANCELADA,2026-01-08 07:55:00
+639,2,5,4,08:00,09:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,3 days,3 days,2026-01-04 08:00:00,2026-01-04 09:00:00,Cystourethroscopy,Urology,CANCELADA,2026-01-08 07:55:00
+466,3,5,4,09:00,10:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,3 days,3 days,2026-01-04 09:00:00,2026-01-04 10:00:00,Cystourethroscopy,Urology,CANCELADA,2026-01-08 07:55:00
+1143,3,1,4,10:00,11:30,,False,,,,,0 days 01:30:00,3,0 days 01:30:00,3 days,3 days,2026-01-04 10:00:00,2026-01-04 11:30:00,"Partial ostectomy, fifth metatarsal head",Podiatry,CANCELADA,2026-01-08 07:55:00
+1132,4,5,4,10:00,11:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,1 days,1 days,2026-01-04 10:00:00,2026-01-04 11:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+297,3,5,4,11:00,12:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,1 days,1 days,2026-01-04 11:00:00,2026-01-04 12:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+447,3,1,4,12:00,13:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,3 days,3 days,2026-01-04 12:00:00,2026-01-04 13:00:00,"Neurectomy, intrinsic musculature of foot",Podiatry,CANCELADA,2026-01-08 07:55:00
+1005,3,1,4,14:00,15:30,,False,,,,,0 days 01:30:00,3,0 days 01:30:00,3 days,3 days,2026-01-04 14:00:00,2026-01-04 15:30:00,"Partial ostectomy, fifth metatarsal head",Podiatry,CANCELADA,2026-01-08 07:55:00
+1127,4,4,4,14:30,15:30,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,3 days,3 days,2026-01-04 14:30:00,2026-01-04 15:30:00,Vasectomy,Urology,CANCELADA,2026-01-08 07:55:00
+474,1,7,4,15:15,16:30,,True,,,,,0 days 01:15:00,1,0 days 01:15:00,5 days,5 days,2026-01-04 15:15:00,2026-01-04 16:30:00,AV fistula,Vascular,CANCELADA,2026-01-08 07:55:00
+343,4,1,4,15:30,17:00,,False,,,,,0 days 01:30:00,4,0 days 01:30:00,3 days,3 days,2026-01-04 15:30:00,2026-01-04 17:00:00,"Partial ostectomy, fifth metatarsal head",Podiatry,CANCELADA,2026-01-08 07:55:00
+364,4,5,4,16:00,17:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,3 days,3 days,2026-01-04 16:00:00,2026-01-04 17:00:00,Vasectomy,Urology,CANCELADA,2026-01-08 07:55:00
+641,4,5,4,17:00,18:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,3 days,3 days,2026-01-04 17:00:00,2026-01-04 18:00:00,Cystourethroscopy,Urology,CANCELADA,2026-01-08 07:55:00
+661,2,2,5,08:00,09:30,,False,,,,,0 days 01:30:00,2,0 days 01:30:00,7 days,7 days,2026-01-05 08:00:00,2026-01-05 09:30:00,Flexor tendon repair,Orthopedics,CANCELADA,2026-01-08 07:55:00
+1058,1,4,5,08:00,10:00,,False,,,,,0 days 02:00:00,1,0 days 02:00:00,6 days,6 days,2026-01-05 08:00:00,2026-01-05 10:00:00,"Hysterectomy, surgical",OBGYN,CANCELADA,2026-01-08 07:55:00
+595,2,2,5,09:30,11:00,,False,,,,,0 days 01:30:00,2,0 days 01:30:00,7 days,7 days,2026-01-05 09:30:00,2026-01-05 11:00:00,Flexor tendon repair,Orthopedics,CANCELADA,2026-01-08 07:55:00
+434,2,5,5,10:00,11:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,1 days,1 days,2026-01-05 10:00:00,2026-01-05 11:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+1056,2,4,5,11:00,13:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,6 days,6 days,2026-01-05 11:00:00,2026-01-05 13:00:00,"Hysterectomy, surgical",OBGYN,CANCELADA,2026-01-08 07:55:00
+366,1,6,5,11:00,14:00,,False,,,,,0 days 03:00:00,1,0 days 03:00:00,5 days,5 days,2026-01-05 11:00:00,2026-01-05 14:00:00,Liposuction,Plastic,CANCELADA,2026-01-08 07:55:00
+1060,4,5,5,11:00,12:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,1 days,1 days,2026-01-05 11:00:00,2026-01-05 12:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+570,4,5,5,12:00,13:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,1 days,1 days,2026-01-05 12:00:00,2026-01-05 13:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+606,2,5,5,13:00,14:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,1 days,1 days,2026-01-05 13:00:00,2026-01-05 14:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+1098,2,5,5,14:00,15:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,1 days,1 days,2026-01-05 14:00:00,2026-01-05 15:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+1148,2,2,5,14:00,16:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-05 14:00:00,2026-01-05 16:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,CANCELADA,2026-01-08 07:55:00
+610,2,6,5,14:00,16:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-05 14:00:00,2026-01-05 16:00:00,"Adjacent tissue transfer, eyelids, nose, ears, lip",Plastic,CANCELADA,2026-01-08 07:55:00
+1147,2,2,5,16:00,18:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-05 16:00:00,2026-01-05 18:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,CANCELADA,2026-01-08 07:55:00
+362,3,5,6,08:00,09:30,,False,,,,,0 days 01:30:00,3,0 days 01:30:00,5 days,5 days,2026-01-06 08:00:00,2026-01-06 09:30:00,Cryosurgery of the prostate gland,Urology,CANCELADA,2026-01-08 07:55:00
+480,2,1,6,08:00,10:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-06 08:00:00,2026-01-06 10:00:00,Bunionectomy with distal osteotomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+477,3,8,6,08:00,10:00,,False,,,,,0 days 02:00:00,3,0 days 02:00:00,5 days,5 days,2026-01-06 08:00:00,2026-01-06 10:00:00,Sleeve gastrectomy,General,CANCELADA,2026-01-08 07:55:00
+1045,2,2,6,08:00,09:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,6 days,6 days,2026-01-06 08:00:00,2026-01-06 09:00:00,"Arthroscopy, knee, surgical",Orthopedics,CANCELADA,2026-01-08 07:55:00
+370,1,7,6,08:00,09:15,,True,,,,,0 days 01:15:00,1,0 days 01:15:00,5 days,5 days,2026-01-06 08:00:00,2026-01-06 09:15:00,AV fistula,Vascular,CANCELADA,2026-01-08 07:55:00
+289,1,4,6,09:00,11:00,,False,,,,,0 days 02:00:00,1,0 days 02:00:00,6 days,6 days,2026-01-06 09:00:00,2026-01-06 11:00:00,"Hysterectomy, surgical",OBGYN,CANCELADA,2026-01-08 07:55:00
+607,4,5,6,10:00,11:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,1 days,1 days,2026-01-06 10:00:00,2026-01-06 11:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+408,2,7,6,10:00,11:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-06 10:00:00,2026-01-06 11:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+448,2,1,6,10:30,13:00,,False,,,,,0 days 02:30:00,2,0 days 02:30:00,5 days,5 days,2026-01-06 10:30:00,2026-01-06 13:00:00,Lapidus bunionectomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+1130,4,5,6,11:00,12:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,1 days,1 days,2026-01-06 11:00:00,2026-01-06 12:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+1021,2,4,6,11:00,13:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,6 days,6 days,2026-01-06 11:00:00,2026-01-06 13:00:00,"Hysterectomy, surgical",OBGYN,CANCELADA,2026-01-08 07:55:00
+1030,2,6,6,11:00,13:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,6 days,6 days,2026-01-06 11:00:00,2026-01-06 13:00:00,Rhinoplasty,Plastic,CANCELADA,2026-01-08 07:55:00
+478,2,8,6,12:00,14:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-06 12:00:00,2026-01-06 14:00:00,Sleeve gastrectomy,General,CANCELADA,2026-01-08 07:55:00
+1198,3,5,6,12:00,13:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,1 days,1 days,2026-01-06 12:00:00,2026-01-06 13:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+367,2,6,6,13:00,16:00,,False,,,,,0 days 03:00:00,2,0 days 03:00:00,5 days,5 days,2026-01-06 13:00:00,2026-01-06 16:00:00,Liposuction,Plastic,CANCELADA,2026-01-08 07:55:00
+674,3,5,6,13:00,14:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,1 days,1 days,2026-01-06 13:00:00,2026-01-06 14:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+522,3,2,6,14:00,15:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,8 days,8 days,2026-01-06 14:00:00,2026-01-06 15:00:00,"Carpal tunnel release, open",Orthopedics,CANCELADA,2026-01-08 07:55:00
+306,2,7,6,14:00,15:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-06 14:00:00,2026-01-06 15:00:00,"Myringotomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+331,4,5,6,14:00,15:00,,False,,,,,0 days 01:00:00,4,0 days 01:00:00,1 days,1 days,2026-01-06 14:00:00,2026-01-06 15:00:00,Tonsillectomy,ENT,CANCELADA,2026-01-08 07:55:00
+1088,2,3,6,14:00,15:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-06 14:00:00,2026-01-06 15:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+307,2,8,6,14:00,16:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-06 14:00:00,2026-01-06 16:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,CANCELADA,2026-01-08 07:55:00
+383,2,2,6,15:00,16:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,6 days,6 days,2026-01-06 15:00:00,2026-01-06 16:00:00,"Arthroscopy, knee, surgical",Orthopedics,CANCELADA,2026-01-08 07:55:00
+323,2,3,6,15:00,16:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-06 15:00:00,2026-01-06 16:00:00,"Myringotomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+1177,1,1,6,15:00,17:00,,False,,,,,0 days 02:00:00,1,0 days 02:00:00,5 days,5 days,2026-01-06 15:00:00,2026-01-06 17:00:00,Bunionectomy with distal osteotomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+1044,2,2,6,16:00,17:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,6 days,6 days,2026-01-06 16:00:00,2026-01-06 17:00:00,"Arthroscopy, knee, surgical",Orthopedics,CANCELADA,2026-01-08 07:55:00
+427,3,3,6,16:00,17:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-06 16:00:00,2026-01-06 17:00:00,"Myringotomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+1070,3,7,6,17:00,18:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-06 17:00:00,2026-01-06 18:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+277,2,2,6,17:00,18:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,6 days,6 days,2026-01-06 17:00:00,2026-01-06 18:00:00,"Arthroscopy, knee, surgical",Orthopedics,CANCELADA,2026-01-08 07:55:00
+1073,2,7,7,08:00,09:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-07 08:00:00,2026-01-07 09:00:00,"Myringotomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+465,2,5,7,08:00,09:30,,False,,,,,0 days 01:30:00,2,0 days 01:30:00,5 days,5 days,2026-01-07 08:00:00,2026-01-07 09:30:00,Cryosurgery of the prostate gland,Urology,CANCELADA,2026-01-08 07:55:00
+393,2,4,7,08:00,10:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,6 days,6 days,2026-01-07 08:00:00,2026-01-07 10:00:00,"Hysterectomy, surgical",OBGYN,CANCELADA,2026-01-08 07:55:00
+412,2,8,7,08:00,10:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-07 08:00:00,2026-01-07 10:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,CANCELADA,2026-01-08 07:55:00
+555,2,2,7,08:00,09:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,6 days,6 days,2026-01-07 08:00:00,2026-01-07 09:00:00,"Arthroscopy, knee, surgical",Orthopedics,CANCELADA,2026-01-08 07:55:00
+346,2,1,7,08:00,10:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-07 08:00:00,2026-01-07 10:00:00,Bunionectomy with distal osteotomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+1071,2,7,7,09:00,10:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-07 09:00:00,2026-01-07 10:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+553,2,2,7,09:00,10:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,6 days,6 days,2026-01-07 09:00:00,2026-01-07 10:00:00,"Arthroscopy, knee, surgical",Orthopedics,CANCELADA,2026-01-08 07:55:00
+384,2,2,7,10:00,11:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,6 days,6 days,2026-01-07 10:00:00,2026-01-07 11:00:00,"Arthroscopy, knee, surgical",Orthopedics,CANCELADA,2026-01-08 07:55:00
+1157,2,4,7,10:00,12:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,6 days,6 days,2026-01-07 10:00:00,2026-01-07 12:00:00,"Hysterectomy, surgical",OBGYN,CANCELADA,2026-01-08 07:55:00
+406,3,7,7,10:00,11:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-07 10:00:00,2026-01-07 11:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+340,2,8,7,10:00,12:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-07 10:00:00,2026-01-07 12:00:00,Sleeve gastrectomy,General,CANCELADA,2026-01-08 07:55:00
+1180,2,1,7,10:00,12:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-07 10:00:00,2026-01-07 12:00:00,Bunionectomy with distal osteotomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+471,2,6,7,11:00,13:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,6 days,6 days,2026-01-07 11:00:00,2026-01-07 13:00:00,Rhinoplasty,Plastic,CANCELADA,2026-01-08 07:55:00
+602,2,4,7,12:00,13:30,,False,,,,,0 days 01:30:00,2,0 days 01:30:00,5 days,5 days,2026-01-07 12:00:00,2026-01-07 13:30:00,Cryosurgery of the prostate gland,Urology,CANCELADA,2026-01-08 07:55:00
+683,2,8,7,12:00,14:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-07 12:00:00,2026-01-07 14:00:00,Sleeve gastrectomy,General,CANCELADA,2026-01-08 07:55:00
+551,3,1,7,12:00,13:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,6 days,6 days,2026-01-07 12:00:00,2026-01-07 13:00:00,Hallux rigidus correction with cheilectomy,Podiatry,CANCELADA,2026-01-08 07:55:00
+642,2,6,7,13:00,16:00,,False,,,,,0 days 03:00:00,2,0 days 03:00:00,5 days,5 days,2026-01-07 13:00:00,2026-01-07 16:00:00,Liposuction,Plastic,CANCELADA,2026-01-08 07:55:00
+668,2,4,7,13:30,15:00,,False,,,,,0 days 01:30:00,2,0 days 01:30:00,5 days,5 days,2026-01-07 13:30:00,2026-01-07 15:00:00,Cryosurgery of the prostate gland,Urology,CANCELADA,2026-01-08 07:55:00
+1112,2,1,7,14:00,15:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-07 14:00:00,2026-01-07 15:00:00,"Correction, hammertoe",Podiatry,CANCELADA,2026-01-08 07:55:00
+584,2,8,7,14:00,16:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-07 14:00:00,2026-01-07 16:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,CANCELADA,2026-01-08 07:55:00
+657,2,2,7,14:00,15:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,8 days,8 days,2026-01-07 14:00:00,2026-01-07 15:00:00,"Carpal tunnel release, open",Orthopedics,CANCELADA,2026-01-08 07:55:00
+579,2,7,7,14:00,15:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-07 14:00:00,2026-01-07 15:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+528,3,3,7,14:00,15:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-07 14:00:00,2026-01-07 15:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+512,3,7,7,15:00,16:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-07 15:00:00,2026-01-07 16:00:00,"Myringotomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+313,3,1,7,15:00,16:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-07 15:00:00,2026-01-07 16:00:00,"Correction, hammertoe",Podiatry,CANCELADA,2026-01-08 07:55:00
+1162,2,5,7,15:00,16:30,,False,,,,,0 days 01:30:00,2,0 days 01:30:00,5 days,5 days,2026-01-07 15:00:00,2026-01-07 16:30:00,Cryosurgery of the prostate gland,Urology,CANCELADA,2026-01-08 07:55:00
+487,2,2,7,15:00,16:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,6 days,6 days,2026-01-07 15:00:00,2026-01-07 16:00:00,"Arthroscopy, knee, surgical",Orthopedics,CANCELADA,2026-01-08 07:55:00
+1079,3,1,7,16:00,17:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Correction, hammertoe",Podiatry,CANCELADA,2026-01-08 07:55:00
+1122,2,3,7,16:00,17:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Myringotomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+1082,2,2,7,16:00,17:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,8 days,8 days,2026-01-07 16:00:00,2026-01-07 17:00:00,"Carpal tunnel release, open",Orthopedics,CANCELADA,2026-01-08 07:55:00
+308,2,8,7,16:00,18:00,,False,,,,,0 days 02:00:00,2,0 days 02:00:00,5 days,5 days,2026-01-07 16:00:00,2026-01-07 18:00:00,"Arthroplasty, knee, hinge prothesis",Orthopedics,CANCELADA,2026-01-08 07:55:00
+1024,3,5,7,16:30,18:00,,False,,,,,0 days 01:30:00,3,0 days 01:30:00,5 days,5 days,2026-01-07 16:30:00,2026-01-07 18:00:00,Cryosurgery of the prostate gland,Urology,CANCELADA,2026-01-08 07:55:00
+666,3,3,7,17:00,18:00,,False,,,,,0 days 01:00:00,3,0 days 01:00:00,5 days,5 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Myringotomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+303,2,7,7,17:00,18:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,5 days,5 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Tympanostomy, general anesthesia",Pediatrics,CANCELADA,2026-01-08 07:55:00
+1182,2,2,7,17:00,18:00,,False,,,,,0 days 01:00:00,2,0 days 01:00:00,6 days,6 days,2026-01-07 17:00:00,2026-01-07 18:00:00,"Arthroscopy, knee, surgical",Orthopedics,CANCELADA,2026-01-08 07:55:00

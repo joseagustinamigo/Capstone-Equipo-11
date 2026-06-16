@@ -21,25 +21,14 @@ import numpy as np
 import gurobipy as gp
 from gurobipy import GRB
 from math import ceil
-import os
 from os import path
-import unicodedata
 
 # =============================================================================
 # 1. PARÁMETROS DE CONFIGURACIÓN — AJUSTAR SEGÚN NECESIDAD
 # =============================================================================
 
-# Directorio base de simulación
-SIMULACION_DIR = path.abspath(path.dirname(__file__))
-
 # Ruta del archivo Excel con los datos
-RUTA_EXCEL = path.abspath(
-    path.join(SIMULACION_DIR, "..", "preprocesamiento", "Datos", "Datos Operaciones y lista de espera.xlsx")
-)
-
-# Ruta del archivo CSV de entrada para reprogramación (creado por simulacion.py)
-RUTA_CSV_ENTRADA = path.join(SIMULACION_DIR, "lista_espera_reprogramacion.csv")
-RUTA_CSV_SALIDA = path.join(SIMULACION_DIR, "resultados", "resultado_programacion.csv")
+RUTA_EXCEL = path.join("..","Capstone-Equipo-11","preprocesamiento","Datos","Datos Operaciones y lista de espera.xlsx")
 
 # Parámetros del horizonte
 N_DIAS = 7                  # |D|
@@ -69,178 +58,11 @@ print("=" * 70)
 print("CARGA DE DATOS")
 print("=" * 70)
 
-os.makedirs(path.dirname(RUTA_CSV_SALIDA), exist_ok=True)
-if path.exists(RUTA_CSV_SALIDA):
-    os.remove(RUTA_CSV_SALIDA)
+df_base = pd.read_excel(RUTA_EXCEL, sheet_name="Datos base")
+df_espera = pd.read_excel(RUTA_EXCEL, sheet_name="Lista de espera")
 
-# Intentar cargar desde CSV de entrada (creado por simulacion.py)
-# Si no existe, cargar del Excel normalmente
-if path.exists(RUTA_CSV_ENTRADA):
-    print(f"Leyendo lista de espera desde: {RUTA_CSV_ENTRADA}")
-    df_base = pd.read_excel(RUTA_EXCEL, sheet_name="Datos base")
-    df_espera = pd.read_csv(RUTA_CSV_ENTRADA, sep=",", encoding="utf-8-sig")
-
-    def normalize_column(col):
-        if pd.isna(col):
-            return col
-        normalized = unicodedata.normalize("NFKD", str(col))
-        normalized = normalized.encode("ascii", "ignore").decode("ascii")
-        return " ".join(normalized.split()).strip()
-
-    # Normalizar nombres de columna que pueden venir desde simulación
-    df_espera.columns = [normalize_column(c) for c in df_espera.columns]
-    if df_espera.columns.duplicated().any():
-        cols = []
-        counts = {}
-        for col in df_espera.columns:
-            if col in counts:
-                counts[col] += 1
-                cols.append(f"{col}.{counts[col]}")
-            else:
-                counts[col] = 0
-                cols.append(col)
-        df_espera.columns = cols
-
-    if "Prioridad de paciente" not in df_espera.columns and "Prioridad" in df_espera.columns:
-        df_espera["Prioridad de paciente"] = df_espera["Prioridad"]
-    if "Duración agendada (min)" not in df_espera.columns and "Duración (min)" in df_espera.columns:
-        df_espera["Duración agendada (min)"] = df_espera["Duración (min)"]
-    if "Duración agendada (min)" not in df_espera.columns and "Duracion agendada (min)" in df_espera.columns:
-        df_espera["Duración agendada (min)"] = df_espera["Duracion agendada (min)"]
-    if "Servicio" not in df_espera.columns and "servicio" in df_espera.columns:
-        df_espera["Servicio"] = df_espera["servicio"]
-    if "Descripción" not in df_espera.columns and "descripcion" in df_espera.columns:
-        df_espera["Descripción"] = df_espera["descripcion"]
-    if "Descripción" not in df_espera.columns and "Descripcion" in df_espera.columns:
-        df_espera["Descripción"] = df_espera["Descripcion"]
-
-    # Coalesce duplicated service/description columns if present
-    for alt in ["Servicio.1", "servicio", "servicio.1", "Servicio.2", "servicio.2"]:
-        if alt in df_espera.columns:
-            df_espera["Servicio"] = df_espera["Servicio"].fillna(df_espera[alt])
-    for alt in ["Descripción.1", "descripcion", "descripcion.1", "Descripción.2", "descripcion.2"]:
-        if alt in df_espera.columns:
-            df_espera["Descripción"] = df_espera["Descripción"].fillna(df_espera[alt])
-    for alt in ["OR Suite.1", "OR Suite.2", "OR Suite.0"]:
-        if alt in df_espera.columns:
-            df_espera["OR Suite"] = df_espera["OR Suite"].fillna(df_espera[alt])
-
-    # Normalize service and description text
-    def normalize_text(value):
-        if pd.isna(value):
-            return pd.NA
-        value = str(value).strip()
-        return value if value != "" else pd.NA
-
-    df_espera["Servicio"] = df_espera["Servicio"].apply(normalize_text)
-    df_espera["Descripción"] = df_espera["Descripción"].apply(normalize_text)
-
-    # Limpiar columnas duplicadas innecesarias
-    df_espera = df_espera.loc[:, ~df_espera.columns.duplicated()]
-
-    def parse_minutes(value):
-        if pd.isna(value):
-            return np.nan
-        if isinstance(value, (int, float, np.integer, np.floating)):
-            return float(value)
-        if isinstance(value, pd.Timedelta):
-            return value.total_seconds() / 60
-        if isinstance(value, str):
-            value = value.strip()
-            if value == "":
-                return np.nan
-            try:
-                return float(value)
-            except ValueError:
-                try:
-                    td = pd.to_timedelta(value)
-                    return td.total_seconds() / 60
-                except Exception:
-                    return np.nan
-        return np.nan
-
-    df_espera["Duración agendada (min)"] = df_espera["Duración agendada (min)"].apply(parse_minutes)
-    df_espera["Prioridad de paciente"] = pd.to_numeric(df_espera["Prioridad de paciente"], errors="coerce")
-    df_espera["Correlativo"] = pd.to_numeric(df_espera["Correlativo"], errors="coerce").astype("Int64")
-
-    if df_espera["Duración agendada (min)"].isna().any():
-        raise ValueError("Al menos un registro de reprogramación tiene Duración agendada (min) inválida")
-    if df_espera["Prioridad de paciente"].isna().any():
-        raise ValueError("Al menos un registro de reprogramación tiene Prioridad de paciente inválida")
-
-    # Validar que las columnas esperadas existan
-    required_columns = ["Correlativo", "Servicio", "Descripción", "Prioridad de paciente", "Duración agendada (min)", "OR Suite"]
-    missing_columns = [c for c in required_columns if c not in df_espera.columns]
-    if missing_columns:
-        raise ValueError(f"Columnas faltantes en el CSV de reprogramación: {missing_columns}")
-
-    # Normalizar texto antes de validar los servicios
-    df_espera["Servicio"] = df_espera["Servicio"].astype("string").str.strip().replace({"": pd.NA})
-
-    df_espera["OR Suite"] = pd.to_numeric(df_espera["OR Suite"], errors="coerce").astype("Int64")
-    if df_espera["OR Suite"].isna().any():
-        raise ValueError("Al menos un registro de reprogramación tiene OR Suite inválido")
-
-    print(f"Lista de espera cargada desde CSV (reprogramación)")
-    print(f"  Registros históricos (Datos base): {len(df_base)}")
-    print(f"  Pacientes para reprogramar: {len(df_espera)}")
-    # Remover CSV después de leerlo
-    try:
-        path.exists(RUTA_CSV_ENTRADA) and os.remove(RUTA_CSV_ENTRADA)
-    except:
-        pass
-else:
-    print(f"No se encontró CSV de reprogramación: {RUTA_CSV_ENTRADA}")
-    print(f"Leyendo lista de espera completa desde: {RUTA_EXCEL}")
-    df_base = pd.read_excel(RUTA_EXCEL, sheet_name="Datos base")
-    df_espera = pd.read_excel(RUTA_EXCEL, sheet_name="Lista de espera")
-    print(f"Registros históricos (Datos base): {len(df_base)}")
-    print(f"Lista de espera: {len(df_espera)}")
-
-
-def parse_minutes_common(value):
-    if pd.isna(value):
-        return np.nan
-    if isinstance(value, pd.Timedelta):
-        return value.total_seconds() / 60
-    if isinstance(value, (int, float, np.integer, np.floating)):
-        return float(value)
-    if isinstance(value, str):
-        value = value.strip()
-        if value == "":
-            return np.nan
-        try:
-            return float(value)
-        except ValueError:
-            try:
-                return pd.to_timedelta(value).total_seconds() / 60
-            except Exception:
-                return np.nan
-    return np.nan
-
-
-required_columns = ["Correlativo", "Servicio", "Descripción", "Prioridad de paciente", "Duración agendada (min)", "OR Suite"]
-missing_columns = [c for c in required_columns if c not in df_espera.columns]
-if missing_columns:
-    raise ValueError(f"Columnas faltantes en datos de reprogramación: {missing_columns}")
-
-df_espera["Servicio"] = df_espera["Servicio"].astype("string").str.strip().replace({"": pd.NA})
-df_espera["Descripción"] = df_espera["Descripción"].astype("string").str.strip().replace({"": pd.NA})
-df_espera["Duración agendada (min)"] = df_espera["Duración agendada (min)"].apply(parse_minutes_common)
-df_espera["Prioridad de paciente"] = pd.to_numeric(df_espera["Prioridad de paciente"], errors="coerce")
-df_espera["Correlativo"] = pd.to_numeric(df_espera["Correlativo"], errors="coerce")
-df_espera["OR Suite"] = pd.to_numeric(df_espera["OR Suite"], errors="coerce")
-
-invalid_rows = df_espera[required_columns].isna().any(axis=1)
-if invalid_rows.any():
-    raise ValueError(f"{invalid_rows.sum()} registros tienen datos requeridos inválidos para reprogramación")
-
-df_espera["Correlativo"] = df_espera["Correlativo"].astype(int)
-df_espera["OR Suite"] = df_espera["OR Suite"].astype(int)
-if df_espera.empty:
-    raise ValueError("No hay pacientes válidos para reprogramar")
-
-
+print(f"Registros históricos (Datos base): {len(df_base)}")
+print(f"Lista de espera: {len(df_espera)}")
 
 # --- Estimar días de permanencia para la lista de espera ---
 # La lista de espera no incluye 'Días de permanencia programados'. Estimamos
@@ -329,14 +151,6 @@ W = {srv: horas_a_slots(rangos) for srv, rangos in ventanas_servicio.items()}
 print("\nVentanas horarias por servicio (en slots):")
 for srv, slots in W.items():
     print(f"  {srv:<14}: {len(slots)} slots disponibles")
-
-servicios_desconocidos = sorted(set(df_espera["Servicio"].dropna()) - set(W))
-if servicios_desconocidos:
-    raise ValueError(f"Servicios sin ventana horaria definida: {servicios_desconocidos}")
-
-pabellones_invalidos = sorted(set(df_espera["OR Suite"].dropna().astype(int)) - set(J))
-if pabellones_invalidos:
-    raise ValueError(f"OR Suite fuera de rango 1..{N_PABELLONES}: {pabellones_invalidos}")
 
 # =============================================================================
 # 4. PRECÁLCULO DE COMBINACIONES (i,j,d,s) FACTIBLES
@@ -505,7 +319,7 @@ for i in I:
             u[i, d] <= gp.quicksum(
                 x[i, j, d_prima, s]
                 for d_prima in d_primas_validos
-
+                
                 if (i, d_prima) in combs_por_id
                 for (j, s) in combs_por_id[(i, d_prima)]
 
@@ -533,7 +347,7 @@ for i in I_UCI:
         m.addConstr(
             u[i, d] <= gp.quicksum(
                 x[i, j, d_prima, s]
-                for d_prima in d_primas_validos
+                for d_prima in d_primas_validos  
                 if (i, d_prima) in combs_por_id
                 for (j, s) in combs_por_id[(i, d_prima)]
 
@@ -620,8 +434,7 @@ else:
                 "Correlativo": df_espera.loc[i, "Correlativo"],
                 "Servicio": g[i],
                 "Descripción": df_espera.loc[i, "Descripción"],
-                "Prioridad de paciente": df_espera.loc[i, "Prioridad de paciente"],
-                "Prioridad": df_espera.loc[i, "Prioridad de paciente"],
+                "Prioridad": p[i],
                 "Pabellón": j,
                 "Día": d,
                 "Hora inicio": f"{hora_inicio//60:02d}:{hora_inicio%60:02d}",
@@ -651,9 +464,9 @@ else:
         print(df_resultado["Prioridad"].value_counts().sort_index(ascending=False))
 
         # Exportar resultados a CSV
-        os.makedirs(path.dirname(RUTA_CSV_SALIDA), exist_ok=True)
-        df_resultado.to_csv(RUTA_CSV_SALIDA, index=False)
-        print(f"\nResultados exportados a: {RUTA_CSV_SALIDA}")
+        archivo_salida = path.join("..","Capstone-Equipo-11","Simulacion","resultados","resultado_programacion.csv")
+        df_resultado.to_csv(archivo_salida, index=False)
+        print(f"\nResultados exportados a: {archivo_salida}")
 
         print("\nPrimeras 15 cirugías programadas:")
         print(df_resultado.head(15).to_string())
