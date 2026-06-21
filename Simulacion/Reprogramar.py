@@ -58,8 +58,8 @@ DIAS_UCI = 2                # σ — días obligatorios en UCI para Vascular/AV 
 N_PACIENTES_MAX = 500
 
 # Parámetros de penalización (Efecto fin de horizonte)
-PENALIZACION_CAMA_BASICA = 5.0  # Costo en la f.o. por ocupar una cama básica el día 7
-PENALIZACION_CAMA_UCI = 1.0     # Costo en la f.o. por ocupar una cama UCI el día 7
+PENALIZACION_CAMA_BASICA = 0.9  # Costo en la f.o. por ocupar una cama básica el día 7
+PENALIZACION_CAMA_UCI = 0.9     # Costo en la f.o. por ocupar una cama UCI el día 7
 
 
 # Parámetros de Gurobi
@@ -273,11 +273,8 @@ df_espera["Requiere_UCI"] = (
 
 # --- Filtro opcional para reducir el tamaño del problema ---
 if N_PACIENTES_MAX is not None and len(df_espera) > N_PACIENTES_MAX:
-    df_espera = df_espera.sort_values(
-        by=["Prioridad de paciente", "Duración agendada (min)"],
-        ascending=[True, True],
-    ).head(N_PACIENTES_MAX).reset_index(drop=True)
-    print(f"Lista de espera filtrada a los top {N_PACIENTES_MAX} pacientes por prioridad.")
+    df_espera = df_espera.head(N_PACIENTES_MAX).reset_index(drop=True)
+    print(f"Lista de espera filtrada a los top {N_PACIENTES_MAX} pacientes.")
 
 print(f"Pacientes a considerar: {len(df_espera)}")
 print(f"  - Que requieren UCI: {df_espera['Requiere_UCI'].sum()}")

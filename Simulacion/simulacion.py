@@ -848,41 +848,55 @@ def exportar_resurcos_hospitalarios():
 
 def exportar_camas_criticas():
     """
-    Exporta camas ocupadas proyectadas para la nueva ventana de planificación.
-    Utiliza el día siguiente al current_time como inicio de la nueva semana, 
-    asegurando continuidad total sin saltos de calendario.
+    Exporta de manera exacta las camas UCI y básicas que seguirán ocupadas 
+    durante el próximo horizonte de planificación para que el algoritmo 
+    de reprogramación no las pise.
     """
+    # IMPORTANTE: Usamos 'camas' (que es el nombre real de tu lista de camas)
+    global camas_uci, camas, current_time
     
-    # 1. Definir inicio real de la ventana de Gurobi: el día siguiente al cierre
-    inicio_nueva_semana = (current_time + timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
-
-    def calcular_ocupacion(lista_camas):
-        ocupacion = []
-        for inicio, fin in lista_camas:
-            # Si el paciente sigue ocupando cama después del inicio de la nueva semana
-            if fin > inicio_nueva_semana:
-                # Calculamos cuánto tiempo de la NUEVA semana estará ocupada la cama
-                # Si el alta es el 18 y la semana parte el 15, ocupa 3 días (15, 16, 17)
-                dias_restantes = (fin - inicio_nueva_semana).total_seconds() / 86400
-                
-                # Redondeo al alza para asegurar que si el paciente ocupa parte del día, 
-                # la cama se considere bloqueada ese día completo.
-                dias_bloqueados = int(np.ceil(dias_restantes))
-                
-                # Evitamos valores negativos o cero si el alta es justo al inicio
-                if dias_bloqueados > 0:
-                    ocupacion.append({"Dias_Restantes": dias_bloqueados})
-        return ocupacion
-
-    # 2. Generar reportes
-    df_basicas = pd.DataFrame(calcular_ocupacion(camas), columns=["Dias_Restantes"])
-    df_uci = pd.DataFrame(calcular_ocupacion(camas_uci), columns=["Dias_Restantes"])
+    # El horizonte de la nueva agenda empieza exactamente el próximo día a las 08:00 h
+    fecha_inicio_agenda = (current_time + timedelta(days=1)).replace(hour=8, minute=0, second=0, microsecond=0)
     
-    # 3. Exportar archivos
-    df_basicas.to_csv(path.join(SIMULACION_DIR, "camas_basicas_activas.csv"), index=False)
-    df_uci.to_csv(path.join(SIMULACION_DIR, "camas_uci_activas.csv"), index=False)
+    registros_uci = []
+    registros_basicas = []
     
+    # 1. Procesar Camas UCI (tu script las guarda como tuplas (inicio, fin))
+    for inicio, fin in camas_uci:
+        if fin > fecha_inicio_agenda:
+            dias_restantes = (fin - fecha_inicio_agenda).days + 1
+            registros_uci.append({
+                "ID paciente": "",
+                "Correlativo": "", # Se deja vacío ya que Reprogramar.py usualmente solo suma el total de días/camas
+                "Dias_Restantes": max(1, dias_restantes),
+                "Fecha_Liberacion": fin.strftime("%Y-%m-%d %H:%M:%S")
+            })
+            
+    # 2. Procesar Camas Básicas (lista llamada 'camas')
+    for inicio, fin in camas:
+        if fin > fecha_inicio_agenda:
+            dias_restantes = (fin - fecha_inicio_agenda).days + 1
+            registros_basicas.append({
+                "ID paciente": "",
+                "Correlativo": "",
+                "Dias_Restantes": max(1, dias_restantes),
+                "Fecha_Liberacion": fin.strftime("%Y-%m-%d %H:%M:%S")
+            })
+            
+    # Guardar en los archivos CSV que lee Reprogramar.py
+    df_uci = pd.DataFrame(registros_uci)
+    if df_uci.empty:
+        df_uci = pd.DataFrame(columns=["ID paciente", "Correlativo", "Dias_Restantes", "Fecha_Liberacion"])
+    df_uci.to_csv("camas_uci_activas.csv", index=False)
+    
+    df_basicas = pd.DataFrame(registros_basicas)
+    if df_basicas.empty:
+        df_basicas = pd.DataFrame(columns=["ID paciente", "Correlativo", "Dias_Restantes", "Fecha_Liberacion"])
+    df_basicas.to_csv("camas_basicas_activas.csv", index=False)
+    
+    print(f"[Camas] Exportadas {len(registros_uci)} UCI y {len(registros_basicas)} básicas activas para la reprogramación.")
 
+    
 def exportar_estado():
     """Exporta estado completo de la simulación."""
     crear_directorios()
