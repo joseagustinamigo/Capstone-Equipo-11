@@ -1,0 +1,4 @@
+Correlativo,Servicio,Descripción,Prioridad de paciente,Prioridad,Pabellón,Día,Hora inicio,Hora fin,Duración (min),Permanencia,Requiere UCI
+441,Vascular,AV fistula,4,4,7,5,08:00,09:15,75,5,True
+616,Vascular,AV fistula,4,4,7,7,08:00,09:15,75,5,True
+1035,Vascular,AV fistula,4,4,7,7,15:00,16:15,75,5,True
