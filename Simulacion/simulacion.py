@@ -852,7 +852,6 @@ def exportar_camas_criticas():
     durante el próximo horizonte de planificación para que el algoritmo 
     de reprogramación no las pise.
     """
-    # IMPORTANTE: Usamos 'camas' (que es el nombre real de tu lista de camas)
     global camas_uci, camas, current_time
     
     # El horizonte de la nueva agenda empieza exactamente el próximo día a las 08:00 h
@@ -867,12 +866,12 @@ def exportar_camas_criticas():
             dias_restantes = (fin - fecha_inicio_agenda).days + 1
             registros_uci.append({
                 "ID paciente": "",
-                "Correlativo": "", # Se deja vacío ya que Reprogramar.py usualmente solo suma el total de días/camas
+                "Correlativo": "", 
                 "Dias_Restantes": max(1, dias_restantes),
                 "Fecha_Liberacion": fin.strftime("%Y-%m-%d %H:%M:%S")
             })
             
-    # 2. Procesar Camas Básicas (lista llamada 'camas')
+    # 2. Procesar Camas Básicas
     for inicio, fin in camas:
         if fin > fecha_inicio_agenda:
             dias_restantes = (fin - fecha_inicio_agenda).days + 1
@@ -896,7 +895,77 @@ def exportar_camas_criticas():
     
     print(f"[Camas] Exportadas {len(registros_uci)} UCI y {len(registros_basicas)} básicas activas para la reprogramación.")
 
+def exportar_lista_espera_actualizada():
+    """
+    Lee la lista de espera global original y elimina las operaciones que 
+    ya fueron REALIZADAS. Exporta la lista de los pacientes que aún siguen esperando.
+    """
+    crear_directorios()
+    ruta_salida = path.join(RUTA_ESTADO_ACTUAL, "Lista_Espera_Actualizada.csv")
     
+    # 1. Identificar a los pacientes que ya salieron de la lista (Realizados)
+    correlativos_completados = []
+    for info in operaciones_estado.values():
+        # Si se realizó, ya no está en la lista de espera
+        if info["estado"] == ESTADO_REALIZADA:
+            correlativos_completados.append(str(info["data"].get("Correlativo", "")))
+
+    # 2. Leer el archivo de la lista de espera original
+    ruta_original = path.abspath(path.join(SIMULACION_DIR, "..", "preprocesamiento", "Datos", "Datos Operaciones y lista de espera.xlsx"))
+    
+    if path.exists(ruta_original):
+        # Leer excel o csv según corresponda
+        if ruta_original.endswith('.xlsx'):
+            df_original = pd.read_excel(ruta_original)
+        else:
+            df_original = pd.read_csv(ruta_original)
+            
+        # 3. Filtrar: Dejar solo a los que NO están en la lista de completados
+        df_restante = df_original[~df_original["Correlativo"].astype(str).isin(correlativos_completados)]
+
+        df_restante = df_restante.sort_values(by="Correlativo", ascending=True)
+        
+        # 4. Guardar la lista de espera actualizada
+        df_restante.to_csv(ruta_salida, index=False, encoding="utf-8-sig")
+    else:
+        print(f"[Aviso] No se encontró la lista original en {ruta_original} para actualizar la lista de espera.")
+
+
+def exportar_historial_cancelaciones():
+    """
+    Actualiza el registro histórico acumulado de TODAS las cancelaciones.
+    Se ejecuta de forma inteligente: no duplica eventos, solo anexa las cancelaciones nuevas.
+    """
+    crear_directorios()
+    ruta_historico = path.join(RUTA_ESTADO_ACTUAL, "Registro_Historico_Cancelaciones.csv")
+    
+    # Obtener todas las cancelaciones actuales en la memoria del sistema
+    canceladas_actuales = obtener_operaciones_por_estado(ESTADO_CANCELADA)
+    
+    if not canceladas_actuales:
+        return # Si no hay cancelaciones hoy/esta semana, no hacemos nada
+        
+    df_actuales = pd.DataFrame(canceladas_actuales)
+    
+    # Crear un ID único del evento para no duplicar (Correlativo + Timestamp exacto de cancelación)
+    df_actuales['id_evento'] = df_actuales['Correlativo'].astype(str) + "_" + df_actuales['Timestamp Estado'].astype(str)
+    
+    if path.exists(ruta_historico):
+        df_historico = pd.read_csv(ruta_historico)
+        
+        # Si el histórico ya tiene la columna id_evento, filtramos las que ya están
+        if 'id_evento' in df_historico.columns:
+            df_nuevas = df_actuales[~df_actuales['id_evento'].isin(df_historico['id_evento'])].copy()
+        else:
+            df_nuevas = df_actuales.copy()
+            
+        # Si hay cancelaciones nuevas que no estaban en el archivo histórico, las agregamos al final
+        if not df_nuevas.empty:
+            df_nuevas.to_csv(ruta_historico, mode="a", index=False, header=False, encoding="utf-8-sig")
+    else:
+        # Si el archivo no existe, lo creamos por primera vez
+        df_actuales.to_csv(ruta_historico, index=False, encoding="utf-8-sig")
+
 def exportar_estado():
     """Exporta estado completo de la simulación."""
     crear_directorios()
@@ -906,6 +975,8 @@ def exportar_estado():
     exportar_operaciones_realizadas()
     exportar_operaciones_pendientes()
     exportar_operaciones_canceladas()
+    exportar_lista_espera_actualizada()
+    exportar_historial_cancelaciones()
 
     # Exportar auditoría y recursos
     exportar_auditoria()
