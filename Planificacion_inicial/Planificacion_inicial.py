@@ -44,7 +44,11 @@ DIAS_UCI = 2                # σ — días obligatorios en UCI para Vascular/AV 
 
 # Filtro inicial: usar solo los N pacientes con mayor prioridad para acotar tamaño
 # Pon None para usar TODOS los pacientes (puede tardar mucho)
-N_PACIENTES_MAX = 500
+N_PACIENTES_MAX = 600
+
+# Parámetros de penalización (Efecto fin de horizonte)
+PENALIZACION_CAMA_BASICA = 5.0  # Costo en la f.o. por ocupar una cama básica el día 7
+PENALIZACION_CAMA_UCI = 1.0     # Costo en la f.o. por ocupar una cama UCI el día 7
 
 # Parámetros de Gurobi
 TIEMPO_LIMITE_SEG = 20000     # 10 minutos
@@ -220,10 +224,29 @@ u = m.addVars(I, D, vtype=GRB.BINARY, name="u")
 # v[i,d] = 1 si paciente i (UCI) ocupa cama UCI el día d
 v = m.addVars(I_UCI, D, vtype=GRB.BINARY, name="v")
 
-# --- Función objetivo ---
+# ------------------------- Función objetivo con penalización de fin de horizonte ----------------------------------------
+# 1. Beneficio por operar (prioridad del paciente)
+beneficio_prioridad = gp.quicksum(
+    p[i] * x[i, j, d, s] 
+    for (i, j, d, s) in combinaciones_validas
+)
+
+# 2. Penalización por ocupar camas en el último día del horizonte (N_DIAS)
+# Esto desincentiva programar cirugías con largas estadías hacia el final de la semana
+penalizacion_basicas = gp.quicksum(
+    PENALIZACION_CAMA_BASICA * u[i, N_DIAS] 
+    for i in I
+)
+
+penalizacion_uci = gp.quicksum(
+    PENALIZACION_CAMA_UCI * v[i, N_DIAS] 
+    for i in I_UCI
+)
+
+# Objetivo final: Maximizar beneficio priorizando la liberación de camas al final
 m.setObjective(
-    gp.quicksum(p[i] * x[i, j, d, s] for (i, j, d, s) in combinaciones_validas),
-    GRB.MAXIMIZE,
+    beneficio_prioridad - penalizacion_basicas - penalizacion_uci,
+    GRB.MAXIMIZE
 )
 
 # --- R1: cada paciente se opera a lo más una vez ---
@@ -464,7 +487,7 @@ else:
         print(df_resultado["Prioridad"].value_counts().sort_index(ascending=False))
 
         # Exportar resultados a CSV
-        archivo_salida = path.join("..","Capstone-Equipo-11","Simulacion","resultados","resultado_programacion.csv")
+        archivo_salida = path.join("..","Capstone-Equipo-11","Planificacion_inicial","resultados","resultado_programacion.csv")
         df_resultado.to_csv(archivo_salida, index=False)
         print(f"\nResultados exportados a: {archivo_salida}")
 

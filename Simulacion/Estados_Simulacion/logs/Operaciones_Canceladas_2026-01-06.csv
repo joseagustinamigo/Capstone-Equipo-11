@@ -1,3 +1,0 @@
-﻿Correlativo,Prioridad,Pabellón,Día,Hora inicio,Hora fin,Permanencia,Requiere UCI,ID paciente,Fecha,OR Suite,Código CPT,Duración agendada (min),Prioridad de paciente,duracion_efectiva_intervencion,dias_permanencia_programados,dias_permanencia_efectivos,inicio_dt,fin_dt,descripcion,servicio,Estado,Timestamp Estado
-1033,5,7,4,08:00,09:15,5,True,11034,,7,36901,0 days 01:15:00,1,0 days 01:07:00,1 days,5 days,2026-01-04 08:00:00,2026-01-04 09:15:00,AV fistula,Vascular,CANCELADA,2026-01-04 09:15:00
-372,5,7,6,09:45,11:00,5,True,10373,,7,36901,0 days 01:15:00,1,0 days 01:09:00,1 days,4 days,2026-01-06 09:45:00,2026-01-06 11:00:00,AV fistula,Vascular,CANCELADA,2026-01-06 11:00:00

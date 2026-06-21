@@ -7,6 +7,7 @@ import subprocess
 import sys
 from os import path
 import unicodedata
+import shutil
 
 
 def normalize_column_name(name):
@@ -76,9 +77,9 @@ RUTA_ESTADO_ACTUAL = path.join(SIMULACION_DIR, "Estados_Simulacion")
 DIR_LOGS = path.join(RUTA_ESTADO_ACTUAL, "logs")
 DIR_OPERACIONES = path.join(RUTA_ESTADO_ACTUAL, "operaciones")
 DIR_RECUROS = path.join(RUTA_ESTADO_ACTUAL, "recursos")
-DIR_SNAPSHOTS = path.join(RUTA_ESTADO_ACTUAL, "snapshots")
 
-BASE_DATE = datetime(2026, 1, 1)
+
+BASE_DATE = datetime(2026, 1, 5)
 SCHEDULE_ANCHOR_DATE = BASE_DATE.date()
 
 # Estados de operación
@@ -95,6 +96,17 @@ OPERACIONES_SCHEMA = [
     "Duración agendada (min)", "Permanencia",
     "Fecha inicio dt", "Fecha fin dt"
 ]
+
+def obtener_total_lista_espera():
+    try:
+        ruta = path.join(SIMULACION_DIR, "..", "preprocesamiento", "Datos", "Datos Operaciones y lista de espera.xlsx")
+        df_le = pd.read_excel(ruta, sheet_name="Lista de espera")
+        return len(df_le)
+    except Exception as e:
+        print(f"No se pudo cargar la lista de espera inicial: {e}")
+        return 0
+
+TOTAL_INICIAL_ESPERA = obtener_total_lista_espera()
 
 # ============================================================================
 # FUNCIONES DE PREPARACIÓN DE DATOS
@@ -132,7 +144,7 @@ def limpiar_resultado_reprogramacion():
 
 def preparar_dataframe():
     """Carga y prepara datos iniciales."""
-    ruta_programacion = path.join(SIMULACION_DIR, "Estado_Inicial", "resultado_programacion_corregido.csv")
+    ruta_programacion = path.join(SIMULACION_DIR, "Estado_Inicial", "programacion_penalizada_5.csv")
     ruta_escenario = path.join(SIMULACION_DIR, "Estado_Inicial", "Escenarios", "escenario_1.csv")
 
     df_prog = pd.read_csv(ruta_programacion, sep=",", encoding="utf-8-sig")
@@ -202,6 +214,9 @@ for row in df.to_dict("records"):
     operaciones_estado[correlativo] = {
         "estado": ESTADO_PROGRAMADA,
         "timestamp_estado": current_time,
+        "fue_reprogramada": False,
+          "veces_cancelada": 0,
+          "motivo_ultima_cancelacion": "",
         "data": row.copy()
     }
     eventos.append({"tipo": "inicio", "tiempo": row["inicio_dt"], "data": row})
@@ -407,29 +422,32 @@ tk.Button(frame_velocidad, text="🐌 Lento", command=slower,
           bg=COLOR_PRIMARY, fg=COLOR_WHITE, width=13, font=("Arial", 9, "bold"),
           relief=tk.FLAT, padx=5, pady=6).pack(side=tk.LEFT, padx=3)
 
-tk.Button(frame_controles, text="🔁 REPROGRAMAR", command=lambda: request_reprogramar(False),
-          bg=COLOR_DANGER, fg=COLOR_WHITE, width=28, font=("Arial", 10, "bold"),
-          relief=tk.FLAT, padx=10, pady=8).pack(pady=5)
 
 def on_closing():
+    """Elimina toda la estructura de archivos temporales al cerrar."""
     try:
+        # 1. Destruir la carpeta Estados_Simulacion y TODAS sus subcarpetas
         if path.exists(RUTA_ESTADO_ACTUAL):
-            for f in os.listdir(RUTA_ESTADO_ACTUAL):
-                if f.endswith(".csv"):
-                    os.remove(path.join(RUTA_ESTADO_ACTUAL, f))
+            shutil.rmtree(RUTA_ESTADO_ACTUAL)
+            
+        # 2. Eliminar archivos huérfanos de la reprogramación
+        if path.exists(RUTA_REPROGRAMACION_SALIDA):
+            os.remove(RUTA_REPROGRAMACION_SALIDA)
+            
+        ruta_espera_reprog = path.join(SIMULACION_DIR, "lista_espera_reprogramacion.csv")
+        if path.exists(ruta_espera_reprog):
+            os.remove(ruta_espera_reprog)
+            
     except Exception as e:
-        pass
-    root.destroy()
-
-root.protocol("WM_DELETE_WINDOW", on_closing)
-
-
+        print(f"Advertencia al limpiar archivos temporales: {e}")
+    finally:
+        root.destroy()
 # ============================================================================
 # FUNCIONES DE LÓGICA DE SIMULACIÓN
 # ============================================================================
 
 def cambiar_estado_operacion(correlativo, nuevo_estado, motivo=""):
-    """Cambia estado de una operación y registra auditoría."""
+    """Cambia estado de una operación, registra auditoría y mantiene historial."""
     if correlativo not in operaciones_estado:
         return
 
@@ -437,6 +455,16 @@ def cambiar_estado_operacion(correlativo, nuevo_estado, motivo=""):
 
     if estado_anterior == nuevo_estado:
         return  # Sin cambios
+
+    # --- NUEVO: TRACKING DE REPROGRAMACIÓN Y CANCELACIÓN ---
+    if estado_anterior == ESTADO_CANCELADA and nuevo_estado == ESTADO_PROGRAMADA:
+        operaciones_estado[correlativo]["fue_reprogramada"] = True
+        
+    if nuevo_estado == ESTADO_CANCELADA:
+        # Incrementamos el contador de cancelaciones
+        actual = operaciones_estado[correlativo].get("veces_cancelada", 0)
+        operaciones_estado[correlativo]["veces_cancelada"] = actual + 1
+        operaciones_estado[correlativo]["motivo_ultima_cancelacion"] = motivo
 
     operaciones_estado[correlativo]["estado"] = nuevo_estado
     operaciones_estado[correlativo]["timestamp_estado"] = current_time
@@ -565,7 +593,7 @@ def transferir_uci_a_normal():
 
 def crear_directorios():
     """Crea estructura de directorios estandarizada."""
-    for dir_path in [RUTA_ESTADO_ACTUAL, DIR_LOGS, DIR_OPERACIONES, DIR_RECUROS, DIR_SNAPSHOTS]:
+    for dir_path in [RUTA_ESTADO_ACTUAL, DIR_LOGS, DIR_OPERACIONES, DIR_RECUROS]:
         os.makedirs(dir_path, exist_ok=True)
 
 
@@ -706,28 +734,42 @@ def exportar_resurcos_hospitalarios():
     else:
         df_resumen.to_csv(ruta_resumen, index=False, encoding="utf-8-sig")
 
+def exportar_camas_criticas():
+    """
+    Exporta camas ocupadas proyectadas para la nueva ventana de planificación.
+    Utiliza el día siguiente al current_time como inicio de la nueva semana, 
+    asegurando continuidad total sin saltos de calendario.
+    """
+    
+    # 1. Definir inicio real de la ventana de Gurobi: el día siguiente al cierre
+    inicio_nueva_semana = (current_time + timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
 
-def exportar_snapshot_completo():
-    """Exporta snapshot completo del estado actual."""
-    crear_directorios()
+    def calcular_ocupacion(lista_camas):
+        ocupacion = []
+        for inicio, fin in lista_camas:
+            # Si el paciente sigue ocupando cama después del inicio de la nueva semana
+            if fin > inicio_nueva_semana:
+                # Calculamos cuánto tiempo de la NUEVA semana estará ocupada la cama
+                # Si el alta es el 18 y la semana parte el 15, ocupa 3 días (15, 16, 17)
+                dias_restantes = (fin - inicio_nueva_semana).total_seconds() / 86400
+                
+                # Redondeo al alza para asegurar que si el paciente ocupa parte del día, 
+                # la cama se considere bloqueada ese día completo.
+                dias_bloqueados = int(np.ceil(dias_restantes))
+                
+                # Evitamos valores negativos o cero si el alta es justo al inicio
+                if dias_bloqueados > 0:
+                    ocupacion.append({"Dias_Restantes": dias_bloqueados})
+        return ocupacion
 
-    timestamp = current_time.strftime("%Y%m%d_%H%M%S")
-    archivo_snapshot = path.join(DIR_SNAPSHOTS, f"Snapshot_{timestamp}.csv")
-
-    snapshot_data = {
-        "Timestamp": current_time.strftime("%Y-%m-%d %H:%M:%S"),
-        "Operaciones_Realizadas": len(obtener_operaciones_por_estado(ESTADO_REALIZADA)),
-        "Operaciones_Pendientes": len(obtener_operaciones_por_estado(ESTADO_PROGRAMADA)),
-        "Operaciones_En_Curso": len(obtener_operaciones_por_estado(ESTADO_EN_CURSO)),
-        "Operaciones_Canceladas": len(obtener_operaciones_por_estado(ESTADO_CANCELADA)),
-        "Camas_Ocupadas": len(camas),
-        "UCI_Ocupadas": len(camas_uci),
-        "Modo_Saturado": modo_saturado
-    }
-
-    df_snapshot = pd.DataFrame([snapshot_data])
-    df_snapshot.to_csv(archivo_snapshot, index=False, encoding="utf-8-sig")
-
+    # 2. Generar reportes
+    df_basicas = pd.DataFrame(calcular_ocupacion(camas), columns=["Dias_Restantes"])
+    df_uci = pd.DataFrame(calcular_ocupacion(camas_uci), columns=["Dias_Restantes"])
+    
+    # 3. Exportar archivos
+    df_basicas.to_csv(path.join(SIMULACION_DIR, "camas_basicas_activas.csv"), index=False)
+    df_uci.to_csv(path.join(SIMULACION_DIR, "camas_uci_activas.csv"), index=False)
+    
 
 def exportar_estado():
     """Exporta estado completo de la simulación."""
@@ -742,37 +784,70 @@ def exportar_estado():
     # Exportar auditoría y recursos
     exportar_auditoria()
     exportar_resurcos_hospitalarios()
-    exportar_snapshot_completo()
+    exportar_camas_criticas()
 
+
+def obtener_operaciones_por_estado(estado):
+    """Retorna lista de operaciones en un estado con su data de tracking extra."""
+    resultado = []
+    for corr, info in operaciones_estado.items():
+        if info["estado"] == estado:
+            data_op = info["data"].copy()
+            data_op["Estado"] = estado
+            data_op["Timestamp Estado"] = info["timestamp_estado"].strftime("%Y-%m-%d %H:%M:%S")
+            data_op["Veces Cancelada"] = info.get("veces_cancelada", 0)
+            data_op["Fue Reprogramada"] = info.get("fue_reprogramada", False)
+            data_op["Motivo Ultima Cancelacion"] = info.get("motivo_ultima_cancelacion", "")
+            resultado.append(data_op)
+    return resultado
 
 def exportar_resumen_dia():
-    """Exporta resumen detallado del día."""
+    """Exporta resumen detallado del día y actualiza el reporte acumulado histórico."""
     crear_directorios()
-
     fecha_str = current_time.strftime("%Y-%m-%d")
 
-    # Contar operaciones del día
+    # Obtener todas las métricas globales
+    realizadas_total = len(obtener_operaciones_por_estado(ESTADO_REALIZADA))
+    canceladas_total = obtener_operaciones_por_estado(ESTADO_CANCELADA)
+    pendientes_total = len(obtener_operaciones_por_estado(ESTADO_PROGRAMADA))
+    
+    # Calcular cuántas canceladas NUNCA se reprogramaron
+    canceladas_definitivas = [op for op in canceladas_total if not op.get("Fue Reprogramada", False)]
+    
+    # Filtrar las de hoy
     realizadas_hoy = [o for o in obtener_operaciones_por_estado(ESTADO_REALIZADA)
-                      if o.get("Fecha inicio dt", "")[:10] == fecha_str]
-    canceladas_hoy = [o for o in obtener_operaciones_por_estado(ESTADO_CANCELADA)
-                      if o.get("Fecha inicio dt", "")[:10] == fecha_str]
+                      if pd.to_datetime(o.get("Timestamp Estado", "")).date() == current_time.date()]
+    canceladas_hoy = [o for o in canceladas_total
+                      if pd.to_datetime(o.get("Timestamp Estado", "")).date() == current_time.date()]
+                      
+    # Calcular restantes en la lista de espera global
+    pacientes_atendidos = realizadas_total + len(canceladas_definitivas)
+    restantes_lista_espera = max(0, TOTAL_INICIAL_ESPERA - pacientes_atendidos)
 
     resumen_dia = {
         "Fecha": fecha_str,
         "Hora_Corte": current_time.strftime("%H:%M"),
-        "Operaciones_Realizadas_Hoy": len(realizadas_hoy),
-        "Operaciones_Canceladas_Hoy": len(canceladas_hoy),
-        "Operaciones_Pendientes": len(obtener_operaciones_por_estado(ESTADO_PROGRAMADA)),
-        "Camas_Ocupadas": len(camas),
-        "UCI_Ocupadas": len(camas_uci),
-        "Capacidad_Camas": TOTAL_CAMAS,
-        "Capacidad_UCI": TOTAL_UCI,
-        "Modo_Saturado": modo_saturado
+        "Realizadas_Hoy": len(realizadas_hoy),
+        "Canceladas_Hoy": len(canceladas_hoy),
+        "Camas_Ocupadas_Fin_Dia": len(camas),
+        "UCI_Ocupadas_Fin_Dia": len(camas_uci),
+        "Acumulado_Realizadas": realizadas_total,
+        "Acumulado_Canceladas_Definitivas": len(canceladas_definitivas),
+        "Operaciones_En_Sistema": pendientes_total,
+        "Restantes_Lista_Espera_Global": restantes_lista_espera
     }
 
+    # 1. Guardar resumen individual del día
     ruta_resumen_dia = path.join(DIR_LOGS, f"Resumen_Dia_{fecha_str}.csv")
     pd.DataFrame([resumen_dia]).to_csv(ruta_resumen_dia, index=False, encoding="utf-8-sig")
-
+    
+    # 2. Agregar al Resumen Histórico Acumulado (el maestro)
+    ruta_historico = path.join(RUTA_ESTADO_ACTUAL, "Resumen_Historico_Acumulado.csv")
+    df_historico = pd.DataFrame([resumen_dia])
+    if path.exists(ruta_historico):
+        df_historico.to_csv(ruta_historico, mode="a", index=False, header=False, encoding="utf-8-sig")
+    else:
+        df_historico.to_csv(ruta_historico, index=False, encoding="utf-8-sig")
 
 def restaurar_camas_estado():
     """Restaura estado de camas desde archivos previos."""
@@ -885,10 +960,13 @@ def cargar_agenda_desde_csv(ruta_csv, anchor_date=None):
 
         if correlativo not in operaciones_estado:
             operaciones_estado[correlativo] = {
-                "estado": ESTADO_PROGRAMADA,
-                "timestamp_estado": current_time,
-                "data": row.copy()
-            }
+        "estado": ESTADO_PROGRAMADA,
+        "timestamp_estado": current_time,
+        "fue_reprogramada": False,
+          "veces_cancelada": 0,
+          "motivo_ultima_cancelacion": "",
+        "data": row.copy()
+    }
         else:
             operaciones_estado[correlativo]["data"] = row.copy()
             if estado_actual != ESTADO_PROGRAMADA:
@@ -1260,27 +1338,6 @@ def request_reprogramar(full_week=False):
 def guardar_estado_diario(resumen_text):
     """Guarda estado detallado del día con estructura estandarizada."""
     exportar_resumen_dia()
-
-    # Exportar operaciones del día
-    fecha_str = current_time.strftime("%Y-%m-%d")
-
-    realizadas_hoy = [
-        o for o in obtener_operaciones_por_estado(ESTADO_REALIZADA)
-        if pd.to_datetime(o.get("Fecha inicio dt", current_time.strftime("%Y-%m-%d"))).date() == current_time.date()
-    ]
-
-    canceladas_hoy = [
-        o for o in obtener_operaciones_por_estado(ESTADO_CANCELADA)
-        if pd.to_datetime(o.get("Fecha inicio dt", current_time.strftime("%Y-%m-%d"))).date() == current_time.date()
-    ]
-
-    if realizadas_hoy:
-        ruta_dia = path.join(DIR_LOGS, f"Operaciones_Realizadas_{fecha_str}.csv")
-        pd.DataFrame(realizadas_hoy).to_csv(ruta_dia, index=False, encoding="utf-8-sig")
-
-    if canceladas_hoy:
-        ruta_cancel = path.join(DIR_LOGS, f"Operaciones_Canceladas_{fecha_str}.csv")
-        pd.DataFrame(canceladas_hoy).to_csv(ruta_cancel, index=False, encoding="utf-8-sig")
 
 
 
