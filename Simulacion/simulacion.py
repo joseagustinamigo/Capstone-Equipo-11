@@ -241,10 +241,125 @@ COLOR_BG = "#ecf0f1"
 COLOR_WHITE = "#ffffff"
 COLOR_TEXT = "#2c3e50"
 
+# ---- Recursos gráficos de las camillas ----
+def _cargar_img(nombre):
+    """Carga un PNG buscándolo junto al script (o en /imagenes, /img, /assets)."""
+    candidatos = [
+        path.join(SIMULACION_DIR, nombre),
+        path.join(SIMULACION_DIR, "imagenes", nombre),
+        path.join(SIMULACION_DIR, "pngs", nombre),
+        path.join(SIMULACION_DIR, "assets", nombre),
+        path.join(os.getcwd(), nombre),
+    ]
+    for ruta in candidatos:
+        if path.exists(ruta):
+            try:
+                return tk.PhotoImage(file=ruta).subsample(3, 3)
+            except Exception as e:
+                print(f"[Aviso] No se pudo cargar '{nombre}': {e}")
+                return None
+    print(f"[Aviso] No se encontró '{nombre}'. Se usará un rectángulo de respaldo.")
+    return None
+
+
+class BedWidget(tk.Canvas):
+    """Pabellón representado como una camilla quirúrgica.
+
+    Mantiene la API de tk.Label (.config(text=..., bg=...)): el color define el
+    estado (verde=libre / rojo=en uso) y el texto, la descripción de la cirugía,
+    de modo que el resto del código de simulación NO cambia.
+    """
+    CARD_BG = "#e1eaef"
+    W, H = 270, 330
+
+    def __init__(self, master, numero):
+        super().__init__(master, width=self.W, height=self.H,
+                         bg=COLOR_BG, highlightthickness=0)
+        self.numero = numero
+        self._estado = "libre"      # libre | ocupado | otro
+        self._desc = ""
+        self.dibujar()
+
+    # ---- API compatible con tk.Label ----
+    def config(self, text=None, bg=None, **kw):
+        estado = self._estado
+        desc = self._desc
+
+        if bg is not None:
+            b = str(bg).lower()
+            if b in ("green", "#117a65", "#1abc9c", "#2ecc71"):
+                estado = "libre"
+            elif b in ("red", "#a93226", "#e74c3c", "#c0392b"):
+                estado = "ocupado"
+            else:
+                estado = "otro"
+
+        if text is not None:
+            desc = ""
+            piezas = [s.strip() for s in text.replace("\u25cf", " ").replace(":", "\n").split("\n") if s.strip()]
+            for s in piezas:
+                up = s.upper()
+                if up.startswith("PABELL") or "LIBRE" in up or "EN USO" in up:
+                    continue
+                desc = s
+
+        if estado == self._estado and desc == self._desc:
+            return
+
+        self._estado = estado
+        self._desc = desc
+        self.dibujar()
+    configure = config
+
+    def cget(self, key):
+        return ""
+
+    def _rr(self, x1, y1, x2, y2, r, **kw):
+        pts = [x1+r, y1, x2-r, y1, x2, y1, x2, y1+r, x2, y2-r, x2, y2,
+               x2-r, y2, x1+r, y2, x1, y2, x1, y2-r, x1, y1+r, x1, y1]
+        return self.create_polygon(pts, smooth=True, **kw)
+
+    def dibujar(self):
+        self.delete("all")
+        if self._estado == "ocupado":
+            img, pill, et = IMG_CAMA_OCUPADA, "#c0392b", "EN USO"
+            estado_txt = self._desc if self._desc else "En uso"
+        elif self._estado == "otro":
+            img, pill, et = IMG_CAMA_OCUPADA, "#ca6f1e", "ASEO"
+            estado_txt = self._desc if self._desc else "En aseo"
+        else:
+            img, pill, et = IMG_CAMA_LIBRE, "#27ae60", "LIBRE"
+            estado_txt = "Disponible"
+
+        # tarjeta
+        self._rr(3, 3, self.W-3, self.H-3, 16, fill=self.CARD_BG, outline="")
+        # encabezado: numero + pildora de estado
+        self.create_text(18, 28, text=f"PABELL\u00d3N {self.numero}",
+                         anchor="w", font=("Arial", 13, "bold"), fill="#2c3e50")
+        pw = 88
+        self._rr(self.W-pw-16, 15, self.W-16, 44, 13, fill=pill, outline="")
+        self.create_text(self.W-16-pw/2.0, 29, text=et, font=("Arial", 10, "bold"), fill="white")
+        # camilla (imagen)
+        if img is not None:
+            self.create_image(self.W//2, 172, image=img)
+        else:
+            fill = "#e74c3c" if self._estado != "libre" else "#48c9b0"
+            self._rr(40, 110, self.W-40, 240, 10, fill=fill, outline="")
+            self.create_text(self.W//2, 175, text="(cama)", fill="white", font=("Arial", 11))
+        # estado / descripcion
+        if len(estado_txt) > 32:
+            estado_txt = estado_txt[:31] + "\u2026"
+        self.create_text(18, self.H-26, text=estado_txt, anchor="w",
+                         font=("Arial", 11), fill="#566573")
+
 root = tk.Tk()
 root.title("Sistema de Simulación Hospitalaria - Planificación de Pabellones")
 root.geometry("1400x800")
 root.configure(bg=COLOR_BG)
+
+IMG_CAMA_LIBRE = _cargar_img("cama_libre.png")
+IMG_CAMA_OCUPADA = _cargar_img("cama_ocupada.png")
+
 
 # ========== HEADER ==========
 header = tk.Frame(root, bg=COLOR_HEADER, height=80)
@@ -266,7 +381,7 @@ main_frame.pack(fill=tk.BOTH, expand=True, padx=15, pady=15)
 panel_izquierdo = tk.Frame(main_frame, bg=COLOR_BG)
 panel_izquierdo.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=5)
 
-# Pabellones
+# Pabellones (Mantenemos el LabelFrame con el diseño profesional)
 frame_pabellones = tk.LabelFrame(panel_izquierdo, text="PABELLONES QUIRÚRGICOS",
                                  padx=12, pady=12, bg=COLOR_WHITE,
                                  font=("Arial", 12, "bold"), fg=COLOR_HEADER,
@@ -276,17 +391,14 @@ frame_pabellones.pack(fill=tk.BOTH, expand=True, pady=5)
 labels_pabellon = {}
 COLUMNAS = 4
 
+# Crear y ubicar cada cama en la cuadrícula
 for i, p in enumerate(pabellones):
     fila, col = i // COLUMNAS, i % COLUMNAS
-    card = tk.Frame(frame_pabellones, bg=COLOR_ACCENT, bd=0, relief="flat")
-    card.grid(row=fila, column=col, padx=8, pady=8, sticky="nsew")
+    bed = BedWidget(frame_pabellones, p)
+    bed.grid(row=fila, column=col, padx=8, pady=8)
+    labels_pabellon[p] = bed
 
-    lbl = tk.Label(card, text=f"PABELLÓN {p}\n● LIBRE", width=16, height=5,
-                   bg=COLOR_ACCENT, fg=COLOR_WHITE,
-                   font=("Arial", 10, "bold"), justify="center")
-    lbl.pack(fill=tk.BOTH, expand=True, padx=2, pady=2)
-    labels_pabellon[p] = lbl
-
+# Configurar las columnas para que se expandan uniformemente
 for c in range(COLUMNAS):
     frame_pabellones.grid_columnconfigure(c, weight=1)
 
