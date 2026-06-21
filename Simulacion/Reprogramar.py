@@ -57,6 +57,11 @@ DIAS_UCI = 2                # σ — días obligatorios en UCI para Vascular/AV 
 # Pon None para usar TODOS los pacientes (puede tardar mucho)
 N_PACIENTES_MAX = 500
 
+# Parámetros de penalización (Efecto fin de horizonte)
+PENALIZACION_CAMA_BASICA = 5.0  # Costo en la f.o. por ocupar una cama básica el día 7
+PENALIZACION_CAMA_UCI = 1.0     # Costo en la f.o. por ocupar una cama UCI el día 7
+
+
 # Parámetros de Gurobi
 TIEMPO_LIMITE_SEG = 20000     # 10 minutos
 MIP_GAP = 0            # detener cuando el gap sea menor al 1%
@@ -296,6 +301,38 @@ ell = {i: ceil(df_espera.loc[i, "Duración agendada (min)"] / SLOT_MIN) for i in
 s_perm = df_espera["Permanencia_estimada"].to_dict()                               # días permanencia
 g = df_espera["Servicio"].to_dict()                                                # servicio
 
+ruta_camas_basicas = path.join(SIMULACION_DIR, "camas_basicas_activas.csv")
+ruta_camas_uci = path.join(SIMULACION_DIR, "camas_uci_activas.csv")
+
+try:
+    if path.exists(ruta_camas_basicas):
+        camas_previas_basicas = pd.read_csv(ruta_camas_basicas)
+        # Si por alguna razón el CSV existe pero no tiene la columna correcta
+        if "Dias_Restantes" not in camas_previas_basicas.columns:
+            camas_previas_basicas = pd.DataFrame(columns=["Dias_Restantes"])
+    else:
+        camas_previas_basicas = pd.DataFrame(columns=["Dias_Restantes"])
+except pd.errors.EmptyDataError:
+    camas_previas_basicas = pd.DataFrame(columns=["Dias_Restantes"])
+
+# Cargar ocupación previa de camas UCI a prueba de fallos
+try:
+    if path.exists(ruta_camas_uci):
+        camas_previas_uci = pd.read_csv(ruta_camas_uci)
+        if "Dias_Restantes" not in camas_previas_uci.columns:
+            camas_previas_uci = pd.DataFrame(columns=["Dias_Restantes"])
+    else:
+        camas_previas_uci = pd.DataFrame(columns=["Dias_Restantes"])
+except pd.errors.EmptyDataError:
+    camas_previas_uci = pd.DataFrame(columns=["Dias_Restantes"])
+
+# Funciones para calcular el castigo (camas ocupadas) por día 'd'
+def camas_basicas_bloqueadas_el_dia(d):
+    return sum(1 for _, row in camas_previas_basicas.iterrows() if row["Dias_Restantes"] >= d)
+
+def camas_uci_bloqueadas_el_dia(d):
+    return sum(1 for _, row in camas_previas_uci.iterrows() if row["Dias_Restantes"] >= d)
+
 # Subconjunto UCI
 I_UCI = df_espera[df_espera["Requiere_UCI"]].index.tolist()
 
@@ -406,10 +443,29 @@ u = m.addVars(I, D, vtype=GRB.BINARY, name="u")
 # v[i,d] = 1 si paciente i (UCI) ocupa cama UCI el día d
 v = m.addVars(I_UCI, D, vtype=GRB.BINARY, name="v")
 
-# --- Función objetivo ---
+# ------------------------- Función objetivo con penalización de fin de horizonte ----------------------------------------
+# 1. Beneficio por operar (prioridad del paciente)
+beneficio_prioridad = gp.quicksum(
+    p[i] * x[i, j, d, s] 
+    for (i, j, d, s) in combinaciones_validas
+)
+
+# 2. Penalización por ocupar camas en el último día del horizonte (N_DIAS)
+# Esto desincentiva programar cirugías con largas estadías hacia el final de la semana
+penalizacion_basicas = gp.quicksum(
+    PENALIZACION_CAMA_BASICA * u[i, N_DIAS] 
+    for i in I
+)
+
+penalizacion_uci = gp.quicksum(
+    PENALIZACION_CAMA_UCI * v[i, N_DIAS] 
+    for i in I_UCI
+)
+
+# Objetivo final: Maximizar beneficio priorizando la liberación de camas al final
 m.setObjective(
-    gp.quicksum(p[i] * x[i, j, d, s] for (i, j, d, s) in combinaciones_validas),
-    GRB.MAXIMIZE,
+    beneficio_prioridad - penalizacion_basicas - penalizacion_uci,
+    GRB.MAXIMIZE
 )
 
 # --- R1: cada paciente se opera a lo más una vez ---
@@ -568,18 +624,24 @@ for i in I_UCI:
 
 # --- R8: capacidad de camas básicas ---
 for d in D:
+    # Restamos las camas ocupadas por la semana anterior
+    disp_basicas = CAP_CAMAS_BASICAS - camas_basicas_bloqueadas_el_dia(d)
+    disp_basicas = max(0, disp_basicas) # Evitar capacidades negativas por seguridad
+    
     m.addConstr(
-        gp.quicksum(u[i, d] for i in I) <= CAP_CAMAS_BASICAS,
+        gp.quicksum(u[i, d] for i in I) <= disp_basicas,
         name=f"R8_camasBas_d{d}",
     )
-
 # --- R9: capacidad de camas UCI ---
 for d in D:
+    # Restamos las camas UCI ocupadas por la semana anterior
+    disp_uci = CAP_CAMAS_UCI - camas_uci_bloqueadas_el_dia(d)
+    disp_uci = max(0, disp_uci) # Evitar capacidades negativas por seguridad
+    
     m.addConstr(
-        gp.quicksum(v[i, d] for i in I_UCI) <= CAP_CAMAS_UCI,
+        gp.quicksum(v[i, d] for i in I_UCI) <= disp_uci,
         name=f"R9_camasUCI_d{d}",
     )
-
 m.update()
 print(f"Variables: {m.NumVars:,}")
 print(f"Restricciones: {m.NumConstrs:,}")
