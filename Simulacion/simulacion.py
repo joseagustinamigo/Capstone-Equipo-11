@@ -1289,12 +1289,7 @@ def preparar_datos_reprogramacion():
         if len(df_disponibles) > 0:
             top_500 = min(500, len(df_disponibles))
             df_top_500 = (
-                df_disponibles
-                .sort_values(
-                    by=["Prioridad de paciente", "Duración agendada (min)"],
-                    ascending=[True, True],
-                )
-                .head(top_500)
+                df_disponibles.head(top_500)
                 .copy()
             )
             print(f"   Seleccionadas top 500 más prioritarias: {len(df_top_500)}")
