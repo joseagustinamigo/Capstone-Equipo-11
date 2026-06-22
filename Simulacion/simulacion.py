@@ -69,8 +69,20 @@ TOTAL_UCI = 2
 DIAS_UCI_MAX = 2
 
 SIMULACION_DIR = path.abspath(path.dirname(__file__))
+
+# ============================================================================
+# CONFIGURACIÓN DE REPROGRAMACIÓN
+# ============================================================================
+# Opciones: "optimizacion" (Reprogramar.py) | "caso_base" (caso_base_completo.py)
+METODO_REPROGRAMACION = "optimizacion" 
+
+# Rutas originales de optimización
 RUTA_REPROGRAMAR_SCRIPT = path.join(SIMULACION_DIR, "Reprogramar.py")
 RUTA_REPROGRAMACION_SALIDA = path.join(SIMULACION_DIR, "resultados", "resultado_programacion.csv")
+
+# Nuevas rutas para el caso base
+RUTA_CASO_BASE_SCRIPT = path.join(SIMULACION_DIR, "caso_base_completo.py")
+RUTA_CASO_BASE_SALIDA = path.join(SIMULACION_DIR, "resultados", "caso_base_asignaciones.csv")
 
 # Estructura de directorios estandarizada
 RUTA_ESTADO_ACTUAL = path.join(SIMULACION_DIR, "Estados_Simulacion")
@@ -142,9 +154,17 @@ def limpiar_resultado_reprogramacion():
         os.remove(RUTA_REPROGRAMACION_SALIDA)
 
 
+# ----------------------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------
+
+#------------------------------- Aqui cambiar los escenarios y asignaciones iniciales ----------------------------------------
+
+# ----------------------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------
+
 def preparar_dataframe():
     """Carga y prepara datos iniciales."""
-    ruta_programacion = path.join(SIMULACION_DIR, "Estado_Inicial", "programacion_penalizada_5.csv")
+    ruta_programacion = path.join(SIMULACION_DIR, "Estado_Inicial", "programacion_penalizada_5.csv")    
     ruta_escenario = path.join(SIMULACION_DIR, "Estado_Inicial", "Escenarios", "escenario_1.csv")
 
     df_prog = pd.read_csv(ruta_programacion, sep=",", encoding="utf-8-sig")
@@ -911,17 +931,21 @@ def exportar_lista_espera_actualizada():
             correlativos_completados.append(str(info["data"].get("Correlativo", "")))
 
     # 2. Leer el archivo de la lista de espera original
+    # Usaremos la ruta al Excel que indicaste en el texto
     ruta_original = path.abspath(path.join(SIMULACION_DIR, "..", "preprocesamiento", "Datos", "Datos Operaciones y lista de espera.xlsx"))
     
     if path.exists(ruta_original):
         # Leer excel o csv según corresponda
         if ruta_original.endswith('.xlsx'):
-            df_original = pd.read_excel(ruta_original)
+            # ¡CORRECCIÓN CLAVE AQUÍ!: Especificar la hoja 'Lista de espera'
+            df_original = pd.read_excel(ruta_original, sheet_name='Lista de espera')
         else:
             df_original = pd.read_csv(ruta_original)
             
         # 3. Filtrar: Dejar solo a los que NO están en la lista de completados
-        df_restante = df_original[~df_original["Correlativo"].astype(str).isin(correlativos_completados)]
+        # Nos aseguramos de limpiar los NA por si acaso
+        df_original = df_original.dropna(subset=['Correlativo'])
+        df_restante = df_original[~df_original["Correlativo"].astype(int).astype(str).isin(correlativos_completados)]
 
         df_restante = df_restante.sort_values(by="Correlativo", ascending=True)
         
@@ -1408,66 +1432,79 @@ def preparar_datos_reprogramacion():
 
 
 def ejecutar_reprogramacion_automatica():
-    """
-    Ejecuta la reprogramación automática al fin de la semana 1.
-    Se llama en el update() cuando llegamos al día 7 a las 20:00.
-    """
-    global RUNNING, week_finished, current_time, reprogram_triggered_today
-
+    """Ejecuta la reprogramación utilizando el método seleccionado."""
+    global reprogram_triggered_today, RUNNING, df
     try:
-        print("\n" + "="*70)
-        print("INICIANDO REPROGRAMACIÓN AUTOMÁTICA - SEMANA 2")
-        print("="*70)
-        print(f"Fecha: {current_time}")
-
-        # 1. Preparar datos
+        # 1. Preparar datos (Siempre lo ejecutamos por si el modelo lo requiere)
         if not preparar_datos_reprogramacion():
             print(" Fallo en preparación de datos")
             return False
 
-        # 2. Ejecutar Reprogramar.py
-        print("\n5. Ejecutando modelo de optimización...")
         exportar_estado()
-        os.makedirs(path.dirname(RUTA_REPROGRAMACION_SALIDA), exist_ok=True)
-        limpiar_resultado_reprogramacion()
         RUNNING = False
 
+        # --- SELECCIÓN DEL MÉTODO ---
+        if METODO_REPROGRAMACION == "optimizacion":
+            print("\n5. Ejecutando modelo de optimización (Reprogramar.py)...")
+            os.makedirs(path.dirname(RUTA_REPROGRAMACION_SALIDA), exist_ok=True)
+            limpiar_resultado_reprogramacion()
+            
+            script_ejecutar = RUTA_REPROGRAMAR_SCRIPT
+            archivo_salida = RUTA_REPROGRAMACION_SALIDA
+            
+        elif METODO_REPROGRAMACION == "caso_base":
+            print("\n5. Ejecutando heurística greedy (caso_base_completo.py)...")
+            # Aseguramos que el directorio exista
+            os.makedirs(path.dirname(RUTA_CASO_BASE_SALIDA), exist_ok=True)
+            
+            script_ejecutar = RUTA_CASO_BASE_SCRIPT
+            archivo_salida = RUTA_CASO_BASE_SALIDA
+            
+        else:
+            print(f" Método de reprogramación desconocido: '{METODO_REPROGRAMACION}'")
+            return False
+
+        # 2. Ejecutar el script seleccionado de manera externa
         try:
             resultado = subprocess.run(
-                [sys.executable, RUTA_REPROGRAMAR_SCRIPT],
+                [sys.executable, script_ejecutar],
                 cwd=SIMULACION_DIR,
                 check=True,
                 capture_output=True,
                 text=True,
-                timeout=300  # 5 minutos
+                timeout=300 # 5 minutos max
             )
             if resultado.stdout:
                 print(resultado.stdout)
-            print("✓ Modelo ejecutado exitosamente")
-
+            print(f"✓ Script '{script_ejecutar}' ejecutado exitosamente")
+            
         except subprocess.TimeoutExpired:
-            print(" Timeout en ejecución del modelo (5 minutos)")
+            print(f" Timeout en ejecución de {script_ejecutar} (5 minutos)")
             return False
         except subprocess.CalledProcessError as e:
-            print(f" Error en ejecución del modelo: {e.stderr}")
+            print(f" Error en ejecución de {script_ejecutar}:\n{e.stderr}")
             return False
 
-        # 3. Cargar nueva agenda
-        if path.exists(RUTA_REPROGRAMACION_SALIDA):
-            print(f"\n6. Cargando nueva agenda desde: {RUTA_REPROGRAMACION_SALIDA}")
+        # 3. Cargar la nueva agenda generada
+        if path.exists(archivo_salida):
+            print(f"\n6. Cargando nueva agenda desde: {archivo_salida}")
             cargar_agenda_desde_csv(
-                RUTA_REPROGRAMACION_SALIDA,
+                archivo_salida,
                 anchor_date=fecha_inicio_siguiente_agenda(),
             )
             print("✓ Nueva agenda cargada exitosamente")
-
-            num_nuevas = len(df)
-            print(f"   Total de operaciones programadas para semana 2: {num_nuevas}")
-
+            
+            # (Opcional) Si quieres ver cuántas se programaron
+            try:
+                num_nuevas = len(pd.read_csv(archivo_salida))
+                print(f" Total de operaciones programadas para semana siguiente: {num_nuevas}")
+            except:
+                pass
+                
             reprogram_triggered_today = True
             return True
         else:
-            print(f" No se generó archivo de salida: {RUTA_REPROGRAMACION_SALIDA}")
+            print(f" No se encontró el archivo de salida esperado: {archivo_salida}")
             return False
 
     except Exception as e:

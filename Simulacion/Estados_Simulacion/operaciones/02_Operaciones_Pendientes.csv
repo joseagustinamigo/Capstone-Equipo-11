@@ -1,4 +1,0 @@
-﻿Correlativo,Servicio,Descripción,Pabellón,Día,Hora inicio,Hora fin,Prioridad,Requiere UCI,Duración agendada (min),Estado,Timestamp Estado
-1313,Vascular,AV fistula,7,5,08:00,09:15,3,True,0 days 01:15:00,PROGRAMADA,2026-03-15 20:00:00
-1172,Vascular,AV fistula,7,7,15:00,16:15,3,True,0 days 01:15:00,PROGRAMADA,2026-03-15 20:00:00
-2025,Vascular,AV fistula,7,7,16:45,18:00,3,True,0 days 01:15:00,PROGRAMADA,2026-03-15 20:00:00
