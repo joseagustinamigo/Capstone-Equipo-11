@@ -59,7 +59,7 @@ N_PACIENTES_MAX = 500
 
 # Parámetros de penalización (Efecto fin de horizonte)
 PENALIZACION_CAMA_BASICA = 0.9  # Costo en la f.o. por ocupar una cama básica el día 7
-PENALIZACION_CAMA_UCI = 0.9     # Costo en la f.o. por ocupar una cama UCI el día 7
+PENALIZACION_CAMA_UCI = - 5.0     # Costo en la f.o. por ocupar una cama UCI el día 7
 
 
 # Parámetros de Gurobi
