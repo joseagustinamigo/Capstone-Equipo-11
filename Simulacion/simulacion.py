@@ -74,7 +74,7 @@ SIMULACION_DIR = path.abspath(path.dirname(__file__))
 # CONFIGURACIÓN DE REPROGRAMACIÓN
 # ============================================================================
 # Opciones: "optimizacion" (Reprogramar.py) | "caso_base" (caso_base_completo.py)
-METODO_REPROGRAMACION = "optimizacion" 
+METODO_REPROGRAMACION = "caso_base" 
 
 # Rutas originales de optimización
 RUTA_REPROGRAMAR_SCRIPT = path.join(SIMULACION_DIR, "Reprogramar.py")
@@ -164,7 +164,7 @@ def limpiar_resultado_reprogramacion():
 
 def preparar_dataframe():
     """Carga y prepara datos iniciales."""
-    ruta_programacion = path.join(SIMULACION_DIR, "Estado_Inicial", "programacion_penalizada_5.csv")    
+    ruta_programacion = path.join(SIMULACION_DIR, "Estado_Inicial", "caso_base_asignaciones.csv")    
     ruta_escenario = path.join(SIMULACION_DIR, "Estado_Inicial", "Escenarios", "escenario_1.csv")
 
     df_prog = pd.read_csv(ruta_programacion, sep=",", encoding="utf-8-sig")
@@ -867,53 +867,59 @@ def exportar_resurcos_hospitalarios():
         df_resumen.to_csv(ruta_resumen, index=False, encoding="utf-8-sig")
 
 def exportar_camas_criticas():
-    """
-    Exporta de manera exacta las camas UCI y básicas que seguirán ocupadas 
-    durante el próximo horizonte de planificación para que el algoritmo 
-    de reprogramación no las pise.
-    """
-    global camas_uci, camas, current_time
+    """Exporta el estado actual de las camas para ser leido por reprogramar.py y caso_base_completo.py"""
+    crear_directorios()
     
-    # El horizonte de la nueva agenda empieza exactamente el próximo día a las 08:00 h
-    fecha_inicio_agenda = (current_time + timedelta(days=1)).replace(hour=8, minute=0, second=0, microsecond=0)
-    
-    registros_uci = []
-    registros_basicas = []
-    
-    # 1. Procesar Camas UCI (tu script las guarda como tuplas (inicio, fin))
-    for inicio, fin in camas_uci:
-        if fin > fecha_inicio_agenda:
-            dias_restantes = (fin - fecha_inicio_agenda).days + 1
-            registros_uci.append({
-                "ID paciente": "",
-                "Correlativo": "", 
-                "Dias_Restantes": max(1, dias_restantes),
-                "Fecha_Liberacion": fin.strftime("%Y-%m-%d %H:%M:%S")
+    # 1. Fijar el "Día 0" de referencia como el LUNES de la próxima semana
+    fecha_inicio_prox = fecha_inicio_siguiente_agenda()
+
+    # 2. Camas Básicas
+    camas_list = []
+    for cama in camas:
+        # Extraer los datos de la tupla. Usamos hasattr para asegurar que tomamos la fecha correcta
+        # sin importar si guardaste (correlativo, fecha) o (fecha, correlativo) en la simulación.
+        if hasattr(cama[1], 'date'):
+            corr, fecha_lib = cama[0], cama[1]
+        else:
+            fecha_lib, corr = cama[0], cama[1]
+
+        # Calcular cuántos días de la PRÓXIMA semana ocuparán
+        dias_restantes = (fecha_lib.date() - fecha_inicio_prox).days
+        
+        # Solo se guardan si realmente "invaden" la próxima semana (dias_restantes > 0)
+        if dias_restantes > 0:
+            camas_list.append({
+                "Correlativo": corr,
+                "Fecha_Liberacion": fecha_lib.strftime("%Y-%m-%d %H:%M:%S"),
+                "Dias_Restantes": dias_restantes
             })
             
-    # 2. Procesar Camas Básicas
-    for inicio, fin in camas:
-        if fin > fecha_inicio_agenda:
-            dias_restantes = (fin - fecha_inicio_agenda).days + 1
-            registros_basicas.append({
-                "ID paciente": "",
-                "Correlativo": "",
-                "Dias_Restantes": max(1, dias_restantes),
-                "Fecha_Liberacion": fin.strftime("%Y-%m-%d %H:%M:%S")
+    # Forzar columnas evita que el CSV se guarde "roto" si la lista está vacía
+    df_basicas = pd.DataFrame(camas_list, columns=["Correlativo", "Fecha_Liberacion", "Dias_Restantes"])
+    df_basicas.to_csv(path.join(SIMULACION_DIR, "camas_basicas_activas.csv"), index=False)
+
+    # 3. Camas UCI
+    camas_uci_list = []
+    for cama in camas_uci:
+        # Aplicamos la misma extracción segura de la tupla para UCI
+        if hasattr(cama[1], 'date'):
+            corr, fecha_lib = cama[0], cama[1]
+        else:
+            fecha_lib, corr = cama[0], cama[1]
+
+        # Agregamos .date() a fecha_inicio_prox 
+        dias_restantes = (fecha_lib.date() - fecha_inicio_prox).days
+        
+        if dias_restantes > 0:
+            camas_uci_list.append({
+                "Correlativo": corr,
+                "Fecha_Liberacion": fecha_lib.strftime("%Y-%m-%d %H:%M:%S"),
+                "Dias_Restantes": dias_restantes
             })
             
-    # Guardar en los archivos CSV que lee Reprogramar.py
-    df_uci = pd.DataFrame(registros_uci)
-    if df_uci.empty:
-        df_uci = pd.DataFrame(columns=["ID paciente", "Correlativo", "Dias_Restantes", "Fecha_Liberacion"])
-    df_uci.to_csv("camas_uci_activas.csv", index=False)
-    
-    df_basicas = pd.DataFrame(registros_basicas)
-    if df_basicas.empty:
-        df_basicas = pd.DataFrame(columns=["ID paciente", "Correlativo", "Dias_Restantes", "Fecha_Liberacion"])
-    df_basicas.to_csv("camas_basicas_activas.csv", index=False)
-    
-    print(f"[Camas] Exportadas {len(registros_uci)} UCI y {len(registros_basicas)} básicas activas para la reprogramación.")
+    df_uci = pd.DataFrame(camas_uci_list, columns=["Correlativo", "Fecha_Liberacion", "Dias_Restantes"])
+    df_uci.to_csv(path.join(SIMULACION_DIR, "camas_uci_activas.csv"), index=False)
+
 
 def exportar_lista_espera_actualizada():
     """
@@ -975,17 +981,24 @@ def exportar_historial_cancelaciones():
     df_actuales['id_evento'] = df_actuales['Correlativo'].astype(str) + "_" + df_actuales['Timestamp Estado'].astype(str)
     
     if path.exists(ruta_historico):
-        df_historico = pd.read_csv(ruta_historico)
-        
-        # Si el histórico ya tiene la columna id_evento, filtramos las que ya están
-        if 'id_evento' in df_historico.columns:
-            df_nuevas = df_actuales[~df_actuales['id_evento'].isin(df_historico['id_evento'])].copy()
-        else:
-            df_nuevas = df_actuales.copy()
+        try:
+            df_historico = pd.read_csv(ruta_historico)
             
-        # Si hay cancelaciones nuevas que no estaban en el archivo histórico, las agregamos al final
-        if not df_nuevas.empty:
-            df_nuevas.to_csv(ruta_historico, mode="a", index=False, header=False, encoding="utf-8-sig")
+            # Verificar si las columnas del archivo son exactamente las mismas que las actuales
+            if list(df_actuales.columns) == list(df_historico.columns):
+                # Si son iguales, solo anexamos las nuevas rápidamente al final del archivo
+                df_nuevas = df_actuales[~df_actuales['id_evento'].isin(df_historico['id_evento'])].copy()
+                if not df_nuevas.empty:
+                    df_nuevas.to_csv(ruta_historico, mode="a", index=False, header=False, encoding="utf-8-sig")
+            else:
+                # Si las columnas cambiaron (ej. pasaron de 27 a 29), unimos todo y reescribimos el archivo
+                df_combinado = pd.concat([df_historico, df_actuales]).drop_duplicates(subset=['id_evento'], keep='last')
+                df_combinado.to_csv(ruta_historico, index=False, encoding="utf-8-sig")
+                
+        except pd.errors.ParserError:
+            # Si el archivo se rompió (ej. Expected 27 fields saw 29), lo reconstruimos usando la memoria actual
+            print("⚠️ [Aviso] El archivo histórico de cancelaciones estaba corrupto y ha sido reconstruido.")
+            df_actuales.to_csv(ruta_historico, index=False, encoding="utf-8-sig")
     else:
         # Si el archivo no existe, lo creamos por primera vez
         df_actuales.to_csv(ruta_historico, index=False, encoding="utf-8-sig")
