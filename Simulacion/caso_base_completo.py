@@ -5,11 +5,9 @@ ICS2122 - Taller de Investigación Operativa - Grupo 11 - Entrega 2
 ================================================================================
 
 SCRIPT ENFOCADO EN EXPORTACIÓN EXCLUSIVA A CSV:
-  1. Ejecuta la heurística greedy de asignación (Fijando pabellón original).
-  2. Lee las estadías directamente del CSV de simulación (sin estimar nada).
-  3. Genera un archivo CSV limpio con el formato y orden estricto de columnas.
-
-Todos los outputs se guardan en la carpeta 'resultados/'.
+  1. Ejecuta la heurística greedy de asignación (CEGUERA CLÍNICA: Orden por Correlativo).
+  2. ESTIMA la estadía usando la MEDIANA HISTÓRICA.
+  3. AGENDAMIENTO MANUAL: Fuerza inicios de cirugía cada 60 minutos (ineficiencia).
 """
 
 import os
@@ -17,34 +15,34 @@ from collections import defaultdict
 import pandas as pd
 import numpy as np
 import unicodedata
+import math
 
 # =============================================================================
 # 1. PARÁMETROS DE CONFIGURACIÓN 
 # =============================================================================
 
-# Directorio base de simulación
 SIMULACION_DIR = os.path.abspath(os.path.dirname(__file__))
 
-# Rutas de archivos (Solo lee el CSV entregado por la simulación)
 RUTA_CSV_ENTRADA = os.path.join(SIMULACION_DIR, "lista_espera_reprogramacion.csv")
 RUTA_CSV_SALIDA = os.path.join(SIMULACION_DIR, "resultados", "caso_base_asignaciones.csv")
+RUTA_EXCEL = os.path.abspath(
+    os.path.join(SIMULACION_DIR, "..", "preprocesamiento", "Datos", "Datos Operaciones y lista de espera.xlsx")
+)
 
-# Rutas de estado de camas heredado
 RUTA_CAMAS_BASICAS = os.path.join(SIMULACION_DIR, "camas_basicas_activas.csv")
 RUTA_CAMAS_UCI = os.path.join(SIMULACION_DIR, "camas_uci_activas.csv")
 
-# Convención de prioridad: True si 5 = mayor, False si 1 = mayor.
 PRIORIDAD_MAX_ES_MAYOR = False   
 
-# Parámetros del horizonte y Recursos
 DIAS = 7                    
 PABELLONES = list(range(1, 9))
-HORA_INICIO = 8 * 60        # 8:00 AM en minutos
-HORA_FIN = 18 * 60          # 6:00 PM en minutos
+SLOT_MIN = 15               
+BLOQUE_MANUAL = 60          # <--- NUEVO: Ineficiencia humana (Obliga a empezar a la hora en punto)
+HORA_INICIO = 8 * 60        
+HORA_FIN = 18 * 60          
 CAP_CAMAS_BASICAS = 75      
 CAP_CAMAS_UCI = 2           
 
-# Ventanas horarias por servicio (en minutos desde medianoche)
 RESTRICCIONES_HORARIAS = {
     'ENT':           [(10*60, 15*60)],
     'General':       [(HORA_INICIO, HORA_FIN)],
@@ -63,12 +61,10 @@ RESTRICCIONES_HORARIAS = {
 # =============================================================================
 
 def cargar_datos():
-    """Carga y limpia la lista de espera usando estrictamente los datos del CSV."""
     print("=" * 70)
     print("CARGA DE DATOS")
     print("=" * 70)
 
-    # Asegurarnos que el directorio de salida exista
     os.makedirs(os.path.dirname(RUTA_CSV_SALIDA), exist_ok=True)
     if os.path.exists(RUTA_CSV_SALIDA):
         os.remove(RUTA_CSV_SALIDA)
@@ -76,8 +72,8 @@ def cargar_datos():
     if not os.path.exists(RUTA_CSV_ENTRADA):
         raise FileNotFoundError(f"ERROR: No se encontró el archivo de entrada: {RUTA_CSV_ENTRADA}")
 
-    print(f"Leyendo lista de espera desde: {RUTA_CSV_ENTRADA}")
     df_espera = pd.read_csv(RUTA_CSV_ENTRADA, sep=",", encoding="utf-8-sig")
+    df_base = pd.read_excel(RUTA_EXCEL, sheet_name="Datos base")
 
     def normalize_column(col):
         if pd.isna(col): return col
@@ -86,7 +82,6 @@ def cargar_datos():
 
     df_espera.columns = [normalize_column(c) for c in df_espera.columns]
     
-    # Evitar columnas duplicadas
     if df_espera.columns.duplicated().any():
         cols = []
         counts = {}
@@ -99,7 +94,6 @@ def cargar_datos():
                 cols.append(col)
         df_espera.columns = cols
 
-    # Normalización básica de nombres de columnas
     column_mapping = {
         "Prioridad": "Prioridad de paciente",
         "Duración (min)": "Duración agendada (min)",
@@ -112,16 +106,6 @@ def cargar_datos():
         if old_col in df_espera.columns and new_col not in df_espera.columns:
             df_espera[new_col] = df_espera[old_col]
 
-    # ---> BÚSQUEDA ROBUSTA PARA LA COLUMNA DE ESTADÍA <---
-    if "Permanencia" not in df_espera.columns:
-        for col in df_espera.columns:
-            col_lower = str(col).lower()
-            # Si la columna contiene la palabra permanencia, estadia o estimado, la toma.
-            if "permanencia" in col_lower or "estad" in col_lower or "estimad" in col_lower:
-                df_espera["Permanencia"] = df_espera[col]
-                break
-
-    # Fusionar columnas duplicadas de texto
     for alt in ["Servicio.1", "servicio", "servicio.1", "Servicio.2", "servicio.2"]:
         if alt in df_espera.columns: df_espera["Servicio"] = df_espera["Servicio"].fillna(df_espera[alt])
     for alt in ["Descripción.1", "descripcion", "descripcion.1", "Descripción.2", "descripcion.2"]:
@@ -138,11 +122,9 @@ def cargar_datos():
     df_espera["Descripción"] = df_espera["Descripción"].apply(normalize_text)
     df_espera = df_espera.loc[:, ~df_espera.columns.duplicated()]
 
-    # Limpiar CSV despues de lectura
     try: os.remove(RUTA_CSV_ENTRADA)
     except: pass
 
-    # Función común para parsear minutos
     def parse_minutes_common(value):
         if pd.isna(value): return np.nan
         if isinstance(value, pd.Timedelta): return value.total_seconds() / 60
@@ -156,13 +138,11 @@ def cargar_datos():
                 except Exception: return np.nan
         return np.nan
 
-    # Validaciones Finales
-    required_columns = ["Correlativo", "Servicio", "Descripción", "Prioridad de paciente", "Duración agendada (min)", "OR Suite", "Permanencia"]
+    required_columns = ["Correlativo", "Servicio", "Descripción", "Prioridad de paciente", "Duración agendada (min)", "OR Suite"]
     missing_columns = [c for c in required_columns if c not in df_espera.columns]
     
     if missing_columns:
-        print(f"\n[DEBUG] ⚠️ Columnas que el código pudo leer del CSV: {list(df_espera.columns)}")
-        raise ValueError(f"Columnas faltantes: {missing_columns}. Revisa el DEBUG de arriba para ver cómo se llama realmente tu columna en el CSV.")
+        raise ValueError(f"Columnas faltantes en la lista de espera: {missing_columns}.")
 
     df_espera["Servicio"] = df_espera["Servicio"].astype("string").str.strip().replace({"": pd.NA})
     df_espera["Descripción"] = df_espera["Descripción"].astype("string").str.strip().replace({"": pd.NA})
@@ -170,33 +150,61 @@ def cargar_datos():
     df_espera["Prioridad de paciente"] = pd.to_numeric(df_espera["Prioridad de paciente"], errors="coerce")
     df_espera["Correlativo"] = pd.to_numeric(df_espera["Correlativo"], errors="coerce").astype(int)
     df_espera["OR Suite"] = pd.to_numeric(df_espera["OR Suite"], errors="coerce").astype(int)
-    
-    # Convertir estadía a número entero de días
-    df_espera["Permanencia"] = pd.to_numeric(df_espera["Permanencia"], errors="coerce").fillna(0).astype(int)
 
     invalid_rows = df_espera[required_columns].isna().any(axis=1)
     if invalid_rows.any():
         raise ValueError(f"{invalid_rows.sum()} registros tienen datos requeridos inválidos")
 
+    # ---> CÁLCULO DE PERMANENCIA ESTIMADA ESTRICTAMENTE HISTÓRICA <---
+    df_base["Servicio"] = df_base["Servicio"].astype("string").str.strip()
+    df_base["Descripción"] = df_base["Descripción"].astype("string").str.strip()
+    
+    col_historica = "Días de permanencia efectivos" if "Días de permanencia efectivos" in df_base.columns else "Días de permanencia programados"
+    
+    mediana_detallada = (
+        df_base.groupby(["Servicio", "Descripción"])[col_historica]
+        .median().fillna(0).round().astype(int)
+        .reset_index()
+        .rename(columns={col_historica: "Permanencia"})
+    )
+    
+    mediana_servicio = (
+        df_base.groupby("Servicio")[col_historica]
+        .median().fillna(0).round().astype(int)
+    )
+    
+    mediana_global = int(round(df_base[col_historica].median(skipna=True)))
+
+    df_espera = df_espera.merge(mediana_detallada, on=["Servicio", "Descripción"], how="left")
+    
+    df_espera["Permanencia"] = df_espera["Permanencia"].fillna(
+        df_espera["Servicio"].map(mediana_servicio)
+    ).fillna(mediana_global).astype(int)
+
     return df_espera
+
 # ============================================================================
 # 3. UTILIDADES DE FACTIBILIDAD
 # ============================================================================
 
-def ventanas_factibles(servicio, duracion):
+def ventanas_factibles(servicio, duracion_bloqueada):
     ventanas = RESTRICCIONES_HORARIAS.get(servicio, [(HORA_INICIO, HORA_FIN)])
-    return [(vi, vf) for vi, vf in ventanas if vf - vi >= duracion]
+    return [(vi, vf) for vi, vf in ventanas if vf - vi >= duracion_bloqueada]
 
-def encontrar_hora_inicio(ocupacion_pabellon, ventanas, duracion):
+def encontrar_hora_inicio(ocupacion_pabellon, ventanas, duracion_bloqueada):
     for vi, vf in ventanas:
-        cursor = vi
+        # ---> INEFICIENCIA HUMANA: Forzar inicios a la "hora en punto" (Ej: 08:00, 09:00)
+        cursor = math.ceil(vi / BLOQUE_MANUAL) * BLOQUE_MANUAL
+        
         for ini, fin in ocupacion_pabellon:
             if fin <= cursor: continue
-            if ini >= cursor + duracion and ini <= vf: return cursor
-            cursor = max(cursor, fin)
-            if cursor + duracion > vf: break
+            if ini >= cursor + duracion_bloqueada and ini <= vf: return cursor
+            
+            # Si choca con otra cirugía, la mueve a la próxima "hora en punto" libre
+            cursor = max(cursor, math.ceil(fin / BLOQUE_MANUAL) * BLOQUE_MANUAL)
+            if cursor + duracion_bloqueada > vf: break
         else:
-            if cursor + duracion <= vf: return cursor
+            if cursor + duracion_bloqueada <= vf: return cursor
     return None
 
 def insertar_ordenado(lista_intervalos, intervalo):
@@ -207,21 +215,27 @@ def insertar_ordenado(lista_intervalos, intervalo):
 # 4. HEURÍSTICA GREEDY DE ASIGNACIÓN
 # ============================================================================
 
-def asignar_greedy(df):
-    """Política miope que respeta las camas ocupadas previas y asigna al OR Suite original."""
-    if PRIORIDAD_MAX_ES_MAYOR:
-        df['_prio_orden'] = -df['Prioridad de paciente']
-    else:
-        df['_prio_orden'] = df['Prioridad de paciente']
-        
-    df = df.sort_values(['_prio_orden', 'Duración agendada (min)'],
-                        ascending=[True, True]).reset_index(drop=True)
+def asignar_greedy(df, n_pacientes=250):
+    """
+    Política miope administrativa pura:
+    - Ordena por tiempo de llegada (Correlativo), ignorando prioridad médica.
+    - Usa "Bloques de 1 hora" para agendar, perdiendo tiempo valioso de pabellón.
+    """
+    
+    # ---> CEGUERA CLÍNICA: Ordenamos estrictamente por antigüedad de llegada
+    df = df.sort_values('Correlativo', ascending=True).reset_index(drop=True)
+    
+    df_activa = df.head(n_pacientes).copy()
+    df_restante = df.iloc[n_pacientes:].copy()
+    no_asignados = []
+    
+    for _, paciente in df_restante.iterrows():
+        no_asignados.append({**paciente.to_dict(), 'motivo': f'fuera del lote de {n_pacientes}'})
 
     ocupacion = {d: {p: [] for p in PABELLONES} for d in range(DIAS)}
     camas_uso = defaultdict(int)
     uci_uso = defaultdict(int)
 
-    # --- PRECARGA DE CAMAS (ESTADO HEREDADO) ---
     if os.path.exists(RUTA_CAMAS_BASICAS):
         df_basicas = pd.read_csv(RUTA_CAMAS_BASICAS)
         for d in range(DIAS):
@@ -233,18 +247,27 @@ def asignar_greedy(df):
             uci_uso[d] = df_uci[df_uci['Dias_Restantes'] > d].shape[0]
 
     asignaciones = []
-    no_asignados = []
 
-    for _, paciente in df.iterrows():
+    for _, paciente in df_activa.iterrows():
         servicio = paciente['Servicio']
-        duracion = int(paciente['Duración agendada (min)'])
-        dias_cama = int(paciente['Permanencia']) # <--- Aquí se toma directo del CSV
         
+        # Lógica de bloques
+        duracion_original = int(paciente['Duración agendada (min)'])
+        slots_requeridos = math.ceil(duracion_original / SLOT_MIN)
+        duracion_bloqueada = slots_requeridos * SLOT_MIN  
+        
+        dias_cama = int(paciente['Permanencia']) 
         es_uci = (servicio == 'Vascular' and 'fistula' in str(paciente['Descripción']).lower())
-        capacidad_camas = CAP_CAMAS_UCI if es_uci else CAP_CAMAS_BASICAS
-        uso_actual = uci_uso if es_uci else camas_uso
+        
+        if es_uci:
+            capacidad_camas = CAP_CAMAS_UCI
+            uso_actual = uci_uso
+            dias_cama = min(2, dias_cama) # NUNCA consumen más de 2 días de UCI
+        else:
+            capacidad_camas = CAP_CAMAS_BASICAS
+            uso_actual = camas_uso
 
-        ventanas = ventanas_factibles(servicio, duracion)
+        ventanas = ventanas_factibles(servicio, duracion_bloqueada)
         if not ventanas:
             no_asignados.append({**paciente.to_dict(), 'motivo': 'duración > ventana servicio'})
             continue
@@ -266,10 +289,10 @@ def asignar_greedy(df):
                 )
                 if not cabe_cama: continue
 
-            hora = encontrar_hora_inicio(ocupacion[d][p], ventanas, duracion)
+            hora = encontrar_hora_inicio(ocupacion[d][p], ventanas, duracion_bloqueada)
             
             if hora is not None:
-                insertar_ordenado(ocupacion[d][p], (hora, hora + duracion))
+                insertar_ordenado(ocupacion[d][p], (hora, hora + duracion_bloqueada))
                 
                 if dias_cama > 0:
                     for k in range(dias_cama):
@@ -283,9 +306,9 @@ def asignar_greedy(df):
                     'Pabellón': p,
                     'Día': d + 1,
                     'Hora inicio': f'{hora//60:02d}:{hora%60:02d}',
-                    'Hora fin': f'{(hora+duracion)//60:02d}:{(hora+duracion)%60:02d}',
-                    'Duración (min)': duracion,
-                    'Permanencia': dias_cama, # Incluido en las variables resultantes
+                    'Hora fin': f'{(hora+duracion_bloqueada)//60:02d}:{(hora+duracion_bloqueada)%60:02d}',
+                    'Duración (min)': duracion_original, 
+                    'Permanencia': dias_cama, 
                     'Requiere UCI': es_uci,
                     'Hora inicio (min)': hora 
                 })
@@ -301,8 +324,6 @@ def asignar_greedy(df):
 # ============================================================================
 
 def exportar_csv(asign, ruta_salida):
-    """Filtra, ordena y exporta las asignaciones estrictamente en el formato CSV requerido."""
-    # Mantenemos las columnas exactas
     cols_csv = [
         'Correlativo', 'Servicio', 'Descripción', 'Prioridad', 
         'Pabellón', 'Día', 'Hora inicio', 'Hora fin', 
@@ -323,19 +344,16 @@ def exportar_csv(asign, ruta_salida):
 
 def main():
     print("=" * 78)
-    print("CASO BASE - POLÍTICA MIOPE GREEDY (SOLO OUTPUT CSV)")
+    print("CASO BASE - POLÍTICA MIOPE ADMINISTRATIVA (ANTIGÜEDAD + BLOQUES)")
     print("=" * 78)
 
-    # Cargar datos
     df_espera = cargar_datos()
-    print(f"\n[1] Pacientes pendientes en lista de espera: {len(df_espera)}")
+    print(f"\n[1] Pacientes procesados en el lote actual: {len(df_espera)}")
 
-    # Heurística
-    print(f"\n[2] Ejecutando heurística greedy (Prioridad + SPT)...")
+    print(f"\n[2] Ejecutando heurística administrativa (Fuerza inicios en punto)...")
     asign, no_asign = asignar_greedy(df_espera)
     print(f"    -> Asignados: {len(asign)}  |  No asignados: {len(no_asign)}")
 
-    # Exportar directamente a CSV
     exportar_csv(asign, RUTA_CSV_SALIDA)
     print(f"\n[3] CSV generado exitosamente en: {RUTA_CSV_SALIDA}")
     print("\nListo.")

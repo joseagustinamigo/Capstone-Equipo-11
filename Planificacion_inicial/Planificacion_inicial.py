@@ -44,11 +44,11 @@ DIAS_UCI = 2                # σ — días obligatorios en UCI para Vascular/AV 
 
 # Filtro inicial: usar solo los N pacientes con mayor prioridad para acotar tamaño
 # Pon None para usar TODOS los pacientes (puede tardar mucho)
-N_PACIENTES_MAX = 600
+N_PACIENTES_MAX = 1257
 
 # Parámetros de penalización (Efecto fin de horizonte)
-PENALIZACION_CAMA_BASICA = 5.0  # Costo en la f.o. por ocupar una cama básica el día 7
-PENALIZACION_CAMA_UCI = 1.0     # Costo en la f.o. por ocupar una cama UCI el día 7
+PENALIZACION_CAMA_BASICA = 0.5  # Costo en la f.o. por ocupar una cama básica el día 7
+PENALIZACION_CAMA_UCI =  -1.0     # Costo en la f.o. por ocupar una cama UCI el día 7
 
 # Parámetros de Gurobi
 TIEMPO_LIMITE_SEG = 20000     # 10 minutos

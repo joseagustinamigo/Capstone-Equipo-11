@@ -59,7 +59,7 @@ N_PACIENTES_MAX = 500
 
 # Parámetros de penalización (Efecto fin de horizonte)
 PENALIZACION_CAMA_BASICA = 0.9  # Costo en la f.o. por ocupar una cama básica el día 7
-PENALIZACION_CAMA_UCI = - 5.0     # Costo en la f.o. por ocupar una cama UCI el día 7
+PENALIZACION_CAMA_UCI =  0.9     # Costo en la f.o. por ocupar una cama UCI el día 7
 
 
 # Parámetros de Gurobi
@@ -250,20 +250,25 @@ if df_espera.empty:
 # --- Estimar días de permanencia para la lista de espera ---
 # La lista de espera no incluye 'Días de permanencia programados'. Estimamos
 # usando máximo del histórico agrupando por descripción de la cirugía.
-permanencia_por_desc = (
-    df_base.groupby("Descripción")["Días de permanencia efectivos"]
-    .apply(lambda x: x.value_counts().idxmax())
-    .astype(int)
-    .to_dict()
-)
+# --- Estimar días de permanencia para la lista de espera (IGUAL AL GREEDY) ---
+df_base["Servicio"] = df_base["Servicio"].astype("string").str.strip()
+df_base["Descripción"] = df_base["Descripción"].astype("string").str.strip()
 
-df_espera["Permanencia_estimada"] = df_espera["Descripción"].map(permanencia_por_desc)
+col_hist = "Días de permanencia efectivos" if "Días de permanencia efectivos" in df_base.columns else "Días de permanencia programados"
 
-# Verificación: que todas las descripciones tengan permanencia asignada
-faltantes = df_espera["Permanencia_estimada"].isna().sum()
-if faltantes > 0:
-    print(f"ADVERTENCIA: {faltantes} pacientes sin permanencia estimada. Se asume 0.")
-    df_espera["Permanencia_estimada"] = df_espera["Permanencia_estimada"].fillna(0).astype(int)
+mediana_detallada = df_base.groupby(["Servicio", "Descripción"])[col_hist].median().fillna(0).round().astype(int).to_dict()
+mediana_servicio = df_base.groupby("Servicio")[col_hist].median().fillna(0).round().astype(int).to_dict()
+mediana_global = int(round(df_base[col_hist].median(skipna=True)))
+
+def estimar_perm(row):
+    val = mediana_detallada.get((row['Servicio'], row['Descripción']))
+    if pd.isna(val):
+        val = mediana_servicio.get(row['Servicio'])
+    if pd.isna(val):
+        val = mediana_global
+    return int(val)
+
+df_espera["Permanencia_estimada"] = df_espera.apply(estimar_perm, axis=1)
 
 # --- Identificar pacientes que requieren UCI (Vascular + AV Fistula) ---
 df_espera["Requiere_UCI"] = (
